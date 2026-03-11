@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carisma Online</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<a href="https://instagram.com/ckanela.oficial" class="instagram-float" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+
+<a 
+href="https://wa.me/5491126095845" 
+class="whatsapp-float" 
+target="_blank"
+>
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<body>
+
+
+<header>
+
+<nav>
+
+<div class="logo">Carisma Online</div>
+
+<div class="menu">
+
+<a href="index.html">Inicio</a>
+<a href="sobre-mi.html">Sobre mí</a>
+<a href="trabajos.html">Trabajos</a>
+<a href="servicios.html">Servicios</a>
+<a href="contacto.html">Contacto</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero reveal">
+
+<div class="hero-content">
+
+<h1>Impulso marcas y negocios en redes sociales</h1>
+
+<p>Creadora de contenido · Community Manager · Influencer</p>
+
+<a class="cta" href="contacto.html">Trabajemos juntos</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="img/hero.jpg" alt="Influencer">
+
+</div>
+
+</section>
+
+
+
+<section class="sobre-mi reveal">
+
+<h2>Sobre mí</h2>
+
+<div class="sobre-mi-grid">
+
+<div class="sobre-mi-image">
+<img src="img/sobre-mi.jpg" alt="Sobre mí">
+</div>
+
+<div class="sobre-mi-texto">
+<p>
+Soy creadora de contenido, community manager e influencer. Trabajo ayudando a marcas, locales y emprendimientos a crecer en redes sociales y en internet con contenido visual atractivo y profesional.
+</p>
+
+<a class="cta" href="sobre-mi.html">Conocé más sobre mí</a>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="servicios reveal">
+
+<h2>Servicios</h2>
+
+<div class="servicios-grid">
+
+<a href="servicios.html" class="servicio">
+
+<h3>Contenido para marcas</h3>
+
+<p>Creación de videos y publicaciones promocionales para redes sociales.</p>
+
+</a>
+
+<a href="servicios.html" class="servicio">
+
+<h3>Gestión de redes</h3>
+
+<p>Planificación de contenido, crecimiento de comunidad y estrategia digital.</p>
+
+</a>
+
+<a href="servicios.html" class="servicio">
+
+<h3>Colaboraciones</h3>
+
+<p>Promoción de productos y servicios en redes sociales.</p>
+
+</a>
+
+</div>
+
+<div class="section-button">
+<a class="cta" href="servicios.html">Conocé todos mis servicios</a>
+</div>
+
+</section>
+
+
+
+<section class="trabajos reveal">
+
+<h2>Contenido y colaboraciones</h2>
+
+<div class="trabajos-slider">
+
+<img src="img/trabajo1.jpg" alt="Trabajo 1">
+<img src="img/trabajo2.jpg" alt="Trabajo 2">
+<img src="img/trabajo3.jpg" alt="Trabajo 3">
+
+</div>
+
+<div class="section-button">
+<a class="cta" href="trabajos.html">Conocé todos mis trabajos</a>
+</div>
+
+</section>
+
+
+
+<section class="contacto reveal">
+
+<h2>¿Trabajamos juntos?</h2>
+
+<p>Contactame por Instagram o WhatsApp para colaboraciones.</p>
+
+<a class="cta" href="contacto.html">Enviar mensaje</a>
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026</p>
+
+<p>Sitio desarrollado por PresenciaOnline</p>
+
+</footer>
+
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>
