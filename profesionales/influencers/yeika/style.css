@@ -469,4 +469,13 @@ width:auto;
 .hero p{
 font-size:18px;
 color:#444;
+
+}
+
+.nombre-personal {
+font-family: Poppins;
+font-size: 32px;
+font-weight: 600;
+margin-bottom: 15px;
+color: #222;
 }
