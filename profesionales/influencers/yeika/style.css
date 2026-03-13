@@ -479,7 +479,8 @@ text-align:left;
 .servicios-intro h1,
 .servicios-intro p{
 max-width:1100px;
-margin:auto;
+margin:0 auto;
+padding:0;
 }
 
 .servicios-intro h1{
@@ -530,6 +531,10 @@ color:#444;
 
 @media (min-width:900px){
 
+.servicios-intro{
+max-width:1100px;
+margin:auto;
+}
 .servicio-detalle{
 max-width:1100px;
 margin:auto;
@@ -542,6 +547,7 @@ max-width:1100px;
 }
 
 }
+
 
 
 
