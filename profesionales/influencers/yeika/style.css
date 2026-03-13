@@ -456,14 +456,15 @@ margin:auto;
 }
 
 }
-
 .sobre-mi-extra p{
-max-width:650px;
-margin:auto;
+max-width:900px;
+margin:0 auto 40px auto;
 line-height:1.8;
 font-size:16px;
 color:#555;
+text-align:left;
 }
+
 
 
 
