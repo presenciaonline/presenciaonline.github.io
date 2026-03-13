@@ -1,3 +1,68 @@
+<!DOCTYPE html>  <html lang="es">  <head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Sobre mí | Carisma Online</title>  <link rel="stylesheet" href="style.css">  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  </head>  <a href="https://instagram.com/ckanela.oficial" class="instagram-float" target="_blank">  
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">  
+</a>  <a href="https://wa.me/5491126095845" class="whatsapp-float" target="_blank">  
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">  
+</a>  <body>  <header>  <nav>  <div class="logo">Carisma Online</div>  <div class="menu">  <a href="index.html">Inicio</a>
+<a href="sobre-mi.html">Sobre mí</a>
+<a href="trabajos.html">Trabajos</a>
+<a href="servicios.html">Servicios</a>
+<a href="contacto.html">Contacto</a>
+
+</div>  </nav>  </header>  <section class="sobre-mi reveal">  <h1 style="text-align:center;margin-bottom:60px;font-family:Poppins;">  
+Sobre mí  
+</h1>  <div class="sobre-mi-grid">  <div class="sobre-mi-image">  
+<img src="img/sobre-mi2.jpg" alt="Sobre mí">  
+</div>  <div class="sobre-mi-texto">  <p>  
+Hola, me alegro que quieras conocer más sobre mí, soy Yeika, creadora de contenido, community manager e influencer. Me dedico a colaborar con marcas, negocios y emprendimientos que quieren mejorar su presencia en internet y comunicarse de forma más profesional en redes sociales.  
+</p>  <p>  
+A lo largo de mi trabajo he construido una comunidad de casi <strong>90 mil seguidores en Instagram</strong> y también tengo presencia activa en TikTok, donde mis publicaciones han alcanzado <strong>millones de visualizaciones</strong>.  
+</p>  <p>  
+He colaborado con diferentes tipos de negocios como locales comerciales, gastronomía, gimnasios, emprendimientos de belleza y marcas personales que buscan mejorar su presencia digital.  
+</p>  <p>  
+Mi enfoque está en crear contenido visual atractivo y estratégico que ayude a los negocios a destacarse, fortalecer su imagen digital y ganar visibilidad tanto en redes sociales como en Google.  
+</p>  <p>  
+Además de la creación de contenido, también realizo material visual como flyers, tarjetas promocionales y piezas digitales para campañas y promociones.  
+</p>  <p>  
+Mi objetivo es ayudar a que los negocios tengan mayor visibilidad, atraigan nuevos clientes y construyan una presencia digital profesional y atractiva.  
+</p>  </div>  </div>  </section>  <section class="servicios reveal">  <h2>Servicios</h2>  <div class="servicios-grid">  <a href="servicios.html" class="servicio">  
+<h3>Contenido para marcas</h3>  
+<p>Creación de fotos y videos promocionales en alta calidad para redes sociales y campañas digitales.</p>  
+</a>  <a href="servicios.html" class="servicio">  
+<h3>Gestión y crecimiento de redes</h3>  
+<p>Estrategias de contenido, estética de perfiles y crecimiento de comunidad en Instagram.</p>  
+</a>  <a href="servicios.html" class="servicio">  
+<h3>Promoción y colaboraciones</h3>  
+<p>Promoción de marcas, productos y negocios a través de contenido, colaboraciones y campañas.</p>  
+</a>  <a href="servicios.html" class="servicio">  
+<h3>Creación de páginas web</h3>  
+<p>Sitios web modernos, rápidos y optimizados para celulares, ideales para negocios y profesionales. Entrega en menos de 72 horas y pago único.</p>  
+</a>  </div>  <a class="cta" href="servicios.html" style="margin-top:40px;">  
+Conocé todos mis servicios  
+</a>  </section>  <section class="contacto reveal">  <h2>Mi objetivo</h2>  <p>  
+Ayudar a que los negocios crezcan, tengan más visibilidad, atraigan más clientes y se posicionen profesionalmente en internet.  
+</p>  <a class="cta" href="contacto.html">Contactar</a>
+
+</section>  <footer>  <p>Desarrollado por <a href="https://presenciaonline.github.io">PresenciaOnline.net</a></p>  <p>  
+<a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |  
+<a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |  
+<a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |  
+<a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>  
+</p>  </footer>  <script>  
+  
+const observer = new IntersectionObserver(entries => {  
+entries.forEach(entry => {  
+if(entry.isIntersecting){  
+entry.target.classList.add("visible");  
+}  
+});  
+});  
+  
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));  
+  
+</script>  </body>  
+</html>
 /* GALERIA SOBRE MI */
 
 .sobre-mi-extra{
@@ -42,3 +107,4 @@ margin:auto;
 }
 
 }
+
