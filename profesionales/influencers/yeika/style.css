@@ -457,4 +457,13 @@ margin:auto;
 
 }
 
+.sobre-mi-extra p{
+max-width:650px;
+margin:auto;
+line-height:1.8;
+font-size:16px;
+color:#555;
+}
+
+
 
