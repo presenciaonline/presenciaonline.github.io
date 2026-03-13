@@ -580,6 +580,18 @@ border-radius:4px;
 font-weight:600;
 }
 
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-family:'Poppins';
+font-weight:600;
+font-size:18px;
+}
+
+.logo svg{
+flex-shrink:0;
+}
 
 
 
