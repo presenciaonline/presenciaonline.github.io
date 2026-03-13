@@ -29,12 +29,6 @@ gap:12px;
 padding:22px 20px;
 }
 
-.logo{
-font-family:'Poppins';
-font-weight:600;
-font-size:18px;
-}
-
 .menu{
 display:flex;
 flex-wrap:wrap;
@@ -563,15 +557,21 @@ font-weight:600;
 text-decoration:underline;
 }
 
+.logo{
+font-family:'Poppins';
+font-weight:600;
+font-size:18px;
+display:flex;
+align-items:center;
+gap:4px;
+}
+
 .logo-dot{
-display:inline-block;
 width:6px;
 height:6px;
 background:#2F8F6B;
 border-radius:50%;
-margin:0 2px;
-position:relative;
-top:-2px;
+display:inline-block;
 }
 
 .logo-icon{
@@ -593,6 +593,7 @@ font-size:18px;
 color:#2F8F6B;
 margin:0 1px;
 }
+
 
 
 
