@@ -594,6 +594,17 @@ color:#2F8F6B;
 margin:0 1px;
 }
 
+.video-presentacion{
+margin-top:40px;
+display:flex;
+justify-content:center;
+}
+
+.video-presentacion video{
+width:100%;
+max-width:500px;
+border-radius:12px;
+}
 
 
 
