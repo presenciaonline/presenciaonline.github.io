@@ -633,6 +633,12 @@ aspect-ratio:1/1;
 object-fit:cover;
 }
 
+.galeria video{
+width:30%;
+aspect-ratio:1/1;
+object-fit:cover;
+}
+
 
 
 
