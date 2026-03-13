@@ -606,6 +606,33 @@ max-width:500px;
 border-radius:12px;
 }
 
+.galeria,
+.galeria-2{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.galeria img,
+.galeria video{
+width:30%;
+border-radius:10px;
+}
+
+.galeria-2 img,
+.galeria-2 video{
+width:30%;
+border-radius:10px;
+}
+
+.galeria video,
+.galeria-2 video{
+aspect-ratio:1/1;
+object-fit:cover;
+}
+
 
 
 
