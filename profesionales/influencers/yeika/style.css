@@ -562,6 +562,23 @@ font-weight:600;
 .servicio-link a:hover{
 text-decoration:underline;
 }
+.logo{
+font-family:'Poppins';
+font-weight:600;
+font-size:18px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.logo-icon{
+background:#2F8F6B;
+color:white;
+font-size:12px;
+padding:4px 6px;
+border-radius:4px;
+font-weight:600;
+}
 
 
 
