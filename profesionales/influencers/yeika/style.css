@@ -473,11 +473,12 @@ margin-bottom:40px;
 .servicios-intro{
 padding:70px 22px;
 background:#f9fbfa;
+text-align:left;
 }
 
 .servicios-intro h1,
 .servicios-intro p{
-max-width:820px;
+max-width:1100px;
 margin:auto;
 }
 
@@ -541,6 +542,7 @@ max-width:820px;
 }
 
 }
+
 
 
 
