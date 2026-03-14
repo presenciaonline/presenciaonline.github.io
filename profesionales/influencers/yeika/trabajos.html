@@ -16,28 +16,31 @@
 
 <style>
 
-/* Ajustes mínimos solo para esta página */
+/* Ajustes solo para esta página */
 
 .trabajos-bloque{
 margin-bottom:80px;
 }
 
-.trabajos-bloque h2{
+.intro-trabajos{
 text-align:center;
-margin-bottom:30px;
-font-family:Poppins;
+max-width:800px;
+margin:auto;
+margin-bottom:60px;
 }
+
+/* CELULAR */
 
 .galeria{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:1fr;
 gap:20px;
 margin-top:20px;
 }
 
 .galeria-2{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr;
 gap:20px;
 margin-top:20px;
 }
@@ -50,11 +53,32 @@ width:100%;
 border-radius:10px;
 }
 
-.intro-trabajos{
-text-align:center;
-max-width:800px;
-margin:auto;
-margin-bottom:60px;
+/* TABLET */
+
+@media (min-width:600px){
+
+.galeria{
+grid-template-columns:repeat(2,1fr);
+}
+
+.galeria-2{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* PC */
+
+@media (min-width:900px){
+
+.galeria{
+grid-template-columns:repeat(3,1fr);
+}
+
+.galeria-2{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 </style>
