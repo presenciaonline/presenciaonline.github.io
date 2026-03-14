@@ -721,3 +721,13 @@ grid-template-columns:1fr;
 }
 
 }
+
+.galeria img,
+.galeria video,
+.galeria-2 img,
+.galeria-2 video{
+height:1200px;
+width:auto;
+display:block;
+border-radius:12px;
+}
