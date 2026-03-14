@@ -727,7 +727,7 @@ grid-template-columns:1fr;
 .galeria-2 img,
 .galeria-2 video{
 height:450px;
-width:100%;
-object-fit:cover;
-border-radius:12px;
+width:auto;
+display:block;
+border-radius:8px;
 }
