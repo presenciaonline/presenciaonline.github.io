@@ -682,6 +682,7 @@ margin:40px auto;
 .galeria-2 video{
 height:420px;
 width:auto;
+flex:0 0 auto;
 border-radius:10px;
 display:block;
 }
