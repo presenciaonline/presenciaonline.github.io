@@ -339,7 +339,7 @@ transform:translateY(0);
 nav{
 flex-direction:row;
 justify-content:space-between;
-max-width:1400px;
+max-width:1300px;
 margin:auto;
 }
 
@@ -672,7 +672,7 @@ display:flex;
 flex-wrap:wrap;
 gap:20px;
 justify-content:center;
-max-width:1100px;
+max-width:1250px;
 margin:40px auto;
 }
 
