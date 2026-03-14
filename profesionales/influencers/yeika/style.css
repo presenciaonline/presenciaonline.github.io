@@ -602,18 +602,6 @@ max-width:500px;
 border-radius:12px;
 }
 
-/* DESKTOP */
-
-.galeria img,
-.galeria video,
-.galeria-2 img,
-.galeria-2 video{
-width:30%;
-max-width:320px;
-border-radius:12px;
-display:block;
-}
-
 /* evitar deformación de video */
 
 .galeria video,
@@ -731,3 +719,4 @@ width:auto;
 display:block;
 border-radius:8px;
 }
+
