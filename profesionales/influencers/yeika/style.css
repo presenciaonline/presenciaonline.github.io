@@ -677,3 +677,8 @@ height:1200px;
 width:auto;
 display:block;
 }
+
+.servicios h2,
+.trabajos h2{
+text-align:center;
+}
