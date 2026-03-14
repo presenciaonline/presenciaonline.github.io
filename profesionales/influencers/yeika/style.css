@@ -339,7 +339,7 @@ transform:translateY(0);
 nav{
 flex-direction:row;
 justify-content:space-between;
-max-width:1200px;
+max-width:1400px;
 margin:auto;
 }
 
@@ -687,24 +687,9 @@ border-radius:10px;
 display:block;
 }
 
-/* tablet */
-
-@media (max-width:900px){
-
-.galeria,
-.galeria-2{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* celular */
-
-@media (max-width:600px){
-
-.galeria,
-.galeria-2{
-grid-template-columns:1fr;
-}
-
+.intro-trabajos{
+max-width:800px;
+margin:0 auto 60px auto;
+text-align:center;
+padding:0 20px;
 }
