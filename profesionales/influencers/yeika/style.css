@@ -624,7 +624,7 @@ align-items:center;
 .galeria video,
 .galeria-2 img,
 .galeria-2 video{
-width:100%;
+width:auto;
 max-width:100%;
 }
 
