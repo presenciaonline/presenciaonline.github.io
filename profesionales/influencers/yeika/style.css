@@ -672,3 +672,8 @@ object-fit:cover;
 }
 
 }
+.trabajos video{
+height:1200px;
+width:auto;
+display:block;
+}
