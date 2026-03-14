@@ -579,17 +579,6 @@ border-radius:4px;
 font-weight:600;
 }
 
-.logo{
-font-family:'Poppins';
-font-weight:600;
-font-size:18px;
-}
-
-.logo-dot{
-color:#2F8F6B;
-margin:0 1px;
-}
-
 .video-presentacion{
 margin-top:40px;
 display:flex;
@@ -628,31 +617,6 @@ width:auto;
 max-width:100%;
 }
 
-}
-
-@media (min-width:900px){
-
-.trabajos-slider{
-grid-template-columns:repeat(3,1fr);
-max-width:1100px;
-margin:auto;
-}
-
-}
-
-@media (min-width: 900px){
-
-.trabajos-slider img{
-height:420px;
-width:100%;
-object-fit:cover;
-}
-
-}
-.trabajos video{
-height:1200px;
-width:auto;
-display:block;
 }
 
 .servicios h2,
