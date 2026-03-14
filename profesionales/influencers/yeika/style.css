@@ -382,7 +382,10 @@ overflow:visible;
 
 .trabajos-slider img{
 width:100%;
-aspect-ratio:16/9;
+height:480px;
+object-fit:cover;
+border-radius:14px;
+display:block;
 }
 
 .servicios-grid{
