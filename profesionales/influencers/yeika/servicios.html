@@ -13,6 +13,88 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+<style>
+.servicios-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 22px 70px 22px;
+}
+
+.servicio-card {
+  background: white;
+  border-radius: 14px;
+  padding: 36px 32px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: all .25s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+}
+
+.servicio-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.servicio-card p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.servicio-card ul {
+  padding-left: 18px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.servicio-card li {
+  color: #444;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.servicio-card .cta {
+  display: inline-block;
+  margin-top: 0;
+  font-size: 14px;
+  padding: 14px 26px;
+  align-self: flex-start;
+}
+
+.servicio-card .servicio-link {
+  margin-top: 12px;
+}
+
+.servicio-card .servicio-link a {
+  font-size: 14px;
+  color: #2F8F6B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.servicio-card .servicio-link a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .servicios-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -25,216 +107,132 @@
 </a>
   
 <header>
-
 <nav>
-
 <div class="logo">
 <span>Carisma</span><span class="logo-dot"></span><span>Online</span>
 </div>
-  
 <div class="menu">
-
 <a href="index.html">Inicio</a>
 <a href="sobre-mi.html">Sobre mí</a>
 <a href="servicios.html">Servicios</a>
 <a href="trabajos.html">Trabajos</a>
 <a href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio." target="_blank">Contacto</a>
 </div>
-
 </nav>
-
 </header>
 
 
-
 <section class="servicios-intro reveal">
-
 <h1>Servicios</h1>
-
 <p>
 Trabajo ayudando a marcas, negocios y emprendimientos a mejorar su presencia visual y digital. 
 Cada proyecto se adapta a las necesidades del cliente, combinando creatividad, estrategia y contenido de alto impacto para redes sociales y campañas promocionales.
 </p>
-
 </section>
 
 
+<div class="servicios-page-grid reveal">
 
-<section class="servicio-detalle reveal">
+  <div class="servicio-card">
+    <h2>Contenido para marcas</h2>
+    <p>Creación de contenido visual profesional para promocionar negocios, productos y servicios en redes sociales y campañas digitales.</p>
+    <ul>
+      <li>Fotos promocionales para redes sociales</li>
+      <li>Videos promocionales en alta calidad</li>
+      <li>Contenido optimizado para Instagram y TikTok</li>
+      <li>Material visual para campañas publicitarias</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-<h2>Contenido para marcas</h2>
+  <div class="servicio-card">
+    <h2>Gestión y crecimiento de redes</h2>
+    <p>Estrategias de contenido y optimización de perfiles para mejorar la presencia digital de marcas y negocios en redes sociales.</p>
+    <ul>
+      <li>Estrategia de contenido</li>
+      <li>Estética y organización del perfil</li>
+      <li>Planificación de publicaciones</li>
+      <li>Crecimiento de comunidad en Instagram</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-<p>
-Creación de contenido visual profesional para promocionar negocios, productos y servicios en redes sociales y campañas digitales.
-</p>
+  <div class="servicio-card">
+    <h2>Promoción y colaboraciones</h2>
+    <p>Promoción de marcas y productos a través de contenido en redes sociales, campañas y colaboraciones con emprendimientos y negocios.</p>
+    <ul>
+      <li>Promoción de productos</li>
+      <li>Campañas con marcas</li>
+      <li>Colaboraciones en redes</li>
+      <li>Canjes y colaboraciones pagas</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-<ul>
-<li>Fotos promocionales para redes sociales</li>
-<li>Videos promocionales en alta calidad</li>
-<li>Contenido optimizado para Instagram y TikTok</li>
-<li>Material visual para campañas publicitarias</li>
-</ul>
+  <div class="servicio-card">
+    <h2>Creación de páginas web</h2>
+    <p>Diseño de sitios web modernos, rápidos y optimizados para celulares, ideales para profesionales, emprendimientos y negocios que quieren mejorar su presencia online.</p>
+    <ul>
+      <li>Diseño moderno y minimalista</li>
+      <li>Optimización para celulares</li>
+      <li>Carga rápida</li>
+      <li>Entrega en menos de 72 horas</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
+  <div class="servicio-card">
+    <h2>Diseño de flyers y piezas gráficas</h2>
+    <p>Creación de material visual para promociones, eventos y campañas publicitarias tanto para redes sociales como para impresiones.</p>
+    <ul>
+      <li>Flyers promocionales</li>
+      <li>Tarjetas personalizadas</li>
+      <li>Material visual para promociones</li>
+      <li>Diseño gráfico para redes sociales</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-</section>
+  <div class="servicio-card">
+    <h2>Presencia y contenido en eventos</h2>
+    <p>Cobertura de eventos, ferias y lanzamientos generando contenido en tiempo real para aumentar la visibilidad de la marca.</p>
+    <ul>
+      <li>Generación de contenido en eventos</li>
+      <li>Promoción de marcas en ferias y lanzamientos</li>
+      <li>Fotos y videos para redes sociales</li>
+      <li>Amplificación del alcance digital</li>
+    </ul>
+    <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
+    <p class="servicio-link"><a href="trabajos.html">Ver ejemplos de trabajos realizados →</a></p>
+  </div>
 
-
-
-<section class="servicio-detalle reveal">
-
-<h2>Gestión y crecimiento de redes</h2>
-
-<p>
-Estrategias de contenido y optimización de perfiles para mejorar la presencia digital de marcas y negocios en redes sociales.
-</p>
-
-<ul>
-<li>Estrategia de contenido</li>
-<li>Estética y organización del perfil</li>
-<li>Planificación de publicaciones</li>
-<li>Crecimiento de comunidad en Instagram</li>
-</ul>
-
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
-
-</section>
-
-
-
-<section class="servicio-detalle reveal">
-
-<h2>Promoción y colaboraciones</h2>
-
-<p>
-Promoción de marcas y productos a través de contenido en redes sociales, campañas y colaboraciones con emprendimientos y negocios.
-</p>
-
-<ul>
-<li>Promoción de productos</li>
-<li>Campañas con marcas</li>
-<li>Colaboraciones en redes</li>
-<li>Canjes y colaboraciones pagas</li>
-</ul>
-
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
-
-</section>
-
-
-
-<section class="servicio-detalle reveal">
-
-<h2>Creación de páginas web</h2>
-
-<p>
-Diseño de sitios web modernos, rápidos y optimizados para celulares, ideales para profesionales, emprendimientos y negocios que quieren mejorar su presencia online.
-</p>
-
-<ul>
-<li>Diseño moderno y minimalista</li>
-<li>Optimización para celulares</li>
-<li>Carga rápida</li>
-<li>Entrega en menos de 72 horas</li>
-</ul>
-
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
-
-</section>
-
-
-
-<section class="servicio-detalle reveal">
-
-<h2>Diseño de flyers y piezas gráficas</h2>
-
-<p>
-Creación de material visual para promociones, eventos y campañas publicitarias tanto para redes sociales como para impresiones.
-</p>
-
-<ul>
-<li>Flyers promocionales</li>
-<li>Tarjetas personalizadas</li>
-<li>Material visual para promociones</li>
-<li>Diseño gráfico para redes sociales</li>
-</ul>
-
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
-
-</section>
-
-
-
-<section class="servicio-detalle reveal">
-
-<h2>Presencia y contenido en eventos</h2>
-
-<p>
-Cobertura de eventos, ferias y lanzamientos generando contenido en tiempo real para aumentar la visibilidad de la marca.
-</p>
-
-<ul>
-<li>Generación de contenido en eventos</li>
-<li>Promoción de marcas en ferias y lanzamientos</li>
-<li>Fotos y videos para redes sociales</li>
-<li>Amplificación del alcance digital</li>
-</ul>
-
-<a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Consultar este servicio</a>
-<p class="servicio-link">
-<a href="trabajos.html">Ver ejemplos de trabajos realizados →</a>
-</p>
-
-</section>
-
+</div>
 
 
 <section class="contacto reveal">
-
 <h2>¿Querés trabajar conmigo?</h2>
-
-<p>
-Si querés mejorar la presencia digital de tu marca o promocionar tu negocio en redes sociales, podemos trabajar juntos.
-</p>
-
+<p>Si querés mejorar la presencia digital de tu marca o promocionar tu negocio en redes sociales, podemos trabajar juntos.</p>
 <a class="cta" href="https://wa.me/5491126095845?text=Hola%20Yeika,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20consultarte%20por%20una%20colaboraci%C3%B3n%20o%20promoci%C3%B3n%20para%20mi%20negocio.">Enviar mensaje</a>
-
 </section>
 
 
-
 <footer>
-
 <p>Desarrollado por <a href="https://presenciaonline.github.io">PresenciaOnline.net</a></p>
-
 <p>
 <a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
 <a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
 <a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
 <a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
 </p>
-
 </footer>
 
 
-
 <script>
-
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
 if(entry.isIntersecting){
@@ -242,11 +240,8 @@ entry.target.classList.add("visible");
 }
 });
 });
-
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
 </script>
-
 
 </body>
 </html>
