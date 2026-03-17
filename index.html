@@ -1,157 +1,526 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Presencia Online | Páginas web para profesionales independientes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Creamos páginas web profesionales para especialistas independientes en Argentina. Simples, claras y listas para funcionar.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f7f8;
-            color: #2c3e50;
-        }
+<title>Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas</title>
+<meta name="description" content="Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada. Pago único, sin mensualidades, lista en menos de 72 horas.">
+<meta name="keywords" content="páginas web profesionales Argentina, web para psicólogos, web para médicos, web para abogados, presencia digital, micrositio profesional">
+<meta name="author" content="Presencia Online">
+<link rel="canonical" href="https://presenciaonline.github.io/index.html">
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(to right, #dfe9f3, #ffffff);
-        }
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presenciaonline.github.io/">
+<meta property="og:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
+<meta property="og:description" content="Páginas web profesionales para especialistas independientes. Modernas, rápidas, pago único y listas en menos de 72 horas.">
+<meta property="og:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Presencia Online">
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
+<meta name="twitter:description" content="Páginas web profesionales para especialistas independientes. Modernas, rápidas, pago único y listas en menos de 72 horas.">
+<meta name="twitter:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
 
-        h2 {
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin: 10px;
-        }
-
-        .btn-mail {
-            background-color: #5bb5b0;
-        }
-
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 250px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+<link rel="stylesheet" href="presencia.css">
 </head>
 
 <body>
 
-<section class="hero">
-    <h1>Presencia Online</h1>
-    <h2>Páginas web profesionales para especialistas independientes en Argentina</h2>
+<!-- BOTONES FLOTANTES -->
+<div class="flotantes">
+  <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="flotante-btn flotante-wa" title="WhatsApp">💬</a>
+  <!-- <a href="https://instagram.com/presenciaonline" target="_blank" class="flotante-btn flotante-ig" title="Instagram">📷</a> -->
+  <!-- <a href="https://facebook.com/presenciaonline" target="_blank" class="flotante-btn flotante-fb" title="Facebook">👍</a> -->
+</div>
 
-    <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." 
-       target="_blank" 
-       class="btn">
-       Contactar por WhatsApp
+<!-- HEADER -->
+<header class="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo.png" alt="Presencia Online">
     </a>
-
-    <br>
-
-    <a href="mailto:presenciaonline.web@gmail.com" class="btn btn-mail">
-        Enviar Email
-    </a>
-</section>
-
-<section class="section">
-    <h2>¿Qué ofrecemos?</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Landing profesional</h3>
-            <p>Diseño limpio, claro y optimizado para transmitir confianza.</p>
-        </div>
-
-        <div class="card">
-            <h3>Lista en días</h3>
-            <p>Página publicada rápidamente sin complicaciones técnicas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Precio accesible</h3>
-            <p>Solución profesional sin costos ocultos ni mantenimiento complejo.</p>
-        </div>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="profesionales.html">Profesionales</a>
+      <a href="demos.html">Demos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="blog.html">Blog</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </div>
+  </div>
+</header>
+
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="contenedor hero-inner">
+
+    <div class="hero-contenido">
+      <div class="hero-badge">Especialistas independientes</div>
+      <h1>Tu tarjeta de presentación<br><span>en el mundo digital.</span></h1>
+      <p class="hero-subtitulo">Profesional, personalizada y lista para usar en menos de 72 horas.</p>
+
+      <div class="hero-diferenciales">
+        <div class="diferencial-item"><div class="icono">⚡</div>Carga ultrarrápida</div>
+        <div class="diferencial-item"><div class="icono">🎨</div>Diseño moderno</div>
+        <div class="diferencial-item"><div class="icono">💰</div>Pago único</div>
+        <div class="diferencial-item"><div class="icono">🔧</div>Cambios en 48hs</div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-whatsapp">💬 Consultanos por WhatsApp</a>
+        <a href="demos.html" class="btn btn-outline">Ver demos →</a>
+      </div>
+    </div>
+
+    <div class="hero-imagen">
+      <div class="hero-imagen-marco">
+        <div class="hero-imagen-placeholder">
+          <div class="icono-grande">🖥️</div>
+          <span>Tu página web profesional</span>
+        </div>
+        <!-- Reemplazar con: <img src="assets/img/hero.jpg" alt="Páginas web profesionales"> -->
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section class="section">
-    <h2>Ideal para profesionales que</h2>
-    <p>
-        ✔️ No tienen página web<br>
-        ✔️ Quieren verse más profesionales<br>
-        ✔️ Desean tener presencia digital<br>
-        ✔️ Buscan una solución simple y efectiva
-    </p>
+
+<!-- 2. PARA QUIÉN ES -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Para quién es?</h2>
+    <p class="seccion-subtitulo">Creamos páginas web para especialistas independientes que quieren verse profesionales online.</p>
+
+    <div class="nichos-grid">
+      <a href="demos/psicologo/index.html" class="nicho-card">
+        <div class="nicho-icono">🧠</div>
+        <h3>Psicólogos</h3>
+        <p>Transmití confianza y conseguí nuevos pacientes con una web que refleja tu enfoque terapéutico.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+      <a href="demos/salud/index.html" class="nicho-card">
+        <div class="nicho-icono">🩺</div>
+        <h3>Profesionales de la salud</h3>
+        <p>Médicos, nutricionistas, kinesiólogos y más. Tu consultorio online disponible las 24hs.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+      <a href="demos/legal/index.html" class="nicho-card">
+        <div class="nicho-icono">⚖️</div>
+        <h3>Abogados</h3>
+        <p>Mostrá tu especialidad y generá consultas desde el primer día con una presencia profesional.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+      <a href="demos/contable/index.html" class="nicho-card">
+        <div class="nicho-icono">📊</div>
+        <h3>Contadores</h3>
+        <p>Diferenciarte de la competencia con una web clara que comunica tus servicios y experiencia.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+      <a href="demos/odontologo/index.html" class="nicho-card">
+        <div class="nicho-icono">🦷</div>
+        <h3>Odontólogos</h3>
+        <p>Mostrá tus tratamientos, tu consultorio y hacé que los pacientes lleguen listos para atenderse.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+      <a href="demos/marketing/index.html" class="nicho-card">
+        <div class="nicho-icono">📱</div>
+        <h3>Marketing y contenido</h3>
+        <p>Community managers e influencers. Tu media kit y portfolio siempre disponibles.</p>
+        <span class="nicho-link">Ver demo →</span>
+      </a>
+    </div>
+  </div>
 </section>
 
-<footer style="text-align:center; color:white;">
 
-<p><strong>PresenciaOnline.net</strong></p>
+<!-- 3. CÓMO FUNCIONA -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Cómo funciona?</h2>
+    <p class="seccion-subtitulo">Tres pasos simples y tu página está online.</p>
 
-<p>
-<a href="/legal/privacidad.html" style="color:white;">Política de privacidad</a> |
-<a href="/legal/cookies.html" style="color:white;">Política de cookies</a> |
-<a href="/legal/terminos.html" style="color:white;">Términos y condiciones</a> |
-<a href="/legal/disclaimer.html" style="color:white;">Aviso legal</a>
-</p>
+    <div class="pasos-grid">
+      <div class="paso-card">
+        <div class="paso-numero">1</div>
+        <h3>Elegís tu demo</h3>
+        <p>Revisás las demos de tu profesión y nos decís cuál te gusta o qué querés combinar.</p>
+      </div>
+      <div class="paso-card">
+        <div class="paso-numero">2</div>
+        <h3>Nos pasás tu info</h3>
+        <p>Nombre, foto, servicios, zona de atención y datos de contacto. Nosotros nos encargamos del resto.</p>
+      </div>
+      <div class="paso-card">
+        <div class="paso-numero">3</div>
+        <h3>Estás online en 72hs</h3>
+        <p>Tu página lista, publicada y funcionando. Sin tecnicismos, sin esperas, sin complicaciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>presenciaonline.web@gmail.com</p>
 
+<!-- 4. QUÉ INCLUYE -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Qué incluye?</h2>
+    <p class="seccion-subtitulo">Todo lo que necesitás para tener una presencia digital profesional.</p>
+
+    <div class="incluye-grid">
+      <div class="incluye-item">
+        <div class="incluye-icono">💰</div>
+        <div class="incluye-texto">
+          <h3>Pago único</h3>
+          <p>Sin mensualidades ni costos ocultos. Pagás una vez y la página es tuya para siempre.</p>
+        </div>
+      </div>
+      <div class="incluye-item">
+        <div class="incluye-icono">⚡</div>
+        <div class="incluye-texto">
+          <h3>Carga ultrarrápida</h3>
+          <p>Páginas estáticas, livianas y optimizadas. Cargan en segundos desde cualquier dispositivo.</p>
+        </div>
+      </div>
+      <div class="incluye-item">
+        <div class="incluye-icono">📱</div>
+        <div class="incluye-texto">
+          <h3>Perfecta en celular</h3>
+          <p>Diseño responsive optimizado para que se vea impecable en todos los dispositivos.</p>
+        </div>
+      </div>
+      <div class="incluye-item">
+        <div class="incluye-icono">🔧</div>
+        <div class="incluye-texto">
+          <h3>Modificaciones en 48hs</h3>
+          <p>¿Cambió algo? Mandás un ticket y lo resolvemos en menos de 48 horas.</p>
+        </div>
+      </div>
+      <div class="incluye-item">
+        <div class="incluye-icono">🎬</div>
+        <div class="incluye-texto">
+          <h3>Fotos y videos</h3>
+          <p>Soporte completo para contenido multimedia optimizado para una carga rápida.</p>
+        </div>
+      </div>
+      <div class="incluye-item">
+        <div class="incluye-icono">🔍</div>
+        <div class="incluye-texto">
+          <h3>Optimizada para Google</h3>
+          <p>SEO básico incluido para que los buscadores encuentren tu página desde el primer día.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. DEMOS -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Ejemplos reales</h2>
+    <p class="seccion-subtitulo">Mirá cómo quedaría tu página web. Cada demo está pensada para tu profesión.</p>
+
+    <div class="demos-grid">
+      <a href="demos/psicologo/index.html" class="demo-card">
+        <div class="demo-preview">🧠</div>
+        <div class="demo-info">
+          <h3>Demo Psicólogo</h3>
+          <p>Diseño cálido y profesional para transmitir confianza a nuevos pacientes.</p>
+        </div>
+      </a>
+      <a href="demos/salud/index.html" class="demo-card">
+        <div class="demo-preview">🩺</div>
+        <div class="demo-info">
+          <h3>Demo Profesional de la Salud</h3>
+          <p>Clara, moderna y orientada a conseguir turnos desde el primer día.</p>
+        </div>
+      </a>
+      <a href="demos/legal/index.html" class="demo-card">
+        <div class="demo-preview">⚖️</div>
+        <div class="demo-info">
+          <h3>Demo Abogado</h3>
+          <p>Seria y profesional, con foco en la especialidad y la generación de consultas.</p>
+        </div>
+      </a>
+      <a href="demos/contable/index.html" class="demo-card">
+        <div class="demo-preview">📊</div>
+        <div class="demo-info">
+          <h3>Demo Contador</h3>
+          <p>Ordenada y clara para mostrar servicios y diferenciarse de la competencia.</p>
+        </div>
+      </a>
+      <a href="demos/odontologo/index.html" class="demo-card">
+        <div class="demo-preview">🦷</div>
+        <div class="demo-info">
+          <h3>Demo Odontólogo</h3>
+          <p>Visual y directa, con galería de tratamientos y reserva de turnos online.</p>
+        </div>
+      </a>
+      <a href="demos/marketing/index.html" class="demo-card">
+        <div class="demo-preview">📱</div>
+        <div class="demo-info">
+          <h3>Demo Marketing y Contenido</h3>
+          <p>Dinámica y moderna para mostrar portfolio, métricas y servicios a marcas.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. POR QUÉ ELEGIRNOS -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
+    <p class="seccion-subtitulo">Lo que nos diferencia de cualquier otra opción del mercado.</p>
+
+    <div class="porque-grid">
+      <div class="porque-item">
+        <div class="porque-icono">⏱️</div>
+        <h3>72 horas, no semanas</h3>
+        <p>Mientras otros tardan semanas, vos ya estás online y recibiendo consultas.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">💳</div>
+        <h3>Pago único, sin sorpresas</h3>
+        <p>Sin planes mensuales ni renovaciones automáticas. Sabés exactamente cuánto pagás.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🚀</div>
+        <h3>Tecnología superior</h3>
+        <p>Sin WordPress ni plugins. Más rápidas, más seguras y que no se rompen solas.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">✏️</div>
+        <h3>Modificaciones garantizadas</h3>
+        <p>Cualquier cambio lo resolvemos en menos de 48 horas por sistema de tickets.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🎯</div>
+        <h3>Pensada para tu profesión</h3>
+        <p>No es una plantilla genérica. Cada página está diseñada para tu nicho específico.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">📞</div>
+        <h3>Sin tecnicismos</h3>
+        <p>Vos nos pasás tu info por WhatsApp. Nosotros nos encargamos de todo lo técnico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7. BLOG -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Recursos para profesionales</h2>
+    <p class="seccion-subtitulo">Todo lo que necesitás saber sobre presencia digital para tu profesión.</p>
+
+    <div class="blog-grid">
+      <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">🧠 Psicología</span>
+        <h3>¿Un psicólogo necesita una página web hoy o alcanzan las redes sociales?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/salud/01-medico-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">🩺 Salud</span>
+        <h3>¿Un médico necesita una página web hoy o alcanzan las redes sociales?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/legal/01-abogado-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">⚖️ Legal</span>
+        <h3>¿Un abogado necesita una página web hoy o alcanza con LinkedIn y los directorios?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/contable/01-contador-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">📊 Contable</span>
+        <h3>¿Un contador necesita una página web hoy o alcanza con el boca a boca?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/odontologo/01-dentista-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">🦷 Odontología</span>
+        <h3>¿Un dentista necesita una página web hoy o alcanza con Instagram?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/marketing/01-profesional-marketing-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">📱 Marketing</span>
+        <h3>¿Un profesional del marketing necesita una página web hoy o alcanzan las redes?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="blog.html" class="btn btn-outline">Ver todos los artículos →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 8. CONTACTO -->
+<section class="seccion seccion-alt reveal" id="contacto">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Hablamos?</h2>
+    <p class="seccion-subtitulo">Contanos qué necesitás y te respondemos a la brevedad.</p>
+
+    <div class="contacto-inner">
+
+      <div class="contacto-info">
+        <h2>Estamos para ayudarte</h2>
+        <p>Si tenés dudas sobre el servicio, querés ver una demo personalizada o ya estás listo para arrancar, escribinos. Respondemos rápido.</p>
+        <div class="contacto-canales">
+          <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="canal-item">
+            <div class="canal-icono" style="background:#25D366;">💬</div>
+            WhatsApp: +54 9 11 4916 7978
+          </a>
+          <div class="canal-item">
+            <div class="canal-icono" style="background:var(--azul);">✉️</div>
+            presenciaonline.web@gmail.com
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARIO — Google Apps Script -->
+      <!-- TODO: Reemplazar ACTION_URL con la URL de tu Google Apps Script -->
+      <div class="contacto-form">
+        <form id="formulario-contacto" action="ACTION_URL_GOOGLE_APPS_SCRIPT" method="POST">
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="form-grupo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-grupo">
+            <label for="nicho">Soy...</label>
+            <select id="nicho" name="nicho" required>
+              <option value="" disabled selected>Seleccioná tu profesión</option>
+              <option value="psicologo">Psicólogo/a</option>
+              <option value="salud">Profesional de la salud</option>
+              <option value="abogado">Abogado/a</option>
+              <option value="contador">Contador/a</option>
+              <option value="odontologo">Odontólogo/a</option>
+              <option value="marketing">Profesional del marketing</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Consulta</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos qué necesitás..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primario form-submit">Enviar mensaje ✉️</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 9. FOOTER -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-inner">
+
+      <div class="footer-logo">
+        <img src="assets/img/logo.png" alt="Presencia Online">
+        <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y lista para usar.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="index.html">Inicio</a>
+        <a href="profesionales.html">Para profesionales</a>
+        <a href="demos.html">Demos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="conocenos.html">Conócenos</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
+        <a href="blog/salud/01-medico-necesita-pagina-web.html">Salud</a>
+        <a href="blog/legal/01-abogado-necesita-pagina-web.html">Legal</a>
+        <a href="blog/contable/01-contador-necesita-pagina-web.html">Contable</a>
+        <a href="blog/odontologo/01-dentista-necesita-pagina-web.html">Odontología</a>
+        <a href="blog/marketing/01-profesional-marketing-necesita-pagina-web.html">Marketing</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Demos</h4>
+        <a href="demos/psicologo/index.html">Demo Psicólogo</a>
+        <a href="demos/salud/index.html">Demo Salud</a>
+        <a href="demos/legal/index.html">Demo Abogado</a>
+        <a href="demos/contable/index.html">Demo Contador</a>
+        <a href="demos/odontologo/index.html">Demo Odontólogo</a>
+        <a href="demos/marketing/index.html">Demo Marketing</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/cookies.html">Cookies</a>
+        <a href="legal/terminos.html">Términos</a>
+        <a href="legal/disclaimer.html">Aviso legal</a>
+      </div>
+    </div>
+
+  </div>
 </footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+// Menú hamburger
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+
+// Animación scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Formulario — Google Apps Script
+// TODO: Reemplazar ACTION_URL_GOOGLE_APPS_SCRIPT con la URL real del script
+document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  fetch(this.action, { method: 'POST', body: new FormData(this) })
+    .then(() => {
+      btn.textContent = '✅ ¡Mensaje enviado!';
+      this.reset();
+      setTimeout(() => { btn.textContent = 'Enviar mensaje ✉️'; btn.disabled = false; }, 4000);
+    })
+    .catch(() => {
+      btn.textContent = '❌ Error. Escribinos por WhatsApp.';
+      btn.disabled = false;
+    });
+});
+
+</script>
 
 </body>
 </html>
