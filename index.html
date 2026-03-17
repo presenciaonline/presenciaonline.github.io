@@ -385,7 +385,7 @@
           </a>
           <div class="canal-item">
             <div class="canal-icono" style="background:var(--azul);">✉️</div>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f484869187919a979d959b9a989d9a91da839196b49399959d98da979b99">[email&#160;protected]</a>
+            presenciaonline.web@gmail.com
           </div>
         </div>
       </div>
@@ -450,11 +450,11 @@
       <div class="footer-col">
         <h4>Blog</h4>
         <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
-        <a href="blog/salud/01-medico-necesita-pagina-web.html">Salud</a>
-        <a href="blog/legal/01-abogado-necesita-pagina-web.html">Legal</a>
-        <a href="blog/contable/01-contador-necesita-pagina-web.html">Contable</a>
-        <a href="blog/odontologo/01-dentista-necesita-pagina-web.html">Odontología</a>
-        <a href="blog/marketing/01-profesional-marketing-necesita-pagina-web.html">Marketing</a>
+        <a href="blog/salud/12-cuanto-cuesta-pagina-web-medico.html">Salud</a>
+        <a href="blog/legal/03-como-puede-un-abogado-aparecer-en-google.html">Legal</a>
+        <a href="blog/contable/05-que-deberia-tener-la-pagina-web-de-un-contador.html">Contable</a>
+        <a href="blog/odontologo/17-pagina-web-dentista-celular.html">Odontología</a>
+        <a href="blog/marketing/10-pagina-web-influencer-confianza-marcas.html">Marketing</a>
       </div>
 
       <div class="footer-col">
@@ -483,3 +483,48 @@
 </footer>
 
 
+<!-- JAVASCRIPT -->
+<script>
+
+// Menú hamburger
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+
+// Animación scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Formulario — Google Apps Script
+// TODO: Reemplazar ACTION_URL_GOOGLE_APPS_SCRIPT con la URL real del script
+document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  fetch(this.action, { method: 'POST', body: new FormData(this) })
+    .then(function() {
+      btn.textContent = '✅ ¡Mensaje enviado!';
+      document.getElementById('formulario-contacto').reset();
+      setTimeout(function() {
+        btn.textContent = 'Enviar mensaje ✉️';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch(function() {
+      btn.textContent = '❌ Error. Escribinos por WhatsApp.';
+      btn.disabled = false;
+    });
+});
+
+-e 
+</script>
+
+</body>
+</html>
