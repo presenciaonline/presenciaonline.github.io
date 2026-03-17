@@ -42,7 +42,7 @@
 <header class="header">
   <div class="contenedor header-inner">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online">
+      <img src="assets/img/logo.png" alt="Presencia Online">
     </a>
     <nav class="nav" id="nav-menu">
       <a href="index.html">Inicio</a>
@@ -509,7 +509,17 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
   btn.disabled = true;
 
   fetch(this.action, { method: 'POST', body: new FormData(this) })
-    .then(() => {
+    .then(function() {
       btn.textContent = '✅ ¡Mensaje enviado!';
-      this.reset();
-      setTimeout(
+      document.getElementById('formulario-contacto').reset();
+      setTimeout(function() {
+        btn.textContent = 'Enviar mensaje ✉️';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch(function() {
+      btn.textContent = '❌ Error. Escribinos por WhatsApp.';
+      btn.disabled = false;
+    });
+});
+
