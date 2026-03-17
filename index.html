@@ -42,7 +42,7 @@
 <header class="header">
   <div class="contenedor header-inner">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo.png" alt="Presencia Online">
+      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online">
     </a>
     <nav class="nav" id="nav-menu">
       <a href="index.html">Inicio</a>
@@ -482,44 +482,4 @@
   </div>
 </footer>
 
-
-<!-- JAVASCRIPT -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-// Menú hamburger
-function toggleMenu() {
-  document.getElementById('nav-menu').classList.toggle('abierto');
-}
-
-// Animación scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Formulario — Google Apps Script
-// TODO: Reemplazar ACTION_URL_GOOGLE_APPS_SCRIPT con la URL real del script
-document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
-
-  fetch(this.action, { method: 'POST', body: new FormData(this) })
-    .then(function() {
-      btn.textContent = '✅ ¡Mensaje enviado!';
-      document.getElementById('formulario-contacto').reset();
-      setTimeout(function() {
-        btn.textContent = 'Enviar mensaje ✉️';
-        btn.disabled = false;
-      }, 4000);
-    })
-    .catch(function() {
-      btn.textContent = '❌ Error. Escribinos por WhatsApp.';
-      btn.disabled = false;
-    });
-});
 
