@@ -1119,6 +1119,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
+  transform: rotate(-2deg);
 }
 
 /* NAV */
@@ -1134,8 +1135,10 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 
 /* HERO */
 .demo-hero {
-  padding: 14px;
+  padding: 16px;
   text-align: center;
+  background: linear-gradient(135deg, #e8f0fe, #dff3ea);
+  border-bottom: 1px solid #eee;
 }
 
 .demo-title {
@@ -1151,12 +1154,14 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 
 .demo-btn {
-  background: #22c55e;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
-  padding: 6px;
-  border-radius: 6px;
-  font-size: 0.65rem;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.7rem;
   font-weight: 700;
+  margin-top: 6px;
+  box-shadow: 0 6px 14px rgba(34,197,94,0.4);
 }
 
 /* SECCIONES */
@@ -1168,10 +1173,11 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 
 .demo-box {
   flex: 1;
-  height: 30px;
-  background: #e9eef5;
-  border-radius: 6px;
+  height: 36px;
+  background: linear-gradient(135deg, #eef2f7, #e3e8ef);
+  border-radius: 8px;
 }
+
 
 /* FONDOS */
 .demo-back {
@@ -1184,15 +1190,11 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 
 .demo-back-1 {
-  top: 10px;
-  left: 10px;
-  transform: rotate(-3deg);
-  z-index: 1;
+  transform: rotate(-6deg);
+  opacity: 0.6;
 }
 
 .demo-back-2 {
-  top: 20px;
-  left: 20px;
-  transform: rotate(3deg);
-  z-index: 0;
+  transform: rotate(6deg);
+  opacity: 0.4;
 }
