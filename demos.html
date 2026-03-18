@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demos | Presencia Online</title>
+<meta name="description" content="Mirá ejemplos reales de páginas web para profesionales independientes. Psicólogos, médicos, abogados, contadores, odontólogos y más.">
+<link rel="canonical" href="https://presenciaonline.github.io/demos.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presenciaonline.github.io/demos.html">
+<meta property="og:title" content="Demos | Presencia Online">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Presencia Online">
+<link rel="stylesheet" href="presencia.css">
+<style>
+.demos-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.demo-page-card {
+  background: var(--blanco);
+  border: 2px solid rgba(26,111,204,0.08);
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-page-card:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-5px);
+  border-color: var(--azul);
+}
+
+.demo-page-card.proximamente {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.demo-page-card.proximamente:hover {
+  transform: none;
+  box-shadow: var(--sombra);
+  border-color: rgba(26,111,204,0.08);
+}
+
+.demo-page-preview {
+  height: 160px;
+  background: linear-gradient(135deg, #e8f0fe, #e8f5ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+}
+
+.demo-page-card:not(.proximamente):hover .demo-page-preview::after {
+  content: 'Ver demo →';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(26,111,204,0.9), transparent);
+  color: white;
+  padding: 20px 16px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.demo-page-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--verde);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.demo-page-badge.prox {
+  background: var(--gris-texto);
+}
+
+.demo-page-info {
+  padding: 20px 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.demo-page-info h3 {
+  font-size: 1rem;
+  color: var(--oscuro);
+}
+
+.demo-page-info p {
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+  flex: 1;
+}
+
+.demo-page-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--azul);
+  margin-top: 4px;
+}
+
+.demo-page-card.proximamente .demo-page-link {
+  color: var(--gris-texto);
+}
+
+@media (max-width: 1024px) {
+  .demos-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .demos-page-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- BOTONES FLOTANTES -->
+<div class="flotantes">
+  <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  </a>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online">
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="profesionales.html">Profesionales</a>
+      <a href="demos.html">Demos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="blog.html">Blog</a>
+      <a href="conocenos.html">Conócenos</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO PÁGINA -->
+<section class="seccion" style="background: linear-gradient(135deg, #f0f6ff 0%, #e8f5ee 100%); padding: 80px 0 60px;">
+  <div class="contenedor" style="text-align:center;">
+    <h1 style="margin-bottom:16px;">Ejemplos reales de páginas web<br><span style="color:var(--azul);">para cada profesión.</span></h1>
+    <p style="font-size:1.05rem; color:var(--gris-texto); max-width:560px; margin:0 auto;">Cada demo está diseñada específicamente para su nicho. Navegá por dentro — así va a quedar tu página.</p>
+  </div>
+</section>
+
+<!-- GRILLA DE DEMOS -->
+<section class="seccion">
+  <div class="contenedor">
+    <div class="demos-page-grid">
+
+      <!-- ODONTÓLOGO — ACTIVO -->
+      <a href="demos/odontologo/index.html" class="demo-page-card">
+        <div class="demo-page-preview">
+          🦷
+          <div class="demo-page-badge">Disponible</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Odontólogos</h3>
+          <p>Dra. Valentina Sosa · Odontología General y Estética · Palermo, CABA. Con secciones de tratamientos, sobre mí y contacto.</p>
+          <span class="demo-page-link">Ver demo →</span>
+        </div>
+      </a>
+
+      <!-- PSICÓLOGO — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          🧠
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Psicólogos</h3>
+          <p>Demo en desarrollo. Diseño cálido y profesional para transmitir confianza a nuevos pacientes.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- MÉDICO — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          🩺
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Médicos y especialistas</h3>
+          <p>Demo en desarrollo. Clara y moderna, orientada a conseguir turnos desde el primer día.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- ABOGADO — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          ⚖️
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Abogados</h3>
+          <p>Demo en desarrollo. Seria y profesional, con foco en la especialidad y la generación de consultas.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- CONTADOR — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          📊
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Contadores</h3>
+          <p>Demo en desarrollo. Ordenada y clara para mostrar servicios y diferenciarse de la competencia.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- MARKETING — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          📣
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Marketing y contenido</h3>
+          <p>Demo en desarrollo. Dinámica y moderna para mostrar portfolio, métricas y servicios a marcas.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- COACH — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          🧭
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Coaches</h3>
+          <p>Demo en desarrollo. Enfocada en transmitir el enfoque y diferenciarse antes de la primera conversación.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- ARQUITECTO — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          🏛️
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Arquitectos</h3>
+          <p>Demo en desarrollo. Portfolio visual con galería de proyectos y ficha de cada trabajo.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- NUTRICIONISTA — PRÓXIMAMENTE -->
+      <div class="demo-page-card proximamente">
+        <div class="demo-page-preview">
+          🥗
+          <div class="demo-page-badge prox">Próximamente</div>
+        </div>
+        <div class="demo-page-info">
+          <h3>Nutricionistas</h3>
+          <p>Demo en desarrollo. Credencial profesional clara con servicios, enfoque y formulario de consulta.</p>
+          <span class="demo-page-link">Próximamente</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:56px;">
+      <p style="color:var(--gris-texto); margin-bottom:20px;">¿Querés ver cómo quedaría tu página antes de decidir?</p>
+      <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20ver%20una%20demo%20personalizada." target="_blank" class="btn btn-whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:22px;height:22px;"> Pedí una demo personalizada
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online">
+        <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y de acabado profesional.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="index.html">Inicio</a>
+        <a href="profesionales.html">Para profesionales</a>
+        <a href="demos.html">Demos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="conocenos.html">Conócenos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
+        <a href="blog/salud/12-cuanto-cuesta-pagina-web-medico.html">Salud</a>
+        <a href="blog/legal/03-como-puede-un-abogado-aparecer-en-google.html">Legal</a>
+        <a href="blog/contable/05-que-deberia-tener-la-pagina-web-de-un-contador.html">Contable</a>
+        <a href="blog/odontologo/17-pagina-web-dentista-celular.html">Odontología</a>
+        <a href="blog/marketing/10-pagina-web-influencer-confianza-marcas.html">Marketing</a>
+        <a href="blog/coach/07-coach-pagina-web-vs-linkedin.html">Coach</a>
+        <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html">Arquitecto</a>
+        <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html">Nutricionista</a>
+      </div>
+      <div class="footer-col">
+        <h4>Demos</h4>
+        <a href="demos/odontologo/index.html">Demo Odontólogo ✓</a>
+        <a href="demos/psicologo/index.html">Demo Psicólogo</a>
+        <a href="demos/salud/index.html">Demo Salud</a>
+        <a href="demos/legal/index.html">Demo Abogado</a>
+        <a href="demos/contable/index.html">Demo Contador</a>
+        <a href="demos/marketing/index.html">Demo Marketing</a>
+        <a href="demos/coach/index.html">Demo Coach</a>
+        <a href="demos/arquitecto/index.html">Demo Arquitecto</a>
+        <a href="demos/nutricionista/index.html">Demo Nutricionista</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/cookies.html">Cookies</a>
+        <a href="legal/terminos.html">Términos</a>
+        <a href="legal/disclaimer.html">Aviso legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+</script>
+</body>
+</html>
