@@ -11,7 +11,6 @@
 <meta name="author" content="Presencia Online">
 <link rel="canonical" href="https://presenciaonline.github.io/index.html">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://presenciaonline.github.io/">
 <meta property="og:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
@@ -20,13 +19,112 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Presencia Online">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
 <meta name="twitter:description" content="Páginas web profesionales para especialistas independientes. Modernas, rápidas, pago único y listas en menos de 72 horas.">
 <meta name="twitter:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
 
 <link rel="stylesheet" href="presencia.css">
+
+<style>
+/* CARDS DE NICHOS — INDEX */
+.nichos-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.nicho-index-card {
+  background: var(--blanco);
+  border: 2px solid rgba(26,111,204,0.08);
+  border-radius: var(--radio-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: var(--transicion);
+}
+
+.nicho-index-card:hover {
+  border-color: var(--azul);
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-4px);
+}
+
+.nicho-index-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nicho-index-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e8f0fe, #e8f5ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.nicho-index-card h3 {
+  font-size: 0.95rem;
+  color: var(--oscuro);
+}
+
+.nicho-index-frase {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--oscuro);
+  line-height: 1.4;
+}
+
+.nicho-index-copy {
+  font-size: 0.83rem;
+  color: var(--gris-texto);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.nicho-index-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.nicho-link-primary {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--azul);
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+.nicho-link-secondary {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--gris-texto);
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+.nicho-link-primary:hover { color: var(--azul-oscuro); }
+.nicho-link-secondary:hover { color: var(--azul); }
+
+@media (max-width: 1024px) {
+  .nichos-index-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .nichos-index-grid { grid-template-columns: 1fr; }
+}
+</style>
+
 </head>
 
 <body>
@@ -34,7 +132,6 @@
 <!-- BOTONES FLOTANTES -->
 <div class="flotantes">
   <!--
-  COMENTADO PARA CUANDO TENGA INSTAGRAM Y FACEBOOK LA EMPRESA
   <a href="https://instagram.com/presenciaonline" class="instagram-float" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
   </a>
@@ -71,45 +168,38 @@
 <!-- 1. HERO -->
 <section class="hero">
   <div class="contenedor hero-inner">
-
     <div class="hero-contenido">
       <div class="hero-badge">Especialistas independientes</div>
       <h1>Tu tarjeta de presentación<br><span>en el mundo digital.</span></h1>
       <p class="hero-subtitulo">Profesional, personalizada y lista para usar en menos de 72 horas.</p>
-
       <div class="hero-diferenciales">
         <div class="diferencial-item"><div class="icono">⚡</div>Carga ultrarrápida</div>
         <div class="diferencial-item"><div class="icono">🎨</div>Diseño moderno</div>
         <div class="diferencial-item"><div class="icono">💰</div>Pago único</div>
         <div class="diferencial-item"><div class="icono">🔧</div>Cambios en 48hs</div>
       </div>
-
       <div class="hero-cta">
         <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:22px;height:22px;"> Consultanos por WhatsApp</a>
         <a href="demos.html" class="btn btn-outline">Ver demos →</a>
       </div>
     </div>
-
     <div class="hero-imagen">
       <div class="hero-imagen-marco">
         <div class="hero-imagen-placeholder">
           <div class="icono-grande">🖥️</div>
           <span>Tu página web profesional</span>
         </div>
-        <!-- Reemplazar con: <img src="assets/img/hero.jpg" alt="Páginas web profesionales"> -->
       </div>
     </div>
-
   </div>
 </section>
 
 
-<!-- 3. CÓMO FUNCIONA -->
+<!-- 2. CÓMO FUNCIONA -->
 <section class="seccion reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Cómo funciona?</h2>
     <p class="seccion-subtitulo">Tres pasos simples y tu página está online.</p>
-
     <div class="pasos-grid">
       <div class="paso-card">
         <div class="paso-numero">1</div>
@@ -131,192 +221,182 @@
 </section>
 
 
-<!-- 4. QUÉ INCLUYE -->
-<section class="seccion seccion-alt reveal">
-  <div class="contenedor">
-    <h2 class="seccion-titulo">¿Qué incluye?</h2>
-    <p class="seccion-subtitulo">Todo lo que necesitás para tener una presencia digital profesional.</p>
-
-    <div class="incluye-grid">
-      <div class="incluye-item">
-        <div class="incluye-icono">💰</div>
-        <div class="incluye-texto">
-          <h3>Pago único</h3>
-          <p>Sin mensualidades ni costos ocultos. Pagás una vez y la página es tuya para siempre.</p>
-        </div>
-      </div>
-      <div class="incluye-item">
-        <div class="incluye-icono">⚡</div>
-        <div class="incluye-texto">
-          <h3>Carga ultrarrápida</h3>
-          <p>Páginas estáticas, livianas y optimizadas. Cargan en segundos desde cualquier dispositivo.</p>
-        </div>
-      </div>
-      <div class="incluye-item">
-        <div class="incluye-icono">📱</div>
-        <div class="incluye-texto">
-          <h3>Perfecta en celular</h3>
-          <p>Diseño responsive optimizado para que se vea impecable en todos los dispositivos.</p>
-        </div>
-      </div>
-      <div class="incluye-item">
-        <div class="incluye-icono">🔧</div>
-        <div class="incluye-texto">
-          <h3>Modificaciones en 48hs</h3>
-          <p>¿Cambió algo? Mandás un ticket y lo resolvemos en menos de 48 horas.</p>
-        </div>
-      </div>
-      <div class="incluye-item">
-        <div class="incluye-icono">🎬</div>
-        <div class="incluye-texto">
-          <h3>Fotos y videos</h3>
-          <p>Soporte completo para contenido multimedia optimizado para una carga rápida.</p>
-        </div>
-      </div>
-      <div class="incluye-item">
-        <div class="incluye-icono">🔍</div>
-        <div class="incluye-texto">
-          <h3>Optimizada para Google</h3>
-          <p>SEO básico incluido para que los buscadores encuentren tu página desde el primer día.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- 2+5. EJEMPLOS REALES -->
-<section class="seccion reveal">
-  <div class="contenedor">
-    <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
-    <p class="seccion-subtitulo">Creamos páginas web para especialistas independientes que quieren verse profesionales online. Mirá cómo quedaría la tuya.</p>
-
-    <div class="demos-grid">
-      <a href="demos/psicologo/index.html" class="demo-card">
-        <div class="demo-preview">🧠</div>
-        <div class="demo-info">
-          <h3>Psicólogos</h3>
-          <p>Transmití confianza y conseguí nuevos pacientes con una web que refleja tu enfoque terapéutico.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/salud/index.html" class="demo-card">
-        <div class="demo-preview">🩺</div>
-        <div class="demo-info">
-          <h3>Profesionales de la salud</h3>
-          <p>Médicos, nutricionistas, kinesiólogos y más. Tu consultorio online disponible las 24hs.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/legal/index.html" class="demo-card">
-        <div class="demo-preview">⚖️</div>
-        <div class="demo-info">
-          <h3>Abogados</h3>
-          <p>Mostrá tu especialidad y generá consultas desde el primer día con una presencia profesional.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/contable/index.html" class="demo-card">
-        <div class="demo-preview">📊</div>
-        <div class="demo-info">
-          <h3>Contadores</h3>
-          <p>Diferenciarte de la competencia con una web clara que comunica tus servicios y experiencia.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/odontologo/index.html" class="demo-card">
-        <div class="demo-preview">🦷</div>
-        <div class="demo-info">
-          <h3>Odontólogos</h3>
-          <p>Mostrá tus tratamientos y hacé que los pacientes lleguen listos para atenderse.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/marketing/index.html" class="demo-card">
-        <div class="demo-preview">📣</div>
-        <div class="demo-info">
-          <h3>Marketing y contenido</h3>
-          <p>Community managers e influencers. Tu media kit y portfolio siempre disponibles.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/coach/index.html" class="demo-card">
-        <div class="demo-preview">🧭</div>
-        <div class="demo-info">
-          <h3>Coaches</h3>
-          <p>Tu enfoque explicado antes de la primera conversación, para que el cliente indicado llegue listo.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/arquitecto/index.html" class="demo-card">
-        <div class="demo-preview">🏛️</div>
-        <div class="demo-info">
-          <h3>Arquitectos</h3>
-          <p>Tu portfolio en un solo lugar, a la altura del trabajo que representa.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-      <a href="demos/nutricionista/index.html" class="demo-card">
-        <div class="demo-preview">🥗</div>
-        <div class="demo-info">
-          <h3>Nutricionistas</h3>
-          <p>Tu formación y criterio profesional visibles desde el primer momento.</p>
-          <span class="nicho-link">Ver demo →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- 6. POR QUÉ ELEGIRNOS -->
+<!-- 3. POR QUÉ ELEGIRNOS — fusionada con qué incluye -->
 <section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
     <p class="seccion-subtitulo">Lo que nos diferencia de cualquier otra opción del mercado.</p>
-
     <div class="porque-grid">
       <div class="porque-item">
         <div class="porque-icono">⏱️</div>
-        <h3>72 horas, no semanas</h3>
-        <p>Mientras otros tardan semanas, vos ya estás online y recibiendo consultas.</p>
+        <h3>Online en 72 horas</h3>
+        <p>Mientras otros tardan semanas en entregar algo, vos ya estás online. Sin esperas, sin excusas.</p>
       </div>
       <div class="porque-item">
-        <div class="porque-icono">💳</div>
+        <div class="porque-icono">💰</div>
         <h3>Pago único, sin sorpresas</h3>
-        <p>Sin planes mensuales ni renovaciones automáticas. Sabés exactamente cuánto pagás.</p>
+        <p>Pagás una vez y la página ya es tuya. Sin mensualidades, sin renovaciones automáticas, sin costos ocultos.</p>
       </div>
       <div class="porque-item">
         <div class="porque-icono">🚀</div>
-        <h3>Tecnología superior</h3>
-        <p>Sin WordPress ni plugins. Más rápidas, más seguras y que no se rompen solas.</p>
+        <h3>Sin WordPress ni plugins</h3>
+        <p>Páginas estáticas, livianas y rápidas. No se rompen, no necesitan actualizaciones y cargan en segundos.</p>
       </div>
       <div class="porque-item">
-        <div class="porque-icono">✏️</div>
-        <h3>Modificaciones garantizadas</h3>
-        <p>Cualquier cambio lo resolvemos en menos de 48 horas por sistema de tickets.</p>
+        <div class="porque-icono">📱</div>
+        <h3>Perfecta en celular</h3>
+        <p>La mayoría de tus pacientes o clientes te van a buscar desde el celular. Tu página se ve impecable en cualquier pantalla.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🔧</div>
+        <h3>Modificaciones en 48hs</h3>
+        <p>¿Cambió tu dirección, tus servicios o tu foto? Mandás un ticket y lo resolvemos en menos de 48 horas.</p>
       </div>
       <div class="porque-item">
         <div class="porque-icono">🎯</div>
         <h3>Pensada para tu profesión</h3>
-        <p>No es una plantilla genérica. Cada página está diseñada para tu nicho específico.</p>
-      </div>
-      <div class="porque-item">
-        <div class="porque-icono">📞</div>
-        <h3>Sin tecnicismos</h3>
-        <p>Vos nos pasás tu info por WhatsApp. Nosotros nos encargamos de todo lo técnico.</p>
+        <p>No es una plantilla genérica. Cada página está diseñada específicamente para cada profesional — con la estructura y el texto que tu cliente necesita ver.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- 7. BLOG — 9 TARJETAS -->
+<!-- 4. A QUIÉNES AYUDAMOS — grilla 3x3 con copy corto -->
 <section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
+    <p class="seccion-subtitulo">Trabajamos con especialistas independientes de distintas áreas. Encontrá la tuya.</p>
+
+    <div class="nichos-index-grid">
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🧠</div>
+          <h3>Psicólogos</h3>
+        </div>
+        <p class="nicho-index-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
+        <p class="nicho-index-copy">No en una plataforma que decide por vos. En un espacio propio donde tu enfoque y tu forma de trabajar puedan ser comprendidos antes del primer contacto.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#psicologo" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/psicologo/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🩺</div>
+          <h3>Médicos y especialistas</h3>
+        </div>
+        <p class="nicho-index-frase">Cuando lo buscan por su nombre, ¿qué encuentran?</p>
+        <p class="nicho-index-copy">La institución lo presenta como parte de un equipo. Pero cuando un paciente quiere elegirlo a usted específicamente, la información que necesita no siempre está disponible.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#medico" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/salud/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">⚖️</div>
+          <h3>Abogados</h3>
+        </div>
+        <p class="nicho-index-frase">Antes de contactarlo, ya lo evaluaron.</p>
+        <p class="nicho-index-copy">Sus clientes llegan por recomendación. Pero antes de escribirle, buscan su nombre. Y deciden en base a lo que ven.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#abogado" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/legal/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">📊</div>
+          <h3>Contadores</h3>
+        </div>
+        <p class="nicho-index-frase">Su experiencia es sólida. ¿La imagen que proyecta lo refleja?</p>
+        <p class="nicho-index-copy">Los clientes que le interesan evalúan antes de contactarlo. Lo que encuentran define si avanzan con usted o siguen buscando.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#contador" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/contable/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🦷</div>
+          <h3>Odontólogos</h3>
+        </div>
+        <p class="nicho-index-frase">Entre que lo ven y lo eligen, hay un paso.</p>
+        <p class="nicho-index-copy">El paciente no decide en redes. Decide cuando busca más información. Si no la encuentra clara, elige al consultorio que sí se la da.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#odontologo" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/odontologo/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">📣</div>
+          <h3>Marketing y contenido</h3>
+        </div>
+        <p class="nicho-index-frase">Entre lo que sabés y lo que mostrás, hay una brecha.</p>
+        <p class="nicho-index-copy">Tu trabajo genera resultados. Tu propia presentación debería reflejarlos.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#marketing" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/marketing/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🧭</div>
+          <h3>Coaches</h3>
+        </div>
+        <p class="nicho-index-frase">Si no se entiende, no sucede.</p>
+        <p class="nicho-index-copy">Tu trabajo empieza en la conversación. Pero antes de eso, alguien decide si llega o no. Lo que encuentra en ese momento define si avanza.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#coach" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/coach/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🏛️</div>
+          <h3>Arquitectos</h3>
+        </div>
+        <p class="nicho-index-frase">Su trabajo no es el problema. Es cómo se está viendo hoy.</p>
+        <p class="nicho-index-copy">Antes de la reunión, el cliente ya está decidiendo. La pregunta es con qué información.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#arquitecto" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/arquitecto/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🥗</div>
+          <h3>Nutricionistas</h3>
+        </div>
+        <p class="nicho-index-frase">En redes, todos parecen lo mismo. La diferencia real no siempre se ve.</p>
+        <p class="nicho-index-copy">Tu formación y tu criterio profesional merecen un lugar donde sean visibles antes de que el paciente tenga que preguntar.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#nutricionista" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/nutricionista/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. BLOG — 9 TARJETAS -->
+<section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">Recursos para profesionales</h2>
     <p class="seccion-subtitulo">Todo lo que necesitás saber sobre presencia digital para tu profesión.</p>
-
     <div class="blog-grid">
       <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html" class="blog-card">
         <span class="blog-nicho">🧠 Psicología</span>
@@ -364,7 +444,6 @@
         <span class="blog-leer">Leer artículo →</span>
       </a>
     </div>
-
     <div style="text-align:center; margin-top:40px;">
       <a href="blog.html" class="btn btn-outline">Ver todos los artículos →</a>
     </div>
@@ -372,14 +451,12 @@
 </section>
 
 
-<!-- 8. CONTACTO -->
-<section class="seccion seccion-alt reveal" id="contacto">
+<!-- 6. CONTACTO -->
+<section class="seccion reveal" id="contacto">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Hablamos?</h2>
     <p class="seccion-subtitulo">Contanos qué necesitás y te respondemos a la brevedad.</p>
-
     <div class="contacto-inner">
-
       <div class="contacto-info">
         <h2>Estamos para ayudarte</h2>
         <p>Si tenés dudas sobre el servicio, querés ver una demo personalizada o ya estás listo para arrancar, escribinos. Respondemos rápido.</p>
@@ -398,9 +475,6 @@
           </div>
         </div>
       </div>
-
-      <!-- FORMULARIO — Google Apps Script -->
-      <!-- TODO: Reemplazar ACTION_URL con la URL de tu Google Apps Script -->
       <div class="contacto-form">
         <form id="formulario-contacto" action="ACTION_URL_GOOGLE_APPS_SCRIPT" method="POST">
           <div class="form-grupo">
@@ -434,22 +508,19 @@
           <button type="submit" class="btn btn-primario form-submit">Enviar mensaje ✉️</button>
         </form>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- 9. FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="contenedor">
     <div class="footer-inner">
-
       <div class="footer-logo">
         <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online">
         <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y de acabado profesional.</p>
       </div>
-
       <div class="footer-col">
         <h4>Explorar</h4>
         <a href="index.html">Inicio</a>
@@ -458,7 +529,6 @@
         <a href="contacto.html">Contacto</a>
         <a href="conocenos.html">Conócenos</a>
       </div>
-
       <div class="footer-col">
         <h4>Blog</h4>
         <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
@@ -471,7 +541,6 @@
         <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html">Arquitecto</a>
         <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html">Nutricionista</a>
       </div>
-
       <div class="footer-col">
         <h4>Demos</h4>
         <a href="demos/psicologo/index.html">Demo Psicólogo</a>
@@ -484,9 +553,7 @@
         <a href="demos/arquitecto/index.html">Demo Arquitecto</a>
         <a href="demos/nutricionista/index.html">Demo Nutricionista</a>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
       <div class="footer-legal">
@@ -496,14 +563,11 @@
         <a href="legal/disclaimer.html">Aviso legal</a>
       </div>
     </div>
-
   </div>
 </footer>
 
 
-<!-- JAVASCRIPT -->
 <script>
-
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
@@ -521,7 +585,6 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
   const btn = this.querySelector('button[type="submit"]');
   btn.textContent = 'Enviando...';
   btn.disabled = true;
-
   fetch(this.action, { method: 'POST', body: new FormData(this) })
     .then(function() {
       btn.textContent = '✅ ¡Mensaje enviado!';
@@ -536,7 +599,6 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
       btn.disabled = false;
     });
 });
-
 </script>
 
 </body>
