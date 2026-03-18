@@ -4,133 +4,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para Profesionales | Presencia Online</title>
 <meta name="description" content="Páginas web para psicólogos, médicos, abogados, contadores, dentistas, coaches, arquitectos, nutricionistas y profesionales del marketing en Argentina.">
 <meta name="author" content="Presencia Online">
 <link rel="canonical" href="https://presenciaonline.github.io/profesionales.html">
-
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://presenciaonline.github.io/profesionales.html">
 <meta property="og:title" content="Para Profesionales | Presencia Online">
 <meta property="og:description" content="Páginas web para especialistas independientes en Argentina. Modernas, rápidas y listas en menos de 72 horas.">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Presencia Online">
-
 <link rel="stylesheet" href="presencia.css">
 
 <style>
-.profesionales-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+.prof-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.prof-card {
+.prof-item {
   background: var(--blanco);
   border: 2px solid rgba(26,111,204,0.08);
   border-radius: var(--radio-lg);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  padding: 40px 40px 32px;
   transition: var(--transicion);
-  text-decoration: none;
-  color: inherit;
+  scroll-margin-top: 90px;
 }
 
-.prof-card:hover {
-  border-color: var(--azul);
+.prof-item:hover {
+  border-color: rgba(26,111,204,0.20);
   box-shadow: var(--sombra-hover);
-  transform: translateY(-5px);
 }
 
-.prof-card-header {
+.prof-item-header {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
-.prof-icono {
-  width: 52px;
-  height: 52px;
+.prof-item-icono {
+  width: 56px;
+  height: 56px;
   border-radius: 14px;
   background: linear-gradient(135deg, #e8f0fe, #e8f5ee);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   flex-shrink: 0;
 }
 
-.prof-card-header h3 {
-  font-size: 1.05rem;
+.prof-item-header h2 {
+  font-size: 1.3rem;
   color: var(--oscuro);
-  line-height: 1.2;
+  margin: 0;
 }
 
-.prof-frase {
+.prof-item-frase {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--oscuro);
-  line-height: 1.4;
+  line-height: 1.45;
   border-left: 3px solid var(--verde);
-  padding-left: 12px;
+  padding-left: 14px;
+  margin-bottom: 18px;
 }
 
-.prof-copy {
-  font-size: 0.88rem;
+.prof-item-copy {
+  font-size: 0.95rem;
   color: var(--gris-texto);
-  line-height: 1.65;
-  flex: 1;
+  line-height: 1.75;
+  margin-bottom: 24px;
 }
 
-.prof-cta {
+.prof-item-copy p {
+  margin-bottom: 12px;
+}
+
+.prof-item-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.prof-item-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.prof-item-demo {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--azul);
+  color: var(--blanco);
+  border-radius: var(--radio);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--azul);
-  margin-top: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
   transition: var(--transicion);
 }
 
-.prof-card:hover .prof-cta {
-  gap: 10px;
+.prof-item-demo:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
-  .profesionales-grid { grid-template-columns: repeat(2, 1fr); }
+.prof-item-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #25D366;
+  color: var(--blanco);
+  border-radius: var(--radio);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+.prof-item-wa:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
-  .profesionales-grid { grid-template-columns: 1fr; }
+  .prof-item { padding: 28px 20px 24px; }
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- BOTONES FLOTANTES -->
 <div class="flotantes">
-  <!--
-  <a href="https://instagram.com/presenciaonline" class="instagram-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-  </a>
-  <a href="https://facebook.com/presenciaonline" class="facebook-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-  </a>
-  -->
   <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." class="whatsapp-float" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
   </a>
 </div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="contenedor header-inner">
     <a href="index.html" class="logo">
@@ -151,129 +171,199 @@
 </header>
 
 
-<!-- HERO -->
-<section class="hero" style="padding: 70px 0 60px;">
+<section class="hero" style="padding: 60px 0 50px;">
   <div class="contenedor" style="text-align:center;">
     <div class="hero-badge" style="margin: 0 auto 20px;">Especialistas independientes</div>
     <h1 style="max-width:700px; margin: 0 auto 16px;">Tu profesión merece una presencia digital a su altura.</h1>
-    <p class="hero-subtitulo" style="margin: 0 auto;">Mirá cómo se ve una página web pensada específicamente para tu área. Hacé clic en tu profesión.</p>
+    <p class="hero-subtitulo" style="margin: 0 auto;">Encontrá tu área y mirá cómo se ve una página web pensada específicamente para vos.</p>
   </div>
 </section>
 
 
-<!-- GRILLA 3x3 -->
 <section class="seccion">
   <div class="contenedor">
-
-    <div class="profesionales-grid">
+    <div class="prof-lista">
 
       <!-- PSICÓLOGO -->
-      <a href="demos/psicologo/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🧠</div>
-          <h3>Psicólogos</h3>
+      <div class="prof-item" id="psicologo">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🧠</div>
+          <h2>Psicólogos</h2>
         </div>
-        <p class="prof-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
-        <p class="prof-copy">No en una plataforma que decide por vos. En un espacio propio donde tu enfoque y tu forma de trabajar puedan ser comprendidos antes del primer contacto.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
+        <div class="prof-item-copy">
+          <p>Su trabajo se basa en algo esencial: el vínculo. Y ese vínculo no empieza en la sesión. Empieza antes.</p>
+          <p>Muchas personas que están buscando iniciar un proceso terapéutico necesitan comprender con quién van a hablar, cómo trabaja y si pueden sentirse cómodas dando ese primer paso. Cuando no encuentran esa información con claridad, la decisión se posterga. O se dirige hacia otro profesional.</p>
+          <p>No por falta de capacidad. Sino por falta de conexión en ese primer momento.</p>
+          <p>Contar con un espacio propio no es promocionarse. Es estar disponible para el paciente que ya está listo y todavía no sabe que usted existe. Un lugar donde su enfoque, su forma de trabajar y su manera de acompañar puedan ser percibidos antes del primer contacto. Sin intermediarios que se queden con parte de su trabajo ni con el control de a quién llega.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/psicologo/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20psicólogo%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- MÉDICO -->
-      <a href="demos/salud/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🩺</div>
-          <h3>Médicos y especialistas</h3>
+      <div class="prof-item" id="medico">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🩺</div>
+          <h2>Médicos y especialistas</h2>
         </div>
-        <p class="prof-frase">Cuando lo buscan por su nombre, ¿qué encuentran?</p>
-        <p class="prof-copy">La institución lo presenta como parte de un equipo. Pero cuando un paciente quiere elegirlo a usted específicamente, la información que necesita no siempre está disponible.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Cuando lo buscan por su nombre, ¿qué encuentran?</p>
+        <div class="prof-item-copy">
+          <p>Su trayectoria se construyó con años de formación, experiencia y práctica clínica. Pero online, en la mayoría de los casos, aparece representada a través de las instituciones donde trabaja.</p>
+          <p>Eso tiene valor. Y también tiene un límite.</p>
+          <p>Cuando un paciente lo busca por su nombre, no siempre encuentra una presentación clara de su especialidad, su recorrido o su forma de trabajo. En ese momento no hay contexto. Solo la información disponible. Y esa información no siempre le pertenece.</p>
+          <p>Si la relación con esa institución cambia, esa visibilidad desaparece con ella. Su presencia propia no depende de ninguna institución. Muestra quién es usted y cómo trabaja, antes del primer contacto. No como promoción, sino como claridad.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/salud/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20médico%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- ABOGADO -->
-      <a href="demos/legal/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">⚖️</div>
-          <h3>Abogados</h3>
+      <div class="prof-item" id="abogado">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">⚖️</div>
+          <h2>Abogados</h2>
         </div>
-        <p class="prof-frase">Antes de contactarlo, ya lo evaluaron.</p>
-        <p class="prof-copy">Sus clientes llegan por recomendación. Pero antes de escribirle, buscan su nombre. Y deciden en base a lo que ven.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Antes de contactarlo, ya lo evaluaron.</p>
+        <div class="prof-item-copy">
+          <p>Sus clientes llegan por recomendación. Pero hay un paso previo que suele pasar desapercibido.</p>
+          <p>Antes de escribirle o llamarlo, esa persona busca su nombre. No para contactarlo, sino para confirmar si es la opción adecuada. En ese momento no hay explicación posible. Solo lo que aparece.</p>
+          <p>Si la información es clara, ordenada y transmite la solidez que corresponde a su trayectoria, el contacto avanza. Si no lo es, la decisión se toma igual — simplemente en otra dirección.</p>
+          <p>Su carta de presentación digital ordena esa instancia: muestra su especialidad, su experiencia y su forma de trabajo, para que esa primera evaluación juegue a su favor.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/legal/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20abogado%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- CONTADOR -->
-      <a href="demos/contable/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">📊</div>
-          <h3>Contadores</h3>
+      <div class="prof-item" id="contador">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">📊</div>
+          <h2>Contadores</h2>
         </div>
-        <p class="prof-frase">Su experiencia es sólida. ¿La imagen que proyecta lo refleja?</p>
-        <p class="prof-copy">Los clientes que le interesan evalúan antes de contactarlo. Lo que encuentran define si avanzan con usted o siguen buscando.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Su experiencia es sólida. ¿La imagen que proyecta lo refleja?</p>
+        <div class="prof-item-copy">
+          <p>Usted no necesita más clientes. Necesita que los clientes correctos lo encuentren a usted.</p>
+          <p>Su cartera se construyó con el tiempo. Eso habla de su trayectoria. Pero hay un paso previo que no siempre se ve.</p>
+          <p>Antes de contactarlo, un potencial cliente busca su nombre. No para consultarle, sino para confirmar si es la opción adecuada. En ese momento no hay explicación posible. Solo lo que aparece.</p>
+          <p>Si la información transmite orden, criterio y claridad, la decisión avanza. Si no lo hace, la evaluación continúa en otra dirección — sin que usted lo sepa.</p>
+          <p>Su credencial digital ordena esa instancia: comunica su experiencia, su especialidad y la solidez de su trabajo, para que esa primera evaluación acompañe el valor que ya tiene.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/contable/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20contador%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
-      <!-- DENTISTA -->
-      <a href="demos/odontologo/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🦷</div>
-          <h3>Odontólogos</h3>
+      <!-- ODONTÓLOGO -->
+      <div class="prof-item" id="odontologo">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🦷</div>
+          <h2>Odontólogos</h2>
         </div>
-        <p class="prof-frase">Entre que lo ven y lo eligen, hay un paso.</p>
-        <p class="prof-copy">El paciente no decide en redes. Decide cuando busca más información. Si no la encuentra clara, elige al consultorio que sí se la da.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Entre que lo ven y lo eligen, hay un paso.</p>
+        <div class="prof-item-copy">
+          <p>Muchos pacientes llegan por Instagram o recomendación. Eso funciona. Pero antes de pedir turno, hacen algo más.</p>
+          <p>Buscan información para decidir. Quieren ver tratamientos, forma de trabajo, qué pueden esperar. En ese momento no hay explicación posible. Solo lo que encuentran.</p>
+          <p>No es un problema de visibilidad. Es lo que pasa después.</p>
+          <p>Si esa información es clara y genera confianza, el turno avanza. Si no lo es, la decisión se toma igual — simplemente con otro consultorio. En silencio, sin que usted lo sepa.</p>
+          <p>Su consultorio en internet trabaja cuando usted no está: muestra sus tratamientos, genera confianza antes del primer contacto y hace que el paciente llegue listo para sacar turno. No compite con Instagram. Lo completa.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/odontologo/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20odontólogo%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- MARKETING -->
-      <a href="demos/marketing/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">📣</div>
-          <h3>Marketing y contenido</h3>
+      <div class="prof-item" id="marketing">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">📣</div>
+          <h2>Marketing y contenido</h2>
         </div>
-        <p class="prof-frase">Entre lo que sabés y lo que mostrás, hay una brecha.</p>
-        <p class="prof-copy">Tu trabajo genera resultados. Tu propia presentación debería reflejarlos.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Entre lo que sabés y lo que mostrás, hay una brecha.</p>
+        <div class="prof-item-copy">
+          <p>Sabés exactamente lo que deberías tener. Eso no es el problema.</p>
+          <p>El problema es que mientras lo postergás, hay clientes que te buscan antes de contactarte. Y en ese momento no evalúan tu criterio — evalúan lo que pueden ver.</p>
+          <p>Si tu portfolio acompaña, la decisión avanza. Si no, la comparación aparece. En silencio, sin que nadie te lo diga.</p>
+          <p>No es falta de capacidad. Es la brecha entre lo que sabés y lo que mostrás. Es el caso más difícil de priorizar — siempre queda para ese fin de semana que no llega. Los más inteligentes lo resuelven simple: lo delegan.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/marketing/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20profesional%20del%20marketing%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- COACH -->
-      <a href="demos/coach/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🧭</div>
-          <h3>Coaches</h3>
+      <div class="prof-item" id="coach">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🧭</div>
+          <h2>Coaches</h2>
         </div>
-        <p class="prof-frase">Si no se entiende, no sucede.</p>
-        <p class="prof-copy">Tu trabajo empieza en la conversación. Pero antes de eso, alguien decide si llega o no. Lo que encuentra en ese momento define si avanza — o elige a otro que sí tiene claro lo que ofrece.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Si no se entiende, no sucede.</p>
+        <div class="prof-item-copy">
+          <p>Tu trabajo no es superficial. Requiere conversación, proceso y tiempo. El problema es que, antes de eso, hay una instancia silenciosa: cuando alguien intenta entender si sos la persona indicada.</p>
+          <p>Si no logra hacerlo, no avanza. No agenda. No escribe. No pregunta. No porque no le sirvas — porque no lo pudo ver.</p>
+          <p>No es un problema de calidad. Es un problema de lo que se transmite antes de que la conversación ocurra.</p>
+          <p>Una web genérica no te haría justicia. Por eso la tuya no puede ser genérica. Tu espacio propio no simplifica lo que hacés. Lo hace visible. Cuenta tu enfoque con la profundidad que merece y le da al cliente indicado la claridad que necesita para dar el primer paso.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/coach/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20coach%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- ARQUITECTO -->
-      <a href="demos/arquitecto/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🏛️</div>
-          <h3>Arquitectos</h3>
+      <div class="prof-item" id="arquitecto">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🏛️</div>
+          <h2>Arquitectos</h2>
         </div>
-        <p class="prof-frase">Su trabajo no es el problema. Es cómo se está viendo hoy.</p>
-        <p class="prof-copy">Antes de la reunión, el cliente ya está decidiendo. La pregunta es con qué información.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">Su trabajo no es el problema. Es cómo se está viendo hoy.</p>
+        <div class="prof-item-copy">
+          <p>Sus proyectos tienen criterio, detalle y una forma de trabajo clara. Pero hoy no están en un solo lugar. Están repartidos entre imágenes, archivos y mensajes.</p>
+          <p>Cuando un cliente lo busca, lo que encuentra no logra transmitir ese nivel. No ve el proceso. No entiende las decisiones. No percibe el estilo completo. Solo ve fragmentos. Y en base a esos fragmentos, decide.</p>
+          <p>No se trata de hacer más. Se trata de mostrar mejor. Sabés exactamente cómo querés que se vea — y por eso lo postergás. Esperando el proyecto perfecto, el momento correcto, el tiempo que no llega.</p>
+          <p>Mientras tanto, hay clientes que te buscan, no encuentran lo que esperan, y eligen a otro que sí tiene algo que mostrar. Un portfolio no es una colección de imágenes. Es la forma en que alguien entiende lo que hacés — antes de que la reunión ocurra.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/arquitecto/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20arquitecto%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
       <!-- NUTRICIONISTA -->
-      <a href="demos/nutricionista/index.html" class="prof-card">
-        <div class="prof-card-header">
-          <div class="prof-icono">🥗</div>
-          <h3>Nutricionistas</h3>
+      <div class="prof-item" id="nutricionista">
+        <div class="prof-item-header">
+          <div class="prof-item-icono">🥗</div>
+          <h2>Nutricionistas</h2>
         </div>
-        <p class="prof-frase">En redes, todos parecen lo mismo. La diferencia real no siempre se ve.</p>
-        <p class="prof-copy">Tu formación y tu criterio profesional merecen un lugar donde sean visibles antes de que el paciente tenga que preguntar.</p>
-        <span class="prof-cta">Ver demo →</span>
-      </a>
+        <p class="prof-item-frase">En redes, todos parecen lo mismo. La diferencia real no siempre se ve.</p>
+        <div class="prof-item-copy">
+          <p>Hoy la nutrición está en todos lados. En redes, en videos, en cuentas que hablan con seguridad sin formación. Y para quien busca ayuda, todo se mezcla.</p>
+          <p>En ese contexto, la diferencia entre un profesional y alguien sin respaldo no siempre es evidente. No porque no exista — porque no se está viendo.</p>
+          <p>Mientras tanto, vos tenés formación, experiencia y criterio clínico real. Pero eso no siempre aparece con claridad en lo que el paciente encuentra. Y en esa primera impresión, la decisión empieza a definirse.</p>
+          <p>No se trata de hacer más contenido. Se trata de salir del ruido. Tu presencia propia es el lugar donde tu especialidad, tu trayectoria y tu forma de trabajar son visibles desde el primer momento. Donde la diferencia no tiene que explicarse — se entiende.</p>
+        </div>
+        <div class="prof-item-cta">
+          <a href="demos/nutricionista/index.html" class="prof-item-demo">Ver demo →</a>
+          <a href="https://wa.me/5491149167978?text=Hola,%20soy%20nutricionista%20y%20quiero%20información%20sobre%20la%20página%20web." target="_blank" class="prof-item-wa"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:18px;height:18px;"> Consultanos</a>
+        </div>
+      </div>
 
     </div>
-
   </div>
 </section>
 
 
 <!-- CTA FINAL -->
-<section class="seccion seccion-alt reveal">
+<section class="seccion seccion-alt">
   <div class="contenedor" style="text-align:center;">
     <h2>¿No encontrás tu profesión?</h2>
     <p class="seccion-subtitulo">Trabajamos con cualquier especialista independiente. Consultanos y te mostramos cómo quedaría tu página.</p>
@@ -284,16 +374,13 @@
 </section>
 
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="contenedor">
     <div class="footer-inner">
-
       <div class="footer-logo">
         <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online">
         <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y de acabado profesional.</p>
       </div>
-
       <div class="footer-col">
         <h4>Explorar</h4>
         <a href="index.html">Inicio</a>
@@ -302,7 +389,6 @@
         <a href="contacto.html">Contacto</a>
         <a href="conocenos.html">Conócenos</a>
       </div>
-
       <div class="footer-col">
         <h4>Blog</h4>
         <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
@@ -315,7 +401,6 @@
         <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html">Arquitecto</a>
         <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html">Nutricionista</a>
       </div>
-
       <div class="footer-col">
         <h4>Demos</h4>
         <a href="demos/psicologo/index.html">Demo Psicólogo</a>
@@ -328,9 +413,7 @@
         <a href="demos/arquitecto/index.html">Demo Arquitecto</a>
         <a href="demos/nutricionista/index.html">Demo Nutricionista</a>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
       <div class="footer-legal">
@@ -340,22 +423,18 @@
         <a href="legal/disclaimer.html">Aviso legal</a>
       </div>
     </div>
-
   </div>
 </footer>
-
 
 <script>
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
