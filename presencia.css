@@ -1029,3 +1029,88 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   transform: scale(1.04);
   z-index: 2;
 }
+
+.hero-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mockups {
+  position: relative;
+  width: 420px;
+  height: 380px;
+}
+
+/* TARJETAS */
+.mockup {
+  position: absolute;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  padding: 12px;
+  transition: 0.4s ease;
+}
+
+/* POSICIÓN */
+.mockup-1 { width: 200px; height: 140px; top: 0; left: 0; transform: rotate(-6deg); }
+.mockup-2 { width: 220px; height: 150px; top: 40px; right: 0; transform: rotate(4deg); }
+.mockup-3 { width: 240px; height: 160px; bottom: 0; left: 30px; transform: rotate(-3deg); }
+.mockup-4 { width: 180px; height: 120px; bottom: 20px; right: 20px; transform: rotate(6deg); }
+
+/* MINI WEB */
+.mini-web {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #f9fbff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ELEMENTOS */
+.mini-header {
+  width: 40%;
+  height: 6px;
+  background: #1a6fcc;
+  border-radius: 4px;
+}
+
+.mini-title {
+  width: 80%;
+  height: 8px;
+  background: #1f2d3d;
+  border-radius: 4px;
+}
+
+.mini-title.short {
+  width: 60%;
+}
+
+.mini-text {
+  width: 100%;
+  height: 6px;
+  background: #b0b8c1;
+  border-radius: 4px;
+}
+
+.mini-text.small {
+  width: 70%;
+}
+
+.mini-btn {
+  width: 50%;
+  height: 8px;
+  background: #27c26c;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+/* HOVER */
+.mockup:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
