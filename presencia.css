@@ -962,6 +962,8 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; justify-content: center; }
 }
+
+/*
 .hero-imagen {
   flex: 1;
   display: flex;
@@ -1029,6 +1031,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   transform: scale(1.04);
   z-index: 2;
 }
+*/
 
 .hero-imagen {
   flex: 1;
