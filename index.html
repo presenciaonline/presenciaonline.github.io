@@ -145,11 +145,10 @@
 </div>
 
 <!-- HEADER -->
-<header class="header header-transparente" id="header">
+<header class="header">
   <div class="contenedor header-inner">
     <a href="index.html" class="logo">
-      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online" class="logo-normal">
-      <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online" class="logo-blanco">
+      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online">
     </a>
     <nav class="nav" id="nav-menu">
       <a href="index.html">Inicio</a>
@@ -166,15 +165,11 @@
 </header>
 
 
-<!-- 1. HERO CON FOTO DE FONDO -->
-<section class="hero hero-foto">
-  <div class="hero-bg">
-    <img src="assets/img/hero/hero.jpg" alt="Presencia Online — páginas web para profesionales">
-    <div class="hero-overlay"></div>
-  </div>
+<!-- 1. HERO -->
+<section class="hero">
   <div class="contenedor hero-inner">
     <div class="hero-contenido">
-      <div class="hero-badge">✦ Especialistas independientes</div>
+      <div class="hero-badge">Especialistas independientes</div>
       <h1>Tu tarjeta de presentación<br><span>en el mundo digital.</span></h1>
       <p class="hero-subtitulo">Profesional, personalizada y lista para usar en menos de 72 horas.</p>
       <div class="hero-diferenciales">
@@ -185,7 +180,15 @@
       </div>
       <div class="hero-cta">
         <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:22px;height:22px;"> Consultanos por WhatsApp</a>
-        <a href="demos.html" class="btn btn-ghost-blanco">Ver demos →</a>
+        <a href="demos.html" class="btn btn-outline">Ver demos →</a>
+      </div>
+    </div>
+    <div class="hero-imagen">
+      <div class="hero-imagen-marco">
+        <div class="hero-imagen-placeholder">
+          <div class="icono-grande">🖥️</div>
+          <span>Tu página web profesional</span>
+        </div>
       </div>
     </div>
   </div>
@@ -218,7 +221,7 @@
 </section>
 
 
-<!-- 3. POR QUÉ ELEGIRNOS -->
+<!-- 3. POR QUÉ ELEGIRNOS — fusionada con qué incluye -->
 <section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
@@ -259,7 +262,7 @@
 </section>
 
 
-<!-- 4. A QUIÉNES AYUDAMOS -->
+<!-- 4. A QUIÉNES AYUDAMOS — grilla 3x3 con copy corto -->
 <section class="seccion reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
@@ -568,18 +571,6 @@
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
-// Header transparente → sólido al hacer scroll
-window.addEventListener('scroll', function() {
-  const header = document.getElementById('header');
-  if (window.scrollY > 80) {
-    header.classList.remove('header-transparente');
-    header.classList.add('header-solido');
-  } else {
-    header.classList.add('header-transparente');
-    header.classList.remove('header-solido');
-  }
-});
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
