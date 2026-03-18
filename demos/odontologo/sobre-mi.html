@@ -9,8 +9,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="dento.css">
+<style>
+.barra-retorno {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background: #1a2332;
+  color: rgba(255,255,255,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 20px;
+  font-size: 0.78rem;
+  font-family: "DM Sans", sans-serif;
+}
+.barra-retorno-link {
+  color: #5CC8D4;
+  text-decoration: none;
+  font-weight: 600;
+}
+.barra-retorno-link:hover { opacity: 0.8; }
+.barra-retorno-sep { opacity: 0.3; }
+.barra-retorno-texto { opacity: 0.6; }
+.barra-retorno-cta {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  background: #0B6E7A;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+.barra-retorno-cta:hover { opacity: 0.85; }
+.header { top: 36px !important; }
+@media (max-width: 600px) {
+  .barra-retorno-texto { display: none; }
+}
+</style>
 </head>
 <body>
+<!-- BARRA RETORNO PRESENCIA ONLINE -->
+<div class="barra-retorno">
+  <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
+  <span class="barra-retorno-sep">·</span>
+  <span class="barra-retorno-texto">Esta es una demo de ejemplo</span>
+  <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
+</div>
 
 <a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
@@ -46,7 +92,7 @@
 <section class="seccion">
   <div class="contenedor seccion-grid-2">
     <div class="sobre-img-wrap">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/odontologo.jpg" alt="Dra. Valentina Sosa" class="sobre-img">
+      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dra. Valentina Sosa" class="sobre-img">
       <div class="sobre-badge-card">
         <div class="badge-num">MN 42.810</div>
         <div class="badge-label">Matrícula Nacional</div>
@@ -160,7 +206,7 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-      <div>dra.sosa@gmail.com</div>
+      <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d5c3d09fc2dec2d0f1d6dcd0d8dd9fd2dedc">[email&#160;protected]</a></div>
     </div>
   </div>
   <div class="contenedor footer-bottom">
@@ -169,15 +215,9 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMenu() { document.getElementById('nav-menu').classList.toggle('abierto'); }
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+const observer = new IntersectionObs
