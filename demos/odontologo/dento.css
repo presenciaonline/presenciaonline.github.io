@@ -1043,3 +1043,16 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   .trat-detalle { flex-direction: column; gap: 16px; }
   .como-llegar { flex-direction: column; }
 }
+
+/* =============================================
+   BARRA DE RETORNO — PRESENCIA ONLINE
+   ============================================= */
+.header {
+  top: 36px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    top: 32px;
+  }
+}
