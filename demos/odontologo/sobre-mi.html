@@ -114,7 +114,7 @@
       <div class="seccion-kicker">Formación</div>
       <h2>Trayectoria y credenciales.</h2>
     </div>
-    <div class="formacion-grid reveal">
+    <div class="formacion-grid">
       <div class="formacion-item">
         <div class="formacion-año">2006</div>
         <div class="formacion-desc">
@@ -215,9 +215,20 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleMenu() { document.getElementById('nav-menu').classList.toggle('abierto'); }
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-const observer = new IntersectionObs
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
