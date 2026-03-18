@@ -1110,16 +1110,19 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 
 /* WEB */
+
 .demo-web {
   position: relative;
   z-index: 3;
   background: white;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.12),
+    0 10px 20px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  transform: rotate(-2deg);
+  transform: none; /* SACAMOS ROTACIÓN */
 }
 
 /* NAV */
@@ -1180,21 +1183,9 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 
 
 /* FONDOS */
-.demo-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 18px;
-  background: white;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.demo-back-1 {
-  transform: rotate(-6deg);
-  opacity: 0.6;
-}
-
+/* FONDO LIMPIO PRO (SIN PAPELES) */
+.demo-back,
+.demo-back-1,
 .demo-back-2 {
-  transform: rotate(6deg);
-  opacity: 0.4;
+  display: none;
 }
