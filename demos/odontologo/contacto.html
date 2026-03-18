@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto y Turnos | Dra. Valentina Sosa · Odontología Palermo</title>
+<meta name="description" content="Agendá tu turno con la Dra. Valentina Sosa. Odontología en Palermo, Buenos Aires. Respondemos en el día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dento.css">
+</head>
+<body>
+
+<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<header class="header" id="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo-text">
+      <span class="logo-nombre">Dra. Valentina Sosa</span>
+      <span class="logo-esp">Odontología · Palermo</span>
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+      <a href="tratamientos.html" class="nav-link">Tratamientos</a>
+      <a href="contacto.html" class="nav-link active nav-cta">Sacar turno</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO PÁGINA -->
+<section class="page-hero">
+  <div class="contenedor">
+    <div class="seccion-kicker">Contacto y turnos</div>
+    <h1>Agendá su consulta<br>cuando lo necesite.</h1>
+    <p class="page-hero-sub">Respondemos en el día. Puede comunicarse directamente por WhatsApp o completar el formulario.</p>
+  </div>
+</section>
+
+<!-- CONTACTO COMPLETO -->
+<section class="seccion">
+  <div class="contenedor contacto-grid">
+
+    <!-- INFO -->
+    <div class="contacto-info-col reveal">
+
+      <div class="contacto-bloque">
+        <h3>Datos de contacto</h3>
+        <div class="contacto-dato">
+          <div class="contacto-icono">📍</div>
+          <div>
+            <strong>Dirección</strong>
+            <span>Av. Santa Fe 3421, Piso 4<br>Palermo, Ciudad de Buenos Aires</span>
+          </div>
+        </div>
+        <div class="contacto-dato">
+          <div class="contacto-icono">🕐</div>
+          <div>
+            <strong>Horarios de atención</strong>
+            <span>Lunes a viernes: 9 a 19hs<br>Sábados: 9 a 13hs</span>
+          </div>
+        </div>
+        <div class="contacto-dato">
+          <div class="contacto-icono">💬</div>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>+54 9 11 0000-0000</span>
+          </div>
+        </div>
+        <div class="contacto-dato">
+          <div class="contacto-icono">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span>dra.sosa@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacto-bloque">
+        <h3>Obras sociales y prepaga</h3>
+        <div class="coberturas-grid">
+          <div class="cobertura-tag">OSDE</div>
+          <div class="cobertura-tag">Swiss Medical</div>
+          <div class="cobertura-tag">Galeno</div>
+          <div class="cobertura-tag">Medifé</div>
+          <div class="cobertura-tag">IOMA</div>
+          <div class="cobertura-tag">Particular</div>
+        </div>
+        <p class="coberturas-nota">Consultá por tu cobertura antes de la primera consulta.</p>
+      </div>
+
+      <a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." target="_blank" class="btn btn-wa-grande">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;"> Escribir por WhatsApp
+      </a>
+
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="contacto-form-col reveal">
+      <div class="form-card">
+        <h3>Solicitar turno</h3>
+        <p class="form-sub">Completá el formulario y te contactamos para confirmar el horario.</p>
+
+        <form id="form-turno" action="ACTION_URL_GOOGLE_APPS_SCRIPT" method="POST">
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
+          </div>
+          <div class="form-grupo">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" required>
+          </div>
+          <div class="form-grupo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="su@email.com">
+          </div>
+          <div class="form-grupo">
+            <label for="tratamiento">Tratamiento de interés</label>
+            <select id="tratamiento" name="tratamiento">
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option value="limpieza">Limpieza dental</option>
+              <option value="blanqueamiento">Blanqueamiento</option>
+              <option value="ortodoncia">Ortodoncia</option>
+              <option value="implantes">Implantes</option>
+              <option value="endodoncia">Endodoncia</option>
+              <option value="estetica">Estética dental</option>
+              <option value="consulta">Consulta general</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contenos brevemente su situación o consulta..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Solicitar turno →</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="seccion seccion-alt">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Ubicación</div>
+      <h2>Cómo llegar.</h2>
+    </div>
+    <div class="mapa-grande">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4!2d-58.4173!3d-34.5865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzExLjQiUyA1OMKwMjUnMDIuMyJX!5e0!3m2!1ses!2sar!4v1"
+        width="100%" height="400" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+    <div class="como-llegar">
+      <div class="llegar-item">🚇 <strong>Subte:</strong> Línea D — Estación Palermo (a 3 cuadras)</div>
+      <div class="llegar-item">🚌 <strong>Colectivos:</strong> 10, 15, 34, 55, 99, 108, 141</div>
+      <div class="llegar-item">🚗 <strong>Estacionamiento:</strong> En Av. Santa Fe y calles adyacentes</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor footer-inner">
+    <div class="footer-brand">
+      <div class="footer-nombre">Dra. Valentina Sosa</div>
+      <div class="footer-esp">Odontología General y Estética</div>
+      <div class="footer-mat">MN 42.810</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="tratamientos.html">Tratamientos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-contacto">
+      <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
+      <div>+54 9 11 0000-0000</div>
+      <div>dra.sosa@gmail.com</div>
+    </div>
+  </div>
+  <div class="contenedor footer-bottom">
+    <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
+    <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('nav-menu').classList.toggle('abierto'); }
+window.addEventListener('scroll', function() {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.getElementById('form-turno').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  fetch(this.action, { method: 'POST', body: new FormData(this) })
+    .then(function() {
+      btn.textContent = '✅ ¡Solicitud enviada!';
+      document.getElementById('form-turno').reset();
+      setTimeout(function() {
+        btn.textContent = 'Solicitar turno →';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch(function() {
+      btn.textContent = '❌ Error. Escribanos por WhatsApp.';
+      btn.disabled = false;
+    });
+});
+</script>
+</body>
+</html>
