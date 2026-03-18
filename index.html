@@ -1,280 +1,614 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra. Valentina Sosa | Odontología General y Estética · Palermo, Buenos Aires</title>
-<meta name="description" content="Odontología general y estética en Palermo. Atención personalizada, diagnóstico claro y acompañamiento en cada etapa. Turnos disponibles.">
-<link rel="canonical" href="https://presenciaonline.github.io/demos/odontologo/index.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="dento.css">
+
+<title>Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas</title>
+<meta name="description" content="Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada. Pago único, sin mensualidades, lista en menos de 72 horas.">
+<meta name="keywords" content="páginas web profesionales Argentina, web para psicólogos, web para médicos, web para abogados, presencia digital, micrositio profesional">
+<meta name="author" content="Presencia Online">
+<link rel="canonical" href="https://presenciaonline.github.io/index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presenciaonline.github.io/">
+<meta property="og:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
+<meta property="og:description" content="Páginas web profesionales para especialistas independientes. Modernas, rápidas, pago único y listas en menos de 72 horas.">
+<meta property="og:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Presencia Online">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Presencia Online | Tu tarjeta de presentación profesional en menos de 72 horas">
+<meta name="twitter:description" content="Páginas web profesionales para especialistas independientes. Modernas, rápidas, pago único y listas en menos de 72 horas.">
+<meta name="twitter:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
+
+<link rel="stylesheet" href="presencia.css">
+
 <style>
-.barra-retorno {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9998;
-  background: #1a2332;
-  color: rgba(255,255,255,0.75);
+/* CARDS DE NICHOS — INDEX */
+.nichos-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.nicho-index-card {
+  background: var(--blanco);
+  border: 2px solid rgba(26,111,204,0.08);
+  border-radius: var(--radio-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: var(--transicion);
+}
+
+.nicho-index-card:hover {
+  border-color: var(--azul);
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-4px);
+}
+
+.nicho-index-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nicho-index-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e8f0fe, #e8f5ee);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.nicho-index-card h3 {
+  font-size: 0.95rem;
+  color: var(--oscuro);
+}
+
+.nicho-index-frase {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--oscuro);
+  line-height: 1.4;
+}
+
+.nicho-index-copy {
+  font-size: 0.83rem;
+  color: var(--gris-texto);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.nicho-index-links {
+  display: flex;
   gap: 16px;
-  padding: 8px 20px;
-  font-size: 0.78rem;
-  font-family: "DM Sans", sans-serif;
+  margin-top: 4px;
+  flex-wrap: wrap;
 }
-.barra-retorno-link {
-  color: #5CC8D4;
+
+.nicho-link-primary {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--azul);
   text-decoration: none;
-  font-weight: 600;
+  transition: var(--transicion);
 }
-.barra-retorno-link:hover { opacity: 0.8; }
-.barra-retorno-sep { opacity: 0.3; }
-.barra-retorno-texto { opacity: 0.6; }
-.barra-retorno-cta {
-  color: white;
+
+.nicho-link-secondary {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--gris-texto);
   text-decoration: none;
-  font-weight: 600;
-  background: #0B6E7A;
-  padding: 4px 12px;
-  border-radius: 99px;
+  transition: var(--transicion);
 }
-.barra-retorno-cta:hover { opacity: 0.85; }
-.header { top: 36px !important; }
+
+.nicho-link-primary:hover { color: var(--azul-oscuro); }
+.nicho-link-secondary:hover { color: var(--azul); }
+
+@media (max-width: 1024px) {
+  .nichos-index-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 600px) {
-  .barra-retorno-texto { display: none; }
+  .nichos-index-grid { grid-template-columns: 1fr; }
 }
 </style>
+
 </head>
+
 <body>
-<!-- BARRA RETORNO PRESENCIA ONLINE -->
-<div class="barra-retorno">
-  <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
-  <span class="barra-retorno-sep">·</span>
-  <span class="barra-retorno-texto">Esta es una demo de ejemplo</span>
-  <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
+
+<!-- BOTONES FLOTANTES -->
+<div class="flotantes">
+  <!--
+  <a href="https://instagram.com/presenciaonline" class="instagram-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+  </a>
+  <a href="https://facebook.com/presenciaonline" class="facebook-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+  </a>
+  -->
+  <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  </a>
 </div>
 
-<!-- FLOTANTE WHATSAPP -->
-<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
-
 <!-- HEADER -->
-<header class="header" id="header">
+<header class="header header-transparente" id="header">
   <div class="contenedor header-inner">
-    <a href="index.html" class="logo-text">
-      <span class="logo-nombre">Dra. Valentina Sosa</span>
-      <span class="logo-esp">Odontología · Palermo</span>
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online" class="logo-normal">
+      <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online" class="logo-blanco">
     </a>
     <nav class="nav" id="nav-menu">
-      <a href="index.html" class="nav-link active">Inicio</a>
-      <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
-      <a href="tratamientos.html" class="nav-link">Tratamientos</a>
-      <a href="contacto.html" class="nav-link nav-cta">Sacar turno</a>
+      <a href="index.html">Inicio</a>
+      <a href="profesionales.html">Profesionales</a>
+      <a href="demos.html">Demos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="blog.html">Blog</a>
+      <a href="conocenos.html">Conócenos</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+
+<!-- 1. HERO CON FOTO DE FONDO -->
+<section class="hero hero-foto">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1400&q=80" alt="Consultorio odontológico">
+    <img src="assets/img/hero/hero.jpg" alt="Presencia Online — páginas web para profesionales">
     <div class="hero-overlay"></div>
   </div>
   <div class="contenedor hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">✦ Turnos disponibles esta semana</div>
-      <h1>Odontología clara,<br>enfocada en cada<br><em>paciente.</em></h1>
-      <p class="hero-sub">Atención personalizada para que llegue a su consulta con toda la información que necesita, sin dudas y sin sorpresas.</p>
-      <div class="hero-btns">
-        <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
-        <a href="sobre-mi.html" class="btn btn-ghost">Conocerme</a>
+    <div class="hero-contenido">
+      <div class="hero-badge">✦ Especialistas independientes</div>
+      <h1>Tu tarjeta de presentación<br><span>en el mundo digital.</span></h1>
+      <p class="hero-subtitulo">Profesional, personalizada y lista para usar en menos de 72 horas.</p>
+      <div class="hero-diferenciales">
+        <div class="diferencial-item"><div class="icono">⚡</div>Carga ultrarrápida</div>
+        <div class="diferencial-item"><div class="icono">🎨</div>Diseño moderno</div>
+        <div class="diferencial-item"><div class="icono">💰</div>Pago único</div>
+        <div class="diferencial-item"><div class="icono">🔧</div>Cambios en 48hs</div>
       </div>
-      <div class="hero-datos">
-        <div class="dato"><span class="dato-num">+12</span><span class="dato-label">años de experiencia</span></div>
-        <div class="dato-sep"></div>
-        <div class="dato"><span class="dato-num">6</span><span class="dato-label">tratamientos</span></div>
-        <div class="dato-sep"></div>
-        <div class="dato"><span class="dato-num">Palermo</span><span class="dato-label">Buenos Aires</span></div>
+      <div class="hero-cta">
+        <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:22px;height:22px;"> Consultanos por WhatsApp</a>
+        <a href="demos.html" class="btn btn-ghost-blanco">Ver demos →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESUMEN SOBRE MÍ -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
-    <div class="sobre-img-wrap">
-      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dra. Valentina Sosa" class="sobre-img">
-      <div class="sobre-badge-card">
-        <div class="badge-num">MN 42.810</div>
-        <div class="badge-label">Matrícula Nacional</div>
-      </div>
-    </div>
-    <div class="sobre-texto">
-      <div class="seccion-kicker">Sobre mí</div>
-      <h2>Una mirada profesional<br>desde la primera consulta.</h2>
-      <p>Soy odontóloga especializada en estética dental y rehabilitación. Trabajo en Palermo desde hace más de doce años, atendiendo pacientes que buscan claridad y confianza en cada paso del tratamiento.</p>
-      <p>Mi enfoque está en explicar con precisión qué está pasando, qué opciones existen y qué puede esperar en cada etapa. Sin tecnicismos innecesarios.</p>
-      <a href="sobre-mi.html" class="link-arrow">Conocer más sobre mi formación →</a>
-    </div>
-  </div>
-</section>
 
-<!-- RESUMEN TRATAMIENTOS -->
-<section class="seccion seccion-alt">
+<!-- 2. CÓMO FUNCIONA -->
+<section class="seccion reveal">
   <div class="contenedor">
-    <div class="seccion-header">
-      <div class="seccion-kicker">Tratamientos</div>
-      <h2>Atención para cada<br>necesidad.</h2>
-      <p class="seccion-sub">Desde la consulta de rutina hasta los tratamientos más complejos. Cada caso se evalúa individualmente.</p>
-    </div>
-
-    <div class="tratamientos-grid">
-
-      <a href="tratamientos.html#limpieza" class="trat-card">
-        <div class="trat-icono">🦷</div>
-        <h3>Limpieza dental</h3>
-        <p>Remoción profesional de placa y sarro. Base de cualquier tratamiento y clave para la salud a largo plazo.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#blanqueamiento" class="trat-card">
-        <div class="trat-icono">✨</div>
-        <h3>Blanqueamiento</h3>
-        <p>Técnicas clínicas de alta eficacia para una sonrisa más luminosa, con resultados visibles desde la primera sesión.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#ortodoncia" class="trat-card">
-        <div class="trat-icono">📐</div>
-        <h3>Ortodoncia</h3>
-        <p>Brackets convencionales e invisalign. Evaluación completa para determinar el tratamiento más adecuado a cada caso.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#implantes" class="trat-card">
-        <div class="trat-icono">🔩</div>
-        <h3>Implantes</h3>
-        <p>Solución definitiva para la pérdida dentaria. Planificación detallada y acompañamiento en cada etapa del proceso.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#endodoncia" class="trat-card">
-        <div class="trat-icono">🩺</div>
-        <h3>Endodoncia</h3>
-        <p>Tratamiento de conducto con técnicas modernas para preservar la pieza dentaria y eliminar el dolor en forma definitiva.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#estetica" class="trat-card">
-        <div class="trat-icono">💎</div>
-        <h3>Estética dental</h3>
-        <p>Carillas de porcelana y diseño de sonrisa. Planificación digital previa para que sepa exactamente el resultado antes de comenzar.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-    </div>
-
-    <div class="seccion-cta">
-      <a href="tratamientos.html" class="btn btn-outline">Ver todos los tratamientos →</a>
+    <h2 class="seccion-titulo">¿Cómo funciona?</h2>
+    <p class="seccion-subtitulo">Tres pasos simples y tu página está online.</p>
+    <div class="pasos-grid">
+      <div class="paso-card">
+        <div class="paso-numero">1</div>
+        <h3>Elegís tu demo</h3>
+        <p>Revisás las demos de tu profesión y nos decís cuál te gusta o qué querés combinar.</p>
+      </div>
+      <div class="paso-card">
+        <div class="paso-numero">2</div>
+        <h3>Nos pasás tu info</h3>
+        <p>Nombre, foto, servicios, zona de atención y datos de contacto. Nosotros nos encargamos del resto.</p>
+      </div>
+      <div class="paso-card">
+        <div class="paso-numero">3</div>
+        <h3>Estás online en 72hs</h3>
+        <p>Tu página lista, publicada y funcionando. Sin tecnicismos, sin esperas, sin complicaciones.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- RESUMEN CONTACTO -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
-    <div class="contacto-preview">
-      <div class="seccion-kicker">Contacto y turnos</div>
-      <h2>Agendá su consulta<br>cuando lo necesite.</h2>
-      <p>Respondemos en el día. Puede comunicarse por WhatsApp o completar el formulario y nos ponemos en contacto.</p>
-      <div class="contacto-datos">
-        <div class="contacto-dato">
-          <div class="contacto-icono">📍</div>
-          <div>
-            <strong>Dirección</strong>
-            <span>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</span>
-          </div>
+
+<!-- 3. POR QUÉ ELEGIRNOS -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
+    <p class="seccion-subtitulo">Lo que nos diferencia de cualquier otra opción del mercado.</p>
+    <div class="porque-grid">
+      <div class="porque-item">
+        <div class="porque-icono">⏱️</div>
+        <h3>Online en 72 horas</h3>
+        <p>Mientras otros tardan semanas en entregar algo, vos ya estás online. Sin esperas, sin excusas.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">💰</div>
+        <h3>Pago único, sin sorpresas</h3>
+        <p>Pagás una vez y la página ya es tuya. Sin mensualidades, sin renovaciones automáticas, sin costos ocultos.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🚀</div>
+        <h3>Sin WordPress ni plugins</h3>
+        <p>Páginas estáticas, livianas y rápidas. No se rompen, no necesitan actualizaciones y cargan en segundos.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">📱</div>
+        <h3>Perfecta en celular</h3>
+        <p>La mayoría de tus pacientes o clientes te van a buscar desde el celular. Tu página se ve impecable en cualquier pantalla.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🔧</div>
+        <h3>Modificaciones en 48hs</h3>
+        <p>¿Cambió tu dirección, tus servicios o tu foto? Mandás un ticket y lo resolvemos en menos de 48 horas.</p>
+      </div>
+      <div class="porque-item">
+        <div class="porque-icono">🎯</div>
+        <h3>Pensada para tu profesión</h3>
+        <p>No es una plantilla genérica. Cada página está diseñada específicamente para cada profesional — con la estructura y el texto que tu cliente necesita ver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. A QUIÉNES AYUDAMOS -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
+    <p class="seccion-subtitulo">Trabajamos con especialistas independientes de distintas áreas. Encontrá la tuya.</p>
+
+    <div class="nichos-index-grid">
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🧠</div>
+          <h3>Psicólogos</h3>
         </div>
-        <div class="contacto-dato">
-          <div class="contacto-icono">🕐</div>
-          <div>
-            <strong>Horarios</strong>
-            <span>Lunes a viernes 9 a 19hs · Sábados 9 a 13hs</span>
-          </div>
+        <p class="nicho-index-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
+        <p class="nicho-index-copy">No en una plataforma que decide por vos. En un espacio propio donde tu enfoque y tu forma de trabajar puedan ser comprendidos antes del primer contacto.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#psicologo" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/psicologo/index.html" class="nicho-link-secondary">Ver demo</a>
         </div>
-        <div class="contacto-dato">
-          <div class="contacto-icono">💬</div>
-          <div>
-            <strong>WhatsApp</strong>
-            <span>+54 9 11 0000-0000</span>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🩺</div>
+          <h3>Médicos y especialistas</h3>
+        </div>
+        <p class="nicho-index-frase">Cuando lo buscan por su nombre, ¿qué encuentran?</p>
+        <p class="nicho-index-copy">La institución lo presenta como parte de un equipo. Pero cuando un paciente quiere elegirlo a usted específicamente, la información que necesita no siempre está disponible.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#medico" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/salud/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">⚖️</div>
+          <h3>Abogados</h3>
+        </div>
+        <p class="nicho-index-frase">Antes de contactarlo, ya lo evaluaron.</p>
+        <p class="nicho-index-copy">Sus clientes llegan por recomendación. Pero antes de escribirle, buscan su nombre. Y deciden en base a lo que ven.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#abogado" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/legal/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">📊</div>
+          <h3>Contadores</h3>
+        </div>
+        <p class="nicho-index-frase">Su experiencia es sólida. ¿La imagen que proyecta lo refleja?</p>
+        <p class="nicho-index-copy">Los clientes que le interesan evalúan antes de contactarlo. Lo que encuentran define si avanzan con usted o siguen buscando.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#contador" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/contable/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🦷</div>
+          <h3>Odontólogos</h3>
+        </div>
+        <p class="nicho-index-frase">Entre que lo ven y lo eligen, hay un paso.</p>
+        <p class="nicho-index-copy">El paciente no decide en redes. Decide cuando busca más información. Si no la encuentra clara, elige al consultorio que sí se la da.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#odontologo" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/odontologo/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">📣</div>
+          <h3>Marketing y contenido</h3>
+        </div>
+        <p class="nicho-index-frase">Entre lo que sabés y lo que mostrás, hay una brecha.</p>
+        <p class="nicho-index-copy">Tu trabajo genera resultados. Tu propia presentación debería reflejarlos.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#marketing" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/marketing/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🧭</div>
+          <h3>Coaches</h3>
+        </div>
+        <p class="nicho-index-frase">Si no se entiende, no sucede.</p>
+        <p class="nicho-index-copy">Tu trabajo empieza en la conversación. Pero antes de eso, alguien decide si llega o no. Lo que encuentra en ese momento define si avanza.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#coach" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/coach/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🏛️</div>
+          <h3>Arquitectos</h3>
+        </div>
+        <p class="nicho-index-frase">Su trabajo no es el problema. Es cómo se está viendo hoy.</p>
+        <p class="nicho-index-copy">Antes de la reunión, el cliente ya está decidiendo. La pregunta es con qué información.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#arquitecto" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/arquitecto/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+      <div class="nicho-index-card">
+        <div class="nicho-index-header">
+          <div class="nicho-index-icono">🥗</div>
+          <h3>Nutricionistas</h3>
+        </div>
+        <p class="nicho-index-frase">En redes, todos parecen lo mismo. La diferencia real no siempre se ve.</p>
+        <p class="nicho-index-copy">Tu formación y tu criterio profesional merecen un lugar donde sean visibles antes de que el paciente tenga que preguntar.</p>
+        <div class="nicho-index-links">
+          <a href="profesionales.html#nutricionista" class="nicho-link-primary">Conocé más →</a>
+          <a href="demos/nutricionista/index.html" class="nicho-link-secondary">Ver demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. BLOG — 9 TARJETAS -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Recursos para profesionales</h2>
+    <p class="seccion-subtitulo">Todo lo que necesitás saber sobre presencia digital para tu profesión.</p>
+    <div class="blog-grid">
+      <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html" class="blog-card">
+        <span class="blog-nicho">🧠 Psicología</span>
+        <h3>¿Un psicólogo necesita una página web o alcanzan las redes sociales?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/salud/12-cuanto-cuesta-pagina-web-medico.html" class="blog-card">
+        <span class="blog-nicho">🩺 Salud</span>
+        <h3>¿Cuánto cuesta realmente crear una página web para un médico?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/legal/03-como-puede-un-abogado-aparecer-en-google.html" class="blog-card">
+        <span class="blog-nicho">⚖️ Legal</span>
+        <h3>¿Cómo puede un abogado aparecer en Google?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/contable/05-que-deberia-tener-la-pagina-web-de-un-contador.html" class="blog-card">
+        <span class="blog-nicho">📊 Contable</span>
+        <h3>¿Qué debería tener la página web de un contador?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/odontologo/17-pagina-web-dentista-celular.html" class="blog-card">
+        <span class="blog-nicho">🦷 Odontología</span>
+        <h3>¿Es importante que la página web de un dentista funcione bien en el celular?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/marketing/10-pagina-web-influencer-confianza-marcas.html" class="blog-card">
+        <span class="blog-nicho">📣 Marketing</span>
+        <h3>¿Una página web ayuda a un influencer a generar confianza con las marcas?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/coach/07-coach-pagina-web-vs-linkedin.html" class="blog-card">
+        <span class="blog-nicho">🧭 Coach</span>
+        <h3>¿Necesita un coach una página web o alcanza con LinkedIn?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html" class="blog-card">
+        <span class="blog-nicho">🏛️ Arquitectura</span>
+        <h3>¿Qué debería tener la página web de un arquitecto para mostrar su portfolio?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+      <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html" class="blog-card">
+        <span class="blog-nicho">🥗 Nutrición</span>
+        <h3>¿Cómo puede una nutricionista mostrar su experiencia en su página web para atraer a los pacientes correctos?</h3>
+        <span class="blog-leer">Leer artículo →</span>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="blog.html" class="btn btn-outline">Ver todos los artículos →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. CONTACTO -->
+<section class="seccion reveal" id="contacto">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">¿Hablamos?</h2>
+    <p class="seccion-subtitulo">Contanos qué necesitás y te respondemos a la brevedad.</p>
+    <div class="contacto-inner">
+      <div class="contacto-info">
+        <h2>Estamos para ayudarte</h2>
+        <p>Si tenés dudas sobre el servicio, querés ver una demo personalizada o ya estás listo para arrancar, escribinos. Respondemos rápido.</p>
+        <div class="contacto-canales">
+          <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="canal-item">
+            <div class="canal-icono" style="background:#25D366;">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:28px;height:28px;">
+            </div>
+            WhatsApp: +54 9 11 4916 7978
+          </a>
+          <div class="canal-item">
+            <div class="canal-icono" style="background:var(--azul);">
+              <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" style="width:28px;height:28px;">
+            </div>
+            presenciaonline.web@gmail.com
           </div>
         </div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
-    </div>
-    <div class="mapa-placeholder">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4!2d-58.4173!3d-34.5865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzExLjQiUyA1OMKwMjUnMDIuMyJX!5e0!3m2!1ses!2sar!4v1"
-        width="100%" height="100%" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
-      </iframe>
+      <div class="contacto-form">
+        <form id="formulario-contacto" action="ACTION_URL_GOOGLE_APPS_SCRIPT" method="POST">
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="form-grupo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-grupo">
+            <label for="nicho">Soy...</label>
+            <select id="nicho" name="nicho" required>
+              <option value="" disabled selected>Seleccioná tu profesión</option>
+              <option value="psicologo">Psicólogo/a</option>
+              <option value="medico">Médico / Especialista</option>
+              <option value="abogado">Abogado/a</option>
+              <option value="contador">Contador/a</option>
+              <option value="odontologo">Odontólogo/a</option>
+              <option value="marketing">Marketing y contenido</option>
+              <option value="coach">Coach</option>
+              <option value="arquitecto">Arquitecto/a</option>
+              <option value="nutricionista">Nutricionista</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Consulta</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos qué necesitás..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primario form-submit">Enviar mensaje ✉️</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="contenedor footer-inner">
-    <div class="footer-brand">
-      <div class="footer-nombre">Dra. Valentina Sosa</div>
-      <div class="footer-esp">Odontología General y Estética</div>
-      <div class="footer-mat">MN 42.810</div>
+  <div class="contenedor">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online">
+        <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y de acabado profesional.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="index.html">Inicio</a>
+        <a href="profesionales.html">Para profesionales</a>
+        <a href="demos.html">Demos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="conocenos.html">Conócenos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
+        <a href="blog/salud/12-cuanto-cuesta-pagina-web-medico.html">Salud</a>
+        <a href="blog/legal/03-como-puede-un-abogado-aparecer-en-google.html">Legal</a>
+        <a href="blog/contable/05-que-deberia-tener-la-pagina-web-de-un-contador.html">Contable</a>
+        <a href="blog/odontologo/17-pagina-web-dentista-celular.html">Odontología</a>
+        <a href="blog/marketing/10-pagina-web-influencer-confianza-marcas.html">Marketing</a>
+        <a href="blog/coach/07-coach-pagina-web-vs-linkedin.html">Coach</a>
+        <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html">Arquitecto</a>
+        <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html">Nutricionista</a>
+      </div>
+      <div class="footer-col">
+        <h4>Demos</h4>
+        <a href="demos/psicologo/index.html">Demo Psicólogo</a>
+        <a href="demos/salud/index.html">Demo Salud</a>
+        <a href="demos/legal/index.html">Demo Abogado</a>
+        <a href="demos/contable/index.html">Demo Contador</a>
+        <a href="demos/odontologo/index.html">Demo Odontólogo</a>
+        <a href="demos/marketing/index.html">Demo Marketing</a>
+        <a href="demos/coach/index.html">Demo Coach</a>
+        <a href="demos/arquitecto/index.html">Demo Arquitecto</a>
+        <a href="demos/nutricionista/index.html">Demo Nutricionista</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="index.html">Inicio</a>
-      <a href="sobre-mi.html">Sobre mí</a>
-      <a href="tratamientos.html">Tratamientos</a>
-      <a href="contacto.html">Contacto</a>
+    <div class="footer-bottom">
+      <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/cookies.html">Cookies</a>
+        <a href="legal/terminos.html">Términos</a>
+        <a href="legal/disclaimer.html">Aviso legal</a>
+      </div>
     </div>
-    <div class="footer-contacto">
-      <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
-      <div>+54 9 11 0000-0000</div>
-      <div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4a0b6a5eab7abb7a584a3a9a5ada8eaa7aba9">[email&#160;protected]</a></div>
-    </div>
-  </div>
-  <div class="contenedor footer-bottom">
-    <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
-    <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<script>
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
 
-// Header scroll
+// Header transparente → sólido al hacer scroll
 window.addEventListener('scroll', function() {
   const header = document.getElementById('header');
-  if (window.scrollY > 60) {
-    header.classList.add('scrolled');
+  if (window.scrollY > 80) {
+    header.classList.remove('header-transparente');
+    header.classList.add('header-solido');
   } else {
-    header.classList.remove('scrolled');
+    header.classList.add('header-transparente');
+    header.classList.remove('header-solido');
   }
 });
 
-// Reveal on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { t
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  fetch(this.action, { method: 'POST', body: new FormData(this) })
+    .then(function() {
+      btn.textContent = '✅ ¡Mensaje enviado!';
+      document.getElementById('formulario-contacto').reset();
+      setTimeout(function() {
+        btn.textContent = 'Enviar mensaje ✉️';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch(function() {
+      btn.textContent = '❌ Error. Escribinos por WhatsApp.';
+      btn.disabled = false;
+    });
+});
+</script>
+
+</body>
+</html>
