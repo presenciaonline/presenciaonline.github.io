@@ -1117,3 +1117,30 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   transform: scale(1.05);
   z-index: 2;
 }
+
+.mini-header {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #1a6fcc;
+}
+
+.mini-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.mini-text {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+.mini-btn {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: white;
+  background: #27c26c;
+  padding: 4px 6px;
+  border-radius: 4px;
+  text-align: center;
+}
