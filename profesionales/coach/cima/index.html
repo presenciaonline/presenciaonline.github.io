@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CIMA | Coaching Ontológico</title>
-<meta name="description" content="Procesos, talleres y formación en coaching ontológico.">
+<link rel="stylesheet" href="cima.css">
 
-<link rel="canonical" href="#">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="dento.css">
 </head>
 
 <body>
 
-<!-- FLOTANTE WHATSAPP -->
-<a href="#" class="wa-float" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
+<!-- BOTÓN WHATSAPP -->
+<div class="flotantes">
+  <a href="https://wa.me/5491149167978" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  </a>
+</div>
 
-<!-- HEADER (INTACTO) -->
-<header class="header" id="header">
+<!-- HEADER (TUYO) -->
+<header class="header">
   <div class="contenedor header-inner">
 
-    <a href="index.html" class="logo-text">
-      <span class="logo-nombre">CIMA</span>
-      <span class="logo-esp">Centro de aprendizaje</span>
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-cima.png" alt="CIMA">
     </a>
 
     <nav class="nav" id="nav-menu">
-      <a href="index.html" class="nav-link active">Inicio</a>
-      <a href="conocenos.html" class="nav-link">Conocenos</a>
-      <a href="propuestas.html" class="nav-link">Propuestas</a>
-      <a href="contacto.html" class="nav-link nav-cta">Agendar</a>
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
     <div class="hamburger" onclick="toggleMenu()">
@@ -48,200 +43,208 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=80" alt="">
-    <div class="hero-overlay"></div>
-  </div>
-
+<section class="hero reveal">
   <div class="contenedor hero-inner">
-    <div class="hero-content">
+    <div class="hero-contenido">
 
-      <div class="hero-badge">✦ Espacio de trabajo personal</div>
+      <h1>Transformá tu forma de pensar, actuar y vivir</h1>
+      <p>Procesos de coaching ontológico para generar cambios reales en tu vida personal y profesional.</p>
 
-      <h1>
-        Un espacio para trabajar<br>
-        sobre lo que hoy te está<br>
-        <em>pasando.</em>
-      </h1>
-
-      <p class="hero-sub">
-        Procesos, talleres y formación en coaching ontológico para abordar situaciones reales y generar cambios concretos.
-      </p>
-
-      <div class="hero-btns">
-        <a href="contacto.html" class="btn btn-primary">Agendar conversación →</a>
-        <a href="conocenos.html" class="btn btn-ghost">Conocenos</a>
-      </div>
-
-      <div class="hero-datos">
-        <div class="dato"><span class="dato-num">+300</span><span class="dato-label">personas acompañadas</span></div>
-        <div class="dato-sep"></div>
-        <div class="dato"><span class="dato-num">10+</span><span class="dato-label">años de experiencia</span></div>
-        <div class="dato-sep"></div>
-        <div class="dato"><span class="dato-num">Morón</span><span class="dato-label">Buenos Aires</span></div>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn btn-primario">Quiero empezar</a>
+        <a href="propuestas.html" class="btn btn-outline">Ver propuestas</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CONOCENOS -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
+<!-- SOBRE -->
+<section class="seccion reveal">
+  <div class="contenedor">
 
-    <div class="sobre-img-wrap">
-      <img src="CIMA LOGO.jpg" alt="" class="sobre-img">
-    </div>
+    <h2 class="seccion-titulo">¿Qué es CIMA?</h2>
+    <p class="seccion-subtitulo">
+      Un espacio de transformación personal basado en el coaching ontológico.
+    </p>
 
-    <div class="sobre-texto">
-      <div class="seccion-kicker">Conocenos</div>
-
-      <h2>Un instituto enfocado en procesos reales.</h2>
-
-      <p>
-        CIMA es un espacio de aprendizaje y trabajo personal. Acompañamos a personas que necesitan ordenar lo que les está pasando y tomar decisiones con mayor claridad.
-      </p>
-
-      <p>
-        Trabajamos desde la conversación y la observación, sin fórmulas ni respuestas prefabricadas.
-      </p>
-
-      <a href="conocenos.html" class="link-arrow">
-        Ver más →
-      </a>
+    <div class="grid-2">
+      <div>
+        <p>
+          El coaching ontológico trabaja sobre la forma en la que interpretás lo que te pasa.
+          Cambiar tu mirada cambia tus decisiones.
+        </p>
+        <p>
+          Y cuando cambian tus decisiones, cambian tus resultados.
+        </p>
+      </div>
+      <div>
+        <p>
+          En CIMA acompañamos procesos para generar cambios profundos, sostenibles y aplicables en la vida real.
+        </p>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- PROPUESTAS -->
-<section class="seccion seccion-alt">
+<section class="seccion seccion-alt reveal">
   <div class="contenedor">
 
-    <div class="seccion-header">
-      <div class="seccion-kicker">Propuestas</div>
+    <h2 class="seccion-titulo">Propuestas</h2>
+    <p class="seccion-subtitulo">Distintas formas de trabajar juntos.</p>
 
-      <h2>Distintas formas de trabajar.</h2>
+    <div class="grid-3">
 
-      <p class="seccion-sub">
-        Podés elegir el formato que mejor se adapte a tu momento.
-      </p>
-    </div>
+      <div class="card">
+        <h3>Procesos individuales</h3>
+        <p>Sesiones 1 a 1 para trabajar objetivos concretos y desbloquear situaciones específicas.</p>
+        <a href="propuestas.html#individual">Ver más →</a>
+      </div>
 
-    <div class="tratamientos-grid">
-
-      <a href="propuestas.html#procesos" class="trat-card">
-        <h3>Procesos personales</h3>
-        <p>Trabajo individual para ordenar, entender y tomar decisiones con mayor claridad.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="propuestas.html#talleres" class="trat-card">
+      <div class="card">
         <h3>Talleres</h3>
-        <p>Encuentros grupales para trabajar temas específicos y compartir experiencias.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
+        <p>Espacios grupales para incorporar herramientas y nuevas formas de observar.</p>
+        <a href="propuestas.html#talleres">Ver más →</a>
+      </div>
 
-      <a href="propuestas.html#formacion" class="trat-card">
+      <div class="card">
         <h3>Formación</h3>
-        <p>Espacios de aprendizaje para incorporar herramientas de coaching.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
+        <p>Programas profundos para desarrollar habilidades y formarte como coach.</p>
+        <a href="propuestas.html#formacion">Ver más →</a>
+      </div>
 
-    </div>
-
-    <div class="seccion-cta">
-      <a href="propuestas.html" class="btn btn-outline">Ver todas las propuestas →</a>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
+<!-- EXPERIENCIAS -->
+<section class="seccion reveal">
+  <div class="contenedor">
 
-    <div class="contacto-preview">
-      <div class="seccion-kicker">Contacto</div>
+    <h2 class="seccion-titulo">Experiencias</h2>
+    <p class="seccion-subtitulo">Personas que ya pasaron por el proceso.</p>
 
-      <h2>Podés empezar por una conversación.</h2>
+    <div class="grid-3">
 
-      <p>
-        Si sentís que hay algo para revisar, podés escribirnos y coordinamos un primer encuentro.
-      </p>
+      <div class="card">
+        <p>"Logré tomar decisiones que venía evitando hace años."</p>
+        <span>- Cliente</span>
+      </div>
 
-      <div class="contacto-datos">
-        <div class="contacto-dato">
-          <div class="contacto-icono">📍</div>
-          <div>
-            <strong>Ubicación</strong>
-            <span>Morón, Buenos Aires</span>
-          </div>
-        </div>
+      <div class="card">
+        <p>"Cambió mi forma de ver las cosas, y eso cambió todo."</p>
+        <span>- Participante</span>
+      </div>
 
-        <div class="contacto-dato">
-          <div class="contacto-icono">🕐</div>
-          <div>
-            <strong>Disponibilidad</strong>
-            <span>Coordinación previa</span>
-          </div>
-        </div>
+      <div class="card">
+        <p>"Hoy tengo claridad y dirección."</p>
+        <span>- Alumno</span>
+      </div>
 
-        <div class="contacto-dato">
-          <div class="contacto-icono">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;">
-          </div>
-          <div>
-            <strong>WhatsApp</strong>
-            <span>+54 9 11 0000-0000</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO (TUYO REAL) -->
+<section class="seccion reveal" id="contacto">
+  <div class="contenedor">
+
+    <h2 class="seccion-titulo">¿Hablamos?</h2>
+    <p class="seccion-subtitulo">Contanos qué necesitás y te respondemos a la brevedad.</p>
+
+    <div class="contacto-inner">
+
+      <div class="contacto-info">
+        <h2>Estamos para ayudarte</h2>
+        <p>Si querés empezar un proceso o conocer más, escribinos.</p>
+
+        <div class="contacto-canales">
+          <a href="https://wa.me/5491149167978" target="_blank" class="canal-item">
+            WhatsApp: +54 9 11 4916 7978
+          </a>
+          <div class="canal-item">
+            contacto@cima.com
           </div>
         </div>
       </div>
 
-      <a href="contacto.html" class="btn btn-primary">Agendar →</a>
-    </div>
+      <div class="contacto-form">
 
-    <div class="mapa-placeholder"></div>
+        <form id="formulario-contacto" action="https://script.google.com/macros/s/AKfycbwclnpUF0F-n7_u-HLvNkxYdegzgy7lKLgnUIbznGcSiVpRkLxufXQGfsQNcHb48FUe/exec" method="POST">
+
+          <div class="form-grupo">
+            <label>Nombre</label>
+            <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tu@email.com" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>Consulta</label>
+            <textarea name="mensaje" placeholder="Contanos qué necesitás..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primario form-submit">
+            Enviar mensaje ✉️
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
 
   </div>
 </section>
 
-<!-- FOOTER (INTOCABLE) -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="contenedor footer-inner">
-    <div class="footer-brand">
-      <div class="footer-nombre">Dra. Valentina Sosa</div>
-      <div class="footer-esp">Odontología General y Estética</div>
-      <div class="footer-mat">MN 42.810</div>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Inicio</a>
-      <a href="sobre-mi.html">Sobre mí</a>
-      <a href="tratamientos.html">Tratamientos</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-    <div class="footer-contacto">
-      <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
-      <div>+54 9 11 0000-0000</div>
-      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
-    </div>
-  </div>
+  <div class="contenedor">
 
-  <div class="contenedor footer-bottom">
-    <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
-    <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
+    <div class="footer-inner">
+
+      <div>
+        <h3>CIMA</h3>
+        <p>Centro integral de métodos de aprendizaje y coaching ontológico.</p>
+      </div>
+
+      <div>
+        <h4>Secciones</h4>
+        <a href="index.html">Inicio</a>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="propuestas.html">Propuestas</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/terminos.html">Términos</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 CIMA</span>
+      <span>Desarrollado por Presencia Online</span>
+    </div>
+
   </div>
 </footer>
 
+<!-- SCRIPTS (TU SISTEMA COMPLETO) -->
 <script>
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
-window.addEventListener('scroll', function() {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
-});
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -249,9 +252,30 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  fetch(this.action, {
+    method: 'POST',
+    body: new FormData(this)
+  })
+  .then(() => {
+    btn.textContent = '✅ ¡Mensaje enviado!';
+    this.reset();
+    setTimeout(() => {
+      btn.textContent = 'Enviar mensaje ✉️';
+      btn.disabled = false;
+    }, 4000);
+  })
+  .catch(() => {
+    btn.textContent = '❌ Error. Escribinos por WhatsApp.';
+    btn.disabled = false;
+  });
 });
 </script>
 
