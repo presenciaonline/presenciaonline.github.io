@@ -5,121 +5,254 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CIMA | Coaching Ontológico</title>
+<meta name="description" content="Procesos, talleres y formación en coaching ontológico.">
 
-<link rel="stylesheet" href="coach.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="dento.css">
+
 </head>
 
 <body>
 
+<!-- WHATSAPP -->
+<a href="#" class="wa-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<!-- HEADER -->
 <header class="header" id="header">
   <div class="contenedor header-inner">
 
-    <div class="logo-nombre">CIMA</div>
+    <a href="index.html" class="logo-text">
+      <span class="logo-nombre">CIMA</span>
+      <span class="logo-esp">Centro de aprendizaje</span>
+    </a>
 
-    <nav class="nav">
-      <a href="#" class="nav-link">Inicio</a>
-      <a href="#" class="nav-link">Conocenos</a>
-      <a href="#" class="nav-link">Propuestas</a>
-      <a href="#" class="nav-link nav-cta">Agendar</a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="conocenos.html" class="nav-link">Conocenos</a>
+      <a href="propuestas.html" class="nav-link">Propuestas</a>
+      <a href="contacto.html" class="nav-link nav-cta">Agendar</a>
     </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
 
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 
   <div class="hero-bg">
-    <img src="consultorio.jpg">
+    <img src="consultorio.jpg" alt="">
     <div class="hero-overlay"></div>
   </div>
 
   <div class="contenedor hero-inner">
+    <div class="hero-content">
 
-    <h1>
-      Un espacio para trabajar<br>
-      sobre lo que te está<br>
-      <em>pasando</em>
-    </h1>
+      <div class="hero-badge">✦ Espacio de trabajo personal</div>
 
-    <p class="hero-sub">
-      Procesos, talleres y formación en coaching ontológico para abordar situaciones concretas y generar cambios reales.
-    </p>
+      <h1>
+        Un espacio para trabajar<br>
+        sobre lo que hoy te está<br>
+        <em>pasando.</em>
+      </h1>
 
-    <div>
-      <a href="#" class="btn btn-primary">Agendar conversación</a>
-      <a href="#" class="btn btn-ghost">Conocenos</a>
+      <p class="hero-sub">
+        Procesos, talleres y formación en coaching ontológico para abordar situaciones reales y generar cambios concretos.
+      </p>
+
+      <div class="hero-btns">
+        <a href="contacto.html" class="btn btn-primary">Agendar conversación →</a>
+        <a href="conocenos.html" class="btn btn-ghost">Conocenos</a>
+      </div>
+
+      <div class="hero-datos">
+        <div class="dato">
+          <span class="dato-num">+300</span>
+          <span class="dato-label">personas acompañadas</span>
+        </div>
+        <div class="dato-sep"></div>
+        <div class="dato">
+          <span class="dato-num">10+</span>
+          <span class="dato-label">años de experiencia</span>
+        </div>
+        <div class="dato-sep"></div>
+        <div class="dato">
+          <span class="dato-num">Morón</span>
+          <span class="dato-label">Buenos Aires</span>
+        </div>
+      </div>
+
     </div>
-
   </div>
 </section>
 
+<!-- CONOCENOS -->
 <section class="seccion">
   <div class="contenedor seccion-grid-2">
 
-    <div>
-      <h2>Un instituto enfocado en procesos reales</h2>
-      <p>
-        Trabajamos con personas que necesitan ordenar lo que les está pasando y tomar decisiones con mayor claridad.
-      </p>
+    <div class="sobre-img-wrap">
+      <img src="CIMA LOGO.jpg" class="sobre-img">
     </div>
 
-    <div>
-      <img src="CIMA LOGO.jpg" style="width:100%; border-radius:16px;">
+    <div class="sobre-texto">
+      <div class="seccion-kicker">Conocenos</div>
+
+      <h2>
+        Un instituto enfocado en procesos reales.
+      </h2>
+
+      <p>
+        Somos un espacio de aprendizaje y trabajo personal. Acompañamos a personas que necesitan ordenar lo que les está pasando y tomar decisiones con mayor claridad.
+      </p>
+
+      <p>
+        No trabajamos con fórmulas ni respuestas rápidas. Cada proceso se construye desde la conversación.
+      </p>
+
+      <a href="conocenos.html" class="link-arrow">
+        Ver más →
+      </a>
     </div>
 
   </div>
 </section>
 
+<!-- PROPUESTAS -->
 <section class="seccion seccion-alt">
   <div class="contenedor">
 
-    <h2>Propuestas</h2>
+    <div class="seccion-header">
+      <div class="seccion-kicker">Propuestas</div>
+
+      <h2>
+        Distintas formas de trabajar.
+      </h2>
+
+      <p class="seccion-sub">
+        Podés elegir el formato que mejor se adapte a tu momento.
+      </p>
+    </div>
 
     <div class="tratamientos-grid">
 
-      <div class="trat-card">
+      <a href="propuestas.html#procesos" class="trat-card">
         <h3>Procesos personales</h3>
-        <p>Trabajo individual para abordar situaciones concretas.</p>
-      </div>
+        <p>
+          Trabajo individual enfocado en lo que hoy te está pasando. Un espacio para ordenar y tomar decisiones.
+        </p>
+        <span class="trat-link">Ver más →</span>
+      </a>
 
-      <div class="trat-card">
+      <a href="propuestas.html#talleres" class="trat-card">
         <h3>Talleres</h3>
-        <p>Espacios grupales para trabajar temas específicos.</p>
-      </div>
+        <p>
+          Encuentros grupales para abordar temas específicos y compartir experiencias.
+        </p>
+        <span class="trat-link">Ver más →</span>
+      </a>
 
-      <div class="trat-card">
+      <a href="propuestas.html#formacion" class="trat-card">
         <h3>Formación</h3>
-        <p>Aprendizaje en coaching ontológico con aplicación real.</p>
-      </div>
+        <p>
+          Espacios de aprendizaje para incorporar herramientas de coaching.
+        </p>
+        <span class="trat-link">Ver más →</span>
+      </a>
 
+    </div>
+
+    <div class="seccion-cta">
+      <a href="propuestas.html" class="btn btn-outline">
+        Ver todas las propuestas →
+      </a>
     </div>
 
   </div>
 </section>
 
+<!-- CONTACTO -->
 <section class="seccion">
-  <div class="contenedor">
+  <div class="contenedor seccion-grid-2">
 
-    <h2>Podés empezar por una conversación</h2>
+    <div class="contacto-preview">
 
-    <p>
-      No hace falta tener todo claro. El primer paso es poner en palabras lo que te está pasando.
-    </p>
+      <div class="seccion-kicker">Contacto</div>
 
-    <a href="#" class="btn btn-primary">Agendar</a>
+      <h2>
+        Podés empezar por una conversación.
+      </h2>
+
+      <p>
+        Si sentís que hay algo para revisar, podés escribirnos y coordinamos un primer encuentro.
+      </p>
+
+      <a href="contacto.html" class="btn btn-primary">
+        Agendar →
+      </a>
+
+    </div>
+
+    <div class="mapa-placeholder"></div>
 
   </div>
 </section>
 
+<!-- FOOTER (RESPETADO) -->
 <footer class="footer">
-  <div class="contenedor">
-    <p>© CIMA Coaching Ontológico</p>
+  <div class="contenedor footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-nombre">CIMA</div>
+      <div class="footer-esp">Centro Integral de Métodos de Aprendizaje</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conocenos</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="footer-contacto">
+      <div>Morón, Buenos Aires</div>
+      <div>+54 9 11 0000-0000</div>
+      <a href="#">contacto@cima.com</a>
+    </div>
+
+  </div>
+
+  <div class="contenedor footer-bottom">
+    <span>© 2025 CIMA. Todos los derechos reservados.</span>
   </div>
 </footer>
 
 <script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+
 window.addEventListener('scroll', function() {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
 });
 </script>
 
