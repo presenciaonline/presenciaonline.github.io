@@ -772,6 +772,11 @@ flex:1;
 max-width:500px;
 border-radius:12px;
 overflow:hidden;
+min-height:250px;
+background:#eee;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .bloque-img img{
