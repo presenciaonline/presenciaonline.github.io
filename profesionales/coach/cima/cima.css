@@ -125,7 +125,7 @@ box-shadow:0 8px 20px rgba(0,0,0,0.15);
 
 .sobre-mi{
 padding:70px 22px;
-background:#f4f8fc;
+background:#f1f3f5;
 }
 
 .sobre-mi h2{
@@ -197,7 +197,7 @@ filter:brightness(1.08);
 
 .servicios{
 padding:70px 22px;
-background:#f7f9fb;
+background:#f4f8fc;
 }
 .servicios.metodologia{
 background:white;
@@ -763,4 +763,18 @@ max-width:100%;
 margin:0;
 }
 
+}
+
+.bloque-img{
+min-height:250px;
+background:#e9ecef;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.bloque-img::after{
+content:"Imagen";
+color:#999;
+font-size:14px;
 }
