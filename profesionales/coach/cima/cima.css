@@ -825,3 +825,8 @@ border-radius:12px;
 .bloque{
 gap:40px;
 }
+.bloque:nth-child(even){
+background:#f9fbfa;
+padding:40px;
+border-radius:12px;
+}
