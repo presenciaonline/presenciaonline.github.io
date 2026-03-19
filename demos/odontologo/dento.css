@@ -1009,25 +1009,28 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 
 @media (max-width: 768px) {
   .nav { display: none; }
-  .nav.abierto {
+ 
+ .nav.abierto {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  position: fixed;
-  inset: 0;
-  top: 0;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
 
-  background: var(--oscuro);
-  z-index: 2000;
+  background: var(--blanco);
 
-  gap: 28px;
-  padding: 40px;
+  padding: 20px 24px;
+  gap: 18px;
+
+  border-bottom: 1px solid rgba(11,110,122,0.10);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+ 
 .nav.abierto .nav-link {
-  font-size: 1.4rem;
-  color: var(--blanco);
+  font-size: 1rem;
+  color: var(--oscuro);
 }
 .nav.abierto .nav-cta {
   margin-top: 20px;
