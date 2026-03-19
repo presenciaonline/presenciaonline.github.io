@@ -197,7 +197,10 @@ filter:brightness(1.08);
 
 .servicios{
 padding:70px 22px;
-background:#fafafa;
+background:white;
+}
+.servicios.metodologia{
+background:#f4f8fc;
 }
 
 .servicios h2{
