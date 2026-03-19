@@ -49,91 +49,82 @@
 <section class="seccion">
   <div class="contenedor contacto-inner">
 
-    <!-- INFO -->
-    <div class="contacto-info">
-      <h2>Estamos para ayudarte</h2>
-      <p>Si tenés dudas, querés ver una demo o ya estás listo para arrancar, escribinos. Respondemos rápido.</p>
+  <!-- INFO -->
+  <div class="contacto-info">
+    <h2>Estamos para ayudarte</h2>
+    <p>Si tenés dudas, querés ver una demo o ya estás listo para arrancar, escribinos. Respondemos rápido.</p>
 
-      <!-- CANALES DE CONTACTO -->
-<div class="contacto-canales">
+    <div class="contacto-canales">
 
-  <!-- WHATSAPP -->
-  <a 
-    href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." 
-    target="_blank" 
-    class="canal-item"
-  >
-    <!-- ICONO -->
-    <div class="canal-icono" style="background:#25D366;">
-      <img 
-        src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-        style="width:22px;height:22px;"
-        alt="WhatsApp"
+      <!-- WHATSAPP -->
+      <a 
+        href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." 
+        target="_blank" 
+        class="canal-item"
       >
+        <div class="canal-icono" style="background:#25D366;">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+            style="width:24px;height:24px;"
+            alt="WhatsApp"
+          >
+        </div>
+        WhatsApp: +54 9 11 4916 7978
+      </a>
+
+      <!-- EMAIL -->
+      <a href="mailto:presenciaonline.web@gmail.com" class="canal-item">
+        <div class="canal-icono" style="background:var(--azul);">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/561/561127.png" 
+            style="width:24px;height:24px;"
+            alt="Email"
+          >
+        </div>
+        presenciaonline.web@gmail.com
+      </a>
+
     </div>
+  </div>
 
-    <!-- TEXTO -->
-    WhatsApp: +54 9 11 4916 7978
-  </a>
+  <!-- FORM -->
+  <div class="contacto-form">
+    <form id="formulario-contacto" action="https://script.google.com/macros/s/AKfycbwclnpUF0F-n7_u-HLvNkxYdegzgy7lKLgnUIbznGcSiVpRkLxufXQGfsQNcHb48FUe/exec" method="POST">
 
+      <div class="form-grupo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+      </div>
 
-  <!-- EMAIL -->
-  <div class="canal-item">
+      <div class="form-grupo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+      </div>
 
-    <!-- ICONO -->
-    <div class="canal-icono" style="background:var(--azul);">
-      <img 
-        src="https://cdn-icons-png.flaticon.com/512/561/561127.png" 
-        style="width:22px;height:22px;"
-        alt="Email"
-      >
-    </div>
+      <div class="form-grupo">
+        <label for="nicho">Soy...</label>
+        <select id="nicho" name="nicho" required>
+          <option value="" disabled selected>Seleccioná tu profesión</option>
+          <option value="psicologo">Psicólogo/a</option>
+          <option value="medico">Médico</option>
+          <option value="abogado">Abogado/a</option>
+          <option value="contador">Contador/a</option>
+          <option value="odontologo">Odontólogo/a</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
 
-    <!-- TEXTO -->
-    presenciaonline.web@gmail.com
+      <div class="form-grupo">
+        <label for="mensaje">Consulta</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Contanos qué necesitás..." required></textarea>
+      </div>
 
+      <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+
+    </form>
   </div>
 
 </div>
-
-    <!-- FORM -->
-    <div class="contacto-form">
-      <form id="formulario-contacto" action="https://script.google.com/macros/s/AKfycbwclnpUF0F-n7_u-HLvNkxYdegzgy7lKLgnUIbznGcSiVpRkLxufXQGfsQNcHb48FUe/exec" method="POST">
-
-        <div class="form-grupo">
-          <label>Nombre</label>
-          <input type="text" name="nombre" required>
-        </div>
-
-        <div class="form-grupo">
-          <label>Email</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div class="form-grupo">
-          <label>Soy...</label>
-          <select name="nicho" required>
-            <option value="">Seleccioná tu profesión</option>
-            <option value="psicologo">Psicólogo/a</option>
-            <option value="medico">Médico</option>
-            <option value="abogado">Abogado/a</option>
-            <option value="contador">Contador/a</option>
-            <option value="odontologo">Odontólogo/a</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-
-        <div class="form-grupo">
-          <label>Consulta</label>
-          <textarea name="mensaje" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primario">Enviar mensaje</button>
-
-      </form>
-    </div>
-
-  </div>
 </section>
 
 <!-- FOOTER -->
