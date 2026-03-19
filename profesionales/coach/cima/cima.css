@@ -125,7 +125,7 @@ box-shadow:0 8px 20px rgba(0,0,0,0.15);
 
 .sobre-mi{
 padding:70px 22px;
-background:#f9fbfa;
+background:#f4f8fc;
 }
 
 .sobre-mi h2{
@@ -197,10 +197,10 @@ filter:brightness(1.08);
 
 .servicios{
 padding:70px 22px;
-background:white;
+background:f7f9fb;
 }
 .servicios.metodologia{
-background:#f4f8fc;
+background:white;
 }
 
 .servicios h2{
@@ -253,6 +253,7 @@ transform:scale(.97);
 .contacto{
 padding:80px 22px;
 text-align:center;
+background:#f4f8fc;
 }
 
 .contacto h2{
