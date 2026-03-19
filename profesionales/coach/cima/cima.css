@@ -334,6 +334,16 @@ opacity:0;
 transform:translateY(40px);
 transition:all .8s ease;
 }
+.bloque{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.bloque.visible{
+opacity:1;
+transform:translateY(0);
+}
 
 .reveal.visible{
 opacity:1;
