@@ -1017,9 +1017,10 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 
   position: fixed;
   inset: 0;
+  top: 0;
 
   background: var(--oscuro);
-  z-index: 999;
+  z-index: 2000;
 
   gap: 28px;
   padding: 40px;
