@@ -701,13 +701,7 @@ gap:20px;
 text-align:center;
 }
 
-.bloque-img img{
-width:100%;
-max-width:420px;
-border-radius:12px;
-display:block;
-margin:auto;
-}
+
 
 .bloque-texto{
 max-width:500px;
@@ -773,8 +767,16 @@ display:flex;
 align-items:center;
 justify-content:center;
 }
-.bloque-img::after{
-content:"Imagen";
-color:#999;
-font-size:14px;
+
+
+.observacion{
+background-image:url("img/observacion.jpg");
+}
+
+.intervencion{
+background-image:url("img/intervencion.jpg");
+}
+
+.integracion{
+background-image:url("img/integracion.jpg");
 }
