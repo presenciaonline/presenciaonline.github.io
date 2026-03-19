@@ -50,7 +50,6 @@ flex-direction:column;
 gap:40px;
 padding:80px 22px;
 background:
-background:
 radial-gradient(circle at 20% 30%, rgba(30,115,190,0.10), transparent 40%),
 radial-gradient(circle at 80% 20%, rgba(107,190,68,0.08), transparent 40%),
 #f4f8fc;
@@ -126,7 +125,7 @@ box-shadow:0 8px 20px rgba(0,0,0,0.15);
 
 .sobre-mi{
 padding:70px 22px;
-background:#6BBE44;
+background:#f9fbfa;
 }
 
 .sobre-mi h2{
@@ -198,7 +197,7 @@ filter:brightness(1.08);
 
 .servicios{
 padding:70px 22px;
-background:#6BBE44;
+background:#fafafa;
 }
 
 .servicios h2{
@@ -412,7 +411,7 @@ bottom:110px;
 .sobre-mi-extra{
 padding:70px 22px;
 text-align:center;
-background:#6BBE44;
+background:#fafafa;
 }
 
 .sobre-mi-extra h2{
@@ -467,7 +466,7 @@ margin-bottom:40px;
 
 .servicios-intro{
 padding:70px 22px;
-background:#6BBE44;
+background:#f9fbfa;
 text-align:left;
 }
 
