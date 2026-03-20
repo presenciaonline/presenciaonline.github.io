@@ -947,3 +947,34 @@ background:#f9fbfa;
   }
 
 }
+/* ================= HERO FIX FINAL ================= */
+
+@media (min-width:900px){
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:80px 60px;
+}
+
+.hero-content{
+  flex:0 0 40%;
+  max-width:480px;
+}
+
+.hero-image{
+  flex:0 0 60%;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:20px;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:420px;
+}
+
+}
