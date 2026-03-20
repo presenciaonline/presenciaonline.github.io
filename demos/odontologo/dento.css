@@ -730,6 +730,10 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   gap: 60px;
   align-items: start;
 }
+.contacto-info-col,
+.contacto-form-col {
+  width: 100%;
+}
 
 .contacto-bloque {
   margin-bottom: 32px;
@@ -804,6 +808,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   border-radius: var(--radio-lg);
   padding: 40px;
   box-shadow: var(--sombra-hover);
+  height: fit-content;
 }
 
 .form-card h3 {
