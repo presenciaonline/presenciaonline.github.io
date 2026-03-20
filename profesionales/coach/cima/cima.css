@@ -734,7 +734,9 @@ footer {
   .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem);
   }
-
+  .hero .cta {
+    align-self: center;
+  }
   .hero-image {
     flex: 0 0 auto;                    /* no crece, ancho según contenido */
     display: flex;
