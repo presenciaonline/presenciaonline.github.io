@@ -695,7 +695,7 @@ footer {
   }
 }
 
-/* ==================== ESCRITORIO (min-width: 900px) ==================== */
+/* Escritorio (min-width: 900px) */
 @media (min-width: 900px) {
   /* Header */
   .nav {
@@ -709,25 +709,24 @@ footer {
   .hero {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;   /* texto a izquierda, imágenes a derecha */
-    gap: clamp(20px, 4vw, 40px);      /* gap máximo 40px */
-    padding: clamp(40px, 6vh, 80px) 40px; /* lateral fijo 40px */
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: auto;
+    justify-content: center;      /* centra el bloque */
+    gap: clamp(20px, 4vw, 50px);  /* gap fluido con tope */
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 60px);
+    max-width: 1400px;            /* evita que se estire demasiado */
+    margin: 0 auto;                /* centra en pantallas grandes */
+    min-height: auto;              /* opcional, saca el min-height si no querés que ocupe toda la pantalla */
   }
 
   .hero-content {
-    flex: 1 1 auto;                   /* ocupa el espacio disponible */
-    max-width: 430px;                  /* límite para que el texto no sea demasiado ancho */
-    min-width: 280px;
+    flex: 1 1 40%;                 /* base 40%, pero puede encogerse */
+    min-width: 280px;              /* ancho mínimo para el texto */
     text-align: left;
-    align-items: flex-start;
+    align-items: flex-start;       /* alinea el texto a la izquierda */
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    max-width: none;
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* tamaño fluido */
+    max-width: none;               /* elimina límite anterior */
   }
 
   .hero p {
@@ -735,113 +734,21 @@ footer {
   }
 
   .hero-image {
-    flex: 0 0 auto;                    /* no crece, ancho según contenido */
+    flex: 1 1 60%;                 /* base 60%, se adapta */
     display: flex;
-    gap: clamp(10px, 2vw, 20px);       /* gap entre imágenes */
-    justify-content: flex-end;          /* imágenes pegadas a la derecha */
+    gap: clamp(10px, 2vw, 20px);   /* gap fluido entre imágenes */
+    justify-content: flex-end;     /* alinea las imágenes a la derecha */
     align-items: center;
   }
 
   .hero-image img {
-    max-height: 420px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    max-height: 420px;             /* altura máxima fija (ideal para 14") */
+    width: auto;                   /* ancho automático proporcional */
+    height: auto;                  /* permite que la altura nunca supere max-height */
+    object-fit: contain;           /* opcional, por si acaso */
     border-radius: 14px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
   }
-
-  /* Ajuste para pantallas medianas (900px - 1200px) */
-  @media (min-width: 900px) and (max-width: 1200px) {
-    .hero-image img {
-      max-height: 380px;                /* opcional: un poco más chicas si hace falta */
-    }
-  }
-
-  /* Trabajos slider */
-  .trabajos-slider {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    overflow: visible;
-  }
-
-  .trabajos-slider img {
-    aspect-ratio: 16/9;
-  }
-
-  /* Servicios grid */
-  .servicios-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  /* Botones flotantes */
-  .whatsapp-float {
-    right: 35px;
-    bottom: 35px;
-  }
-
-  .instagram-float {
-    right: 35px;
-    bottom: 110px;
-  }
-
-  /* Sobre mí galería */
-  .sobre-mi-galeria {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .sobre-mi-galeria img:last-child {
-    grid-column: span 2;
-    max-width: 500px;
-    margin: auto;
-  }
-
-  /* Servicios intro y detalle */
-  .servicios-intro {
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .servicio-detalle {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 22px;
-  }
-
-  .servicio-detalle p,
-  .servicio-detalle ul {
-    max-width: 1100px;
-  }
-
-  /* Metodología bloques */
-  .bloque {
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-    text-align: left;
-  }
-
-  .bloque.reverse {
-    flex-direction: row-reverse;
-  }
-
-  .bloque-img,
-  .bloque-texto {
-    flex: 1;
-    margin: 0;
-  }
-
-  .bloque-img img {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .bloque-texto {
-    max-width: 500px;
-  }
-}
 
   /* Ajuste para pantallas medianas (900px - 1200px) */
   @media (min-width: 900px) and (max-width: 1200px) {
