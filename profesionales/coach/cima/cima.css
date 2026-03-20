@@ -705,49 +705,56 @@ footer {
     margin: auto;
   }
 
-  /* HERO: distribución 40% / 60% */
+  /* HERO - Versión mejorada */
   .hero {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 80px 60px;
-    min-height: auto; /* opcional: si no quieres que ocupe toda la pantalla */
+    justify-content: center;      /* centra el bloque */
+    gap: clamp(20px, 4vw, 50px);  /* gap fluido con tope */
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 60px);
+    max-width: 1400px;            /* evita que se estire demasiado */
+    margin: 0 auto;                /* centra en pantallas grandes */
+    min-height: auto;              /* opcional, saca el min-height si no querés que ocupe toda la pantalla */
   }
 
- .hero-content {
-    flex: 0 0 40%;               /* 40% del ancho de .hero */
-    max-width: none;              /* elimina el límite anterior */
-    text-align: left;             /* alineación izquierda (ya estaba) */
+  .hero-content {
+    flex: 1 1 40%;                 /* base 40%, pero puede encogerse */
+    min-width: 280px;              /* ancho mínimo para el texto */
+    text-align: left;
+    align-items: flex-start;       /* alinea el texto a la izquierda */
   }
 
   .hero h1 {
-    font-size: 46px;
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* tamaño fluido */
+    max-width: none;               /* elimina límite anterior */
   }
 
- .hero-image {
-    flex: 0 0 60%;                /* 60% del ancho de .hero */
+  .hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .hero-image {
+    flex: 1 1 60%;                 /* base 60%, se adapta */
     display: flex;
-    gap: 20px;
-    justify-content: space-between; /* separa las imágenes */
+    gap: clamp(10px, 2vw, 20px);   /* gap fluido entre imágenes */
+    justify-content: flex-end;     /* alinea las imágenes a la derecha */
     align-items: center;
   }
 
- .hero-image img {
-    width: 50%;                    /* cada imagen ocupa la mitad del contenedor */
-    max-width: none;               /* elimina el max-width anterior */
-    height: auto;                  /* mantiene proporción */
-    object-fit: cover;             /* evita deformación si las imágenes tienen distinta relación de aspecto */
+  .hero-image img {
+    max-height: 420px;             /* altura máxima fija (ideal para 14") */
+    width: auto;                   /* ancho automático proporcional */
+    height: auto;                  /* permite que la altura nunca supere max-height */
+    object-fit: contain;           /* opcional, por si acaso */
     border-radius: 14px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
   }
 
-  /* Sobre mí */
-  .sobre-mi-grid {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
-    margin: auto;
-    gap: 60px;
+  /* Ajuste para pantallas medianas (900px - 1200px) */
+  @media (min-width: 900px) and (max-width: 1200px) {
+    .hero-image img {
+      max-height: 380px;           /* un poco más pequeñas si hace falta */
+    }
   }
 
   /* Trabajos slider */
