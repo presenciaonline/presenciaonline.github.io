@@ -364,18 +364,22 @@ margin:auto;
 .hero{
 flex-direction:row;
 align-items:center;
-gap:60px;
+justify-content:space-between;
+gap:40px;
 text-align:left;
+padding:80px 60px;
 }
 
 .hero-content{
-flex:1;
-align-items:flex-start;
-max-width:460px;
+flex:0 0 45%;
+max-width:520px;
 }
 
 .hero-image{
-flex:1;
+flex:0 0 55%;
+display:flex;
+justify-content:flex-end;
+gap:20px;
 }
 
 .hero h1{
