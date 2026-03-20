@@ -718,11 +718,10 @@ footer {
   }
 
   .hero-content {
-    flex: 1 1 40%;                 /* base 40%, pero puede encogerse */
+    flex: 1 1 30%;                 /* base 40%, pero puede encogerse */
     min-width: 280px;              /* ancho mínimo para el texto */
     text-align: left;
     align-items: flex-start;       /* alinea el texto a la izquierda */
-    max-width: 400px;   /* podés ajustar: 400, 450, 500... */
   }
 
   .hero h1 {
