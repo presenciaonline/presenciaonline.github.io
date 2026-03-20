@@ -705,33 +705,41 @@ footer {
     margin: auto;
   }
 
-  /* Hero */
+  /* HERO: distribución 40% / 60% */
   .hero {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    text-align: left;
     padding: 80px 60px;
+    min-height: auto; /* opcional: si no quieres que ocupe toda la pantalla */
   }
 
-  .hero-content {
-    flex: 0 0 40%;
-    max-width: 480px;
-    align-items: flex-start;
+ .hero-content {
+    flex: 0 0 40%;               /* 40% del ancho de .hero */
+    max-width: none;              /* elimina el límite anterior */
+    text-align: left;             /* alineación izquierda (ya estaba) */
   }
 
   .hero h1 {
     font-size: 46px;
   }
 
-  .hero-image {
-    flex: 0 0 60%;
-    justify-content: flex-end;
+ .hero-image {
+    flex: 0 0 60%;                /* 60% del ancho de .hero */
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; /* separa las imágenes */
+    align-items: center;
   }
 
-  .hero-image img {
-    max-width: 420px;
+ .hero-image img {
+    width: 50%;                    /* cada imagen ocupa la mitad del contenedor */
+    max-width: none;               /* elimina el max-width anterior */
+    height: auto;                  /* mantiene proporción */
+    object-fit: cover;             /* evita deformación si las imágenes tienen distinta relación de aspecto */
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
   }
 
   /* Sobre mí */
