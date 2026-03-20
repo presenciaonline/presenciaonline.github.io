@@ -39,7 +39,13 @@
   padding: 4px 12px;
   border-radius: 99px;
 }
+.barra-retorno-cta:hover { opacity: 0.85; }
+
 .header { top: 36px !important; }
+
+@media (max-width: 600px) {
+  .barra-retorno-texto { display: none; }
+}
 </style>
 </head>
 
@@ -228,6 +234,18 @@ Después de años de ejercicio profesional, sigo creyendo que la confianza se co
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
+
+window.addEventListener('scroll', function() {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
