@@ -727,8 +727,11 @@ filter:brightness(1.05);
 .bloque{
 display:flex;
 flex-direction:column;
+align-items:center;
 gap:20px;
 text-align:center;
+padding:40px;
+border-radius:12px;
 }
 
 
@@ -827,8 +830,6 @@ gap:40px;
 }
 .bloque:nth-child(even){
 background:#f9fbfa;
-padding:40px;
-border-radius:12px;
 }
 
 @media(max-width:768px){
