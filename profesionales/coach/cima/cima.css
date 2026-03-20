@@ -947,7 +947,7 @@ background:#f9fbfa;
   }
 
 }
-/* ================= HERO FIX FINAL ================= */
+/* ================= HERO FIX FINAL (VERTICAL IMAGES) ================= */
 
 @media (min-width:900px){
 
@@ -955,26 +955,26 @@ background:#f9fbfa;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:40px;
+  gap:60px;
   padding:80px 60px;
 }
 
 .hero-content{
-  flex:0 0 40%;
-  max-width:4800px;
+  flex:0 0 45%;
+  max-width:520px;
 }
 
 .hero-image{
-  flex:0 0 60%;
+  flex:0 0 45%;
   display:flex;
-  justify-content:flex-end;
-  align-items:center;
+  flex-direction:column; /* CLAVE: una arriba de la otra */
+  align-items:flex-end;  /* alineadas a la derecha */
   gap:20px;
 }
 
 .hero-image img{
   width:100%;
-  max-width:480px;
+  max-width:420px;
 }
 
 }
