@@ -912,3 +912,36 @@ background:#f9fbfa;
   }
 
 }
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+/* contenedor de imágenes */
+.hero-image{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+/* imágenes */
+.hero-image img{
+  width:100%;
+  max-width:240px;
+  border-radius:14px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.12);
+}
+@media (max-width:768px){
+
+  .hero-image{
+    flex-direction:column;
+  }
+
+  .hero-image img{
+    max-width:320px;
+  }
+
+}
