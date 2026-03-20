@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áreas de práctica | Estudio Jurídico Palermo</title>
+<meta name="description" content="Asesoramiento legal en derecho civil, laboral, penal, familia y contratos en Palermo, Buenos Aires. Atención personalizada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="abog.css">
+<style>
+.barra-retorno {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background: #1a2332;
+  color: rgba(255,255,255,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 20px;
+  font-size: 0.78rem;
+  font-family: "DM Sans", sans-serif;
+}
+.barra-retorno-link {
+  color: #5CC8D4;
+  text-decoration: none;
+  font-weight: 600;
+}
+.barra-retorno-link:hover { opacity: 0.8; }
+.barra-retorno-sep { opacity: 0.3; }
+.barra-retorno-texto { opacity: 0.6; }
+.barra-retorno-cta {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  background: #0B6E7A;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+.barra-retorno-cta:hover { opacity: 0.85; }
+.header { top: 36px !important; }
+@media (max-width: 600px) {
+  .barra-retorno-texto { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="barra-retorno">
+  <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
+  <span class="barra-retorno-sep">·</span>
+  <span class="barra-retorno-texto">Esta es una demo de ejemplo</span>
+  <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
+</div>
+
+<a href="https://wa.me/5491100000000?text=Hola,%20quiero%20hacer%20una%20consulta%20legal." class="wa-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<header class="header" id="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo-text">
+      <span class="logo-nombre">Estudio Jurídico</span>
+      <span class="logo-esp">Abogado · Palermo</span>
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+      <a href="tratamientos.html" class="nav-link active">Áreas de práctica</a>
+      <a href="contacto.html" class="nav-link nav-cta">Consultar</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="contenedor">
+    <div class="seccion-kicker">Áreas de práctica</div>
+    <h1>Asesoramiento legal<br>para cada situación.</h1>
+    <p class="page-hero-sub">Cada caso es distinto. El trabajo comienza con un análisis claro y una estrategia definida desde el primer momento.</p>
+  </div>
+</section>
+
+<section class="trat-seccion">
+  <div class="contenedor trat-seccion-inner">
+    <div class="trat-img-wrap reveal">
+      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/limpieza.jpg">
+    </div>
+    <div class="trat-texto reveal">
+      <h2>Derecho civil</h2>
+      <p>Asesoramiento en conflictos entre particulares, responsabilidad civil, daños y perjuicios, contratos y reclamos patrimoniales.</p>
+      <p>Se analiza cada situación en detalle para definir la mejor vía de resolución, judicial o extrajudicial.</p>
+      <div class="trat-detalle">
+        <div class="trat-detalle-item"><strong>Modalidad</strong><span>Consultas y seguimiento</span></div>
+        <div class="trat-detalle-item"><strong>Alcance</strong><span>Casos particulares</span></div>
+        <div class="trat-detalle-item"><strong>Instancia</strong><span>Judicial / Extrajudicial</span></div>
+      </div>
+      <a href="contacto.html" class="btn btn-primary">Consultar →</a>
+    </div>
+  </div>
+</section>
+
+<section class="trat-seccion seccion-alt">
+  <div class="contenedor trat-seccion-inner reverse">
+    <div class="trat-texto reveal">
+      <h2>Derecho laboral</h2>
+      <p>Defensa y asesoramiento en despidos, indemnizaciones, conflictos laborales y relaciones de trabajo.</p>
+      <p>Se busca proteger los derechos del trabajador o empleador con una estrategia clara y respaldada legalmente.</p>
+      <div class="trat-detalle">
+        <div class="trat-detalle-item"><strong>Casos</strong><span>Despidos · Reclamos</span></div>
+        <div class="trat-detalle-item"><strong>Instancia</strong><span>Conciliación / Juicio</span></div>
+        <div class="trat-detalle-item"><strong>Enfoque</strong><span>Resolución efectiva</span></div>
+      </div>
+      <a href="contacto.html" class="btn btn-primary">Consultar →</a>
+    </div>
+    <div class="trat-img-wrap reveal">
+      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/blanqueamiento.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="trat-seccion">
+  <div class="contenedor trat-seccion-inner">
+    <div class="trat-img-wrap reveal">
+      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/ortodoncia.jpg">
+    </div>
+    <div class="trat-texto reveal">
+      <h2>Derecho de familia</h2>
+      <p>Intervención en divorcios, acuerdos, régimen de visitas, alimentos y conflictos familiares.</p>
+      <p>Se prioriza un enfoque claro, ordenado y con acompañamiento en cada etapa del proceso.</p>
+      <div class="trat-detalle">
+        <div class="trat-detalle-item"><strong>Casos</strong><span>Divorcios · Alimentos</span></div>
+        <div class="trat-detalle-item"><strong>Modalidad</strong><span>Judicial / Acuerdos</span></div>
+        <div class="trat-detalle-item"><strong>Seguimiento</strong><span>Personalizado</span></div>
+      </div>
+      <a href="contacto.html" class="btn btn-primary">Consultar →</a>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-teal">
+  <div class="contenedor seccion-cta-center">
+    <h2>¿Necesita asesoramiento legal?</h2>
+    <p>Puede hacer una consulta inicial para evaluar su caso y entender qué opciones tiene.</p>
+    <a href="contacto.html" class="btn btn-white">Consultar →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor footer-inner">
+    <div class="footer-brand">
+      <div class="footer-nombre">Estudio Jurídico</div>
+      <div class="footer-esp">Asesoramiento legal integral</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="tratamientos.html">Áreas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-contacto">
+      <div>Palermo, Buenos Aires</div>
+      <div>+54 9 11 0000-0000</div>
+      <a href="#">contacto@estudio.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+
+window.addEventListener('scroll', function() {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
