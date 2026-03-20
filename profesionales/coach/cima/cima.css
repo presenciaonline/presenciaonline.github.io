@@ -719,7 +719,7 @@ footer {
 
   .hero-content {
     flex: 1 1 auto;                   /* ocupa el espacio disponible */
-    max-width: 420px;                  /* límite para que el texto no sea demasiado ancho */
+    max-width: 400px;                  /* límite para que el texto no sea demasiado ancho */
     min-width: 280px;
     text-align: left;
     align-items: flex-start;
