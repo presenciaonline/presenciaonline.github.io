@@ -837,3 +837,78 @@ background:#f9fbfa;
     display:none;
   }
 }
+/* =========================
+   HEADER NUEVO (CIMA)
+========================= */
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 22px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* NAV DESKTOP */
+
+.nav{
+  display:flex;
+  gap:18px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:24px;
+  height:2px;
+  background:#222;
+  display:block;
+  transition:all .3s ease;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+  /* ocultar menú normal */
+  .nav{
+    display:none;
+  }
+
+  /* menú abierto */
+  .nav.abierto{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:white;
+    padding:20px;
+    gap:16px;
+    border-bottom:1px solid #eee;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  /* mostrar hamburger */
+  .hamburger{
+    display:flex;
+  }
+
+}
