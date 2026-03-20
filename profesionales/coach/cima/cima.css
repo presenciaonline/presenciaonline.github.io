@@ -830,3 +830,9 @@ background:#f9fbfa;
 padding:40px;
 border-radius:12px;
 }
+
+@media(max-width:768px){
+  .metodologia-bloques::before{
+    display:none;
+  }
+}
