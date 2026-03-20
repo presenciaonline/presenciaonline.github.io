@@ -730,6 +730,10 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   gap: 60px;
   align-items: start;
 }
+.contacto-form-col {
+  position: sticky;
+  top: 120px;
+}
 .contacto-info-col,
 .contacto-form-col {
   width: 100%;
