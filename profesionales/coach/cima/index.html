@@ -2,232 +2,229 @@
 <html lang="es">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIMA | Coaching Ontológico</title>
 
-<title>CIMA | Coaching Ontológico</title>
+  <link rel="stylesheet" href="cima.css">
 
-<link rel="stylesheet" href="cima.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- WHATSAPP -->
-<a href="#" class="whatsapp-float">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
+  <!-- BOTONES FLOTANTES -->
+  <a href="#" class="instagram-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
 
-<header>
+  <a href="#" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
 
-<nav>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
 
-<div class="logo">
-<span>CIMA</span><span class="logo-dot"></span>
-</div>
-  
-<div class="menu">
+      <div class="logo">
+        <span>CIMA</span><span class="logo-dot"></span>
+      </div>
 
-<a href="index.html">Inicio</a>
-<a href="conocenos.html">Conócenos</a>
-<a href="propuestas.html">Propuestas</a>
-<a href="metodologia.html">Cómo trabajamos</a>
-<a href="contacto.html">Contacto</a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="enfoque.html">Nuestro enfoque</a>
+        <a href="propuestas.html">Propuestas</a>
+        <a href="reflexiones.html">Reflexiones</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
 
-</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-</nav>
+    </div>
+  </header>
 
-</header>
+  <!-- HERO -->
+  <section class="hero reveal">
 
-<!-- HERO -->
+    <div class="hero-content">
+      <h3 class="hero-nombre">CIMA</h3>
 
-<section class="hero reveal">
+      <h1>Espacios de formación donde trabajás sobre cómo interpretás, decidís y actuás</h1>
 
-<div class="hero-content">
+      <p>
+        No es teoría. Es práctica, experiencia y acompañamiento en procesos reales.
+      </p>
 
-<h3 class="hero-nombre">CIMA</h3>
+      <a class="cta" href="propuestas.html">Ver propuestas</a>
+    </div>
 
-<h1>Espacios de formación donde trabajás sobre cómo interpretás, decidís y actuás</h1>
+    <div class="hero-image">
+      <img src="img/hero.jpg" alt="Coaching ontológico">
+    </div>
 
-<p>
-No es teoría. Es práctica, experiencia y acompañamiento en procesos reales.
-</p>
+  </section>
 
-<a class="cta" href="propuestas.html">Ver propuestas</a>
+  <!-- QUÉ ES -->
+  <section class="sobre-mi reveal">
 
-</div>
+    <h2>¿Qué es CIMA?</h2>
 
-<div class="hero-image">
-<img src="img/hero.jpg" alt="Coaching ontológico">
-</div>
+    <div class="sobre-mi-grid">
 
-</section>
+      <div class="sobre-mi-image">
+        <img src="img/sobre-mi.jpg" alt="Centro de coaching">
+      </div>
 
-<!-- QUE ES -->
+      <div class="sobre-mi-texto">
+        <p>
+          El coaching ontológico trabaja sobre la forma en la que interpretás lo que te pasa, las decisiones que tomás y cómo actuás en tu vida cotidiana.
+        </p>
 
-<section class="sobre-mi reveal">
+        <p>
+          En CIMA generamos espacios donde eso se observa, se cuestiona y se transforma a través de la experiencia.
+        </p>
 
-<h2>¿Qué es CIMA?</h2>
+        <p>
+          No es contenido teórico. Es un proceso.
+        </p>
+      </div>
 
-<div class="sobre-mi-grid">
+      <div class="section-button">
+        <a class="cta" href="conocenos.html">Conocé el centro</a>
+      </div>
 
-<div class="sobre-mi-image">
-<img src="img/sobre-mi.jpg" alt="Instituto de coaching">
-</div>
+    </div>
 
-<div class="sobre-mi-texto">
+  </section>
 
-<p>
-El coaching ontológico trabaja sobre la forma en la que interpretás lo que te pasa, las decisiones que tomás y cómo actuás en tu vida cotidiana.
-</p>
+  <!-- NUESTRO ENFOQUE -->
+  <section class="servicios reveal">
 
-<p>
-En CIMA generamos espacios donde eso se observa, se cuestiona y se transforma a través de la experiencia.
-</p>
+    <h2>Nuestro enfoque</h2>
 
-<p>
-No es contenido teórico. Es un proceso.
-</p>
+    <div class="servicios-grid">
 
-</div>
+      <a href="enfoque.html" class="servicio">
+        <h3>Del tener al ser</h3>
+        <p>El foco no está puesto en lo que lográs acumular, sino en quién estás siendo frente a tu vida.</p>
+      </a>
 
-<div class="section-button">
-<a class="cta" href="conocenos.html">Conocé el instituto</a>
-</div>
+      <a href="enfoque.html" class="servicio">
+        <h3>Pensamientos, emociones y acciones</h3>
+        <p>La manera en que pensás influye en cómo sentís, cómo actuás y en los resultados que construís.</p>
+      </a>
 
-</div>
+      <a href="enfoque.html" class="servicio">
+        <h3>El miedo no te detiene si lo observás</h3>
+        <p>Trabajar sobre el miedo, las creencias y las interpretaciones abre nuevas posibilidades de acción.</p>
+      </a>
 
-</section>
+    </div>
 
-<!-- PROPUESTAS -->
+  </section>
 
-<section class="servicios reveal">
+  <!-- PROPUESTAS -->
+  <section class="servicios metodologia reveal">
 
-<h2>Propuestas</h2>
+    <h2>Propuestas</h2>
 
-<div class="servicios-grid">
+    <div class="servicios-grid">
 
-<a href="propuestas.html#talleres" class="servicio">
-<h3>Talleres iniciales</h3>
-<p>Primer acercamiento al coaching ontológico a través de experiencias concretas.</p>
-</a>
+      <a href="propuestas.html#darse-cuenta" class="servicio">
+        <h3>Darse Cuenta</h3>
+        <p>Niveles 1 y 2 de talleres vivenciales basados en coaching ontológico, con experiencias progresivas de transformación.</p>
+      </a>
 
-<a href="propuestas.html#niveles" class="servicio">
-<h3>Procesos por niveles</h3>
-<p>Trabajo progresivo sobre la forma de observar, interpretar y actuar.</p>
-</a>
+      <a href="propuestas.html#peldaños" class="servicio">
+        <h3>Peldaños</h3>
+        <p>Un proceso de tres meses para profundizar, integrar y llevar a la vida real lo trabajado en los niveles anteriores.</p>
+      </a>
 
-<a href="propuestas.html#formacion" class="servicio">
-<h3>Formación en coaching</h3>
-<p>Proceso completo para formarte y desarrollar una práctica profesional.</p>
-</a>
+      <a href="propuestas.html#escuela" class="servicio">
+        <h3>Escuela de Coaching</h3>
+        <p>Formación orientada a quienes, después de atravesar el recorrido previo, desean formarse profesionalmente como coach.</p>
+      </a>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
-<!-- METODOLOGIA -->
+  <!-- REFLEXIONES -->
+  <section class="servicios reveal">
 
-<section class="servicios metodologia reveal">
-<h2>Cómo trabajamos</h2>
+    <h2>Reflexiones</h2>
 
-<div class="metodologia-bloques">
+    <div class="servicios-grid">
 
-<!-- Observación -->
-<div class="bloque">
-  
-<div class="bloque-texto">
-<h3><span class="step">01</span> Observación</h3>
-  <p>Identificar patrones, interpretaciones y formas de actuar actuales.</p>
-<a href="metodologia.html#observacion">Ver más</a>
-</div>
+      <a href="reflexiones.html" class="servicio">
+        <h3>No se trata solo de lo que te pasa</h3>
+        <p>Muchas veces el cambio comienza cuando observás de otra manera lo que ya venías viviendo.</p>
+      </a>
 
-<div class="bloque-img">
-<img src="img/observacion.jpg" alt="Observación">
-</div>
+      <a href="reflexiones.html" class="servicio">
+        <h3>El miedo también habla</h3>
+        <p>Reconocer el miedo no es frenarte: puede ser el primer paso para actuar de forma diferente.</p>
+      </a>
 
-</div>
+      <a href="reflexiones.html" class="servicio">
+        <h3>Transformar el ser transforma la vida</h3>
+        <p>Cuando cambia tu manera de pensar, sentir y actuar, cambian también tus resultados.</p>
+      </a>
 
-<!-- Intervención -->
-<div class="bloque reverse">
-  
-<div class="bloque-texto">
-<h3><span class="step">02</span> Intervención</h3>
-  <p>Dinámicas y conversaciones que generan quiebres reales.</p>
-<a href="metodologia.html#intervencion">Ver más</a>
-</div>
+    </div>
 
-<div class="bloque-img">
-<img src="img/intervencion.jpg" alt="Intervención">
-</div>
+  </section>
 
-</div>
+  <!-- CONTACTO -->
+  <section class="contacto reveal">
 
-<!-- Integración -->
-<div class="bloque">
-  
-<div class="bloque-texto">
-<h3><span class="step">03</span> Integración</h3>
-  <p>Llevar lo trabajado a la vida cotidiana y sostener nuevos resultados.</p>
-<a href="metodologia.html#integracion">Ver más</a>
-</div>
+    <h2>¿Querés empezar?</h2>
 
-<div class="bloque-img">
-<img src="img/integracion.jpg" alt="Integración">
-</div>
+    <p>
+      Si algo de esto resuena con vos, podemos orientarte según tu momento y lo que estés buscando.
+    </p>
 
-</div>
+    <a class="cta" href="contacto.html">Escribinos</a>
 
-</div>
-</section>
+  </section>
 
-<!-- CTA FINAL -->
+  <!-- FOOTER -->
+  <footer>
 
-<section class="contacto reveal">
+    <p>Desarrollado por <a href="https://presenciaonline.github.io">PresenciaOnline.net</a></p>
 
-<h2>¿Querés empezar?</h2>
+    <p>
+      <a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
+      <a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
+      <a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
+      <a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
+    </p>
 
-<p>
-Podemos orientarte según tu momento y lo que estés buscando.
-</p>
+  </footer>
 
-<a class="cta" href="contacto.html">Escribinos</a>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+    }
 
-</section>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
 
-<!-- FOOTER (INTOCABLE) -->
-
-<footer>
-
-<p>Desarrollado por <a href="https://presenciaonline.github.io">PresenciaOnline.net</a></p>
-
-<p>
-<a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
-<a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
-<a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
-<a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
-</p>
-
-</footer>
-
-<script>
-
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add("visible");
-}
-});
-});
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-document.querySelectorAll(".bloque").forEach(el => observer.observe(el));
-</script>
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    document.querySelectorAll(".bloque").forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
