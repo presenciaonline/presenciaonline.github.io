@@ -142,7 +142,7 @@ align-items:center;
 }
 
 .sobre-mi-image{
-max-width:420px;
+max-width:480px;
 margin:auto;
 }
 
@@ -928,7 +928,7 @@ background:#f9fbfa;
 /* imágenes */
 .hero-image img{
   width:100%;
-  max-width:420px;
+  max-width:480px;
   border-radius:14px;
   box-shadow:0 12px 35px rgba(0,0,0,0.12);
 }
@@ -939,7 +939,7 @@ background:#f9fbfa;
   }
 
   .hero-image img{
-    max-width:320px;
+    max-width:340px;
   }
 
 }
