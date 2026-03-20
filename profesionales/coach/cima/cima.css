@@ -726,9 +726,10 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    max-width: none;
-  }
+  font-size: clamp(1.8rem, 4vw, 3rem); /* un poco más chico */
+  max-width: 100%;                     /* hereda el ancho del contenedor */
+  word-wrap: break-word;                /* fuerza a partir palabras largas si es necesario */
+}
 
   .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem);
