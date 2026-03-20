@@ -722,6 +722,7 @@ footer {
     min-width: 280px;              /* ancho mínimo para el texto */
     text-align: left;
     align-items: flex-start;       /* alinea el texto a la izquierda */
+    max-width: 400px;   /* podés ajustar: 400, 450, 500... */
   }
 
   .hero h1 {
