@@ -10,13 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="psico.css">
-
 <style>
 .barra-retorno {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 9998;
   background: #1a2332;
   color: rgba(255,255,255,0.75);
@@ -28,35 +25,22 @@
   font-size: 0.78rem;
   font-family: "DM Sans", sans-serif;
 }
-.barra-retorno-link {
-  color: #5CC8D4;
-  text-decoration: none;
-  font-weight: 600;
-}
+.barra-retorno-link { color: #5CC8D4; text-decoration: none; font-weight: 600; }
 .barra-retorno-link:hover { opacity: 0.8; }
 .barra-retorno-sep { opacity: 0.3; }
 .barra-retorno-texto { opacity: 0.6; }
 .barra-retorno-cta {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  background: #0B6E7A;
-  padding: 4px 12px;
-  border-radius: 99px;
+  color: white; text-decoration: none; font-weight: 600;
+  background: #0B6E7A; padding: 4px 12px; border-radius: 99px;
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
-
 .header { top: 36px !important; }
-
-@media (max-width: 600px) {
-  .barra-retorno-texto { display: none; }
-}
+@media (max-width: 600px) { .barra-retorno-texto { display: none; } }
 </style>
 </head>
-
 <body>
 
-<!-- BARRA -->
+<!-- BARRA RETORNO -->
 <div class="barra-retorno">
   <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
   <span class="barra-retorno-sep">·</span>
@@ -64,7 +48,7 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
-<!-- WHATSAPP -->
+<!-- FLOTANTE WHATSAPP -->
 <a href="https://wa.me/5491100000000?text=Hola,%20quisiera%20consultar%20por%20una%20primera%20entrevista." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
@@ -76,14 +60,12 @@
       <span class="logo-nombre">Lic. Mariana López</span>
       <span class="logo-esp">Psicología · Palermo</span>
     </a>
-
     <nav class="nav" id="nav-menu">
       <a href="index.html" class="nav-link active">Inicio</a>
       <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
-      <a href="tratamientos.html" class="nav-link">Enfoque</a>
+      <a href="enfoque.html" class="nav-link">Enfoque</a>
       <a href="contacto.html" class="nav-link nav-cta">Solicitar entrevista</a>
     </nav>
-
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -93,151 +75,103 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=1400&q=80" alt="Espacio terapéutico">
+    <img src="assets/img/hero.jpg" alt="Espacio terapéutico">
     <div class="hero-overlay"></div>
   </div>
-
   <div class="contenedor hero-inner">
     <div class="hero-content">
-
       <div class="hero-badge">✦ Espacios disponibles</div>
-
-      <h1>
-        Un espacio para empezar a hablar<br>
-        de lo que le pasa
-      </h1>
-
-      <p class="hero-sub">
-        Acompañamiento terapéutico desde la escucha y el respeto, a su propio ritmo y sin juicio.
-      </p>
-
+      <h1>Un espacio para empezar<br>a hablar de lo que<br><em>le pasa.</em></h1>
+      <p class="hero-sub">Acompañamiento terapéutico desde la escucha y el respeto, a su propio ritmo y sin juicio.</p>
       <div class="hero-btns">
         <a href="contacto.html" class="btn btn-primary">Solicitar una primera entrevista →</a>
         <a href="sobre-mi.html" class="btn btn-ghost">Conocer mi enfoque</a>
       </div>
-
       <div class="hero-datos">
-
         <div class="dato">
           <span class="dato-num">Escucha</span>
           <span class="dato-label">sin juicio</span>
         </div>
-
         <div class="dato-sep"></div>
-
         <div class="dato">
           <span class="dato-num">Proceso</span>
           <span class="dato-label">a su ritmo</span>
         </div>
-
         <div class="dato-sep"></div>
-
         <div class="dato">
           <span class="dato-num">Palermo</span>
           <span class="dato-label">Buenos Aires</span>
         </div>
-
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- SOBRE -->
+<!-- RESUMEN SOBRE MÍ -->
 <section class="seccion">
   <div class="contenedor seccion-grid-2">
-
     <div class="sobre-img-wrap">
-      <img src="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=600&q=80" alt="Lic. Mariana López" class="sobre-img">
+      <img src="assets/img/psicologa.jpg" alt="Lic. Mariana López" class="sobre-img">
       <div class="sobre-badge-card">
         <div class="badge-num">MP 58.421</div>
         <div class="badge-label">Matrícula Profesional</div>
       </div>
     </div>
-
     <div class="sobre-texto">
       <div class="seccion-kicker">Sobre mí</div>
-
       <h2>El vínculo empieza antes<br>de la primera sesión.</h2>
-
-      <p>
-        Trabajo acompañando procesos terapéuticos desde un enfoque centrado en la escucha, el respeto y la singularidad de cada persona.
-      </p>
-
-      <p>
-        Muchas decisiones comienzan antes del primer encuentro. Poder comprender con quién va a hablar y cómo se trabaja es parte de ese proceso.
-      </p>
-
+      <p>Trabajo acompañando procesos terapéuticos desde un enfoque centrado en la escucha, el respeto y la singularidad de cada persona.</p>
+      <p>Muchas decisiones comienzan antes del primer encuentro. Poder comprender con quién va a hablar y cómo se trabaja es parte de ese proceso.</p>
       <a href="sobre-mi.html" class="link-arrow">Conocer más sobre mi enfoque →</a>
     </div>
-
   </div>
 </section>
 
-<!-- ENFOQUE -->
+<!-- RESUMEN ENFOQUE -->
 <section class="seccion seccion-alt">
   <div class="contenedor">
-
     <div class="seccion-header">
       <div class="seccion-kicker">Acompañamiento</div>
-
       <h2>Un espacio pensado<br>para cada proceso.</h2>
-
-      <p class="seccion-sub">
-        Cada situación es distinta. El trabajo se construye en función de lo que usted necesita en este momento.
-      </p>
+      <p class="seccion-sub">Cada situación es distinta. El trabajo se construye en función de lo que usted necesita en este momento.</p>
     </div>
 
     <div class="tratamientos-grid">
 
-      <a href="tratamientos.html#ansiedad" class="trat-card">
+      <a href="enfoque.html#ansiedad" class="trat-card">
         <h3>Ansiedad y angustia</h3>
-        <p>Espacio para comprender lo que le está pasando y empezar a ordenarlo.</p>
+        <p>Espacio para comprender lo que le está pasando y empezar a ordenarlo sin presión.</p>
         <span class="trat-link">Ver más →</span>
       </a>
 
-      <a href="tratamientos.html#procesos" class="trat-card">
+      <a href="enfoque.html#procesos" class="trat-card">
         <h3>Procesos personales</h3>
-        <p>Acompañamiento en momentos de cambio, decisiones o crisis.</p>
+        <p>Acompañamiento en momentos de cambio, decisiones difíciles o crisis.</p>
         <span class="trat-link">Ver más →</span>
       </a>
 
-      <a href="tratamientos.html#vinculos" class="trat-card">
-        <h3>Vínculos</h3>
-        <p>Trabajo sobre relaciones, comunicación y conflictos.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-
-      <a href="tratamientos.html#primera" class="trat-card">
+      <a href="enfoque.html#primera" class="trat-card">
         <h3>Primera consulta</h3>
-        <p>Un primer encuentro para conocer su situación sin compromiso.</p>
+        <p>Un primer encuentro para conocer su situación, sin ningún compromiso de continuar.</p>
         <span class="trat-link">Ver más →</span>
       </a>
 
     </div>
 
     <div class="seccion-cta">
-      <a href="tratamientos.html" class="btn btn-outline">Ver más →</a>
+      <a href="enfoque.html" class="btn btn-outline">Ver todo el enfoque →</a>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- RESUMEN CONTACTO -->
 <section class="seccion">
   <div class="contenedor seccion-grid-2">
-
     <div class="contacto-preview">
       <div class="seccion-kicker">Contacto</div>
-
       <h2>Puede comenzar cuando lo necesite.</h2>
-
-      <p>
-        Puede comunicarse por WhatsApp o completar el formulario y se le responderá en el día.
-      </p>
-
+      <p>Puede comunicarse por WhatsApp o completar el formulario. Se le responderá en el día.</p>
       <div class="contacto-datos">
-
         <div class="contacto-dato">
           <div class="contacto-icono">📍</div>
           <div>
@@ -245,7 +179,6 @@
             <span>Palermo, Ciudad de Buenos Aires</span>
           </div>
         </div>
-
         <div class="contacto-dato">
           <div class="contacto-icono">🕐</div>
           <div>
@@ -253,7 +186,6 @@
             <span>Lunes a viernes 9 a 19hs</span>
           </div>
         </div>
-
         <div class="contacto-dato">
           <div class="contacto-icono" style="background:rgba(11,110,122,0.08);">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;">
@@ -263,47 +195,38 @@
             <span>+54 9 11 0000-0000</span>
           </div>
         </div>
-
       </div>
-
-      <a href="contacto.html" class="btn btn-primary">Solicitar entrevista →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar una primera entrevista →</a>
     </div>
-
     <div class="mapa-placeholder">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4!2d-58.4173!3d-34.5865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzExLjQiUyA1OMKwMjUnMDIuMyJX!5e0!3m2!1ses!2sar!4v1"
         width="100%" height="100%" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
       </iframe>
     </div>
-
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="contenedor footer-inner">
-
     <div class="footer-brand">
       <div class="footer-nombre">Lic. Mariana López</div>
       <div class="footer-esp">Psicología</div>
       <div class="footer-mat">MP 58.421</div>
     </div>
-
     <div class="footer-links">
       <a href="index.html">Inicio</a>
       <a href="sobre-mi.html">Sobre mí</a>
-      <a href="tratamientos.html">Enfoque</a>
+      <a href="enfoque.html">Enfoque</a>
       <a href="contacto.html">Contacto</a>
     </div>
-
     <div class="footer-contacto">
       <div>Palermo, Buenos Aires</div>
       <div>+54 9 11 0000-0000</div>
       <a href="mailto:contacto@psico.com">contacto@psico.com</a>
     </div>
-
   </div>
-
   <div class="contenedor footer-bottom">
     <span>© 2025 Lic. Mariana López. Todos los derechos reservados.</span>
     <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
@@ -314,22 +237,18 @@
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
 </script>
-
 </body>
 </html>
