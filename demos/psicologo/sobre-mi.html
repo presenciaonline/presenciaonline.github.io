@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre mí | Lic. Mariana López · Psicología Palermo</title>
+<meta name="description" content="Conocé la formación, trayectoria y enfoque de la Lic. Mariana López, psicóloga en Palermo, Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="psico.css">
+<style>
+.barra-retorno {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9998;
+  background: #1a2332;
+  color: rgba(255,255,255,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 20px;
+  font-size: 0.78rem;
+  font-family: "DM Sans", sans-serif;
+}
+.barra-retorno-link { color: #5CC8D4; text-decoration: none; font-weight: 600; }
+.barra-retorno-link:hover { opacity: 0.8; }
+.barra-retorno-sep { opacity: 0.3; }
+.barra-retorno-texto { opacity: 0.6; }
+.barra-retorno-cta {
+  color: white; text-decoration: none; font-weight: 600;
+  background: #0B6E7A; padding: 4px 12px; border-radius: 99px;
+}
+.barra-retorno-cta:hover { opacity: 0.85; }
+.header { top: 36px !important; }
+@media (max-width: 600px) { .barra-retorno-texto { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="barra-retorno">
+  <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
+  <span class="barra-retorno-sep">·</span>
+  <span class="barra-retorno-texto">Esta es una demo de ejemplo</span>
+  <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
+</div>
+
+<a href="https://wa.me/5491100000000?text=Hola,%20quisiera%20consultar%20por%20una%20primera%20entrevista." class="wa-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<header class="header" id="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo-text">
+      <span class="logo-nombre">Lic. Mariana López</span>
+      <span class="logo-esp">Psicología · Palermo</span>
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sobre-mi.html" class="nav-link active">Sobre mí</a>
+      <a href="enfoque.html" class="nav-link">Enfoque</a>
+      <a href="contacto.html" class="nav-link nav-cta">Solicitar entrevista</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO PÁGINA -->
+<section class="page-hero">
+  <div class="contenedor">
+    <div class="seccion-kicker">Sobre mí</div>
+    <h1>Un trabajo construido<br>sobre la escucha.</h1>
+  </div>
+</section>
+
+<!-- SOBRE MÍ COMPLETO -->
+<section class="seccion">
+  <div class="contenedor seccion-grid-2">
+    <div class="sobre-img-wrap">
+      <img src="assets/img/psicologa.jpg" alt="Lic. Mariana López" class="sobre-img">
+      <div class="sobre-badge-card">
+        <div class="badge-num">MP 58.421</div>
+        <div class="badge-label">Matrícula Profesional</div>
+      </div>
+    </div>
+    <div class="sobre-texto reveal">
+      <h2>Mi enfoque</h2>
+      <p>Trabajo acompañando procesos terapéuticos desde un lugar centrado en la singularidad de cada persona. No hay una fórmula ni un protocolo único — hay una escucha atenta a lo que cada situación necesita.</p>
+      <p>Mi formación combina el enfoque cognitivo-conductual con herramientas sistémicas y de tercera generación. Pero más allá de las técnicas, lo que orienta el trabajo es la relación terapéutica: ese vínculo de confianza donde el cambio puede ocurrir.</p>
+      <p>Muchas personas llegan con la duda de si la terapia es para ellas. La primera entrevista existe exactamente para eso: para conocer su situación, entender qué está buscando y ver juntos si hay un camino posible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMACIÓN -->
+<section class="seccion seccion-alt">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Formación</div>
+      <h2>Trayectoria y credenciales.</h2>
+    </div>
+    <div class="formacion-grid">
+      <div class="formacion-item">
+        <div class="formacion-año">2007</div>
+        <div class="formacion-desc">
+          <strong>Licenciatura en Psicología</strong>
+          <span>Universidad de Buenos Aires (UBA)</span>
+        </div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-año">2010</div>
+        <div class="formacion-desc">
+          <strong>Especialización en Terapia Cognitivo-Conductual</strong>
+          <span>AIGLE — Asociación para la Investigación y el Desarrollo de la Psicoterapia</span>
+        </div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-año">2014</div>
+        <div class="formacion-desc">
+          <strong>Formación en Terapia de Aceptación y Compromiso (ACT)</strong>
+          <span>ACBS — Association for Contextual Behavioral Science</span>
+        </div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-año">2018</div>
+        <div class="formacion-desc">
+          <strong>Posgrado en Terapia Sistémica</strong>
+          <span>Instituto Argentino de Terapia Familiar y de Pareja</span>
+        </div>
+      </div>
+      <div class="formacion-item">
+        <div class="formacion-año">2022</div>
+        <div class="formacion-desc">
+          <strong>Actualización en Trauma y Regulación Emocional</strong>
+          <span>Formación continua — Buenos Aires</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMA DE TRABAJAR -->
+<section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Mi forma de trabajar</div>
+      <h2>Lo que puede esperar<br>desde el primer encuentro.</h2>
+    </div>
+    <div class="valores-grid">
+      <div class="valor-item reveal">
+        <div class="valor-icono">🎧</div>
+        <h3>Escucha sin juicio</h3>
+        <p>Un espacio donde puede hablar de lo que le está pasando sin sentir que tiene que justificarse ni demostrar nada.</p>
+      </div>
+      <div class="valor-item reveal">
+        <div class="valor-icono">🌱</div>
+        <h3>Proceso a su ritmo</h3>
+        <p>No hay un camino único ni un tiempo estipulado. El trabajo se construye en función de lo que usted necesita en cada momento.</p>
+      </div>
+      <div class="valor-item reveal">
+        <div class="valor-icono">🤝</div>
+        <h3>Vínculo terapéutico</h3>
+        <p>La relación entre paciente y terapeuta es la herramienta más poderosa del proceso. Todo lo demás se construye sobre esa base.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="seccion seccion-teal">
+  <div class="contenedor seccion-cta-center">
+    <h2>¿Quiere conocer cómo<br>podemos trabajar juntos?</h2>
+    <p>La primera entrevista es un espacio para conocer su situación sin ningún compromiso de continuar.</p>
+    <a href="contacto.html" class="btn btn-white">Solicitar una primera entrevista →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor footer-inner">
+    <div class="footer-brand">
+      <div class="footer-nombre">Lic. Mariana López</div>
+      <div class="footer-esp">Psicología</div>
+      <div class="footer-mat">MP 58.421</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="enfoque.html">Enfoque</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-contacto">
+      <div>Palermo, Buenos Aires</div>
+      <div>+54 9 11 0000-0000</div>
+      <a href="mailto:contacto@psico.com">contacto@psico.com</a>
+    </div>
+  </div>
+  <div class="contenedor footer-bottom">
+    <span>© 2025 Lic. Mariana López. Todos los derechos reservados.</span>
+    <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+window.addEventListener('scroll', function() {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
