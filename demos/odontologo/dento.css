@@ -1062,6 +1062,9 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 
 @media (max-width: 480px) {
   .hero { min-height: 100svh; }
+  .hero-inner {
+    padding: 160px 20px 80px;
+  }
   .trat-detalle { flex-direction: column; gap: 16px; }
   .como-llegar { flex-direction: column; }
 }
