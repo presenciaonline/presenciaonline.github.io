@@ -149,6 +149,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
   padding: 12px 0;
+  top: inherit;
 }
 
 .header-inner {
