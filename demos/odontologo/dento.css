@@ -149,7 +149,6 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
   padding: 12px 0;
-  top: inherit;
 }
 
 .header-inner {
@@ -1067,22 +1066,3 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   .como-llegar { flex-direction: column; }
 }
 
-/* =============================================
-   BARRA DE RETORNO — PRESENCIA ONLINE
-   ============================================= */
-.header {
-  top: 36px;
-}
-
-@media (max-width: 600px) {
-  .header {
-    top: 60px;
-  }
-}
-@media (max-width: 480px) {
-
-  .hero-inner {
-  padding: 160px 20px 80px;
-}
-
-}
