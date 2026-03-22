@@ -44,12 +44,7 @@
   border-radius: 99px;
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
-.header,
-.header.scrolled { top: 60px !important; }
-@media (max-width: 600px) {
-  .header,
-  .header.scrolled { top: 60px !important; }
-}
+
 </style>
 </head>
 <body>
@@ -254,6 +249,17 @@ Explicación clara de su situación y las opciones disponibles desde la primera 
 </footer>
 
 <script>
+
+function setHeaderTop() {
+  const barra = document.querySelector('.barra-retorno');
+  const header = document.getElementById('header');
+  if (barra && header) {
+    header.style.top = barra.offsetHeight + 'px';
+  }
+}
+setHeaderTop();
+window.addEventListener('resize', setHeaderTop);
+  
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
