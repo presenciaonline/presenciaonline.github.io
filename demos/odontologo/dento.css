@@ -1073,7 +1073,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 
 @media (max-width: 600px) {
   .header {
-    top: 50px;
+    top: 60px;
   }
 }
 @media (max-width: 480px) {
