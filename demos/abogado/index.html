@@ -235,21 +235,36 @@
 </footer>
 
 <script>
+
+function setHeaderTop() {
+  const barra = document.querySelector('.barra-retorno');
+  const header = document.getElementById('header');
+  if (barra && header) {
+    header.style.top = barra.offsetHeight + 'px';
+  }
+}
+setHeaderTop();
+window.addEventListener('resize', setHeaderTop);
+  
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
+
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
+
 document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
 </script>
+
 </body>
 </html>
