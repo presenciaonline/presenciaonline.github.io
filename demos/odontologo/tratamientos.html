@@ -12,9 +12,7 @@
 <style>
 .barra-retorno {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 9998;
   background: #1a2332;
   color: rgba(255,255,255,0.75);
@@ -26,31 +24,20 @@
   font-size: 0.78rem;
   font-family: "DM Sans", sans-serif;
 }
-.barra-retorno-link {
-  color: #5CC8D4;
-  text-decoration: none;
-  font-weight: 600;
-}
+.barra-retorno-link { color: #5CC8D4; text-decoration: none; font-weight: 600; }
 .barra-retorno-link:hover { opacity: 0.8; }
 .barra-retorno-sep { opacity: 0.3; }
 .barra-retorno-texto { opacity: 0.6; }
 .barra-retorno-cta {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  background: #0B6E7A;
-  padding: 4px 12px;
-  border-radius: 99px;
+  color: white; text-decoration: none; font-weight: 600;
+  background: #0B6E7A; padding: 4px 12px; border-radius: 99px;
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
-.header { top: 36px !important; }
-@media (max-width: 600px) {
-  .barra-retorno-texto { display: none; }
-}
+@media (max-width: 600px) { .barra-retorno-texto { display: none; } }
 </style>
 </head>
 <body>
-<!-- BARRA RETORNO PRESENCIA ONLINE -->
+
 <div class="barra-retorno">
   <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
   <span class="barra-retorno-sep">·</span>
@@ -58,7 +45,7 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
-<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
+<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
@@ -72,7 +59,7 @@
       <a href="index.html" class="nav-link">Inicio</a>
       <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
       <a href="tratamientos.html" class="nav-link active">Tratamientos</a>
-      <a href="contacto.html" class="nav-link nav-cta">Sacar turno</a>
+      <a href="contacto.html" class="nav-link nav-cta">Solicitar turno</a>
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -80,7 +67,6 @@
   </div>
 </header>
 
-<!-- HERO PÁGINA -->
 <section class="page-hero">
   <div class="contenedor">
     <div class="seccion-kicker">Tratamientos</div>
@@ -93,10 +79,10 @@
 <section class="trat-seccion" id="limpieza">
   <div class="contenedor trat-seccion-inner">
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/limpieza.jpg" alt="Limpieza dental">
+      <img src="assets/img/limpieza.jpg" alt="Limpieza dental">
     </div>
     <div class="trat-texto reveal">
-     
+      <div class="seccion-kicker">Tratamiento 01</div>
       <h2>Limpieza dental</h2>
       <p>La limpieza profesional va más allá del cepillado diario. Permite remover el sarro acumulado en zonas de difícil acceso, detectar focos de inflamación temprana y evaluar el estado general de la boca.</p>
       <p>Es la base de cualquier tratamiento y la mejor inversión en salud bucal a largo plazo. Se recomienda realizarla cada seis meses.</p>
@@ -105,7 +91,7 @@
         <div class="trat-detalle-item"><strong>Frecuencia</strong><span>Cada 6 meses</span></div>
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>No requiere</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
   </div>
 </section>
@@ -114,7 +100,7 @@
 <section class="trat-seccion seccion-alt" id="blanqueamiento">
   <div class="contenedor trat-seccion-inner reverse">
     <div class="trat-texto reveal">
-     
+      <div class="seccion-kicker">Tratamiento 02</div>
       <h2>Blanqueamiento</h2>
       <p>El blanqueamiento clínico utiliza agentes activos de alta concentración aplicados en consultorio, con resultados visibles desde la primera sesión. A diferencia de los productos de venta libre, el procedimiento está controlado y adaptado a cada caso.</p>
       <p>Se evalúa previamente el estado del esmalte y la sensibilidad dentaria para determinar el protocolo más adecuado.</p>
@@ -123,10 +109,10 @@
         <div class="trat-detalle-item"><strong>Sesiones</strong><span>1 a 2 sesiones</span></div>
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>No requiere</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/blanqueamiento.jpg" alt="Blanqueamiento dental">
+      <img src="assets/img/blanqueamiento.jpg" alt="Blanqueamiento dental">
     </div>
   </div>
 </section>
@@ -135,10 +121,10 @@
 <section class="trat-seccion" id="ortodoncia">
   <div class="contenedor trat-seccion-inner">
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/ortodoncia.jpg" alt="Ortodoncia">
+      <img src="assets/img/ortodoncia.jpg" alt="Ortodoncia">
     </div>
     <div class="trat-texto reveal">
-      
+      <div class="seccion-kicker">Tratamiento 03</div>
       <h2>Ortodoncia</h2>
       <p>Trabajo con brackets metálicos, cerámicos e Invisalign, según las necesidades y preferencias de cada paciente. La elección del sistema no es solo estética: depende de la complejidad del caso y de los hábitos del paciente.</p>
       <p>La evaluación inicial incluye radiografías, fotografías y modelos digitales para planificar el tratamiento con precisión antes de comenzar.</p>
@@ -147,7 +133,7 @@
         <div class="trat-detalle-item"><strong>Sistemas</strong><span>Brackets · Invisalign</span></div>
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>No requiere</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
   </div>
 </section>
@@ -156,7 +142,7 @@
 <section class="trat-seccion seccion-alt" id="implantes">
   <div class="contenedor trat-seccion-inner reverse">
     <div class="trat-texto reveal">
-     
+      <div class="seccion-kicker">Tratamiento 04</div>
       <h2>Implantes</h2>
       <p>El implante dental es la solución más estable y duradera para reemplazar una pieza perdida. Funciona como una raíz artificial sobre la que se coloca una corona que imita el diente natural en forma, color y función.</p>
       <p>El proceso requiere una planificación detallada que incluye evaluación ósea, tomografía y diseño digital previo. Cada etapa está explicada con claridad antes de proceder.</p>
@@ -165,10 +151,10 @@
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>Local</span></div>
         <div class="trat-detalle-item"><strong>Durabilidad</strong><span>15+ años</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/implantes.jpg" alt="Implantes dentales">
+      <img src="assets/img/implantes.jpg" alt="Implantes dentales">
     </div>
   </div>
 </section>
@@ -177,10 +163,10 @@
 <section class="trat-seccion" id="endodoncia">
   <div class="contenedor trat-seccion-inner">
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/endodoncia.jpg" alt="Endodoncia">
+      <img src="assets/img/endodoncia.jpg" alt="Endodoncia">
     </div>
     <div class="trat-texto reveal">
-      
+      <div class="seccion-kicker">Tratamiento 05</div>
       <h2>Endodoncia</h2>
       <p>El tratamiento de conducto permite preservar una pieza dentaria que de otro modo debería extraerse. Consiste en eliminar el tejido afectado del interior del diente y sellar el conducto radicular para evitar reinfecciones.</p>
       <p>Con las técnicas actuales, el procedimiento es predecible, controlado y —contrariamente a lo que se suele creer— poco molesto para el paciente.</p>
@@ -189,7 +175,7 @@
         <div class="trat-detalle-item"><strong>Sesiones</strong><span>1 a 2 sesiones</span></div>
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>Local</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
   </div>
 </section>
@@ -198,7 +184,7 @@
 <section class="trat-seccion seccion-alt" id="estetica">
   <div class="contenedor trat-seccion-inner reverse">
     <div class="trat-texto reveal">
-      
+      <div class="seccion-kicker">Tratamiento 06</div>
       <h2>Estética dental</h2>
       <p>Las carillas de porcelana y el diseño digital de sonrisa permiten transformar la apariencia de los dientes con resultados precisos y naturales. Antes de comenzar cualquier procedimiento, realizamos una simulación digital para que sepa exactamente cómo va a quedar el resultado.</p>
       <p>Cada diseño parte de un análisis facial, de la proporción de los dientes y de las expectativas concretas del paciente.</p>
@@ -207,10 +193,10 @@
         <div class="trat-detalle-item"><strong>Material</strong><span>Porcelana · Composite</span></div>
         <div class="trat-detalle-item"><strong>Anestesia</strong><span>Local (mínima)</span></div>
       </div>
-      <a href="contacto.html" class="btn btn-primary">Sacar turno →</a>
+      <a href="contacto.html" class="btn btn-primary">Solicitar turno →</a>
     </div>
     <div class="trat-img-wrap reveal">
-      <img src="https://presenciaonline.github.io/demos/odontologo/assets/img/estetica.jpg" alt="Estética dental">
+      <img src="assets/img/estetica.jpg" alt="Estética dental">
     </div>
   </div>
 </section>
@@ -220,7 +206,7 @@
   <div class="contenedor seccion-cta-center">
     <h2>¿Tiene dudas sobre qué<br>tratamiento necesita?</h2>
     <p>La primera consulta es una evaluación completa. Le explico exactamente qué encontré y qué opciones tiene, sin compromiso de comenzar.</p>
-    <a href="contacto.html" class="btn btn-white">Sacar turno →</a>
+    <a href="contacto.html" class="btn btn-white">Solicitar turno →</a>
   </div>
 </section>
 
@@ -240,7 +226,8 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-<a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>    </div>
+      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
+    </div>
   </div>
   <div class="contenedor footer-bottom">
     <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
@@ -249,21 +236,26 @@
 </footer>
 
 <script>
+function setHeaderTop() {
+  const barra = document.querySelector('.barra-retorno');
+  const header = document.getElementById('header');
+  if (barra && header) header.style.top = barra.offsetHeight + 'px';
+}
+setHeaderTop();
+window.addEventListener('resize', setHeaderTop);
+
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+</body>
+</html>
