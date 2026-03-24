@@ -1049,7 +1049,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
    .hamburger { display: flex; z-index: 1000; }
 
   .seccion-grid-2 { grid-template-columns: 1fr; gap: 40px; }
-  .trat-seccion-inner { grid-template-columns: 1fr; gap: 40px; }
+  .trat-seccion-inner { grid-template-columns: 1fr; gap: 40px; }   
   .trat-seccion-inner.reverse { direction: ltr; }
   .tratamientos-grid { grid-template-columns: 1fr; }
   .valores-grid { grid-template-columns: 1fr; }
@@ -1058,6 +1058,13 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .hero-btns { flex-direction: column; }
   .sobre-badge-card { bottom: -10px; right: -10px; }
+   /* NUEVO: forzar orden en móvil */
+  .trat-seccion-inner .trat-img-wrap {
+    order: 2;
+  }
+  .trat-seccion-inner .trat-texto {
+    order: 1;
+  }
 }
 
 @media (max-width: 480px) {
