@@ -590,6 +590,22 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   align-items: center;
 }
 
+/* Alternancia en escritorio */
+.trat-seccion-inner .trat-img-wrap {
+  order: 1;
+}
+.trat-seccion-inner .trat-texto {
+  order: 2;
+}
+
+.trat-seccion-inner.reverse .trat-texto {
+  order: 1;
+}
+.trat-seccion-inner.reverse .trat-img-wrap {
+  order: 2;
+}
+
+/*
 .trat-seccion-inner.reverse {
   direction: rtl;
 }
@@ -597,6 +613,7 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 .trat-seccion-inner.reverse > * {
   direction: ltr;
 }
+*/
 
 .trat-img-wrap img {
   width: 100%;
