@@ -33,7 +33,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
-
 .nicho-index-card {
   background: var(--blanco);
   border: 2px solid rgba(26,111,204,0.08);
@@ -44,19 +43,16 @@
   gap: 10px;
   transition: var(--transicion);
 }
-
 .nicho-index-card:hover {
   border-color: var(--azul);
   box-shadow: var(--sombra-hover);
   transform: translateY(-4px);
 }
-
 .nicho-index-header {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .nicho-index-icono {
   width: 40px;
   height: 40px;
@@ -68,12 +64,7 @@
   font-size: 1.2rem;
   flex-shrink: 0;
 }
-
-.nicho-index-card h3 {
-  font-size: 0.95rem;
-  color: var(--oscuro);
-}
-
+.nicho-index-card h3 { font-size: 0.95rem; color: var(--oscuro); }
 .nicho-index-frase {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -81,21 +72,18 @@
   color: var(--oscuro);
   line-height: 1.4;
 }
-
 .nicho-index-copy {
   font-size: 0.83rem;
   color: var(--gris-texto);
   line-height: 1.6;
   flex: 1;
 }
-
 .nicho-index-links {
   display: flex;
   gap: 16px;
   margin-top: 4px;
   flex-wrap: wrap;
 }
-
 .nicho-link-primary {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -104,7 +92,6 @@
   text-decoration: none;
   transition: var(--transicion);
 }
-
 .nicho-link-secondary {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
@@ -113,15 +100,90 @@
   text-decoration: none;
   transition: var(--transicion);
 }
-
 .nicho-link-primary:hover { color: var(--azul-oscuro); }
 .nicho-link-secondary:hover { color: var(--azul); }
+@media (max-width: 1024px) { .nichos-index-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .nichos-index-grid { grid-template-columns: 1fr; } }
 
-@media (max-width: 1024px) {
-  .nichos-index-grid { grid-template-columns: repeat(2, 1fr); }
+/* ── MERCADO PAGO ── */
+.mp-bloque {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #eef3fd 100%);
+  border: 1.5px solid rgba(0,158,227,0.22);
+  border-radius: var(--radio-lg);
+  padding: 26px 24px;
 }
-@media (max-width: 600px) {
-  .nichos-index-grid { grid-template-columns: 1fr; }
+.mp-bloque-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.mp-bloque-titulo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--oscuro);
+}
+.mp-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0,158,227,0.12);
+  color: #0369a1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.mp-bloque-sub {
+  font-size: 0.84rem;
+  color: var(--gris-texto);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+.mp-bloque-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.mp-bloque-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #009ee3;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 10px 20px;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0,158,227,0.28);
+}
+.mp-bloque-btn:hover {
+  background: #007ec2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,158,227,0.38);
+}
+.mp-bloque-btn-ghost {
+  background: transparent;
+  color: #009ee3;
+  border: 2px solid #009ee3;
+  box-shadow: none;
+}
+.mp-bloque-btn-ghost:hover {
+  background: rgba(0,158,227,0.07);
+  box-shadow: none;
+}
+.mp-bloque-nota {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 12px;
 }
 </style>
 
@@ -131,14 +193,6 @@
 
 <!-- BOTONES FLOTANTES -->
 <div class="flotantes">
-  <!--
-  <a href="https://instagram.com/presenciaonline" class="instagram-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-  </a>
-  <a href="https://facebook.com/presenciaonline" class="facebook-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-  </a>
-  -->
   <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." class="whatsapp-float" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
   </a>
@@ -155,7 +209,6 @@
       <a href="profesionales.html">Profesionales</a>
       <a href="demos.html">Demos</a>
       <a href="contacto.html">Contacto</a>
-      <!--<a href="blog.html">Blog</a>-->
       <a href="conocenos.html">Conócenos</a>
     </nav>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -217,7 +270,7 @@
 </section>
 
 
-<!-- 3. POR QUÉ ELEGIRNOS — fusionada con qué incluye -->
+<!-- 3. POR QUÉ ELEGIRNOS -->
 <section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
@@ -258,7 +311,7 @@
 </section>
 
 
-<!-- 4. A QUIÉNES AYUDAMOS — grilla 3x3 con copy corto -->
+<!-- 4. A QUIÉNES AYUDAMOS -->
 <section class="seccion reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
@@ -304,49 +357,17 @@
           <a href="demos/odontologo/index.html" class="nicho-link-secondary">Ver demo</a>
         </div>
       </div>
-  </div>
+    </div>
 
     <div style="text-align:center; margin-top:40px;">
       <a href="profesionales.html" class="btn btn-outline">Ver todos los profesionales →</a>
     </div>
-      
-</section>
 
-
-<!-- 5. BLOG — 9 TARJETAS -->
-<!--
-  <section class="seccion seccion-alt reveal">
-  <div class="contenedor">
-    <h2 class="seccion-titulo">Recursos para profesionales</h2>
-    <p class="seccion-subtitulo">Todo lo que necesitás saber sobre presencia digital para tu profesión.</p>
-    <div class="blog-grid">
-      <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html" class="blog-card">
-        <span class="blog-nicho">🧠 Psicología</span>
-        <h3>¿Un psicólogo necesita una página web o alcanzan las redes sociales?</h3>
-        <span class="blog-leer">Leer artículo →</span>
-      </a>
-      
-      <a href="blog/abogado/03-como-puede-un-abogado-aparecer-en-google.html" class="blog-card">
-        <span class="blog-nicho">⚖️ abogado</span>
-        <h3>¿Cómo puede un abogado aparecer en Google?</h3>
-        <span class="blog-leer">Leer artículo →</span>
-      </a>
-     
-      <a href="blog/odontologo/17-pagina-web-dentista-celular.html" class="blog-card">
-        <span class="blog-nicho">🦷 Odontología</span>
-        <h3>¿Es importante que la página web de un dentista funcione bien en el celular?</h3>
-        <span class="blog-leer">Leer artículo →</span>
-      </a>
-          
-    </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="blog.html" class="btn btn-outline">Ver todos los artículos →</a>
-    </div>
   </div>
 </section>
--->
 
-<!-- 6. CONTACTO -->
+
+<!-- 5. CONTACTO -->
 <section class="seccion reveal" id="contacto">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Hablamos?</h2>
@@ -369,6 +390,39 @@
             presenciaonline.web@gmail.com
           </div>
         </div>
+
+        <!-- ── MERCADO PAGO ── -->
+        <div class="mp-bloque">
+          <div class="mp-bloque-header">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;flex-shrink:0;">
+              <circle cx="18" cy="18" r="18" fill="#009EE3"/>
+              <path d="M9 22l4-7 3.5 5.5 3-4.5 4.5 6H9z" fill="#fff"/>
+            </svg>
+            <span class="mp-bloque-titulo">Pagá por Mercado Pago</span>
+            <span class="mp-badge">Recomendado</span>
+          </div>
+          <p class="mp-bloque-sub">
+            ¿Ya hablamos y confirmaste tu proyecto? Podés enviarnos la seña o el pago final directamente desde acá. Ingresás el monto que acordamos y arrancamos.
+          </p>
+          <div class="mp-bloque-btns">
+            <!--
+              INSTRUCCIONES:
+              1. Entrá a mercadopago.com.ar → Cobrar → Crear link de cobro
+              2. En "Monto" elegí "Dejar que el comprador ingrese el monto"
+              3. Creá uno llamado "Seña Presencia Online" y otro "Saldo final Presencia Online"
+              4. Reemplazá las URLs de abajo con tus links reales
+            -->
+            <a href="https://link.mercadopago.com.ar/TU-LINK-SENA" target="_blank" class="mp-bloque-btn">
+              💳 Enviar seña
+            </a>
+            <a href="https://link.mercadopago.com.ar/TU-LINK-SALDO" target="_blank" class="mp-bloque-btn mp-bloque-btn-ghost">
+              Pagar saldo final
+            </a>
+          </div>
+          <p class="mp-bloque-nota">🔒 Pago seguro · Tarjeta, débito o saldo MP · Vos ingresás el monto al pagar</p>
+        </div>
+        <!-- ── FIN MERCADO PAGO ── -->
+
       </div>
       <div class="contacto-form">
         <form id="formulario-contacto" action="https://script.google.com/macros/s/AKfycbwclnpUF0F-n7_u-HLvNkxYdegzgy7lKLgnUIbznGcSiVpRkLxufXQGfsQNcHb48FUe/exec" method="POST">
@@ -424,31 +478,11 @@
         <a href="contacto.html">Contacto</a>
         <a href="conocenos.html">Conócenos</a>
       </div>
-      <!--
-      <div class="footer-col">
-        <h4>Blog</h4>
-        <a href="blog/psicologos/01-psicologo-necesita-pagina-web.html">Psicólogos</a>
-        <a href="blog/salud/12-cuanto-cuesta-pagina-web-medico.html">Salud</a>
-        <a href="blog/abogado/03-como-puede-un-abogado-aparecer-en-google.html">abogado</a>
-        <a href="blog/contable/05-que-deberia-tener-la-pagina-web-de-un-contador.html">Contable</a>
-        <a href="blog/odontologo/17-pagina-web-dentista-celular.html">Odontología</a>
-        <a href="blog/marketing/10-pagina-web-influencer-confianza-marcas.html">Marketing</a>
-        <a href="blog/coach/07-coach-pagina-web-vs-linkedin.html">Coach</a>
-        <a href="blog/arquitecto/08-que-deberia-tener-pagina-web-arquitecto.html">Arquitecto</a>
-        <a href="blog/nutricionista/09-nutricionista-pagina-web-pacientes.html">Nutricionista</a>
-      </div>
-        -->
       <div class="footer-col">
         <h4>Demos</h4>
         <a href="demos/psicologo/index.html">Demo Psicólogo</a>
-        <!--<a href="demos/salud/index.html">Demo Salud</a>-->
         <a href="demos/abogado/index.html">Demo Abogado</a>
-        <!--<a href="demos/contable/index.html">Demo Contador</a>-->
         <a href="demos/odontologo/index.html">Demo Odontólogo</a>
-        <!--<a href="demos/marketing/index.html">Demo Marketing</a>-->
-        <!--<a href="demos/coach/index.html">Demo Coach</a>-->
-        <!--<a href="demos/arquitecto/index.html">Demo Arquitecto</a>-->
-        <!--<a href="demos/nutricionista/index.html">Demo Nutricionista</a>-->
       </div>
     </div>
     <div class="footer-bottom">
