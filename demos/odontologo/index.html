@@ -68,6 +68,39 @@
 .testimonio-autor span { font-size: 0.78rem; color: var(--teal); }
 @media (max-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .testimonios-grid { grid-template-columns: 1fr; } }
+
+/* EQUIPAMIENTO */
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.equip-item {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  padding: 24px 20px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--trans);
+}
+.equip-item:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-3px);
+}
+.equip-item h3 { font-size: 0.95rem; color: var(--oscuro); }
+.equip-item p { font-size: 0.83rem; color: var(--gris); line-height: 1.55; }
+.equip-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  margin-bottom: 4px;
+}
+@media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
+  
 </style>
 </head>
 <body>
