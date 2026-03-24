@@ -686,22 +686,35 @@ formPago.addEventListener('submit', function(e) {
     method: 'POST',
     body: new FormData(this)
   })
-  .then(function() {
+  .then(function(response) {
+    // Leer la respuesta como texto (debería ser 'ok')
+    return response.text();
+  })
+  .then(function(text) {
     submitBtn.textContent = '✅ ¡Datos guardados!';
-    // Abrir Mercado Pago en nueva pestaña
-    window.open(pendingUrl, '_blank');
+    
+    // Crear un enlace invisible y hacer clic en él (evita bloqueo de pop-ups)
+    const link = document.createElement('a');
+    link.href = pendingUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
     // Cerrar modal y limpiar formulario
     modal.style.display = 'none';
     formPago.reset();
     submitBtn.disabled = false;
     submitBtn.textContent = 'Continuar al pago →';
   })
-  .catch(function() {
+  .catch(function(error) {
+    console.error('Error:', error);
     submitBtn.textContent = 'Continuar al pago →';
     submitBtn.disabled = false;
     alert('Hubo un error al guardar los datos. Por favor intentá de nuevo o escribinos por WhatsApp.');
   });
-});  
+});
   
 </script>
 
