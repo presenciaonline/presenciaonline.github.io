@@ -387,7 +387,7 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card').forEach(el => {
+document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card, .equip-item').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
