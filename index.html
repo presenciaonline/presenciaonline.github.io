@@ -660,7 +660,7 @@ document.getElementById('cancelarPago').addEventListener('click', () => {
   formPago.reset();
 });
 
-// Envío del formulario de datos de pago
+// Envío del formulario de datos de pago (EXACTAMENTE IGUAL QUE EL DE CONTACTO)
 formPago.addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -676,35 +676,22 @@ formPago.addEventListener('submit', function(e) {
 
   document.getElementById('error-msg-modal').style.display = 'none';
 
-  const datos = new URLSearchParams();
-  datos.append('nombre', nombre);
-  datos.append('dni_cuit', dni);
-  datos.append('email', email);
-  datos.append('telefono', telefono);
-  datos.append('tipo_pago', pendingTipo);
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxPlH0k-kaXEh-zHaQOOojb2osAxMq24Fw8socb5Q3qTxe9U3H-UF-7KidvnFILxm7D/exec'; // <--- TU URL
-
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwjhhtVZKECjnQHmSupnKxzhD_TXuY0rYetHmP3fwZOHsXKwbRcNWLWD09CcsTmEQw/exec';
   const submitBtn = this.querySelector('button[type="submit"]');
   submitBtn.textContent = 'Guardando...';
   submitBtn.disabled = true;
 
+  // MISMA ESTRUCTURA QUE EL FORMULARIO DE CONTACTO
   fetch(scriptURL, {
     method: 'POST',
-    body: datos
+    body: new FormData(this)
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Respuesta del script:', data);
-    if (data.success) {
-      // Redirigir a Mercado Pago
-      window.location.href = pendingUrl;
-    } else {
-      throw new Error(data.error || 'Error desconocido');
-    }
+  .then(function() {
+    submitBtn.textContent = '✅ ¡Datos guardados!';
+    // Redirigir a Mercado Pago
+    window.location.href = pendingUrl;
   })
-  .catch(error => {
-    console.error('Error:', error);
+  .catch(function() {
     submitBtn.textContent = 'Continuar al pago →';
     submitBtn.disabled = false;
     alert('Hubo un error al guardar los datos. Por favor intentá de nuevo o escribinos por WhatsApp.');
