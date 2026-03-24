@@ -664,7 +664,6 @@ document.getElementById('cancelarPago').addEventListener('click', () => {
 formPago.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  // Validación simple
   const nombre = document.getElementById('pago_nombre').value.trim();
   const dni = document.getElementById('pago_dni').value.trim();
   const email = document.getElementById('pago_email').value.trim();
@@ -673,43 +672,42 @@ formPago.addEventListener('submit', function(e) {
   if (!nombre || !dni || !email || !telefono) {
     document.getElementById('error-msg-modal').style.display = 'block';
     return;
-  } else {
-    document.getElementById('error-msg-modal').style.display = 'none';
   }
 
-  // Preparar datos para enviar a Google Apps Script
-  const datos = {
-    nombre: nombre,
-    dni_cuit: dni,
-    email: email,
-    telefono: telefono,
-    tipo_pago: pendingTipo,
-    fecha: new Date().toISOString()
-  };
+  document.getElementById('error-msg-modal').style.display = 'none';
 
-  // Aquí debes reemplazar con la URL de tu propio script de Google Apps Script
-  // que reciba estos datos y los guarde en una hoja de cálculo.
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyI38GJ88wm4GBUU4KLGIfFR4GB-QS2wkajM1DiZeeETpq7SsGpNZl28Jjn17RIXutxzA/exec';
+  const datos = new URLSearchParams();
+  datos.append('nombre', nombre);
+  datos.append('dni_cuit', dni);
+  datos.append('email', email);
+  datos.append('telefono', telefono);
+  datos.append('tipo_pago', pendingTipo);
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxPlH0k-kaXEh-zHaQOOojb2osAxMq24Fw8socb5Q3qTxe9U3H-UF-7KidvnFILxm7D/exec'; // <--- TU URL
+
   const submitBtn = this.querySelector('button[type="submit"]');
   submitBtn.textContent = 'Guardando...';
   submitBtn.disabled = true;
 
   fetch(scriptURL, {
     method: 'POST',
-    mode: 'no-cors', // si el script no necesita respuesta, podemos usar no-cors
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(datos)
+    body: datos
   })
-  .then(() => {
-    // En no-cors no podemos leer la respuesta, asumimos éxito
-    // Redirigir al link de Mercado Pago
-    window.location.href = pendingUrl;
+  .then(response => response.json())
+  .then(data => {
+    console.log('Respuesta del script:', data);
+    if (data.success) {
+      // Redirigir a Mercado Pago
+      window.location.href = pendingUrl;
+    } else {
+      throw new Error(data.error || 'Error desconocido');
+    }
   })
   .catch(error => {
     console.error('Error:', error);
     submitBtn.textContent = 'Continuar al pago →';
     submitBtn.disabled = false;
-    alert('Hubo un error. Por favor intentá de nuevo o escribinos por WhatsApp.');
+    alert('Hubo un error al guardar los datos. Por favor intentá de nuevo o escribinos por WhatsApp.');
   });
 });
 </script>
