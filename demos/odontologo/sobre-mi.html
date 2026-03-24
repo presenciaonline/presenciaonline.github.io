@@ -12,9 +12,7 @@
 <style>
 .barra-retorno {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 9998;
   background: #1a2332;
   color: rgba(255,255,255,0.75);
@@ -26,31 +24,52 @@
   font-size: 0.78rem;
   font-family: "DM Sans", sans-serif;
 }
-.barra-retorno-link {
-  color: #5CC8D4;
-  text-decoration: none;
-  font-weight: 600;
-}
+.barra-retorno-link { color: #5CC8D4; text-decoration: none; font-weight: 600; }
 .barra-retorno-link:hover { opacity: 0.8; }
 .barra-retorno-sep { opacity: 0.3; }
 .barra-retorno-texto { opacity: 0.6; }
 .barra-retorno-cta {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  background: #0B6E7A;
-  padding: 4px 12px;
-  border-radius: 99px;
+  color: white; text-decoration: none; font-weight: 600;
+  background: #0B6E7A; padding: 4px 12px; border-radius: 99px;
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
-.header { top: 36px !important; }
-@media (max-width: 600px) {
-  .barra-retorno-texto { display: none; }
+@media (max-width: 600px) { .barra-retorno-texto { display: none; } }
+
+/* EQUIPAMIENTO */
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
+.equip-item {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  padding: 24px 20px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--trans);
+}
+.equip-item:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-3px);
+}
+.equip-item h3 { font-size: 0.95rem; color: var(--oscuro); }
+.equip-item p { font-size: 0.83rem; color: var(--gris); line-height: 1.55; }
+.equip-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  margin-bottom: 4px;
+}
+@media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<!-- BARRA RETORNO PRESENCIA ONLINE -->
+
 <div class="barra-retorno">
   <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
   <span class="barra-retorno-sep">·</span>
@@ -58,7 +77,7 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
-<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
+<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
@@ -72,7 +91,7 @@
       <a href="index.html" class="nav-link">Inicio</a>
       <a href="sobre-mi.html" class="nav-link active">Sobre mí</a>
       <a href="tratamientos.html" class="nav-link">Tratamientos</a>
-      <a href="contacto.html" class="nav-link nav-cta">Sacar turno</a>
+      <a href="contacto.html" class="nav-link nav-cta">Solicitar turno</a>
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -80,7 +99,6 @@
   </div>
 </header>
 
-<!-- HERO PÁGINA -->
 <section class="page-hero">
   <div class="contenedor">
     <div class="seccion-kicker">Sobre mí</div>
@@ -88,11 +106,11 @@
   </div>
 </section>
 
-<!-- SOBRE MÍ COMPLETO -->
+<!-- SOBRE MÍ -->
 <section class="seccion">
   <div class="contenedor seccion-grid-2">
     <div class="sobre-img-wrap">
-      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dra. Valentina Sosa" class="sobre-img">
+      <img src="assets/img/odontologo.jpg" alt="Dra. Valentina Sosa" class="sobre-img">
       <div class="sobre-badge-card">
         <div class="badge-num">MN 42.810</div>
         <div class="badge-label">Matrícula Nacional</div>
@@ -154,8 +172,51 @@
   </div>
 </section>
 
-<!-- VALORES -->
+<!-- EQUIPAMIENTO -->
 <section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Equipamiento</div>
+      <h2>Tecnología al servicio<br>de cada diagnóstico.</h2>
+      <p class="seccion-sub">El consultorio cuenta con equipamiento moderno para diagnósticos más precisos y tratamientos más cómodos.</p>
+    </div>
+    <div class="equip-grid">
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Radiografía digital</h3>
+        <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
+      </div>
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Cámara intraoral</h3>
+        <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
+      </div>
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Sistema Invisalign digital</h3>
+        <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
+      </div>
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Diseño digital de sonrisa</h3>
+        <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
+      </div>
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Anestesia computarizada</h3>
+        <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
+      </div>
+      <div class="equip-item reveal">
+        <div class="equip-dot"></div>
+        <h3>Esterilización con autoclave</h3>
+        <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMA DE TRABAJAR -->
+<section class="seccion seccion-alt">
   <div class="contenedor">
     <div class="seccion-header">
       <div class="seccion-kicker">Mi forma de trabajar</div>
@@ -186,7 +247,7 @@
   <div class="contenedor seccion-cta-center">
     <h2>¿Quiere conocer su situación<br>con precisión?</h2>
     <p>La primera consulta incluye evaluación completa y diagnóstico detallado. Sin compromiso.</p>
-    <a href="contacto.html" class="btn btn-white">Sacar turno →</a>
+    <a href="contacto.html" class="btn btn-white">Solicitar turno →</a>
   </div>
 </section>
 
@@ -206,7 +267,8 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-<a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>    </div>
+      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
+    </div>
   </div>
   <div class="contenedor footer-bottom">
     <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
@@ -215,19 +277,26 @@
 </footer>
 
 <script>
+function setHeaderTop() {
+  const barra = document.querySelector('.barra-retorno');
+  const header = document.getElementById('header');
+  if (barra && header) header.style.top = barra.offsetHeight + 'px';
+}
+setHeaderTop();
+window.addEventListener('resize', setHeaderTop);
+
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+</body>
+</html>
