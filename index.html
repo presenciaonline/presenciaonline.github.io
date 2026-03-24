@@ -164,6 +164,7 @@
   text-decoration: none;
   transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
   box-shadow: 0 2px 8px rgba(0,158,227,0.28);
+  cursor: pointer;
 }
 .mp-bloque-btn:hover {
   background: #007ec2;
@@ -185,8 +186,88 @@
   color: #64748b;
   margin-top: 12px;
 }
-</style>
 
+/* MODAL PARA DATOS DE PAGO */
+.modal-pago {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+.modal-contenido {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  max-width: 500px;
+  width: 90%;
+  padding: 28px;
+  position: relative;
+  box-shadow: var(--sombra-hover);
+}
+.modal-contenido h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.modal-contenido p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+}
+.modal-form .form-grupo {
+  margin-bottom: 18px;
+}
+.modal-form label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--oscuro);
+}
+.modal-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(26,111,204,0.12);
+  border-radius: var(--radio);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  transition: var(--transicion);
+}
+.modal-form input:focus {
+  border-color: var(--azul);
+  outline: none;
+}
+.modal-botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+.modal-botones .btn {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+.modal-botones .btn-secundario {
+  background: #e2e8f0;
+  color: #1a2332;
+  border: none;
+}
+.modal-botones .btn-secundario:hover {
+  background: #cbd5e1;
+  transform: none;
+}
+.error-msg {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: none;
+}
+</style>
 </head>
 
 <body>
@@ -405,17 +486,10 @@
             ¿Ya hablamos y confirmaste tu proyecto? Podés enviarnos la seña o el pago final directamente desde acá. Ingresás el monto que acordamos y arrancamos.
           </p>
           <div class="mp-bloque-btns">
-            <!--
-              INSTRUCCIONES:
-              1. Entrá a mercadopago.com.ar → Cobrar → Crear link de cobro
-              2. En "Monto" elegí "Dejar que el comprador ingrese el monto"
-              3. Creá uno llamado "Seña Presencia Online" y otro "Saldo final Presencia Online"
-              4. Reemplazá las URLs de abajo con tus links reales
-            -->
-            <a href="https://link.mercadopago.com.ar/presenciaonlineweb" target="_blank" class="mp-bloque-btn">
+            <a id="btn-sena" class="mp-bloque-btn" data-url="https://link.mercadopago.com.ar/presenciaonlineweb" data-tipo="seña">
               💳 Enviar seña
             </a>
-            <a href="https://link.mercadopago.com.ar/presenciaonlineweb" target="_blank" class="mp-bloque-btn mp-bloque-btn-ghost">
+            <a id="btn-saldo" class="mp-bloque-btn mp-bloque-btn-ghost" data-url="https://link.mercadopago.com.ar/presenciaonlineweb" data-tipo="saldo">
               Pagar saldo final
             </a>
           </div>
@@ -460,6 +534,38 @@
     </div>
   </div>
 </section>
+
+
+<!-- MODAL PARA DATOS DE PAGO -->
+<div id="modalPago" class="modal-pago">
+  <div class="modal-contenido">
+    <h3>Antes de proceder al pago</h3>
+    <p>Necesitamos tus datos para enviarte la conformidad del pago por correo electrónico y tener un registro.</p>
+    <form id="form-pago" class="modal-form">
+      <div class="form-grupo">
+        <label for="pago_nombre">Nombre completo *</label>
+        <input type="text" id="pago_nombre" name="nombre" required>
+      </div>
+      <div class="form-grupo">
+        <label for="pago_dni">DNI / CUIT *</label>
+        <input type="text" id="pago_dni" name="dni_cuit" required>
+      </div>
+      <div class="form-grupo">
+        <label for="pago_email">Correo electrónico *</label>
+        <input type="email" id="pago_email" name="email" required>
+      </div>
+      <div class="form-grupo">
+        <label for="pago_telefono">Teléfono / WhatsApp *</label>
+        <input type="tel" id="pago_telefono" name="telefono" required>
+      </div>
+      <div class="error-msg" id="error-msg-modal">Por favor completá todos los campos.</div>
+      <div class="modal-botones">
+        <button type="button" id="cancelarPago" class="btn btn-secundario">Cancelar</button>
+        <button type="submit" class="btn btn-primario">Continuar al pago →</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 
 <!-- FOOTER -->
@@ -511,6 +617,7 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// Formulario de contacto original
 document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
@@ -529,6 +636,81 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
       btn.textContent = '❌ Error. Escribinos por WhatsApp.';
       btn.disabled = false;
     });
+});
+
+// ----- Lógica para Mercado Pago con modal -----
+const modal = document.getElementById('modalPago');
+const formPago = document.getElementById('form-pago');
+let pendingUrl = '';
+let pendingTipo = '';
+
+// Abrir modal al hacer clic en cualquiera de los dos botones
+document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    pendingUrl = this.getAttribute('data-url');
+    pendingTipo = this.getAttribute('data-tipo') || 'pago';
+    modal.style.display = 'flex';
+  });
+});
+
+// Cerrar modal
+document.getElementById('cancelarPago').addEventListener('click', () => {
+  modal.style.display = 'none';
+  formPago.reset();
+});
+
+// Envío del formulario de datos de pago
+formPago.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Validación simple
+  const nombre = document.getElementById('pago_nombre').value.trim();
+  const dni = document.getElementById('pago_dni').value.trim();
+  const email = document.getElementById('pago_email').value.trim();
+  const telefono = document.getElementById('pago_telefono').value.trim();
+
+  if (!nombre || !dni || !email || !telefono) {
+    document.getElementById('error-msg-modal').style.display = 'block';
+    return;
+  } else {
+    document.getElementById('error-msg-modal').style.display = 'none';
+  }
+
+  // Preparar datos para enviar a Google Apps Script
+  const datos = {
+    nombre: nombre,
+    dni_cuit: dni,
+    email: email,
+    telefono: telefono,
+    tipo_pago: pendingTipo,
+    fecha: new Date().toISOString()
+  };
+
+  // Aquí debes reemplazar con la URL de tu propio script de Google Apps Script
+  // que reciba estos datos y los guarde en una hoja de cálculo.
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyI38GJ88wm4GBUU4KLGIfFR4GB-QS2wkajM1DiZeeETpq7SsGpNZl28Jjn17RIXutxzA/exec';
+  const submitBtn = this.querySelector('button[type="submit"]');
+  submitBtn.textContent = 'Guardando...';
+  submitBtn.disabled = true;
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'no-cors', // si el script no necesita respuesta, podemos usar no-cors
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(datos)
+  })
+  .then(() => {
+    // En no-cors no podemos leer la respuesta, asumimos éxito
+    // Redirigir al link de Mercado Pago
+    window.location.href = pendingUrl;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    submitBtn.textContent = 'Continuar al pago →';
+    submitBtn.disabled = false;
+    alert('Hubo un error. Por favor intentá de nuevo o escribinos por WhatsApp.');
+  });
 });
 </script>
 
