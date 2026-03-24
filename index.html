@@ -661,6 +661,7 @@ document.getElementById('cancelarPago').addEventListener('click', () => {
 });
 
 // Envío del formulario de datos de pago (EXACTAMENTE IGUAL QUE EL DE CONTACTO)
+
 formPago.addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -681,22 +682,27 @@ formPago.addEventListener('submit', function(e) {
   submitBtn.textContent = 'Guardando...';
   submitBtn.disabled = true;
 
-  // MISMA ESTRUCTURA QUE EL FORMULARIO DE CONTACTO
   fetch(scriptURL, {
     method: 'POST',
     body: new FormData(this)
   })
   .then(function() {
     submitBtn.textContent = '✅ ¡Datos guardados!';
-    // Redirigir a Mercado Pago
-    window.location.href = pendingUrl;
+    // Abrir Mercado Pago en nueva pestaña
+    window.open(pendingUrl, '_blank');
+    // Cerrar modal y limpiar formulario
+    modal.style.display = 'none';
+    formPago.reset();
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Continuar al pago →';
   })
   .catch(function() {
     submitBtn.textContent = 'Continuar al pago →';
     submitBtn.disabled = false;
     alert('Hubo un error al guardar los datos. Por favor intentá de nuevo o escribinos por WhatsApp.');
   });
-});
+});  
+  
 </script>
 
 </body>
