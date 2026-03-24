@@ -100,6 +100,15 @@
 }
 @media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
+
+ .equip-img {
+  width: 100%;
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-hover);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  margin-bottom: 12px;
+} 
   
 </style>
 </head>
@@ -228,38 +237,38 @@
       <h2>Tecnología al servicio<br>de cada diagnóstico.</h2>
       <p class="seccion-sub">El consultorio cuenta con equipamiento moderno para diagnósticos más precisos y tratamientos más cómodos.</p>
     </div>
-    <div class="equip-grid">
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Radiografía digital</h3>
-        <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
-      </div>
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Cámara intraoral</h3>
-        <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
-      </div>
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Sistema Invisalign digital</h3>
-        <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
-      </div>
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Diseño digital de sonrisa</h3>
-        <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
-      </div>
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Anestesia computarizada</h3>
-        <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
-      </div>
-      <div class="equip-item reveal">
-        <div class="equip-dot"></div>
-        <h3>Esterilización con autoclave</h3>
-        <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
-      </div>
-    </div>
+<div class="equip-grid">
+  <div class="equip-item reveal">
+    <img src="assets/img/radiografia.jpg" alt="Radiografía digital" class="equip-img">
+    <h3>Radiografía digital</h3>
+    <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
+  </div>
+  <div class="equip-item reveal">
+    <img src="assets/img/intraoral.jpg" alt="Cámara intraoral" class="equip-img">
+    <h3>Cámara intraoral</h3>
+    <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
+  </div>
+  <div class="equip-item reveal">
+    <img src="assets/img/invisalign.jpg" alt="Sistema Invisalign digital" class="equip-img">
+    <h3>Sistema Invisalign digital</h3>
+    <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
+  </div>
+  <div class="equip-item reveal">
+    <img src="assets/img/sonrisa.jpg" alt="Diseño digital de sonrisa" class="equip-img">
+    <h3>Diseño digital de sonrisa</h3>
+    <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
+  </div>
+  <div class="equip-item reveal">
+    <img src="assets/img/anestesia.jpg" alt="Anestesia computarizada" class="equip-img">
+    <h3>Anestesia computarizada</h3>
+    <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
+  </div>
+  <div class="equip-item reveal">
+    <img src="assets/img/autoclave.jpg" alt="Esterilización con autoclave" class="equip-img">
+    <h3>Esterilización con autoclave</h3>
+    <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
+  </div>
+</div>
   </div>
 </section>
   
