@@ -13,9 +13,7 @@
 <style>
 .barra-retorno {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 9998;
   background: #1a2332;
   color: rgba(255,255,255,0.75);
@@ -27,28 +25,53 @@
   font-size: 0.78rem;
   font-family: "DM Sans", sans-serif;
 }
-.barra-retorno-link {
-  color: #5CC8D4;
-  text-decoration: none;
-  font-weight: 600;
-}
+.barra-retorno-link { color: #5CC8D4; text-decoration: none; font-weight: 600; }
 .barra-retorno-link:hover { opacity: 0.8; }
 .barra-retorno-sep { opacity: 0.3; }
 .barra-retorno-texto { opacity: 0.6; }
 .barra-retorno-cta {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  background: #0B6E7A;
-  padding: 4px 12px;
-  border-radius: 99px;
+  color: white; text-decoration: none; font-weight: 600;
+  background: #0B6E7A; padding: 4px 12px; border-radius: 99px;
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
+@media (max-width: 600px) { .barra-retorno-texto { display: none; } }
 
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonio-card {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  padding: 28px 24px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--trans);
+}
+.testimonio-card:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-3px);
+}
+.testimonio-estrellas { color: #f59e0b; font-size: 0.9rem; letter-spacing: 2px; }
+.testimonio-texto {
+  font-size: 0.92rem;
+  color: var(--gris);
+  line-height: 1.65;
+  font-style: italic;
+  flex: 1;
+}
+.testimonio-autor { display: flex; flex-direction: column; gap: 2px; }
+.testimonio-autor strong { font-size: 0.88rem; color: var(--oscuro); font-weight: 600; }
+.testimonio-autor span { font-size: 0.78rem; color: var(--teal); }
+@media (max-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .testimonios-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<!-- BARRA RETORNO PRESENCIA ONLINE -->
+
 <div class="barra-retorno">
   <a href="../../demos.html" class="barra-retorno-link">← Volver a Presencia Online</a>
   <span class="barra-retorno-sep">·</span>
@@ -56,12 +79,10 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
-<!-- FLOTANTE WHATSAPP -->
-<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20sacar%20un%20turno." class="wa-float" target="_blank">
+<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<!-- HEADER -->
 <header class="header" id="header">
   <div class="contenedor header-inner">
     <a href="index.html" class="logo-text">
@@ -89,34 +110,28 @@
   <div class="contenedor hero-inner">
     <div class="hero-content">
       <div class="hero-badge">✦ Turnos disponibles esta semana</div>
-<h1>Odontología clara,<br>enfocada en cada<br><em>paciente.</em></h1>
+      <h1>Odontología clara,<br>enfocada en cada<br><em>paciente.</em></h1>
       <p class="hero-sub">Explicación clara de su situación y las opciones disponibles desde la primera consulta.</p>
-
       <div class="hero-btns">
-<a href="contacto.html" class="btn btn-primary">Solicitar turno</a>
+        <a href="contacto.html" class="btn btn-primary">Solicitar turno</a>
         <a href="sobre-mi.html" class="btn btn-ghost">Conocerme</a>
       </div>
-      
       <div class="hero-datos">
-  <div class="dato">
-    <span class="dato-num">+12</span>
-    <span class="dato-label">años de experiencia</span>
-  </div>
-
-  <div class="dato-sep"></div>
-
-  <div class="dato">
-    <span class="dato-num">General</span>
-    <span class="dato-label">y estética</span>
-  </div>
-
-  <div class="dato-sep"></div>
-
-  <div class="dato">
-    <span class="dato-num">Palermo</span>
-    <span class="dato-label">Buenos Aires</span>
-  </div>
-</div>
+        <div class="dato">
+          <span class="dato-num">+12</span>
+          <span class="dato-label">años de experiencia</span>
+        </div>
+        <div class="dato-sep"></div>
+        <div class="dato">
+          <span class="dato-num">General</span>
+          <span class="dato-label">y estética</span>
+        </div>
+        <div class="dato-sep"></div>
+        <div class="dato">
+          <span class="dato-num">Palermo</span>
+          <span class="dato-label">Buenos Aires</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -149,36 +164,67 @@
       <h2>Atención para cada<br>necesidad.</h2>
       <p class="seccion-sub">Desde la consulta de rutina hasta los tratamientos más complejos. Cada caso se evalúa individualmente.</p>
     </div>
-
     <div class="tratamientos-grid">
-
       <a href="tratamientos.html#limpieza" class="trat-card">
-    <h3>Limpieza dental</h3>
-    <p>Remoción profesional de placa y sarro. Base de cualquier tratamiento y clave para la salud a largo plazo.</p>
-    <span class="trat-link">Ver más →</span>
-  </a>
-
-  <a href="tratamientos.html#blanqueamiento" class="trat-card">
-    <h3>Blanqueamiento</h3>
-    <p>Técnicas clínicas de alta eficacia para una sonrisa más luminosa, con resultados visibles desde la primera sesión.</p>
-    <span class="trat-link">Ver más →</span>
-  </a>
-
-  <a href="tratamientos.html#implantes" class="trat-card">
-    <h3>Implantes</h3>
-    <p>Solución definitiva para la pérdida dentaria. Planificación detallada y acompañamiento en cada etapa del proceso.</p>
-    <span class="trat-link">Ver más →</span>
-  </a>
+        <h3>Limpieza dental</h3>
+        <p>Remoción profesional de placa y sarro. Base de cualquier tratamiento y clave para la salud a largo plazo.</p>
+        <span class="trat-link">Ver más →</span>
+      </a>
+      <a href="tratamientos.html#blanqueamiento" class="trat-card">
+        <h3>Blanqueamiento</h3>
+        <p>Técnicas clínicas de alta eficacia para una sonrisa más luminosa, con resultados visibles desde la primera sesión.</p>
+        <span class="trat-link">Ver más →</span>
+      </a>
+      <a href="tratamientos.html#implantes" class="trat-card">
+        <h3>Implantes</h3>
+        <p>Solución definitiva para la pérdida dentaria. Planificación detallada y acompañamiento en cada etapa del proceso.</p>
+        <span class="trat-link">Ver más →</span>
+      </a>
     </div>
-
     <div class="seccion-cta">
       <a href="tratamientos.html" class="btn btn-outline">Ver todos los tratamientos →</a>
     </div>
   </div>
 </section>
 
-<!-- RESUMEN CONTACTO -->
+<!-- TESTIMONIOS -->
 <section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Testimonios</div>
+      <h2>Lo que dicen<br>los pacientes.</h2>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testimonio-card">
+        <div class="testimonio-estrellas">★★★★★</div>
+        <p class="testimonio-texto">"Llegué con mucho miedo después de años sin ir al dentista. La Dra. Sosa me explicó todo con una claridad que nunca había experimentado. Terminé el tratamiento sin una sola sorpresa."</p>
+        <div class="testimonio-autor">
+          <strong>Martín R.</strong>
+          <span>Implante dental · Palermo</span>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="testimonio-estrellas">★★★★★</div>
+        <p class="testimonio-texto">"Vine por el blanqueamiento pero lo que más me sorprendió fue la primera consulta. Me mostraron todo en fotos y me dieron un plan de tratamiento por escrito. Nunca me habían tratado así."</p>
+        <div class="testimonio-autor">
+          <strong>Lucía M.</strong>
+          <span>Blanqueamiento y estética · Palermo</span>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="testimonio-estrellas">★★★★★</div>
+        <p class="testimonio-texto">"Llevé a mi hijo de 9 años y fue una experiencia completamente diferente a lo que esperaba. Salió contento. Eso dice todo."</p>
+        <div class="testimonio-autor">
+          <strong>Carolina F.</strong>
+          <span>Odontología general · Palermo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUMEN CONTACTO -->
+<section class="seccion seccion-alt">
   <div class="contenedor seccion-grid-2">
     <div class="contacto-preview">
       <div class="seccion-kicker">Contacto y turnos</div>
@@ -200,9 +246,9 @@
           </div>
         </div>
         <div class="contacto-dato">
-          <div class="contacto-icono" style="background:rgba(11,110,122,0.08);">  
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;">
-            </div>
+          <div class="contacto-icono" style="background:rgba(11,110,122,0.08);">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;">
+          </div>
           <div>
             <strong>WhatsApp</strong>
             <span>+54 9 11 0000-0000</span>
@@ -220,7 +266,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="contenedor footer-inner">
     <div class="footer-brand">
@@ -237,7 +282,8 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-<a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>    </div>
+      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
+    </div>
   </div>
   <div class="contenedor footer-bottom">
     <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
@@ -246,36 +292,29 @@
 </footer>
 
 <script>
-
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
   const header = document.getElementById('header');
-  if (barra && header) {
-    header.style.top = barra.offsetHeight + 'px';
-  }
+  if (barra && header) header.style.top = barra.offsetHeight + 'px';
 }
 setHeaderTop();
 window.addEventListener('resize', setHeaderTop);
-  
+
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
-
 window.addEventListener('scroll', function() {
   document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
 });
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.1 });
-
-document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder').forEach(el => {
+document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
 </script>
-
 </body>
 </html>
