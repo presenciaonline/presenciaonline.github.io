@@ -35,7 +35,9 @@
 .barra-retorno-cta:hover { opacity: 0.85; }
 @media (max-width: 600px) { .barra-retorno-texto { display: none; } }
 </style>
+  
 </head>
+  
 <body>
 
 <div class="barra-retorno">
@@ -132,6 +134,34 @@
       <a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." target="_blank" class="btn btn-wa-grande">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;"> Escribir por WhatsApp
       </a>
+
+      <!-- ── MERCADO PAGO ── -->
+<div class="mp-bloque">
+  <div class="mp-bloque-header">
+    <span class="mp-bloque-titulo">Pago online</span>
+    <span class="mp-badge">Opcional</span>
+  </div>
+
+  <p class="mp-bloque-sub">
+    Si ya coordinamos su turno, puede abonar la seña o la consulta directamente desde aquí. 
+    El monto se ingresa al momento del pago.
+  </p>
+
+  <div class="mp-bloque-btns">
+    <a class="mp-bloque-btn" data-url="https://link.mercadopago.com.ar/TU-LINK">
+      💳 Enviar seña
+    </a>
+
+    <a class="mp-bloque-btn mp-bloque-btn-ghost" data-url="https://link.mercadopago.com.ar/TU-LINK">
+      Pagar consulta
+    </a>
+  </div>
+
+  <p class="mp-bloque-nota">
+    🔒 Pago seguro · Tarjeta o saldo · Confirmación inmediata
+  </p>
+</div>
+<!-- ── FIN MERCADO PAGO ── -->
 
     </div>
 
@@ -269,6 +299,62 @@ if (form) {
       });
   });
 }
+
+const modal = document.getElementById('modalPago');
+const formPago = document.getElementById('form-pago');
+let pendingUrl = '';
+
+document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    pendingUrl = this.getAttribute('data-url');
+    modal.style.display = 'flex';
+  });
+});
+
+document.getElementById('cancelarPago').addEventListener('click', function() {
+  modal.style.display = 'none';
+  formPago.reset();
+});
+
+formPago.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById('pago_nombre').value.trim();
+  const email  = document.getElementById('pago_email').value.trim();
+
+  if (!nombre || !email) return;
+
+  window.open(pendingUrl, '_blank');
+
+  modal.style.display = 'none';
+  formPago.reset();
+});
+  
 </script>
+
+  <div id="modalPago" class="modal-pago">
+  <div class="modal-contenido">
+    <h3>Antes de proceder al pago</h3>
+
+    <form id="form-pago" class="modal-form">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input type="text" id="pago_nombre" required>
+      </div>
+
+      <div class="form-grupo">
+        <label>Email</label>
+        <input type="email" id="pago_email" required>
+      </div>
+
+      <div class="modal-botones">
+        <button type="button" id="cancelarPago">Cancelar</button>
+        <button type="submit">Continuar al pago →</button>
+      </div>
+    </form>
+  </div>
+</div>
+  
 </body>
 </html>
