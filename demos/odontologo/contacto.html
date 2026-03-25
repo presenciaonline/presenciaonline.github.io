@@ -136,7 +136,7 @@
       </a>
 
       <!-- ── MERCADO PAGO ── -->
-<div class="mp-bloque">
+<div class="mp-bloque" id="mercadopago">
   <div class="mp-bloque-header">
     <span class="mp-bloque-titulo">Pago online</span>
     <span class="mp-badge">Opcional</span>
@@ -144,7 +144,7 @@
 
   <p class="mp-bloque-sub">
     Si ya coordinamos su turno, puede abonar la seña o la consulta directamente desde aquí. 
-    El monto se ingresa al momento del pago.
+    Podrá ingresar el monto al momento de pagar.
   </p>
 
   <div class="mp-bloque-btns">
@@ -303,7 +303,7 @@ if (form) {
 const modal = document.getElementById('modalPago');
 const formPago = document.getElementById('form-pago');
 let pendingUrl = '';
-
+if (modal && formPago) {
 document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -316,7 +316,8 @@ document.getElementById('cancelarPago').addEventListener('click', function() {
   modal.style.display = 'none';
   formPago.reset();
 });
-
+}
+  
 formPago.addEventListener('submit', function(e) {
   e.preventDefault();
 
