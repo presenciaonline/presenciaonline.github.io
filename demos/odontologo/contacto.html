@@ -255,6 +255,29 @@
   </div>
 </footer>
 
+<div id="modalPago" class="modal-pago">
+  <div class="modal-contenido">
+    <h3>Antes de proceder al pago</h3>
+
+    <form id="form-pago" class="modal-form">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input type="text" id="pago_nombre" required>
+      </div>
+
+      <div class="form-grupo">
+        <label>Email</label>
+        <input type="email" id="pago_email" required>
+      </div>
+
+      <div class="modal-botones">
+        <button type="button" id="cancelarPago">Cancelar</button>
+        <button type="submit">Continuar al pago →</button>
+      </div>
+    </form>
+  </div>
+</div>
+  
 <script>
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
@@ -333,29 +356,6 @@ formPago.addEventListener('submit', function(e) {
 });
   }
 </script>
-
-  <div id="modalPago" class="modal-pago">
-  <div class="modal-contenido">
-    <h3>Antes de proceder al pago</h3>
-
-    <form id="form-pago" class="modal-form">
-      <div class="form-grupo">
-        <label>Nombre</label>
-        <input type="text" id="pago_nombre" required>
-      </div>
-
-      <div class="form-grupo">
-        <label>Email</label>
-        <input type="email" id="pago_email" required>
-      </div>
-
-      <div class="modal-botones">
-        <button type="button" id="cancelarPago">Cancelar</button>
-        <button type="submit">Continuar al pago →</button>
-      </div>
-    </form>
-  </div>
-</div>
   
 </body>
 </html>
