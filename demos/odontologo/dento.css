@@ -1112,3 +1112,64 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   color: var(--teal-dark);
   text-decoration: underline;
 }
+.mp-bloque {
+  margin-top: 28px;
+  background: linear-gradient(135deg, #f4fbfc 0%, #eef7f8 100%);
+  border: 1.5px solid rgba(11,110,122,0.18);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.mp-bloque-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.mp-bloque-titulo {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mp-badge {
+  font-size: 0.65rem;
+  background: rgba(11,110,122,0.1);
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+.mp-bloque-sub {
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.mp-bloque-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mp-bloque-btn {
+  background: #0B6E7A;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mp-bloque-btn-ghost {
+  background: transparent;
+  border: 2px solid #0B6E7A;
+  color: #0B6E7A;
+}
+
+.mp-bloque-nota {
+  font-size: 0.75rem;
+  margin-top: 10px;
+  opacity: 0.7;
+}
