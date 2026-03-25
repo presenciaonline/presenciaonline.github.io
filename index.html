@@ -617,7 +617,7 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Formulario de contacto original
+// Formulario de contacto
 document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
@@ -638,84 +638,67 @@ document.getElementById('formulario-contacto').addEventListener('submit', functi
     });
 });
 
-// ----- Lógica para Mercado Pago con modal -----
+// ----- Lógica Mercado Pago con modal -----
 const modal = document.getElementById('modalPago');
 const formPago = document.getElementById('form-pago');
 let pendingUrl = '';
-let pendingTipo = '';
 
 // Abrir modal al hacer clic en cualquiera de los dos botones
-document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(btn => {
+document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(function(btn) {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     pendingUrl = this.getAttribute('data-url');
-    pendingTipo = this.getAttribute('data-tipo') || 'pago';
     modal.style.display = 'flex';
   });
 });
 
 // Cerrar modal
-document.getElementById('cancelarPago').addEventListener('click', () => {
+document.getElementById('cancelarPago').addEventListener('click', function() {
   modal.style.display = 'none';
   formPago.reset();
 });
 
-// Envío del formulario de datos de pago (EXACTAMENTE IGUAL QUE EL DE CONTACTO)
-
+// Envío del formulario del modal
 formPago.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const nombre = document.getElementById('pago_nombre').value.trim();
-  const dni = document.getElementById('pago_dni').value.trim();
-  const email = document.getElementById('pago_email').value.trim();
+  const nombre   = document.getElementById('pago_nombre').value.trim();
+  const dni      = document.getElementById('pago_dni').value.trim();
+  const email    = document.getElementById('pago_email').value.trim();
   const telefono = document.getElementById('pago_telefono').value.trim();
 
   if (!nombre || !dni || !email || !telefono) {
     document.getElementById('error-msg-modal').style.display = 'block';
     return;
   }
-
   document.getElementById('error-msg-modal').style.display = 'none';
 
+  // ✅ CLAVE: window.open() ANTES del fetch.
+  // Los navegadores bloquean cualquier apertura de ventana que no sea
+  // consecuencia directa e inmediata de un gesto del usuario.
+  // Una vez que el código entra en el .then() de fetch (asíncrono),
+  // ya no cuenta como "gesto directo" y el popup blocker lo cancela.
+  // Al abrir la ventana aquí, dentro del handler de submit, sí es directo.
+  window.open(pendingUrl, '_blank');
+
+  // El fetch registra los datos en segundo plano (no bloquea la navegación)
   const scriptURL = 'https://script.google.com/macros/s/AKfycbw7K4oENhrt61Nz557LBM9iejt2rWu0R_bQwLhAzQ28lwrZrJ98ItoJLNhaOtWTqShagQ/exec';
   const submitBtn = this.querySelector('button[type="submit"]');
-  submitBtn.textContent = 'Guardando...';
+  submitBtn.textContent = 'Abriendo pago...';
   submitBtn.disabled = true;
 
   fetch(scriptURL, {
     method: 'POST',
     body: new FormData(this)
   })
-  .then(function(response) {
-    // Leer la respuesta como texto (debería ser 'ok')
-    return response.text();
-  })
-  .then(function(text) {
-    submitBtn.textContent = '✅ ¡Datos guardados!';
-    
-    // Crear un enlace invisible y hacer clic en él (evita bloqueo de pop-ups)
-    const link = document.createElement('a');
-    link.href = pendingUrl;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Cerrar modal y limpiar formulario
+  .finally(function() {
+    // Se ejecuta tanto si el fetch tuvo éxito como si falló
     modal.style.display = 'none';
     formPago.reset();
     submitBtn.disabled = false;
     submitBtn.textContent = 'Continuar al pago →';
-  })
-  .catch(function(error) {
-    console.error('Error:', error);
-    submitBtn.textContent = 'Continuar al pago →';
-    submitBtn.disabled = false;
-    alert('Hubo un error al guardar los datos. Por favor intentá de nuevo o escribinos por WhatsApp.');
   });
 });
-  
 </script>
 
 </body>
