@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra. Valentina Sosa | Odontología General y Estética · Palermo, Buenos Aires</title>
-<meta name="description" content="Odontología general y estética en Palermo. Atención personalizada, diagnóstico claro y acompañamiento en cada etapa. Turnos disponibles.">
-<link rel="canonical" href="https://presenciaonline.github.io/demos/odontologo/index.html">
+<title>Contacto y Turnos | Dra. Valentina Sosa · Odontología Palermo</title>
+<meta name="description" content="Solicite su turno con la Dra. Valentina Sosa. Odontología en Palermo, Buenos Aires. Respondemos en el día.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -35,169 +34,6 @@
 }
 .barra-retorno-cta:hover { opacity: 0.85; }
 @media (max-width: 600px) { .barra-retorno-texto { display: none; } }
-
-.testimonios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.testimonio-card {
-  background: var(--blanco);
-  border-radius: var(--radio-lg);
-  padding: 28px 24px;
-  box-shadow: var(--sombra);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: var(--trans);
-}
-.testimonio-card:hover {
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-3px);
-}
-.testimonio-estrellas { color: #f59e0b; font-size: 0.9rem; letter-spacing: 2px; }
-.testimonio-texto {
-  font-size: 0.92rem;
-  color: var(--gris);
-  line-height: 1.65;
-  font-style: italic;
-  flex: 1;
-}
-.testimonio-autor { display: flex; flex-direction: column; gap: 2px; }
-.testimonio-autor strong { font-size: 0.88rem; color: var(--oscuro); font-weight: 600; }
-.testimonio-autor span { font-size: 0.78rem; color: var(--teal); }
-@media (max-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .testimonios-grid { grid-template-columns: 1fr; } }
-
-/* EQUIPAMIENTO */
-.equip-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.equip-item {
-  background: var(--blanco);
-  border-radius: var(--radio-lg);
-  padding: 24px 20px;
-  box-shadow: var(--sombra);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: var(--trans);
-}
-.equip-item:hover {
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-3px);
-}
-.equip-item h3 { font-size: 0.95rem; color: var(--oscuro); }
-.equip-item p { font-size: 0.83rem; color: var(--gris); line-height: 1.55; }
-.equip-dot {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--teal), var(--teal-light));
-  margin-bottom: 4px;
-}
-@media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
-
-/* ── MERCADO PAGO ── */
-.mp-card {
-  background: #f0f9ff;
-  border: 1.5px solid #bae6fd;
-  border-radius: var(--radio-lg);
-  padding: 24px 22px;
-  margin: 24px 0 20px;
-}
-.mp-card-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-.mp-logo {
-  height: 22px;
-  display: block;
-}
-.mp-card-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #0c4a6e;
-}
-.mp-card-sub {
-  font-size: 0.82rem;
-  color: #0369a1;
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-.mp-btns {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.mp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: #009ee3;
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 10px 18px;
-  border-radius: 99px;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
-  white-space: nowrap;
-}
-.mp-btn:hover { background: #0082bc; transform: translateY(-1px); }
-.mp-btn-ghost {
-  background: transparent;
-  color: #009ee3;
-  border: 1.5px solid #009ee3;
-}
-.mp-btn-ghost:hover { background: #e0f4fd; transform: translateY(-1px); }
-.mp-aviso {
-  font-size: 0.75rem;
-  color: #64748b;
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-
- .equip-img {
-  width: 100%;
-  border-radius: var(--radio-lg);
-  box-shadow: var(--sombra-hover);
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  margin-bottom: 12px;
-}
-
-/* ── MP DISCRETA — solo index ── */
-.mp-hint {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 16px;
-  padding: 12px 16px;
-  background: rgba(0,158,227,0.06);
-  border: 1px solid rgba(0,158,227,0.18);
-  border-radius: 12px;
-  font-size: 0.82rem;
-  color: var(--gris);
-  line-height: 1.4;
-}
-.mp-hint svg { flex-shrink: 0; }
-.mp-hint a {
-  color: #009ee3;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.mp-hint a:hover { text-decoration: underline; }
-  
 </style>
 </head>
 <body>
@@ -220,10 +56,10 @@
       <span class="logo-esp">Odontología · Palermo</span>
     </a>
     <nav class="nav" id="nav-menu">
-      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="index.html" class="nav-link">Inicio</a>
       <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
       <a href="tratamientos.html" class="nav-link">Tratamientos</a>
-      <a href="contacto.html" class="nav-link nav-cta">Solicitar turno</a>
+      <a href="contacto.html" class="nav-link active nav-cta">Solicitar turno</a>
     </nav>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -231,191 +67,35 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <img src="assets/img/consultorio.jpg" alt="Consultorio odontológico">
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="contenedor hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">✦ Turnos disponibles esta semana</div>
-      <h1>Odontología clara,<br>enfocada en cada<br><em>paciente.</em></h1>
-      <p class="hero-sub">Explicación clara de su situación y las opciones disponibles desde la primera consulta.</p>
-      <div class="hero-btns">
-        <a href="contacto.html" class="btn btn-primary">Solicitar turno</a>
-        <a href="sobre-mi.html" class="btn btn-ghost">Conocerme</a>
-      </div>
-      <div class="hero-datos">
-        <div class="dato">
-          <span class="dato-num">+12</span>
-          <span class="dato-label">años de experiencia</span>
-        </div>
-        <div class="dato-sep"></div>
-        <div class="dato">
-          <span class="dato-num">General</span>
-          <span class="dato-label">y estética</span>
-        </div>
-        <div class="dato-sep"></div>
-        <div class="dato">
-          <span class="dato-num">Palermo</span>
-          <span class="dato-label">Buenos Aires</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESUMEN SOBRE MÍ -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
-    <div class="sobre-img-wrap">
-      <img src="assets/img/odontologo.jpg" alt="Dra. Valentina Sosa" class="sobre-img">
-      <div class="sobre-badge-card">
-        <div class="badge-num">MN 42.810</div>
-        <div class="badge-label">Matrícula Nacional</div>
-      </div>
-    </div>
-    <div class="sobre-texto">
-      <div class="seccion-kicker">Sobre mí</div>
-      <h2>Una mirada profesional<br>desde la primera consulta.</h2>
-      <p>Soy odontóloga especializada en estética dental y rehabilitación. Trabajo en Palermo desde hace más de doce años, atendiendo pacientes que buscan claridad y confianza en cada paso del tratamiento.</p>
-      <p>Mi enfoque está en explicar con precisión qué está pasando, qué opciones existen y qué puede esperar en cada etapa. Sin tecnicismos innecesarios.</p>
-      <a href="sobre-mi.html" class="link-arrow">Conocer más sobre mi formación →</a>
-    </div>
-  </div>
-</section>
-
-<!-- RESUMEN TRATAMIENTOS -->
-<section class="seccion seccion-alt">
+<!-- HERO PÁGINA -->
+<section class="page-hero">
   <div class="contenedor">
-    <div class="seccion-header">
-      <div class="seccion-kicker">Tratamientos</div>
-      <h2>Atención para cada<br>necesidad.</h2>
-      <p class="seccion-sub">Desde la consulta de rutina hasta los tratamientos más complejos. Cada caso se evalúa individualmente.</p>
-    </div>
-    <div class="tratamientos-grid">
-      <a href="tratamientos.html#limpieza" class="trat-card">
-        <h3>Limpieza dental</h3>
-        <p>Remoción profesional de placa y sarro. Base de cualquier tratamiento y clave para la salud a largo plazo.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-      <a href="tratamientos.html#blanqueamiento" class="trat-card">
-        <h3>Blanqueamiento</h3>
-        <p>Técnicas clínicas de alta eficacia para una sonrisa más luminosa, con resultados visibles desde la primera sesión.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-      <a href="tratamientos.html#implantes" class="trat-card">
-        <h3>Implantes</h3>
-        <p>Solución definitiva para la pérdida dentaria. Planificación detallada y acompañamiento en cada etapa del proceso.</p>
-        <span class="trat-link">Ver más →</span>
-      </a>
-    </div>
-    <div class="seccion-cta">
-      <a href="tratamientos.html" class="btn btn-outline">Ver todos los tratamientos →</a>
-    </div>
+    <div class="seccion-kicker">Contacto y turnos</div>
+    <h1>Solicite su turno.</h1>
+    <p class="page-hero-sub">Respondemos en el día. Puede comunicarse directamente por WhatsApp o completar el formulario.</p>
   </div>
 </section>
 
-<!-- EQUIPAMIENTO -->
+<!-- CONTACTO COMPLETO -->
 <section class="seccion">
-  <div class="contenedor">
-    <div class="seccion-header">
-      <div class="seccion-kicker">Equipamiento</div>
-      <h2>Tecnología al servicio<br>de cada diagnóstico.</h2>
-      <p class="seccion-sub">El consultorio cuenta con equipamiento moderno para diagnósticos más precisos y tratamientos más cómodos.</p>
-    </div>
-<div class="equip-grid">
-  <div class="equip-item reveal">
-    <img src="assets/img/radiografia.jpg" alt="Radiografía digital" class="equip-img">
-    <h3>Radiografía digital</h3>
-    <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/intraoral.jpg" alt="Cámara intraoral" class="equip-img">
-    <h3>Cámara intraoral</h3>
-    <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/invisalign.jpg" alt="Sistema Invisalign digital" class="equip-img">
-    <h3>Sistema Invisalign digital</h3>
-    <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/sonrisa.jpg" alt="Diseño digital de sonrisa" class="equip-img">
-    <h3>Diseño digital de sonrisa</h3>
-    <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/anestesia.jpg" alt="Anestesia computarizada" class="equip-img">
-    <h3>Anestesia computarizada</h3>
-    <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/autoclave.jpg" alt="Esterilización con autoclave" class="equip-img">
-    <h3>Esterilización con autoclave</h3>
-    <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
-  </div>
-</div>
-  </div>
-</section>
-  
-<!-- TESTIMONIOS -->
-<section class="seccion seccion-alt">
-  <div class="contenedor">
-    <div class="seccion-header">
-      <div class="seccion-kicker">Testimonios</div>
-      <h2>Lo que dicen<br>los pacientes.</h2>
-    </div>
-    <div class="testimonios-grid">
-      <div class="testimonio-card">
-        <div class="testimonio-estrellas">★★★★★</div>
-        <p class="testimonio-texto">"Llegué con mucho miedo después de años sin ir al dentista. La Dra. Sosa me explicó todo con una claridad que nunca había experimentado. Terminé el tratamiento sin una sola sorpresa."</p>
-        <div class="testimonio-autor">
-          <strong>Martín R.</strong>
-          <span>Implante dental · Palermo</span>
-        </div>
-      </div>
-      <div class="testimonio-card">
-        <div class="testimonio-estrellas">★★★★★</div>
-        <p class="testimonio-texto">"Vine por el blanqueamiento pero lo que más me sorprendió fue la primera consulta. Me mostraron todo en fotos y me dieron un plan de tratamiento por escrito. Nunca me habían tratado así."</p>
-        <div class="testimonio-autor">
-          <strong>Lucía M.</strong>
-          <span>Blanqueamiento y estética · Palermo</span>
-        </div>
-      </div>
-      <div class="testimonio-card">
-        <div class="testimonio-estrellas">★★★★★</div>
-        <p class="testimonio-texto">"Llevé a mi hijo de 9 años y fue una experiencia completamente diferente a lo que esperaba. Salió contento. Eso dice todo."</p>
-        <div class="testimonio-autor">
-          <strong>Carolina F.</strong>
-          <span>Odontología general · Palermo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <div class="contenedor contacto-grid">
 
-<!-- RESUMEN CONTACTO -->
-<section class="seccion">
-  <div class="contenedor seccion-grid-2">
-    <div class="contacto-preview">
-      <div class="seccion-kicker">Contacto y turnos</div>
-      <h2>Solicitar turno</h2>
-      <p>Respondemos en el día. Puede comunicarse por WhatsApp o completar el formulario y nos ponemos en contacto.</p>
-      <div class="contacto-datos">
+    <div class="contacto-info-col reveal">
+
+      <div class="contacto-bloque">
+        <h3>Datos de contacto</h3>
         <div class="contacto-dato">
           <div class="contacto-icono">📍</div>
           <div>
             <strong>Dirección</strong>
-            <span>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</span>
+            <span>Av. Santa Fe 3421, Piso 4<br>Palermo, Ciudad de Buenos Aires</span>
           </div>
         </div>
         <div class="contacto-dato">
           <div class="contacto-icono">🕐</div>
           <div>
-            <strong>Horarios</strong>
-            <span>Lunes a viernes 9 a 19hs · Sábados 9 a 13hs</span>
+            <strong>Horarios de atención</strong>
+            <span>Lunes a viernes: 9 a 19hs<br>Sábados: 9 a 13hs</span>
           </div>
         </div>
         <div class="contacto-dato">
@@ -427,24 +107,95 @@
             <span>+54 9 11 0000-0000</span>
           </div>
         </div>
+        <div class="contacto-dato">
+          <div class="contacto-icono">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a></span>
+          </div>
+        </div>
       </div>
-      <!-- ── MP DISCRETA ── -->
-      <div class="mp-hint">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-          <circle cx="14" cy="14" r="14" fill="#009EE3"/>
-          <path d="M7 17l3-5.5 2.8 4.3 2.3-3.5 3.5 4.7H7z" fill="#fff"/>
-        </svg>
-        También podés enviar una seña para reservar tu turno directamente por
-        <a href="contacto.html#pago">Mercado Pago →</a>
-      </div>
-      <!-- ── FIN MP DISCRETA ── -->
 
-      <a href="contacto.html" class="btn btn-primary">Solicitar turno</a>
+      <div class="contacto-bloque">
+        <h3>Obras sociales y prepaga</h3>
+        <div class="coberturas-grid">
+          <div class="cobertura-tag">OSDE</div>
+          <div class="cobertura-tag">Swiss Medical</div>
+          <div class="cobertura-tag">Galeno</div>
+          <div class="cobertura-tag">Medifé</div>
+          <div class="cobertura-tag">IOMA</div>
+          <div class="cobertura-tag">Particular</div>
+        </div>
+        <p class="coberturas-nota">Consulte por su cobertura antes de la primera consulta.</p>
+      </div>
+
+      <a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." target="_blank" class="btn btn-wa-grande">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:24px;height:24px;"> Escribir por WhatsApp
+      </a>
+
     </div>
+
+    <!-- FORMULARIO -->
+    <div class="contacto-form-col reveal">
+      <div class="form-card">
+        <h3>Solicitar turno</h3>
+        <p class="form-sub">Complete el formulario y nos ponemos en contacto para confirmar el horario.</p>
+
+        <form id="form-turno" action="ACTION_URL_GOOGLE_APPS_SCRIPT" method="POST">
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
+          </div>
+          <div class="form-grupo">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" required>
+          </div>
+          <div class="form-grupo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="su@email.com">
+          </div>
+          <div class="form-grupo">
+            <label for="tratamiento">Tratamiento de interés</label>
+            <select id="tratamiento" name="tratamiento">
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option value="limpieza">Limpieza dental</option>
+              <option value="blanqueamiento">Blanqueamiento</option>
+              <option value="ortodoncia">Ortodoncia</option>
+              <option value="implantes">Implantes</option>
+              <option value="endodoncia">Endodoncia</option>
+              <option value="estetica">Estética dental</option>
+              <option value="consulta">Consulta general</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntenos brevemente su situación o consulta..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Solicitar turno →</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="seccion seccion-alt">
+  <div class="contenedor">
+    <div class="seccion-header">
+      <div class="seccion-kicker">Ubicación</div>
+      <h2>Cómo llegar.</h2>
+    </div>
+    <div class="mapa-grande">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4!2d-58.4173!3d-34.5865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzExLjQiUyA1OMKwMjUnMDIuMyJX!5e0!3m2!1ses!2sar!4v1"
-        width="100%" height="100%" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
+        width="100%" height="400" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
       </iframe>
+    </div>
+    <div class="como-llegar">
+      <div class="llegar-item">🚇 <strong>Subte:</strong> Línea D — Estación Palermo (a 3 cuadras)</div>
+      <div class="llegar-item">🚌 <strong>Colectivos:</strong> 10, 15, 34, 55, 99, 108, 141</div>
+      <div class="llegar-item">🚗 <strong>Estacionamiento:</strong> En Av. Santa Fe y calles adyacentes</div>
     </div>
   </div>
 </section>
@@ -465,7 +216,7 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-      <a href="/cdn-cgi/l/email-protection#22414d4c564341564d62465043514d51430c414d4f"><span class="__cf_email__" data-cfemail="16757978627775627956726477657965773875797b">[email&#160;protected]</span></a>
+      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
     </div>
   </div>
   <div class="contenedor footer-bottom">
@@ -474,7 +225,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
   const header = document.getElementById('header');
@@ -493,4 +244,31 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.1
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const form = document.getElementById('form-turno');
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    fetch(this.action, { method: 'POST', body: new FormData(this) })
+      .then(function() {
+        btn.textContent = '✅ ¡Turno solicitado!';
+        form.reset();
+        setTimeout(function() {
+          btn.textContent = 'Solicitar turno →';
+          btn.disabled = false;
+        }, 4000);
+      })
+      .catch(function() {
+        btn.textContent = '❌ Error. Escríbanos por WhatsApp.';
+        btn.disabled = false;
+      });
+  });
+}
+</script>
+</body>
+</html>
