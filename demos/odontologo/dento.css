@@ -1092,4 +1092,9 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   .trat-detalle { flex-direction: column; gap: 16px; }
   .como-llegar { flex-direction: column; }
 }
-
+.contacto-preview > .btn {
+  display: flex;
+  justify-content: center;
+  margin: 32px auto 0 auto;
+  width: fit-content;
+}
