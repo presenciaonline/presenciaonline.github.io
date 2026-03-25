@@ -101,6 +101,71 @@
 @media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
 
+/* ── MERCADO PAGO ── */
+.mp-card {
+  background: #f0f9ff;
+  border: 1.5px solid #bae6fd;
+  border-radius: var(--radio-lg);
+  padding: 24px 22px;
+  margin: 24px 0 20px;
+}
+.mp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.mp-logo {
+  height: 22px;
+  display: block;
+}
+.mp-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+.mp-card-sub {
+  font-size: 0.82rem;
+  color: #0369a1;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.mp-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.mp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #009ee3;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.mp-btn:hover { background: #0082bc; transform: translateY(-1px); }
+.mp-btn-ghost {
+  background: transparent;
+  color: #009ee3;
+  border: 1.5px solid #009ee3;
+}
+.mp-btn-ghost:hover { background: #e0f4fd; transform: translateY(-1px); }
+.mp-aviso {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
  .equip-img {
   width: 100%;
   border-radius: var(--radio-lg);
@@ -108,7 +173,30 @@
   aspect-ratio: 4/3;
   object-fit: cover;
   margin-bottom: 12px;
-} 
+}
+
+/* ── MP DISCRETA — solo index ── */
+.mp-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(0,158,227,0.06);
+  border: 1px solid rgba(0,158,227,0.18);
+  border-radius: 12px;
+  font-size: 0.82rem;
+  color: var(--gris);
+  line-height: 1.4;
+}
+.mp-hint svg { flex-shrink: 0; }
+.mp-hint a {
+  color: #009ee3;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mp-hint a:hover { text-decoration: underline; }
   
 </style>
 </head>
@@ -340,9 +428,19 @@
           </div>
         </div>
       </div>
+      <!-- ── MP DISCRETA ── -->
+      <div class="mp-hint">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+          <circle cx="14" cy="14" r="14" fill="#009EE3"/>
+          <path d="M7 17l3-5.5 2.8 4.3 2.3-3.5 3.5 4.7H7z" fill="#fff"/>
+        </svg>
+        También podés enviar una seña para reservar tu turno directamente por
+        <a href="contacto.html#pago">Mercado Pago →</a>
+      </div>
+      <!-- ── FIN MP DISCRETA ── -->
+
       <a href="contacto.html" class="btn btn-primary">Solicitar turno</a>
     </div>
-    <div class="mapa-placeholder">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.4!2d-58.4173!3d-34.5865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzExLjQiUyA1OMKwMjUnMDIuMyJX!5e0!3m2!1ses!2sar!4v1"
         width="100%" height="100%" style="border:0; border-radius:16px;" allowfullscreen loading="lazy">
@@ -367,7 +465,7 @@
     <div class="footer-contacto">
       <div>Av. Santa Fe 3421, Piso 4 · Palermo, CABA</div>
       <div>+54 9 11 0000-0000</div>
-      <a href="mailto:contacto@drasosa.com">contacto@drasosa.com</a>
+      <a href="/cdn-cgi/l/email-protection#22414d4c564341564d62465043514d51430c414d4f"><span class="__cf_email__" data-cfemail="16757978627775627956726477657965773875797b">[email&#160;protected]</span></a>
     </div>
   </div>
   <div class="contenedor footer-bottom">
@@ -376,7 +474,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
   const header = document.getElementById('header');
@@ -395,11 +493,4 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.1 });
-document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card, .equip-item').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
-</script>
-</body>
-</html>
+}, { threshold: 0.1
