@@ -1098,3 +1098,17 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   margin: 32px auto 0 auto;
   width: fit-content;
 }
+.link-pago {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 500;
+  transition: var(--trans);
+}
+
+.link-pago:hover {
+  color: var(--teal-dark);
+  text-decoration: underline;
+}
