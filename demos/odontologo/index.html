@@ -121,7 +121,7 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
-<a href="https://wa.me/5491100000000?text=Hola%20Dra.%20Sosa,%20quiero%20solicitar%20un%20turno." class="wa-float" target="_blank">
+<a href="https://wa.me/5491149167978?text=Hola,%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
@@ -352,6 +352,17 @@
   </div>
 </section>
 
+<!-- CTA PRESENCIA ONLINE -->
+<section style="background: linear-gradient(135deg, #07474F 0%, #0B6E7A 100%); padding: 56px 0; text-align: center;">
+  <div class="contenedor">
+    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.55); font-family:'DM Sans',sans-serif; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Esta es una demo de Presencia Online</p>
+    <h2 style="color: #ffffff; font-family:'Playfair Display',serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 20px; font-weight: 600;">Quiero una página así<br>para mi consultorio.</h2>
+    <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:#ffffff; color:#07474F; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.95rem; padding:14px 32px; border-radius:12px; text-decoration:none; box-shadow:0 4px 20px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s;">
+      Contactar a Presencia Online →
+    </a>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="contenedor footer-inner">
     <div class="footer-brand">
@@ -375,9 +386,12 @@
     <span>© 2025 Dra. Valentina Sosa. Todos los derechos reservados.</span>
     <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
   </div>
+  <div class="contenedor footer-nap">
+  Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
+</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
   const header = document.getElementById('header');
@@ -396,11 +410,4 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.1 });
-document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card, .equip-item').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
-</script>
-</body>
-</html>
+}, { threshold: 0.1
