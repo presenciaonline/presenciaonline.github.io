@@ -1189,20 +1189,20 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 }
 /* CTA PRESENCIA ONLINE */
 .cta-presencia {
-  background: linear-gradient(135deg, #07474F 0%, #0B6E7A 100%);
+  background: var(--gris-claro);
   padding: 56px 0;
   text-align: center;
 }
 .cta-presencia-kicker {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.35);
   font-family: 'DM Sans', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 .cta-presencia h2 {
-  color: #ffffff;
+  color: #1A2332;
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   margin-bottom: 24px;
@@ -1213,18 +1213,19 @@ h3 { font-size: 1.15rem; font-weight: 600; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #ffffff;
-  color: #07474F;
+  background: #0B6E7A;
+  color: #ffffff;
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 14px 32px;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(11,110,122,0.25);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .cta-presencia-btn:hover {
+  background: #07474F;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 28px rgba(11,110,122,0.35);
 }
