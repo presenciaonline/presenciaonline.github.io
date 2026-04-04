@@ -1176,3 +1176,14 @@ h3 { font-size: 1.15rem; font-weight: 600; }
 #MercadoPago {
   scroll-margin-top: 120px;
 }
+/* NAP Presencia Online — Google local SEO */
+.footer-nap {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 14px;
+  padding-bottom: 8px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 8px;
+}
