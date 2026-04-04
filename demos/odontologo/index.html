@@ -101,15 +101,56 @@
 @media (max-width: 1024px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
 
- .equip-img {
+.equip-img {
   width: 100%;
   border-radius: var(--radio-lg);
   box-shadow: var(--sombra-hover);
   aspect-ratio: 4/3;
   object-fit: cover;
   margin-bottom: 12px;
-} 
-  
+}
+
+/* CTA PRESENCIA ONLINE */
+.cta-presencia {
+  background: linear-gradient(135deg, #07474F 0%, #0B6E7A 100%);
+  padding: 56px 0;
+  text-align: center;
+}
+.cta-presencia-kicker {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.cta-presencia h2 {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.cta-presencia-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #07474F;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-presencia-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
 </style>
 </head>
 <body>
@@ -121,6 +162,7 @@
   <a href="../../index.html" class="barra-retorno-cta">Ver todos los servicios →</a>
 </div>
 
+<!-- WA flotante → número de Presencia Online -->
 <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." class="wa-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
@@ -237,41 +279,41 @@
       <h2>Tecnología al servicio<br>de cada diagnóstico.</h2>
       <p class="seccion-sub">El consultorio cuenta con equipamiento moderno para diagnósticos más precisos y tratamientos más cómodos.</p>
     </div>
-<div class="equip-grid">
-  <div class="equip-item reveal">
-    <img src="assets/img/radiografia.jpg" alt="Radiografía digital" class="equip-img">
-    <h3>Radiografía digital</h3>
-    <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/intraoral.jpg" alt="Cámara intraoral" class="equip-img">
-    <h3>Cámara intraoral</h3>
-    <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/invisalign.jpg" alt="Sistema Invisalign digital" class="equip-img">
-    <h3>Sistema Invisalign digital</h3>
-    <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/sonrisa.jpg" alt="Diseño digital de sonrisa" class="equip-img">
-    <h3>Diseño digital de sonrisa</h3>
-    <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/anestesia.jpg" alt="Anestesia computarizada" class="equip-img">
-    <h3>Anestesia computarizada</h3>
-    <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
-  </div>
-  <div class="equip-item reveal">
-    <img src="assets/img/autoclave.jpg" alt="Esterilización con autoclave" class="equip-img">
-    <h3>Esterilización con autoclave</h3>
-    <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
-  </div>
-</div>
+    <div class="equip-grid">
+      <div class="equip-item reveal">
+        <img src="assets/img/radiografia.jpg" alt="Radiografía digital" class="equip-img">
+        <h3>Radiografía digital</h3>
+        <p>Menor radiación y diagnóstico inmediato en pantalla. Le muestro la imagen y le explico qué encontré en el momento.</p>
+      </div>
+      <div class="equip-item reveal">
+        <img src="assets/img/intraoral.jpg" alt="Cámara intraoral" class="equip-img">
+        <h3>Cámara intraoral</h3>
+        <p>Fotografías del interior de la boca en alta definición. Usted ve exactamente lo mismo que yo veo.</p>
+      </div>
+      <div class="equip-item reveal">
+        <img src="assets/img/invisalign.jpg" alt="Sistema Invisalign digital" class="equip-img">
+        <h3>Sistema Invisalign digital</h3>
+        <p>Planificación digital del tratamiento de ortodoncia. Simulación del resultado antes de comenzar.</p>
+      </div>
+      <div class="equip-item reveal">
+        <img src="assets/img/sonrisa.jpg" alt="Diseño digital de sonrisa" class="equip-img">
+        <h3>Diseño digital de sonrisa</h3>
+        <p>Simulación del resultado estético antes de cualquier procedimiento. Decisiones tomadas con información completa.</p>
+      </div>
+      <div class="equip-item reveal">
+        <img src="assets/img/anestesia.jpg" alt="Anestesia computarizada" class="equip-img">
+        <h3>Anestesia computarizada</h3>
+        <p>Sistema de inyección controlada que reduce significativamente la molestia durante el procedimiento.</p>
+      </div>
+      <div class="equip-item reveal">
+        <img src="assets/img/autoclave.jpg" alt="Esterilización con autoclave" class="equip-img">
+        <h3>Esterilización con autoclave</h3>
+        <p>Todo el instrumental pasa por autoclave digital entre cada paciente. Protocolo de seguridad sin excepciones.</p>
+      </div>
+    </div>
   </div>
 </section>
-  
+
 <!-- TESTIMONIOS -->
 <section class="seccion seccion-alt">
   <div class="contenedor">
@@ -353,11 +395,11 @@
 </section>
 
 <!-- CTA PRESENCIA ONLINE -->
-<section style="background: linear-gradient(135deg, #07474F 0%, #0B6E7A 100%); padding: 56px 0; text-align: center;">
+<section class="cta-presencia">
   <div class="contenedor">
-    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.55); font-family:'DM Sans',sans-serif; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Esta es una demo de Presencia Online</p>
-    <h2 style="color: #ffffff; font-family:'Playfair Display',serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 20px; font-weight: 600;">Quiero una página así<br>para mi consultorio.</h2>
-    <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:#ffffff; color:#07474F; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.95rem; padding:14px 32px; border-radius:12px; text-decoration:none; box-shadow:0 4px 20px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s;">
+    <p class="cta-presencia-kicker">Esta es una demo de Presencia Online</p>
+    <h2>Quiero una página así<br>para mi consultorio.</h2>
+    <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20una%20p%C3%A1gina%20as%C3%AD%20para%20mi%20consultorio." target="_blank" class="cta-presencia-btn">
       Contactar a Presencia Online →
     </a>
   </div>
@@ -387,11 +429,11 @@
     <span class="footer-credit">Sitio desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></span>
   </div>
   <div class="contenedor footer-nap">
-  Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
-</div>
+    Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
+  </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function setHeaderTop() {
   const barra = document.querySelector('.barra-retorno');
   const header = document.getElementById('header');
@@ -410,4 +452,11 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.1
+}, { threshold: 0.1 });
+document.querySelectorAll('.trat-card, .sobre-img-wrap, .sobre-texto, .contacto-preview, .mapa-placeholder, .testimonio-card, .equip-item').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
