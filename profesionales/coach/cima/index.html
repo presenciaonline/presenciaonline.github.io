@@ -353,6 +353,65 @@
       object-fit:cover; display:block;
     }
 
+    /* ─── CARRUSEL REFLEXIONES ─── */
+    .carrusel-wrapper {
+      position:relative;
+      max-width:1100px;
+      margin:0 auto;
+      overflow:hidden;
+    }
+    .carrusel-track {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .carrusel-slide {
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      display:block;
+      transition:all .25s ease;
+      border:1.5px solid transparent;
+    }
+    .carrusel-slide:hover {
+      transform:translateY(-5px);
+      box-shadow:0 14px 36px rgba(0,0,0,0.12);
+      border-color:rgba(30,115,190,0.18);
+    }
+    .carrusel-slide img {
+      width:100%; display:block;
+      object-fit:contain;
+    }
+    .carrusel-dots { display:none; }
+
+    @media (max-width:768px) {
+      .carrusel-track {
+        display:flex;
+        transition:transform .4s ease;
+        gap:0;
+      }
+      .carrusel-slide {
+        min-width:100%;
+        border-radius:14px;
+        margin:0 8px;
+        min-width:calc(100% - 16px);
+      }
+      .carrusel-dots {
+        display:flex;
+        justify-content:center;
+        gap:10px;
+        margin-top:20px;
+      }
+      .dot {
+        width:10px; height:10px;
+        border-radius:50%;
+        background:rgba(30,115,190,0.25);
+        cursor:pointer;
+        transition:background .2s;
+      }
+      .dot.activo { background:#1E73BE; }
+    }
+
     /* ─── DIVISOR SECCIÓN ─── */
     .ci-divisor {
       height:1px; background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
@@ -481,7 +540,7 @@
 
 
   <!-- ══════════════════════════════════════
-       TALLERES — Estilo A alternado x3
+       TALLERES — Estilo B tarjetas
   ══════════════════════════════════════ -->
   <section class="ci-s ci-gris reveal">
     <div class="ci-inner ci-centro">
@@ -490,75 +549,47 @@
       <p class="ci-sub">
         Tres niveles que se construyen uno sobre el otro. Cada instancia es una experiencia en sí misma — y a la vez, un paso hacia la siguiente.
       </p>
-    </div>
 
-    <!-- TALLER 1: imagen izquierda, texto derecha -->
-    <!-- img/taller-dc1.jpg → foto del taller Darse Cuenta Nivel 1 -->
-    <div class="ci-inner" style="margin-bottom:70px;">
-      <div class="ci-grid2">
-        <div class="ci-foto">
-          <img src="img/taller-dc1.jpg" alt="Taller Darse Cuenta Nivel 1">
-        </div>
-        <div class="ci-texto">
-          <span class="ci-num">Nivel 1</span>
-          <h2>Darse Cuenta</h2>
-          <p>
-            El punto de partida. Empezás a observar tus pensamientos, tus emociones y tus patrones de acción.
-          </p>
-          <p>
-            Vas a poder soltar el pasado para crear nuevos espacios en tu vida. Vas a aprender a distinguir entre excusas y resultados para ser responsable de la vida que elegís.
-          </p>
-          <a href="talleres.html#darse-cuenta-1" class="link-arrow">Ver taller →</a>
-        </div>
+      <div class="ci-cards">
+
+        <!-- img/taller-dc1.jpg → foto del taller Darse Cuenta Nivel 1 -->
+        <a href="talleres.html#darse-cuenta-1" class="ci-card">
+          <img src="img/taller-dc1.jpg" alt="Darse Cuenta Nivel 1" class="ci-card-foto">
+          <div class="ci-card-body">
+            <span class="ci-num">Nivel 1</span>
+            <h3>Darse Cuenta</h3>
+            <p>El punto de partida. Empezás a observar tus pensamientos, tus emociones y tus patrones de acción.</p>
+            <span class="ci-card-link">Ver taller →</span>
+          </div>
+        </a>
+
+        <!-- img/taller-dc2.jpg → foto del taller Darse Cuenta Nivel 2 -->
+        <a href="talleres.html#darse-cuenta-2" class="ci-card">
+          <img src="img/taller-dc2.jpg" alt="Darse Cuenta Nivel 2" class="ci-card-foto">
+          <div class="ci-card-body">
+            <span class="ci-num">Nivel 2</span>
+            <h3>Darse Cuenta</h3>
+            <p>La profundización. Con lo trabajado en el nivel anterior, avanzás sobre creencias más arraigadas y ampliás tu visión de lo que es posible para vos.</p>
+            <span class="ci-card-link">Ver taller →</span>
+          </div>
+        </a>
+
+        <!-- img/taller-peldanos.jpg → foto del taller Peldaños -->
+        <a href="talleres.html#peldanos" class="ci-card">
+          <img src="img/taller-peldanos.jpg" alt="Peldaños Nivel 3" class="ci-card-foto">
+          <div class="ci-card-body">
+            <span class="ci-num">Nivel 3</span>
+            <h3>Peldaños</h3>
+            <p>La integración de todo lo trabajado y de tu manera de estar en el mundo.</p>
+            <span class="ci-card-link">Ver taller →</span>
+          </div>
+        </a>
+
       </div>
-    </div>
 
-    <!-- TALLER 2: texto izquierda, imagen derecha (reverse) -->
-    <!-- img/taller-dc2.jpg → foto del taller Darse Cuenta Nivel 2 -->
-    <div class="ci-inner" style="margin-bottom:70px;">
-      <div class="ci-grid2 reverse">
-        <div class="ci-foto">
-          <img src="img/taller-dc2.jpg" alt="Taller Darse Cuenta Nivel 2">
-        </div>
-        <div class="ci-texto">
-          <span class="ci-num">Nivel 2</span>
-          <h2>Darse Cuenta</h2>
-          <p>
-            La profundización. Con lo trabajado en el nivel anterior, avanzás sobre creencias más arraigadas y ampliás tu visión de lo que es posible para vos.
-          </p>
-          <p>
-            ¿Y si el miedo fuera una señal de que estás listo para crecer? En este nivel aprendés a observarlo en lugar de huir de él.
-          </p>
-          <a href="talleres.html#darse-cuenta-2" class="link-arrow">Ver taller →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TALLER 3: imagen izquierda, texto derecha -->
-    <!-- img/taller-peldanos.jpg → foto del taller Peldaños -->
-    <div class="ci-inner" style="margin-bottom:50px;">
-      <div class="ci-grid2">
-        <div class="ci-foto">
-          <img src="img/taller-peldanos.jpg" alt="Taller Peldaños Nivel 3">
-        </div>
-        <div class="ci-texto">
-          <span class="ci-num">Nivel 3</span>
-          <h2>Peldaños</h2>
-          <p>
-            La integración. Un proceso de tres meses para llevar a la vida real todo lo trabajado en los niveles anteriores.
-          </p>
-          <p>
-            El cambio deja de ser un taller y se convierte en tu manera de estar en el mundo.
-          </p>
-          <a href="talleres.html#peldanos" class="link-arrow">Ver taller →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ci-inner ci-centro">
       <a href="talleres.html" class="btn-outline">Ver todos los talleres</a>
-    </div>
 
+    </div>
   </section>
 
 
@@ -606,10 +637,7 @@
 
 
   <!-- ══════════════════════════════════════
-       REFLEXIONES — Estilo B (foto arriba)
-       Imágenes: img/reflexion-1.jpg
-                 img/reflexion-2.jpg
-                 img/reflexion-3.jpg
+       REFLEXIONES — solo fotos, carrusel en mobile
   ══════════════════════════════════════ -->
   <section class="ci-s ci-verde reveal">
     <div class="ci-inner ci-centro">
@@ -619,36 +647,39 @@
         Preguntas y pensamientos para que algo se mueva adentro. No hace falta responderlos. Alcanza con sostenerlos.
       </p>
 
-      <div class="ci-cards">
+      <!-- Carrusel wrapper -->
+      <div class="carrusel-wrapper">
+        <div class="carrusel-track" id="carrusel-track">
 
-        <!-- img/reflexion-1.jpg → imagen que acompañe la reflexión sobre el miedo -->
-        <a href="reflexiones.html" class="ci-card reflexion">
-          <img src="img/reflexion-1.jpg" alt="Reflexión" class="ci-card-foto">
-          <div class="ci-reflexion-body">
-            <blockquote>"¿Y si el miedo fuera una señal de que estás listo para crecer?"</blockquote>
-            <span class="ci-card-link">Leer más reflexiones →</span>
-          </div>
-        </a>
+          <!-- img/reflexion-1.jpg -->
+          <a href="reflexiones.html" class="carrusel-slide">
+            <img src="img/reflexion-1.jpg" alt="Reflexión CIMA">
+          </a>
 
-        <!-- img/reflexion-2.jpg → imagen que acompañe la reflexión sobre el saber y el hacer -->
-        <a href="reflexiones.html" class="ci-card reflexion">
-          <img src="img/reflexion-2.jpg" alt="Reflexión" class="ci-card-foto">
-          <div class="ci-reflexion-body">
-            <blockquote>"¿Cómo tomás tus decisiones?"</blockquote>
-            <span class="ci-card-link">Leer más reflexiones →</span>
-          </div>
-        </a>
+          <!-- img/reflexion-2.jpg -->
+          <a href="reflexiones.html" class="carrusel-slide">
+            <img src="img/reflexion-2.jpg" alt="Reflexión CIMA">
+          </a>
 
-        <!-- img/reflexion-3.jpg → imagen que acompañe la reflexión sobre el tiempo -->
-        <a href="reflexiones.html" class="ci-card reflexion">
-          <img src="img/reflexion-3.jpg" alt="Reflexión" class="ci-card-foto">
-          <div class="ci-reflexion-body">
-            <blockquote>"Agradece a tus emociones"</blockquote>
-            <span class="ci-card-link">Leer más reflexiones →</span>
-          </div>
-        </a>
+          <!-- img/reflexion-3.jpg -->
+          <a href="reflexiones.html" class="carrusel-slide">
+            <img src="img/reflexion-3.jpg" alt="Reflexión CIMA">
+          </a>
 
+        </div>
+
+        <!-- Puntos — solo visibles en mobile -->
+        <div class="carrusel-dots" id="carrusel-dots">
+          <span class="dot activo" onclick="irASlide(0)"></span>
+          <span class="dot" onclick="irASlide(1)"></span>
+          <span class="dot" onclick="irASlide(2)"></span>
+        </div>
       </div>
+
+      <a href="reflexiones.html" class="btn-outline" style="margin-top:36px;">Ver todas las reflexiones</a>
+
+    </div>
+  </section>
 
     </div>
   </section>
@@ -852,6 +883,31 @@
       //  });
    // });
     -->
+
+    // Carrusel reflexiones (solo mobile)
+    let slideActual = 0;
+    const track = document.getElementById('carrusel-track');
+    const dots = document.querySelectorAll('.dot');
+
+    function irASlide(n) {
+      if (window.innerWidth > 768) return;
+      slideActual = n;
+      track.style.transform = `translateX(calc(-${n * 100}% - ${n * 16}px))`;
+      dots.forEach((d, i) => d.classList.toggle('activo', i === n));
+    }
+
+    // Swipe touch
+    let touchStartX = 0;
+    if (track) {
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0 && slideActual < 2) irASlide(slideActual + 1);
+          if (diff < 0 && slideActual > 0) irASlide(slideActual - 1);
+        }
+      });
+    }
 
   </script>
 
