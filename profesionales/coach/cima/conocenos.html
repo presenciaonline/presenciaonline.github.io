@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conócenos | CIMA Coaching Ontológico · Morón</title>
+  <meta name="description" content="Conocé a Silvia y Julieta, las coaches detrás de CIMA. Doce años acompañando procesos reales de transformación personal en Morón.">
+
+  <link rel="stylesheet" href="cima.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ─── LOGO ─── */
+    .logo { display:flex; align-items:center; text-decoration:none; }
+    .logo img { height:80px; width:auto; display:block; }
+
+    /* ─── KICKER ─── */
+    .kicker {
+      display:inline-block;
+      font-family:'Poppins',sans-serif;
+      font-size:0.72rem; font-weight:600;
+      letter-spacing:2px; text-transform:uppercase;
+      color:#1E73BE;
+      border:1.5px solid rgba(30,115,190,0.28);
+      border-radius:99px; padding:4px 14px;
+      margin-bottom:18px;
+    }
+
+    /* ─── HERO INTERNO ─── */
+    .hero-interno {
+      background:linear-gradient(135deg,#1a2332 0%,#1E73BE 100%);
+      padding:90px 22px 70px;
+      text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .hero-interno::before {
+      content:''; position:absolute;
+      top:-80px; right:-80px;
+      width:360px; height:360px;
+      background:rgba(107,190,68,0.08); border-radius:50%;
+    }
+    .hero-interno-inner {
+      position:relative; z-index:1;
+      max-width:700px; margin:0 auto;
+    }
+    .hero-interno h1 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.8rem,4vw,2.8rem);
+      font-weight:700; color:#fff;
+      line-height:1.2; margin-bottom:16px;
+    }
+    .hero-interno p {
+      color:rgba(255,255,255,0.8);
+      font-size:1rem; line-height:1.8;
+      max-width:540px; margin:0 auto;
+    }
+
+    /* ─── SECCIONES ─── */
+    .ci-s      { padding:90px 22px; }
+    .ci-blanca { background:#fff; }
+    .ci-gris   { background:#f4f8fc; }
+    .ci-verde  { background:#eaf7f1; }
+    .ci-inner  { max-width:1140px; margin:0 auto; }
+    .ci-centro { text-align:center; }
+
+    /* ─── GRID 2 COL ─── */
+    .ci-grid2 {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:68px; align-items:center;
+      max-width:1100px; margin:0 auto;
+    }
+    .ci-grid2.reverse { direction:rtl; }
+    .ci-grid2.reverse > * { direction:ltr; }
+
+    .coach-foto img {
+      width:100%; border-radius:18px; display:block;
+      box-shadow:0 14px 40px rgba(0,0,0,0.13);
+      object-fit:contain;
+    }
+
+    /* ─── TEXTO COACH ─── */
+    .coach-cargo {
+      font-family:'Poppins',sans-serif;
+      font-size:0.75rem; font-weight:600;
+      color:#6BBE44; letter-spacing:1.5px;
+      text-transform:uppercase;
+      margin-bottom:14px; display:block;
+    }
+    .ci-texto h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.8rem,3.5vw,2.6rem);
+      font-weight:700; color:#1a2332;
+      line-height:1.1; margin-bottom:20px;
+    }
+    .ci-texto p {
+      color:#555; font-size:0.97rem;
+      line-height:1.85; margin-bottom:14px;
+    }
+    .frase-coach {
+      font-family:'Poppins',sans-serif;
+      font-size:0.97rem; font-weight:600;
+      color:#1a2332; font-style:italic;
+      padding:18px 20px;
+      border-left:3px solid #6BBE44;
+      background:rgba(107,190,68,0.06);
+      border-radius:0 10px 10px 0;
+      margin-top:10px; margin-bottom:0;
+      display:block;
+    }
+
+    /* ─── SEPARADOR ─── */
+    .ci-sep {
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
+      max-width:1100px; margin:0 auto;
+    }
+
+    /* ─── PIRÁMIDE ─── */
+    .piramide-bloque {
+      max-width:680px; margin:0 auto;
+      text-align:center;
+    }
+    .piramide-bloque h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.5rem,3vw,2rem);
+      font-weight:700; color:#1a2332;
+      margin-bottom:14px;
+    }
+    .piramide-bloque .frase-silvia {
+      font-family:'Poppins',sans-serif;
+      font-size:1.05rem; font-weight:600;
+      color:#1a2332; font-style:italic;
+      margin-bottom:20px; display:block;
+    }
+    .piramide-bloque p {
+      color:#555; font-size:0.97rem;
+      line-height:1.85; margin-bottom:28px;
+    }
+    .piramide-img {
+      max-width:520px; margin:0 auto 30px;
+      border-radius:18px; overflow:hidden;
+      box-shadow:0 14px 40px rgba(0,0,0,0.10);
+    }
+    .piramide-img img { width:100%; display:block; }
+
+    /* ─── COACHING ONTOLÓGICO ─── */
+    .coaching-bloque {
+      max-width:720px; margin:0 auto;
+      text-align:center;
+    }
+    .coaching-bloque h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.5rem,3vw,2rem);
+      font-weight:700; color:#1a2332;
+      margin-bottom:14px;
+    }
+    .coaching-bloque p {
+      color:#555; font-size:0.97rem;
+      line-height:1.85; margin-bottom:14px;
+    }
+    .coaching-bloque .destacado {
+      font-family:'Poppins',sans-serif;
+      font-size:1.05rem; font-weight:600;
+      color:#1E73BE; margin:24px 0;
+      display:block;
+    }
+
+    /* ─── REFLEXIÓN E IMÁGENES FINALES ─── */
+    .reflexion-img {
+      max-width:560px; margin:0 auto;
+      border-radius:18px; overflow:hidden;
+      box-shadow:0 14px 40px rgba(0,0,0,0.13);
+    }
+    .reflexion-img img { width:100%; display:block; }
+
+    .broche-img {
+      max-width:480px; margin:0 auto;
+      border-radius:18px; overflow:hidden;
+      box-shadow:0 14px 40px rgba(0,0,0,0.10);
+    }
+    .broche-img img { width:100%; display:block; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:900px) {
+      .ci-grid2 { grid-template-columns:1fr; gap:36px; }
+      .ci-grid2.reverse { direction:ltr; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTONES FLOTANTES -->
+  <a href="https://www.instagram.com/cima.aprendizaje" target="_blank" class="instagram-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+  <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/CIMA_LOGO.jpg" alt="CIMA – Centro Integral de Métodos de Aprendizaje">
+      </a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="talleres.html">Talleres</a>
+        <a href="reflexiones.html">Reflexiones</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO INTERNO -->
+  <section class="hero-interno">
+    <div class="hero-interno-inner">
+      <span class="kicker" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.3);">El equipo</span>
+      <h1>Dos coaches.<br>Una misión.<br>Doce años.</h1>
+      <p>Silvia y Julieta llevan más de una década acompañando a personas que eligieron hacerse cargo de su vida.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       SILVIA
+       Imagen: img/Silvia.jpg
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-blanca reveal" id="quienes-somos">
+    <div class="ci-inner">
+      <div class="ci-grid2">
+
+        <div class="coach-foto">
+          <img src="img/Silvia.jpg" alt="Silvia – CEO Coach Ontológico Profesional CIMA">
+        </div>
+
+        <div class="ci-texto">
+          <span class="coach-cargo">CEO · Coach Ontológico Profesional</span>
+          <h2>Silvia</h2>
+          <span class="frase-coach">
+            "Ya estamos hace 12 años, y hoy puedo decir como dicen los sabios: sos feliz cuando sabés para qué viniste a este mundo."
+          </span>
+          <p style="margin-top:20px;">
+            Ver el proceso de cada persona que pasa por nuestro espacio, y que al final del camino logre valorarse como ser, la hace estar en paz.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       JULIETA
+       Imagen: img/Julieta.jpg
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-gris reveal">
+    <div class="ci-inner">
+      <div class="ci-grid2 reverse">
+
+        <div class="coach-foto">
+          <img src="img/Julieta.jpg" alt="Julieta – CEO Coach Ontológico Profesional CIMA">
+        </div>
+
+        <div class="ci-texto">
+          <span class="coach-cargo">CEO · Coach Ontológico Profesional</span>
+          <h2>Julieta</h2>
+          <span class="frase-coach">
+            "Este proyecto hizo que conectara con mi ¿Para qué estoy? y en qué puedo llegar a hacer un recurso para otro."
+          </span>
+          <span class="frase-coach" style="margin-top:14px;">
+            "Esta es la profesión la cual me apasiona, disfruto, honro y elijo cada día."
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PIRÁMIDE SER → HACER → TENER
+       Imagen: img/piramide.jpg
+       (renombrar: cima_aprendizaje_1678921794...)
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-blanca reveal" id="nuestra-filosofia">
+    <div class="ci-inner ci-centro">
+      <span class="kicker">Nuestra filosofía</span>
+      <div class="piramide-bloque">
+        <h2>La ley del orden de la vida</h2>
+        <span class="frase-silvia">"Hoy en día todo el mundo quiere tener para ser feliz. Pero la vida no funciona así."</span>
+        <p>
+          Primero tenés que ser. Después hacés. Y después tenés.
+        </p>
+        <div class="piramide-img">
+          <img src="img/piramide.jpg" alt="Ley del orden de la vida – SER HACER TENER – CIMA">
+        </div>
+        <p>
+          Por eso en CIMA trabajamos desde la base, la transformación del ser. Porque si controlás tus pensamientos negativos los podés reemplazar por pensamientos positivos, que generan emociones constructivas, que a su vez posibilitan acciones más beneficiosas, las cuales ejecutadas diariamente cambian tu entorno y tu vida.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       QUÉ ES EL COACHING ONTOLÓGICO
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-verde reveal" id="por-que-cima">
+    <div class="ci-inner ci-centro">
+      <span class="kicker">Coaching Ontológico</span>
+      <div class="coaching-bloque">
+        <h2>¿Qué es el coaching ontológico?</h2>
+        <p>
+          No es terapia. No es autoayuda. Es un espacio donde alguien te hace las preguntas que vos solo no te animás a hacerte.
+        </p>
+        <p>
+          El coaching ontológico trabaja sobre cómo mirás las cosas. Porque cuando cambia la mirada, cambia lo que podés hacer. Y cuando cambia lo que hacés, cambia tu vida.
+        </p>
+        <span class="destacado">Un coach no te da respuestas. Te acompaña a encontrar las tuyas.</span>
+        <p>
+          En cada conversación hay preguntas que abren puertas. Que te exponen a zonas que nunca exploraste. Que generan la energía necesaria para un cambio profundo y real.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       REFLEXIÓN
+       Imagen: img/reflexion-conocenos.jpg
+       (renombrar: cima_aprendizaje_1624497695...)
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-blanca reveal">
+    <div class="ci-inner ci-centro">
+      <div class="reflexion-img">
+        <img src="img/reflexion-conocenos.jpg" alt="Quédate donde te inviten a pensar, te enseñen a cuestionarte y te apoyen al reconstruirte – CIMA">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       BROCHE DE ORO
+       Imagen: img/granito-de-arena.jpg
+       (renombrar: cima_aprendizaje_1685752167...)
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-gris reveal">
+    <div class="ci-inner ci-centro">
+      <div class="broche-img">
+        <img src="img/granito-de-arena.jpg" alt="Somos un granito de arena para cambiar el mundo – CIMA">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></p>
+    <p>
+      <a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
+      <a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
+      <a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
+      <a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
+    </p>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
