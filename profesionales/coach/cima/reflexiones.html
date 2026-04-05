@@ -29,6 +29,10 @@
       margin-bottom:18px;
     }
 
+    /* ─── REVEAL ─── */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
     /* ─── HERO ─── */
     .ref-hero {
       padding:110px 22px 80px;
@@ -45,8 +49,7 @@
       font-family:'Poppins',sans-serif;
       font-size:1.05rem; color:#444;
       line-height:1.8; max-width:500px;
-      margin:0 auto;
-      font-weight:500;
+      margin:0 auto; font-weight:500;
     }
 
     /* ─── PUENTE ─── */
@@ -59,110 +62,120 @@
     .ref-puente p {
       font-family:'Poppins',sans-serif;
       font-size:clamp(1.05rem,2vw,1.3rem);
-      font-weight:500;
-      color:#1a2332;
+      font-weight:500; color:#1a2332;
       line-height:1.6;
     }
-    .ref-puente p strong {
-      color:#1E73BE;
-      font-weight:700;
-    }
+    .ref-puente p strong { color:#1E73BE; font-weight:700; }
 
     /* ─── COLECCION ─── */
-    .ref-coleccion {
-      padding:36px 22px 72px;
-    }
-    .ref-coleccion-inner {
-      max-width:1100px;
-      margin:0 auto;
-    }
+    .ref-coleccion { padding:36px 22px 72px; }
+    .ref-coleccion-inner { max-width:1100px; margin:0 auto; }
 
-    /* ─── GRIDS ─── */
-    .ref-grid {
-      display:grid;
-      gap:16px;
-    }
-    .ref-grid-3 {
-      grid-template-columns:repeat(3,1fr);
-    }
-    .ref-grid-2 {
-      grid-template-columns:repeat(2,1fr);
-    }
-    .ref-grid-1 {
-      grid-template-columns:1fr;
-    }
-
-    .ref-grid img {
-      width:100%; display:block;
-      border-radius:14px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
-      object-fit:contain;
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .ref-grid img:hover {
-      transform:translateY(-4px);
-      box-shadow:0 12px 32px rgba(0,0,0,0.13);
-    }
-
-    /* Fila 2 de 2 imágenes centradas dentro de grilla de 3 */
-    .ref-fila-2 {
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
-      max-width:calc(66.66% - 8px);
-      margin:16px auto 0;
-    }
-    .ref-fila-2 img {
-      width:100%; display:block;
-      border-radius:14px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
-      object-fit:contain;
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .ref-fila-2 img:hover {
-      transform:translateY(-4px);
-      box-shadow:0 12px 32px rgba(0,0,0,0.13);
-    }
-
-    /* Imagen portada (centrada, ancho controlado) */
+    /* ─── PORTADA EMOCIONES (estática, ambos tamaños) ─── */
     .ref-portada {
-      display:block;
-      width:100%;
-      max-width:420px;
-      margin:0 auto 16px;
-      border-radius:14px;
+      display:block; width:100%; max-width:420px;
+      margin:0 auto 20px; border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+    }
+
+    /* ─── IMÁGENES DENTRO DE SLIDES ─── */
+    .carrusel-slide img {
+      width:100%; display:block; border-radius:14px;
       box-shadow:0 4px 20px rgba(0,0,0,0.08);
       object-fit:contain;
       transition:transform .25s ease, box-shadow .25s ease;
     }
-    .ref-portada:hover {
+    .carrusel-slide img:hover {
       transform:translateY(-4px);
       box-shadow:0 12px 32px rgba(0,0,0,0.13);
     }
 
-    /* Imagen suelta centrada */
-    .ref-sola-wrap {
-      max-width:480px;
-      margin:0 auto;
+    /* ════════════════════════════════════
+       CARRUSEL — MOBILE FIRST
+       En mobile: flex con swipe
+       En desktop: override a grid
+    ════════════════════════════════════ */
+    .carrusel-wrapper { position:relative; overflow:hidden; }
+    .carrusel-track { display:flex; transition:transform .4s ease; }
+    .carrusel-slide {
+      min-width:calc(100% - 16px);
+      margin:0 8px; flex-shrink:0;
+      border-radius:14px; overflow:hidden;
     }
-    .ref-sola-wrap img {
-      width:100%; display:block;
-      border-radius:14px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
-      object-fit:contain;
+    .carrusel-dots {
+      display:flex; justify-content:center;
+      gap:10px; margin-top:20px;
+    }
+    .dot {
+      width:10px; height:10px; border-radius:50%;
+      background:rgba(30,115,190,0.25);
+      cursor:pointer; transition:background .2s;
+      border:none; padding:0; appearance:none;
+    }
+    .dot.activo { background:#1E73BE; }
+
+    /* ─── DESKTOP: carruseles → grillas ─── */
+    @media (min-width:769px) {
+
+      .carrusel-wrapper { overflow:visible; }
+      .carrusel-track { transition:none; }
+      .carrusel-dots { display:none !important; }
+      .carrusel-slide {
+        min-width:unset; margin:0;
+        border-radius:0; overflow:visible;
+      }
+
+      /* ZONA DE CONFORT: 5 imágenes → 3 + 2 centradas */
+      /* Truco: grid de 6 columnas, cada item ocupa 2 col */
+      .ref-track-5 {
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        gap:16px;
+      }
+      .ref-track-5 .carrusel-slide:nth-child(1) { grid-column:1 / 3; }
+      .ref-track-5 .carrusel-slide:nth-child(2) { grid-column:3 / 5; }
+      .ref-track-5 .carrusel-slide:nth-child(3) { grid-column:5 / 7; }
+      .ref-track-5 .carrusel-slide:nth-child(4) { grid-column:2 / 4; }
+      .ref-track-5 .carrusel-slide:nth-child(5) { grid-column:4 / 6; }
+
+      /* MIEDO / DECISIONES: 4 imágenes → 3 arriba + remate centrado */
+      .ref-track-4r {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:16px;
+      }
+      .ref-track-4r .carrusel-slide:nth-child(4) {
+        grid-column:1 / -1;
+        max-width:62%;
+        margin:0 auto;
+      }
+
+      /* EMOCIONES: 9 imágenes → 3x3 */
+      .ref-track-3x3 {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:16px;
+      }
+
+      /* ESPEJO: 2 imágenes → side by side centradas */
+      .ref-track-2 {
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+        max-width:760px;
+        margin:0 auto;
+      }
     }
 
-    /* ─── SUELTAS: dos imágenes lado a lado centradas ─── */
+    /* ─── IMÁGENES SUELTAS (sin carrusel) ─── */
     .ref-sueltas {
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:16px;
-      max-width:760px;
-      margin:0 auto;
+      gap:16px; max-width:760px; margin:0 auto;
     }
     .ref-sueltas img {
-      width:100%; display:block;
-      border-radius:14px;
+      width:100%; display:block; border-radius:14px;
       box-shadow:0 4px 20px rgba(0,0,0,0.08);
       object-fit:contain;
       transition:transform .25s ease, box-shadow .25s ease;
@@ -171,38 +184,43 @@
       transform:translateY(-4px);
       box-shadow:0 12px 32px rgba(0,0,0,0.13);
     }
-
-    /* ─── CIERRE: empezar.jpg ─── */
-    .ref-cierre {
-      padding:90px 22px 110px;
-      background:#fff;
-      text-align:center;
+    @media (max-width:520px) {
+      .ref-sueltas { grid-template-columns:1fr; max-width:420px; }
     }
+
+    /* ─── CIERRE ─── */
+    .ref-cierre {
+      padding:80px 22px; background:#fff; text-align:center;
+    }
+    .ref-cierre + .ref-cierre { padding-top:0; }
     .ref-cierre img {
-      display:block;
-      width:100%;
-      max-width:480px;
-      margin:0 auto;
-      border-radius:18px;
-      box-shadow:0 14px 40px rgba(30,115,190,0.18);
+      display:block; width:100%; max-width:480px;
+      margin:0 auto; border-radius:18px;
+      box-shadow:0 14px 40px rgba(30,115,190,0.15);
       object-fit:contain;
     }
 
+    /* ─── DIVISOR ─── */
+    .ci-divisor {
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
+      max-width:1100px; margin:0 auto;
+    }
+
     /* ─── CTA FINAL ─── */
+    .ci-inner { max-width:1140px; margin:0 auto; }
     .ci-cta-final {
       background:linear-gradient(135deg,#155a96 0%,#1E73BE 60%,#2185d8 100%);
       padding:90px 22px; text-align:center;
       position:relative; overflow:hidden;
     }
     .ci-cta-final::before {
-      content:''; position:absolute;
-      top:-80px; right:-80px;
+      content:''; position:absolute; top:-80px; right:-80px;
       width:360px; height:360px;
       background:rgba(255,255,255,0.05); border-radius:50%;
     }
     .ci-cta-final::after {
-      content:''; position:absolute;
-      bottom:-60px; left:-60px;
+      content:''; position:absolute; bottom:-60px; left:-60px;
       width:260px; height:260px;
       background:rgba(107,190,68,0.08); border-radius:50%;
     }
@@ -217,7 +235,6 @@
       color:rgba(255,255,255,0.8); font-size:1rem;
       max-width:520px; margin:0 auto 36px; line-height:1.75;
     }
-    .ci-inner { max-width:1140px; margin:0 auto; }
     .btn-blanco {
       display:inline-block; background:#fff;
       color:#1E73BE; font-family:'Poppins',sans-serif;
@@ -227,28 +244,6 @@
       box-shadow:0 4px 16px rgba(0,0,0,0.15);
     }
     .btn-blanco:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
-
-    /* ─── DIVISOR ─── */
-    .ci-divisor {
-      height:1px;
-      background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
-      max-width:1100px; margin:0 auto;
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width:900px) {
-      .ref-fila-2 { max-width:100%; }
-    }
-    @media (max-width:768px) {
-      .ref-grid-3 { grid-template-columns:repeat(2,1fr); }
-      .ref-fila-2 { max-width:100%; }
-      .ref-sueltas { grid-template-columns:1fr; max-width:420px; }
-    }
-    @media (max-width:520px) {
-      .ref-grid-3 { grid-template-columns:1fr; }
-      .ref-grid-2 { grid-template-columns:1fr; }
-      .ref-fila-2 { grid-template-columns:1fr; }
-    }
 
   </style>
 </head>
@@ -271,11 +266,9 @@
   ══════════════════════════════════════ -->
   <header class="header">
     <div class="header-inner">
-
       <a href="index.html" class="logo">
         <img src="img/CIMA_LOGO.jpg" alt="CIMA – Centro Integral de Métodos de Aprendizaje">
       </a>
-
       <nav class="nav" id="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="conocenos.html">Conócenos</a>
@@ -283,13 +276,9 @@
         <a href="reflexiones.html" class="activo">Reflexiones</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-
       <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
-
     </div>
   </header>
 
@@ -313,20 +302,27 @@
 
 
   <!-- ══════════════════════════════════════
-       ZONA DE CONFORT
-       zona-1.jpg · zona-2.jpg · zona-3.jpg
-       zona-4.jpg · zona-5.jpg
+       ZONA DE CONFORT — 5 imágenes
+       Desktop: 3 + 2 centradas
+       Mobile: carrusel 5 slides
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-coleccion-inner">
-      <div class="ref-grid ref-grid-3">
-        <img src="img/zona-1.jpg" alt="Etapas de Zona de Confort – CIMA">
-        <img src="img/zona-2.jpg" alt="Zona de Confort – CIMA">
-        <img src="img/zona-3.jpg" alt="Zona de Éxito – CIMA">
-      </div>
-      <div class="ref-fila-2">
-        <img src="img/zona-4.jpg" alt="Zona de Aprendizaje – CIMA">
-        <img src="img/zona-5.jpg" alt="Zona de Miedo – CIMA">
+      <div class="carrusel-wrapper" data-carrusel>
+        <div class="carrusel-track ref-track-5">
+          <div class="carrusel-slide"><img src="img/zona-1.jpg" alt="Etapas de Zona de Confort – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/zona-2.jpg" alt="Zona de Confort – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/zona-3.jpg" alt="Zona de Éxito – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/zona-4.jpg" alt="Zona de Aprendizaje – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/zona-5.jpg" alt="Zona de Miedo – CIMA"></div>
+        </div>
+        <div class="carrusel-dots">
+          <button class="dot activo"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -343,20 +339,25 @@
 
 
   <!-- ══════════════════════════════════════
-       EL MIEDO
-       miedo-1.jpg · miedo-2.jpg · miedo-3.jpg
-       miedo-4.jpg · miedo-5.jpg
+       EL MIEDO — 4 imágenes
+       Desktop: 3 arriba + miedo-4 remate centrado
+       Mobile: carrusel 4 slides
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-coleccion-inner">
-      <div class="ref-grid ref-grid-3">
-        <img src="img/miedo-1.jpg" alt="El Miedo – CIMA">
-        <img src="img/miedo-2.jpg" alt="El Miedo – CIMA">
-        <img src="img/miedo-3.jpg" alt="El Miedo – CIMA">
-      </div>
-      <div class="ref-fila-2">
-        <img src="img/miedo-4.jpg" alt="El Miedo – CIMA">
-        <img src="img/miedo-5.jpg" alt="El Miedo – CIMA">
+      <div class="carrusel-wrapper" data-carrusel>
+        <div class="carrusel-track ref-track-4r">
+          <div class="carrusel-slide"><img src="img/miedo-1.jpg" alt="El Miedo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/miedo-2.jpg" alt="El Miedo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/miedo-3.jpg" alt="El Miedo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/miedo-4.jpg" alt="El Miedo – CIMA"></div>
+        </div>
+        <div class="carrusel-dots">
+          <button class="dot activo"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -374,22 +375,36 @@
 
   <!-- ══════════════════════════════════════
        EMOCIONES — GRACIAS
-       emociones-1.jpg (portada grupal)
-       emociones-2.jpg a emociones-10.jpg (9 individuales)
+       Portada estática arriba (ambos tamaños)
+       Desktop: 9 individuales en 3x3
+       Mobile: carrusel 9 slides
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-coleccion-inner">
-      <img class="ref-portada" src="img/emociones-1.jpg" alt="Emociones Gracias – CIMA">
-      <div class="ref-grid ref-grid-3">
-        <img src="img/emociones-2.jpg" alt="Alegría – CIMA">
-        <img src="img/emociones-3.jpg" alt="Envidia – CIMA">
-        <img src="img/emociones-4.jpg" alt="Vergüenza – CIMA">
-        <img src="img/emociones-5.jpg" alt="Enojo – CIMA">
-        <img src="img/emociones-6.jpg" alt="Aburrimiento – CIMA">
-        <img src="img/emociones-7.jpg" alt="Miedo – CIMA">
-        <img src="img/emociones-8.jpg" alt="Ansiedad – CIMA">
-        <img src="img/emociones-9.jpg" alt="Tristeza – CIMA">
-        <img src="img/emociones-10.jpg" alt="Desagrado – CIMA">
+      <img class="ref-portada" src="img/emociones-1.jpg" alt="Emociones – CIMA">
+      <div class="carrusel-wrapper" data-carrusel>
+        <div class="carrusel-track ref-track-3x3">
+          <div class="carrusel-slide"><img src="img/emociones-2.jpg" alt="Alegría – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-3.jpg" alt="Envidia – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-4.jpg" alt="Vergüenza – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-5.jpg" alt="Enojo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-6.jpg" alt="Aburrimiento – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-7.jpg" alt="Miedo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-8.jpg" alt="Ansiedad – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-9.jpg" alt="Tristeza – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/emociones-10.jpg" alt="Desagrado – CIMA"></div>
+        </div>
+        <div class="carrusel-dots">
+          <button class="dot activo"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -398,7 +413,7 @@
 
 
   <!-- ══════════════════════════════════════
-       PUENTE 4 → DECISIONES / EGO VS AMOR PROPIO
+       PUENTE 4 → DECISIONES
   ══════════════════════════════════════ -->
   <div class="ref-puente reveal">
     <p>Todo lo que sentís toma decisiones.<br><strong>A veces antes de que te des cuenta.</strong></p>
@@ -406,17 +421,25 @@
 
 
   <!-- ══════════════════════════════════════
-       DECISIONES / EGO VS AMOR PROPIO
-       decisiones-1.jpg · decisiones-2.jpg
-       decisiones-3.jpg · decisiones-4.jpg
+       DECISIONES — 4 imágenes
+       Desktop: 3 arriba + decisiones-4 remate centrado
+       Mobile: carrusel 4 slides
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-coleccion-inner">
-      <div class="ref-grid ref-grid-2" style="max-width:760px;margin:0 auto;">
-        <img src="img/decisiones-1.jpg" alt="Decisiones – CIMA">
-        <img src="img/decisiones-2.jpg" alt="Egoísmo – CIMA">
-        <img src="img/decisiones-3.jpg" alt="Amor Propio – CIMA">
-        <img src="img/decisiones-4.jpg" alt="Ego vs Amor Propio – CIMA">
+      <div class="carrusel-wrapper" data-carrusel>
+        <div class="carrusel-track ref-track-4r">
+          <div class="carrusel-slide"><img src="img/decisiones-1.jpg" alt="¿Desde dónde tomás las decisiones? – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/decisiones-2.jpg" alt="Egoísmo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/decisiones-3.jpg" alt="Amor Propio – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/decisiones-4.jpg" alt="Ego vs Amor Propio – CIMA"></div>
+        </div>
+        <div class="carrusel-dots">
+          <button class="dot activo"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -433,14 +456,21 @@
 
 
   <!-- ══════════════════════════════════════
-       LA LEY DEL ESPEJO
-       espejo-1.jpg · espejo-2.jpg
+       LA LEY DEL ESPEJO — 2 imágenes
+       Desktop: side by side centradas
+       Mobile: carrusel 2 slides
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-coleccion-inner">
-      <div class="ref-grid ref-grid-2" style="max-width:760px;margin:0 auto;">
-        <img src="img/espejo-1.jpg" alt="La Ley del Espejo – CIMA">
-        <img src="img/espejo-2.jpg" alt="La Ley del Espejo – CIMA">
+      <div class="carrusel-wrapper" data-carrusel>
+        <div class="carrusel-track ref-track-2">
+          <div class="carrusel-slide"><img src="img/espejo-1.jpg" alt="La Ley del Espejo – CIMA"></div>
+          <div class="carrusel-slide"><img src="img/espejo-2.jpg" alt="La Ley del Espejo – CIMA"></div>
+        </div>
+        <div class="carrusel-dots">
+          <button class="dot activo"></button>
+          <button class="dot"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -457,9 +487,8 @@
 
 
   <!-- ══════════════════════════════════════
-       LOS 4 ACUERDOS + EL QUE SABE
-       acuerdos.jpg · el-que-sabe.jpg
-       (sin bridge entre ellas — el flujo habla solo)
+       SUELTAS: 4 Acuerdos + El que sabe
+       Estáticas — una imagen cada una
   ══════════════════════════════════════ -->
   <section class="ref-coleccion reveal">
     <div class="ref-sueltas">
@@ -471,7 +500,7 @@
 
   <!-- ══════════════════════════════════════
        CIERRE FILOSÓFICO — JUNG
-       (sin texto, sin bridge — la imagen nombra lo que acaba de pasar)
+       Sin texto. La imagen nombra lo que acaba de pasar.
   ══════════════════════════════════════ -->
   <section class="ref-cierre reveal">
     <img src="img/vision.jpg" alt="Quien mira hacia dentro, despierta. Carl Gustav Jung – CIMA">
@@ -479,8 +508,8 @@
 
 
   <!-- ══════════════════════════════════════
-       EMPEZAR — puente al CTA
-       (sola, sin texto — el llamado concreto)
+       EMPEZAR — El llamado concreto
+       Sin texto. El recorrido pide acción.
   ══════════════════════════════════════ -->
   <section class="ref-cierre reveal" style="padding-top:0;">
     <img src="img/empezar.jpg" alt="Cierra los ojos, respira hondo y vuelve a empezar – CIMA">
@@ -493,9 +522,7 @@
   <section class="ci-cta-final reveal">
     <div class="ci-inner">
       <h2>¿Algo de esto te movió algo?</h2>
-      <p>
-        No hace falta tener todo claro. Hace falta dar un primer paso. Escribinos y te orientamos.
-      </p>
+      <p>No hace falta tener todo claro. Hace falta dar un primer paso. Escribinos y te orientamos.</p>
       <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="btn-blanco">
         Escribinos por WhatsApp
       </a>
@@ -522,18 +549,48 @@
   ══════════════════════════════════════ -->
   <script>
 
-    // Menú hamburguesa
+    // ─── Menú hamburguesa ───
     function toggleMenu() {
       document.getElementById('nav-menu').classList.toggle('abierto');
     }
 
-    // Scroll reveal
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
+    // ─── Scroll reveal ───
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.06 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ─── Carruseles múltiples (solo mobile) ───
+    document.querySelectorAll('[data-carrusel]').forEach(wrapper => {
+      const track  = wrapper.querySelector('.carrusel-track');
+      const slides = wrapper.querySelectorAll('.carrusel-slide');
+      const dots   = wrapper.querySelectorAll('.dot');
+      let current  = 0;
+
+      function goTo(n) {
+        if (window.innerWidth > 768) return;
+        current = Math.max(0, Math.min(n, slides.length - 1));
+        track.style.transform = `translateX(calc(-${current * 100}% - ${current * 16}px))`;
+        dots.forEach((d, i) => d.classList.toggle('activo', i === current));
+      }
+
+      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+      let startX = 0;
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive:true });
+      track.addEventListener('touchend',   e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          track.style.transform = '';
+          current = 0;
+          dots.forEach((d, i) => d.classList.toggle('activo', i === 0));
+        }
+      });
+    });
 
   </script>
 
