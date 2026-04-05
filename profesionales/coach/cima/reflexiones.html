@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexiones | CIMA – Coaching Ontológico · Morón</title>
+  <meta name="description" content="Preguntas y pensamientos que mueven algo adentro. Reflexiones de CIMA – Centro Integral de Métodos de Aprendizaje.">
+
+  <link rel="stylesheet" href="cima.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ─── LOGO ─── */
+    .logo { display:flex; align-items:center; text-decoration:none; }
+    .logo img { height:80px; width:auto; display:block; }
+
+    /* ─── KICKER ─── */
+    .kicker {
+      display:inline-block;
+      font-family:'Poppins',sans-serif;
+      font-size:0.72rem; font-weight:600;
+      letter-spacing:2px; text-transform:uppercase;
+      color:#1E73BE;
+      border:1.5px solid rgba(30,115,190,0.28);
+      border-radius:99px; padding:4px 14px;
+      margin-bottom:18px;
+    }
+
+    /* ─── HERO ─── */
+    .ref-hero {
+      padding:110px 22px 80px;
+      background:#eaf7f1;
+      text-align:center;
+    }
+    .ref-hero h1 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:700; color:#1a2332;
+      line-height:1.2; margin-bottom:18px;
+    }
+    .ref-bajada {
+      font-family:'Poppins',sans-serif;
+      font-size:1.05rem; color:#444;
+      line-height:1.8; max-width:500px;
+      margin:0 auto;
+      font-weight:500;
+    }
+
+    /* ─── PUENTE ─── */
+    .ref-puente {
+      max-width:780px;
+      margin:0 auto;
+      padding:72px 22px 12px;
+      text-align:center;
+    }
+    .ref-puente p {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.05rem,2vw,1.3rem);
+      font-weight:500;
+      color:#1a2332;
+      line-height:1.6;
+    }
+    .ref-puente p strong {
+      color:#1E73BE;
+      font-weight:700;
+    }
+
+    /* ─── COLECCION ─── */
+    .ref-coleccion {
+      padding:36px 22px 72px;
+    }
+    .ref-coleccion-inner {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    /* ─── GRIDS ─── */
+    .ref-grid {
+      display:grid;
+      gap:16px;
+    }
+    .ref-grid-3 {
+      grid-template-columns:repeat(3,1fr);
+    }
+    .ref-grid-2 {
+      grid-template-columns:repeat(2,1fr);
+    }
+    .ref-grid-1 {
+      grid-template-columns:1fr;
+    }
+
+    .ref-grid img {
+      width:100%; display:block;
+      border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .ref-grid img:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(0,0,0,0.13);
+    }
+
+    /* Fila 2 de 2 imágenes centradas dentro de grilla de 3 */
+    .ref-fila-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      max-width:calc(66.66% - 8px);
+      margin:16px auto 0;
+    }
+    .ref-fila-2 img {
+      width:100%; display:block;
+      border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .ref-fila-2 img:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(0,0,0,0.13);
+    }
+
+    /* Imagen portada (centrada, ancho controlado) */
+    .ref-portada {
+      display:block;
+      width:100%;
+      max-width:420px;
+      margin:0 auto 16px;
+      border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .ref-portada:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(0,0,0,0.13);
+    }
+
+    /* Imagen suelta centrada */
+    .ref-sola-wrap {
+      max-width:480px;
+      margin:0 auto;
+    }
+    .ref-sola-wrap img {
+      width:100%; display:block;
+      border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+    }
+
+    /* ─── SUELTAS: dos imágenes lado a lado centradas ─── */
+    .ref-sueltas {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      max-width:760px;
+      margin:0 auto;
+    }
+    .ref-sueltas img {
+      width:100%; display:block;
+      border-radius:14px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      object-fit:contain;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .ref-sueltas img:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(0,0,0,0.13);
+    }
+
+    /* ─── CIERRE: empezar.jpg ─── */
+    .ref-cierre {
+      padding:90px 22px 110px;
+      background:#fff;
+      text-align:center;
+    }
+    .ref-cierre img {
+      display:block;
+      width:100%;
+      max-width:480px;
+      margin:0 auto;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(30,115,190,0.18);
+      object-fit:contain;
+    }
+
+    /* ─── CTA FINAL ─── */
+    .ci-cta-final {
+      background:linear-gradient(135deg,#155a96 0%,#1E73BE 60%,#2185d8 100%);
+      padding:90px 22px; text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .ci-cta-final::before {
+      content:''; position:absolute;
+      top:-80px; right:-80px;
+      width:360px; height:360px;
+      background:rgba(255,255,255,0.05); border-radius:50%;
+    }
+    .ci-cta-final::after {
+      content:''; position:absolute;
+      bottom:-60px; left:-60px;
+      width:260px; height:260px;
+      background:rgba(107,190,68,0.08); border-radius:50%;
+    }
+    .ci-cta-final .ci-inner { position:relative; z-index:1; }
+    .ci-cta-final h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.6rem,3.5vw,2.4rem);
+      font-weight:700; color:#fff;
+      line-height:1.2; margin-bottom:16px;
+    }
+    .ci-cta-final p {
+      color:rgba(255,255,255,0.8); font-size:1rem;
+      max-width:520px; margin:0 auto 36px; line-height:1.75;
+    }
+    .ci-inner { max-width:1140px; margin:0 auto; }
+    .btn-blanco {
+      display:inline-block; background:#fff;
+      color:#1E73BE; font-family:'Poppins',sans-serif;
+      font-weight:700; font-size:0.95rem;
+      padding:15px 32px; border-radius:10px;
+      text-decoration:none; transition:all .25s ease;
+      box-shadow:0 4px 16px rgba(0,0,0,0.15);
+    }
+    .btn-blanco:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+    /* ─── DIVISOR ─── */
+    .ci-divisor {
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
+      max-width:1100px; margin:0 auto;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:900px) {
+      .ref-fila-2 { max-width:100%; }
+    }
+    @media (max-width:768px) {
+      .ref-grid-3 { grid-template-columns:repeat(2,1fr); }
+      .ref-fila-2 { max-width:100%; }
+      .ref-sueltas { grid-template-columns:1fr; max-width:420px; }
+    }
+    @media (max-width:520px) {
+      .ref-grid-3 { grid-template-columns:1fr; }
+      .ref-grid-2 { grid-template-columns:1fr; }
+      .ref-fila-2 { grid-template-columns:1fr; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════
+       BOTONES FLOTANTES
+  ══════════════════════════════════════ -->
+  <a href="https://www.instagram.com/cima.aprendizaje" target="_blank" class="instagram-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+  <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+
+  <!-- ══════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="img/CIMA_LOGO.jpg" alt="CIMA – Centro Integral de Métodos de Aprendizaje">
+      </a>
+
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="talleres.html">Talleres</a>
+        <a href="reflexiones.html" class="activo">Reflexiones</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="ref-hero">
+    <span class="kicker">Para pensar</span>
+    <h1>Reflexiones</h1>
+    <p class="ref-bajada">Esto no es para leer.<br>Es para quedarse con algo.</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 1 → ZONA DE CONFORT
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>Antes de cualquier pregunta, hay que ver desde dónde se contesta.</p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       ZONA DE CONFORT
+       zona-1.jpg · zona-2.jpg · zona-3.jpg
+       zona-4.jpg · zona-5.jpg
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-coleccion-inner">
+      <div class="ref-grid ref-grid-3">
+        <img src="img/zona-1.jpg" alt="Etapas de Zona de Confort – CIMA">
+        <img src="img/zona-2.jpg" alt="Zona de Confort – CIMA">
+        <img src="img/zona-3.jpg" alt="Zona de Éxito – CIMA">
+      </div>
+      <div class="ref-fila-2">
+        <img src="img/zona-4.jpg" alt="Zona de Aprendizaje – CIMA">
+        <img src="img/zona-5.jpg" alt="Zona de Miedo – CIMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 2 → EL MIEDO
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>Vivís con él desde siempre.<br>No es el problema.<br><strong>Lo que hacés cuando aparece, sí.</strong></p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       EL MIEDO
+       miedo-1.jpg · miedo-2.jpg · miedo-3.jpg
+       miedo-4.jpg · miedo-5.jpg
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-coleccion-inner">
+      <div class="ref-grid ref-grid-3">
+        <img src="img/miedo-1.jpg" alt="El Miedo – CIMA">
+        <img src="img/miedo-2.jpg" alt="El Miedo – CIMA">
+        <img src="img/miedo-3.jpg" alt="El Miedo – CIMA">
+      </div>
+      <div class="ref-fila-2">
+        <img src="img/miedo-4.jpg" alt="El Miedo – CIMA">
+        <img src="img/miedo-5.jpg" alt="El Miedo – CIMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 3 → EMOCIONES
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>Había más adentro<br>de lo que creías.</p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       EMOCIONES — GRACIAS
+       emociones-1.jpg (portada grupal)
+       emociones-2.jpg a emociones-10.jpg (9 individuales)
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-coleccion-inner">
+      <img class="ref-portada" src="img/emociones-1.jpg" alt="Emociones Gracias – CIMA">
+      <div class="ref-grid ref-grid-3">
+        <img src="img/emociones-2.jpg" alt="Alegría – CIMA">
+        <img src="img/emociones-3.jpg" alt="Envidia – CIMA">
+        <img src="img/emociones-4.jpg" alt="Vergüenza – CIMA">
+        <img src="img/emociones-5.jpg" alt="Enojo – CIMA">
+        <img src="img/emociones-6.jpg" alt="Aburrimiento – CIMA">
+        <img src="img/emociones-7.jpg" alt="Miedo – CIMA">
+        <img src="img/emociones-8.jpg" alt="Ansiedad – CIMA">
+        <img src="img/emociones-9.jpg" alt="Tristeza – CIMA">
+        <img src="img/emociones-10.jpg" alt="Desagrado – CIMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 4 → DECISIONES / EGO VS AMOR PROPIO
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>Todo lo que sentís toma decisiones.<br><strong>A veces antes de que te des cuenta.</strong></p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       DECISIONES / EGO VS AMOR PROPIO
+       decisiones-1.jpg · decisiones-2.jpg
+       decisiones-3.jpg · decisiones-4.jpg
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-coleccion-inner">
+      <div class="ref-grid ref-grid-2" style="max-width:760px;margin:0 auto;">
+        <img src="img/decisiones-1.jpg" alt="Decisiones – CIMA">
+        <img src="img/decisiones-2.jpg" alt="Egoísmo – CIMA">
+        <img src="img/decisiones-3.jpg" alt="Amor Propio – CIMA">
+        <img src="img/decisiones-4.jpg" alt="Ego vs Amor Propio – CIMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 5 → LA LEY DEL ESPEJO
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>Si algo de lo que viniste viendo te generó algo,<br><strong>fijate bien a quién se lo atribuiste.</strong></p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       LA LEY DEL ESPEJO
+       espejo-1.jpg · espejo-2.jpg
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-coleccion-inner">
+      <div class="ref-grid ref-grid-2" style="max-width:760px;margin:0 auto;">
+        <img src="img/espejo-1.jpg" alt="La Ley del Espejo – CIMA">
+        <img src="img/espejo-2.jpg" alt="La Ley del Espejo – CIMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       PUENTE 6 → LOS 4 ACUERDOS
+  ══════════════════════════════════════ -->
+  <div class="ref-puente reveal">
+    <p>El problema no es no saber.<br><strong>Es el día después de que supiste.</strong></p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       LOS 4 ACUERDOS + EL QUE SABE
+       acuerdos.jpg · el-que-sabe.jpg
+       (sin bridge entre ellas — el flujo habla solo)
+  ══════════════════════════════════════ -->
+  <section class="ref-coleccion reveal">
+    <div class="ref-sueltas">
+      <img src="img/acuerdos.jpg" alt="4 Acuerdos de Miguel Ruiz – CIMA">
+      <img src="img/el-que-sabe.jpg" alt="El que sabe y no hace, no sabe – CIMA">
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CIERRE — EMPEZAR
+       (sin texto, sin bridge — la imagen cierra)
+  ══════════════════════════════════════ -->
+  <section class="ref-cierre reveal">
+    <img src="img/empezar.jpg" alt="Cierra los ojos, respira hondo y vuelve a empezar – CIMA">
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════ -->
+  <section class="ci-cta-final reveal">
+    <div class="ci-inner">
+      <h2>¿Algo de esto te movió algo?</h2>
+      <p>
+        No hace falta tener todo claro. Hace falta dar un primer paso. Escribinos y te orientamos.
+      </p>
+      <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="btn-blanco">
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <p>Desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></p>
+    <p>
+      <a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
+      <a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
+      <a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
+      <a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
+    </p>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════ -->
+  <script>
+
+    // Menú hamburguesa
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  </script>
+
+</body>
+</html>
