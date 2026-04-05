@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talleres | CIMA Coaching Ontológico · Morón</title>
+  <meta name="description" content="Talleres vivenciales de coaching ontológico en Morón. Darse Cuenta Nivel 1, Nivel 2 y Peldaños. Un recorrido de transformación personal.">
+
+  <link rel="stylesheet" href="cima.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ─── LOGO ─── */
+    .logo { display:flex; align-items:center; text-decoration:none; }
+    .logo img { height:80px; width:auto; display:block; }
+
+    /* ─── KICKER ─── */
+    .kicker {
+      display:inline-block;
+      font-family:'Poppins',sans-serif;
+      font-size:0.72rem; font-weight:600;
+      letter-spacing:2px; text-transform:uppercase;
+      color:#1E73BE;
+      border:1.5px solid rgba(30,115,190,0.28);
+      border-radius:99px; padding:4px 14px;
+      margin-bottom:18px;
+    }
+
+    /* ─── HERO INTERNO ─── */
+    .hero-interno {
+      background:linear-gradient(135deg,#1a2332 0%,#1E73BE 100%);
+      padding:90px 22px 70px;
+      text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .hero-interno::before {
+      content:''; position:absolute;
+      top:-80px; right:-80px;
+      width:360px; height:360px;
+      background:rgba(107,190,68,0.08); border-radius:50%;
+    }
+    .hero-interno::after {
+      content:''; position:absolute;
+      bottom:-60px; left:-60px;
+      width:260px; height:260px;
+      background:rgba(255,255,255,0.04); border-radius:50%;
+    }
+    .hero-interno-inner {
+      position:relative; z-index:1;
+      max-width:700px; margin:0 auto;
+    }
+    .hero-interno h1 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.8rem,4vw,2.8rem);
+      font-weight:700; color:#fff;
+      line-height:1.2; margin-bottom:16px;
+    }
+    .hero-interno p {
+      color:rgba(255,255,255,0.8);
+      font-size:1rem; line-height:1.8;
+      max-width:540px; margin:0 auto;
+    }
+
+    /* ─── SECCIONES ─── */
+    .ci-s      { padding:90px 22px; }
+    .ci-blanca { background:#fff; }
+    .ci-gris   { background:#f4f8fc; }
+    .ci-inner  { max-width:1140px; margin:0 auto; }
+
+    /* ─── GRID 2 COL ─── */
+    .ci-grid2 {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:68px; align-items:center;
+      max-width:1100px; margin:0 auto;
+    }
+    .ci-grid2.reverse { direction:rtl; }
+    .ci-grid2.reverse > * { direction:ltr; }
+
+    .ci-foto img {
+      width:100%; border-radius:18px; display:block;
+      box-shadow:0 14px 40px rgba(0,0,0,0.13);
+      object-fit:contain;
+    }
+
+    /* ─── TEXTO TALLER ─── */
+    .ci-num {
+      display:inline-block;
+      font-family:'Poppins',sans-serif;
+      font-size:0.7rem; font-weight:700;
+      color:#4e9530; letter-spacing:1.5px;
+      text-transform:uppercase;
+      background:rgba(107,190,68,0.12);
+      border-radius:99px; padding:3px 12px;
+      margin-bottom:14px;
+    }
+    .ci-texto h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.6rem,3vw,2.2rem);
+      font-weight:700; color:#1a2332;
+      line-height:1.2; margin-bottom:6px;
+    }
+    .subtitulo-taller {
+      font-family:'Poppins',sans-serif;
+      font-size:0.82rem; font-weight:500;
+      color:#6BBE44; letter-spacing:0.5px;
+      margin-bottom:20px; display:block;
+      text-transform:uppercase;
+    }
+    .ci-texto p {
+      color:#555; font-size:0.97rem;
+      line-height:1.85; margin-bottom:14px;
+    }
+    .frase-cierre {
+      font-family:'Poppins',sans-serif;
+      font-size:0.95rem; font-weight:600;
+      color:#1a2332; font-style:italic;
+      margin:20px 0 0;
+      padding-left:16px;
+      border-left:3px solid #6BBE44;
+      display:block;
+    }
+
+    /* ─── REQUISITO ─── */
+    .requisito {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-family:'Poppins',sans-serif;
+      font-size:0.78rem; font-weight:600;
+      color:#888;
+      background:#f4f8fc;
+      border-radius:99px;
+      padding:5px 14px;
+      margin-bottom:20px;
+    }
+
+    /* ─── DATOS LOGÍSTICOS ─── */
+    .datos-taller {
+      display:flex; gap:14px; flex-wrap:wrap;
+      margin:22px 0 0;
+    }
+    .dato-taller {
+      background:#f4f8fc;
+      border-radius:10px;
+      padding:12px 18px;
+      display:flex; flex-direction:column; gap:3px;
+    }
+    .dato-taller strong {
+      font-family:'Poppins',sans-serif;
+      font-size:0.9rem; font-weight:700;
+      color:#1a2332;
+    }
+    .dato-taller span { font-size:0.78rem; color:#555; }
+
+    /* ─── SEPARADOR ─── */
+    .ci-sep {
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(30,115,190,0.15),transparent);
+      max-width:1100px; margin:0 auto;
+    }
+
+    /* ─── CTA FINAL ─── */
+    .cta-final-talleres {
+      background:linear-gradient(135deg,#155a96 0%,#1E73BE 60%,#2185d8 100%);
+      padding:90px 22px;
+      text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .cta-final-talleres::before {
+      content:''; position:absolute;
+      top:-80px; right:-80px;
+      width:360px; height:360px;
+      background:rgba(255,255,255,0.05); border-radius:50%;
+    }
+    .cta-final-talleres::after {
+      content:''; position:absolute;
+      bottom:-60px; left:-60px;
+      width:260px; height:260px;
+      background:rgba(107,190,68,0.08); border-radius:50%;
+    }
+    .cta-final-talleres .inner {
+      position:relative; z-index:1;
+      max-width:620px; margin:0 auto;
+    }
+    .cta-final-talleres h2 {
+      font-family:'Poppins',sans-serif;
+      font-size:clamp(1.5rem,3vw,2.1rem);
+      font-weight:700; color:#fff;
+      line-height:1.25; margin-bottom:18px;
+    }
+    .cta-final-talleres p {
+      color:rgba(255,255,255,0.82);
+      font-size:1rem; line-height:1.8;
+      margin-bottom:36px;
+    }
+    .btn-blanco {
+      display:inline-block; background:#fff;
+      color:#1E73BE; font-family:'Poppins',sans-serif;
+      font-weight:700; font-size:0.95rem;
+      padding:16px 34px; border-radius:10px;
+      text-decoration:none; transition:all .25s ease;
+      box-shadow:0 4px 16px rgba(0,0,0,0.15);
+    }
+    .btn-blanco:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:900px) {
+      .ci-grid2 { grid-template-columns:1fr; gap:36px; }
+      .ci-grid2.reverse { direction:ltr; }
+      .datos-taller { gap:10px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTONES FLOTANTES -->
+  <a href="https://www.instagram.com/cima.aprendizaje" target="_blank" class="instagram-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+  <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/CIMA_LOGO.jpg" alt="CIMA – Centro Integral de Métodos de Aprendizaje">
+      </a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="conocenos.html">Conócenos</a>
+        <a href="talleres.html">Talleres</a>
+        <a href="reflexiones.html">Reflexiones</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO INTERNO -->
+  <section class="hero-interno">
+    <div class="hero-interno-inner">
+      <span class="kicker" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.3);">Talleres Vivenciales</span>
+      <h1>Un recorrido de transformación</h1>
+      <p>Tres niveles que se construyen uno sobre el otro. Cada instancia es una experiencia en sí misma — y a la vez, un paso hacia la siguiente.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       NIVEL 1 — DARSE CUENTA
+       Imagen: img/taller-dc1.jpg
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-blanca reveal" id="darse-cuenta-1">
+    <div class="ci-inner">
+      <div class="ci-grid2">
+
+        <div class="ci-foto">
+          <img src="img/taller-dc1.jpg" alt="Darse Cuenta Nivel 1 – CIMA">
+        </div>
+
+        <div class="ci-texto">
+          <span class="ci-num">Nivel 1</span>
+          <h2>Darse Cuenta</h2>
+          <span class="subtitulo-taller">Entrenamiento de desarrollo personal basado en coaching ontológico</span>
+
+          <p>Hay algo que sabés que no está funcionando. No siempre sabés qué es. Solo sentís que algo podría ser diferente.</p>
+          <p>El Darse Cuenta es el primer paso. Cuatro días para observarte. Para ver de qué manera tu forma de pensar, de sentir y de actuar está creando los resultados que tenés hoy.</p>
+          <p>No se explica. Se vive.</p>
+
+          <span class="frase-cierre">Entrégate al programa, confiá y dejate sorprender.</span>
+
+          <div class="datos-taller">
+            <div class="dato-taller">
+              <strong>4 días</strong>
+              <span>Duración</span>
+            </div>
+            <div class="dato-taller">
+              <strong>Presencial</strong>
+              <span>Modalidad</span>
+            </div>
+            <div class="dato-taller">
+              <strong>Independencia 234</strong>
+              <span>Morón, Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       NIVEL 2 — DARSE CUENTA
+       Imagen: img/taller-dc2.jpg
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-gris reveal" id="darse-cuenta-2">
+    <div class="ci-inner">
+      <div class="ci-grid2 reverse">
+
+        <div class="ci-foto">
+          <img src="img/taller-dc2.jpg" alt="Darse Cuenta Nivel 2 – CIMA">
+        </div>
+
+        <div class="ci-texto">
+          <span class="ci-num">Nivel 2</span>
+          <h2>Darse Cuenta</h2>
+          <span class="requisito">Requiere haber completado el Nivel 1</span>
+
+          <p>Ya diste el primer paso. Ahora vas más adentro.</p>
+          <p>Cuatro días para trabajar sobre lo que quedó. Las creencias más arraigadas, los patrones que siguen apareciendo, los miedos que todavía te frenan.</p>
+          <p>El Nivel 2 no es una repetición. Es una profundización.</p>
+
+          <span class="frase-cierre">El siguiente paso te está esperando.</span>
+
+          <div class="datos-taller">
+            <div class="dato-taller">
+              <strong>4 días</strong>
+              <span>Duración</span>
+            </div>
+            <div class="dato-taller">
+              <strong>Presencial</strong>
+              <span>Modalidad</span>
+            </div>
+            <div class="dato-taller">
+              <strong>Independencia 234</strong>
+              <span>Morón, Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="ci-sep"></div>
+
+
+  <!-- ══════════════════════════════════════
+       NIVEL 3 — PELDAÑOS
+       Imagen: img/taller-peldanos.jpg
+  ══════════════════════════════════════ -->
+  <section class="ci-s ci-blanca reveal" id="peldanos">
+    <div class="ci-inner">
+      <div class="ci-grid2">
+
+        <div class="ci-foto">
+          <img src="img/taller-peldanos.jpg" alt="Peldaños Nivel 3 – CIMA">
+        </div>
+
+        <div class="ci-texto">
+          <span class="ci-num">Nivel 3</span>
+          <h2>Peldaños</h2>
+          <span class="requisito">Requiere haber completado el Nivel 1 y el Nivel 2</span>
+
+          <p>Tres meses para llevar todo lo aprendido a tu vida real. A tus metas. A tus relaciones. A quién estás eligiendo ser cada día.</p>
+          <p>Peldaños te pone en acción, con el apoyo de un grupo y de coaches que te acompañan en cada caída y en cada logro. Porque no lo hacés solo.</p>
+          <p>No es un taller más. Es un compromiso con vos mismo.</p>
+
+          <span class="frase-cierre">Peldaños es tu vida.</span>
+
+          <div class="datos-taller">
+            <div class="dato-taller">
+              <strong>3 meses</strong>
+              <span>Duración</span>
+            </div>
+            <div class="dato-taller">
+              <strong>3 fines de semana</strong>
+              <span>Presenciales</span>
+            </div>
+            <div class="dato-taller">
+              <strong>Independencia 234</strong>
+              <span>Morón, Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CTA FINAL ÚNICO
+  ══════════════════════════════════════ -->
+  <section class="cta-final-talleres reveal">
+    <div class="inner">
+      <h2>Hay cosas que no se explican.<br>Se viven.</h2>
+      <p>
+        Si algo de este recorrido resuena con vos, escribinos. No necesitás tener todo claro para dar el primer paso — solo tenés que vencer el miedo y animarte a darlo.
+      </p>
+      <a href="https://wa.me/5491161802964?text=Hola,%20quiero%20información%20sobre%20los%20talleres%20de%20CIMA." target="_blank" class="btn-blanco">
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Desarrollado por <a href="https://presenciaonline.github.io" target="_blank">Presencia Online</a></p>
+    <p>
+      <a href="https://presenciaonline.github.io/legal/privacidad.html">Privacidad</a> |
+      <a href="https://presenciaonline.github.io/legal/cookies.html">Cookies</a> |
+      <a href="https://presenciaonline.github.io/legal/terminos.html">Términos</a> |
+      <a href="https://presenciaonline.github.io/legal/disclaimer.html">Aviso legal</a>
+    </p>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
