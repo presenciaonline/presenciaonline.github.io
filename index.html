@@ -1175,6 +1175,7 @@
         <label for="pago_telefono">Teléfono / WhatsApp *</label>
         <input type="tel" id="pago_telefono" name="telefono" required>
       </div>
+      <input type="hidden" name="tipo_pago" id="tipo_pago_valor">
       <div class="error-msg" id="error-msg-modal">Por favor completá todos los campos.</div>
       <div class="modal-botones">
         <button type="button" id="cancelarPago" class="btn btn-secundario">Cancelar</button>
@@ -1281,6 +1282,16 @@ document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(function(btn) {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     pendingUrl = this.getAttribute('data-url');
+    
+    // Detectar tipo de pago por el id del botón
+    var tipoPago = 'no especificado';
+    if (this.id === 'btn-sena') {
+      tipoPago = 'seña';
+    } else if (this.id === 'btn-saldo') {
+      tipoPago = 'saldo final';
+    }
+    
+    document.getElementById('tipo_pago_valor').value = tipoPago;
     modal.style.display = 'flex';
   });
 });
