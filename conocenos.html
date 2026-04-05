@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conócenos | Presencia Online · Páginas web para profesionales independientes</title>
+<meta name="description" content="Conocé quiénes somos y por qué creamos Presencia Online. Ayudamos a especialistas independientes a tener presencia digital profesional.">
+<meta name="author" content="Presencia Online">
+<link rel="canonical" href="https://presenciaonline.github.io/conocenos.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://presenciaonline.github.io/conocenos.html">
+<meta property="og:title" content="Conócenos | Presencia Online">
+<meta property="og:description" content="Conocé quiénes somos y por qué creamos Presencia Online.">
+<meta property="og:image" content="https://presenciaonline.github.io/assets/img/og-image.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Presencia Online">
+
+<link rel="stylesheet" href="presencia.css">
+
+<style>
+/* ── PAGE HERO ── */
+.page-hero {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul) 100%);
+  padding: 100px 0 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -80px;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.page-hero .contenedor { position: relative; z-index: 1; }
+.page-hero-kicker {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 20px;
+}
+.page-hero h1 {
+  color: var(--blanco);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 16px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+}
+.page-hero h1 span { color: #7dd3fc; }
+.page-hero p {
+  color: rgba(255,255,255,0.78);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── ORIGEN ── */
+.origen-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.origen-texto h2 { margin-bottom: 20px; }
+.origen-texto p {
+  font-size: 0.97rem;
+  color: var(--gris-texto);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.origen-texto p strong { color: var(--oscuro); }
+.origen-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.origen-card {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  padding: 22px 20px;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: var(--transicion);
+  border-left: 4px solid transparent;
+}
+.origen-card:hover {
+  box-shadow: var(--sombra-hover);
+  border-left-color: var(--azul);
+  transform: translateX(4px);
+}
+.origen-card-num {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--azul);
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+  min-width: 28px;
+}
+.origen-card h4 {
+  font-size: 0.9rem;
+  color: var(--oscuro);
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+.origen-card p {
+  font-size: 0.82rem;
+  color: var(--gris-texto);
+  line-height: 1.5;
+}
+@media (max-width: 768px) { .origen-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+/* ── MISIÓN Y VISIÓN ── */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.mv-card {
+  border-radius: var(--radio-lg);
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.mv-card-mision { background: linear-gradient(135deg, var(--azul-oscuro), var(--azul)); }
+.mv-card-vision { background: linear-gradient(135deg, var(--verde-oscuro), var(--verde)); }
+.mv-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 14px;
+  display: block;
+}
+.mv-card h3 {
+  color: var(--blanco);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.mv-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.82);
+}
+.mv-deco {
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 120px; height: 120px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+@media (max-width: 600px) { .mv-grid { grid-template-columns: 1fr; } }
+
+/* ── VALORES ── */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.valor-card {
+  background: var(--blanco);
+  border-radius: var(--radio-lg);
+  padding: 32px 24px;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+}
+.valor-card:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-4px);
+}
+.valor-num {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: rgba(26,111,204,0.12);
+  line-height: 1;
+  margin-bottom: 16px;
+  display: block;
+}
+.valor-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.valor-card p { font-size: 0.87rem; color: var(--gris-texto); line-height: 1.6; }
+@media (max-width: 1024px) { .valores-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .valores-grid { grid-template-columns: 1fr; } }
+
+/* ── DATOS EMPRESA ── */
+.empresa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.empresa-info h2 { margin-bottom: 14px; }
+.empresa-info > p {
+  font-size: 0.97rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.empresa-datos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 28px;
+  border: 1.5px solid rgba(26,111,204,0.10);
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+}
+.empresa-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(26,111,204,0.08);
+}
+.empresa-dato:last-child { border-bottom: none; }
+.empresa-dato strong {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--azul);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.empresa-dato span,
+.empresa-dato a {
+  font-size: 0.92rem;
+  color: var(--gris-texto);
+  line-height: 1.5;
+  text-decoration: none;
+}
+.empresa-dato a { color: var(--oscuro); font-weight: 600; }
+.empresa-dato a:hover { color: var(--azul); }
+.empresa-mapa {
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra-hover);
+  height: 340px;
+}
+.empresa-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+@media (max-width: 768px) { .empresa-grid { grid-template-columns: 1fr; } }
+
+/* ── CTA FINAL ── */
+.conocenos-cta {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul) 60%, #2563eb 100%);
+  padding: 72px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.conocenos-cta::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 360px; height: 360px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+.conocenos-cta .contenedor { position: relative; z-index: 1; }
+.conocenos-cta h2 {
+  color: var(--blanco);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 14px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.25;
+}
+.conocenos-cta p {
+  color: rgba(255,255,255,0.78);
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.65;
+}
+.conocenos-cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-blanco {
+  background: var(--blanco);
+  color: var(--azul);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transicion);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.btn-blanco:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+/* ── NAP FOOTER ── */
+.footer-nap {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  text-align: right;
+  line-height: 1.6;
+}
+@media (max-width: 600px) { .footer-nap { text-align: center; } }
+</style>
+</head>
+
+<body>
+
+<!-- BOTONES FLOTANTES -->
+<div class="flotantes">
+  <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  </a>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="contenedor header-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-presencia-online.png" alt="Presencia Online">
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="profesionales.html">Profesionales</a>
+      <a href="demos.html">Demos</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="conocenos.html">Conócenos</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="contenedor">
+    <div class="page-hero-kicker">Nuestra historia</div>
+    <h1>Detectamos un problema.<br><span>Y nos avocamos a resolverlo.</span></h1>
+    <p>Hablamos con docenas de profesionales independientes y encontramos que casi todos compartían la misma situación.</p>
+  </div>
+</section>
+
+
+<!-- ORIGEN -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <div class="origen-grid">
+      <div class="origen-texto">
+        <h2>Lo que escuchamos, una y otra vez.</h2>
+        <p>
+          Hablamos con psicólogos, odontólogos, abogados, nutricionistas, coaches. Profesionales con años de experiencia, con pacientes y clientes que los buscaban, con trabajo real y resultados concretos.
+        </p>
+        <p>
+          Y casi todos compartían la misma situación: <strong>sus consultas llegaban por todos lados y les resultaba difícil ordenarlas.</strong> WhatsApp, Instagram, recomendaciones de boca en boca — pero ningún lugar propio donde centralizar todo eso.
+        </p>
+        <p>
+          Algunos tenían redes sociales activas. Otros aparecían en directorios. Pero muy pocos tenían un espacio que les perteneciera, que mostrara quiénes eran, cómo trabajaban y que registrara cada consulta que llegaba.
+        </p>
+        <p>
+          Así nació Presencia Online: para resolver este problema y ayudar a todos los especialistas independientes que necesitan una página web profesional.
+        </p>
+      </div>
+      <div class="origen-visual">
+        <div class="origen-card">
+          <div class="origen-card-num">01</div>
+          <div>
+            <h4>"Tengo mensajes de hace meses que nunca respondí"</h4>
+            <p>Consultas perdidas en el historial de WhatsApp, difíciles de recuperar.</p>
+          </div>
+        </div>
+        <div class="origen-card">
+          <div class="origen-card-num">02</div>
+          <div>
+            <h4>"Me escriben por Instagram pero no sé cómo organizarlo"</h4>
+            <p>Canales mezclados, sin registro, sin seguimiento posible.</p>
+          </div>
+        </div>
+        <div class="origen-card">
+          <div class="origen-card-num">03</div>
+          <div>
+            <h4>"No sé cuántas consultas tuve el mes pasado"</h4>
+            <p>Sin datos, sin registro, sin forma de medir ni mejorar.</p>
+          </div>
+        </div>
+        <div class="origen-card">
+          <div class="origen-card-num">04</div>
+          <div>
+            <h4>"Sé que pierdo clientes, pero no sé cuántos"</h4>
+            <p>Oportunidades que se van en silencio, sin que nadie lo note.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MISIÓN Y VISIÓN -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Lo que nos mueve.</h2>
+    <p class="seccion-subtitulo">El por qué detrás de cada página que entregamos.</p>
+    <div class="mv-grid">
+      <div class="mv-card mv-card-mision">
+        <span class="mv-label">Nuestra misión</span>
+        <h3>Que cada especialista independiente tenga un espacio profesional propio que trabaje por él.</h3>
+        <p>Un lugar donde sus pacientes y clientes lleguen, entiendan quién es, cómo trabaja y qué tienen que hacer para contactarse. Claro, ordenado y siempre disponible.</p>
+        <div class="mv-deco"></div>
+      </div>
+      <div class="mv-card mv-card-vision">
+        <span class="mv-label">Nuestra visión</span>
+        <h3>Que cada profesional independiente en Argentina tenga una presencia digital a la altura de su trabajo.</h3>
+        <p>El trabajo de años que construyó cada profesional merece ser visible de forma clara y ordenada. Eso es lo que construimos con cada página que entregamos.</p>
+        <div class="mv-deco"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CÓMO TRABAJAMOS -->
+<section class="seccion reveal">
+  <div class="contenedor">
+    <h2 class="seccion-titulo">Cómo trabajamos.</h2>
+    <p class="seccion-subtitulo">Los principios que guían cada proyecto que tomamos.</p>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <span class="valor-num">01</span>
+        <h3>Foco en un solo mercado</h3>
+        <p>Elegimos trabajar con profesionales independientes y los conocemos a fondo. Ese foco es el que nos permite entregar algo realmente bueno para cada uno.</p>
+      </div>
+      <div class="valor-card">
+        <span class="valor-num">02</span>
+        <h3>Velocidad y calidad, juntas</h3>
+        <p>Entregamos en 72 horas porque tenemos un proceso claro y probado. Velocidad y calidad van de la mano cuando el proceso está bien pensado.</p>
+      </div>
+      <div class="valor-card">
+        <span class="valor-num">03</span>
+        <h3>Diseño orientado a resultados</h3>
+        <p>Cada decisión de diseño y texto está tomada pensando en la persona que va a entrar a la página. El objetivo es que entienda y se contacte.</p>
+      </div>
+      <div class="valor-card">
+        <span class="valor-num">04</span>
+        <h3>Páginas que son tuyas para siempre</h3>
+        <p>Cada página que entregamos le pertenece al profesional. Funciona sola, está disponible todo el tiempo y crece con el tiempo.</p>
+      </div>
+      <div class="valor-card">
+        <span class="valor-num">05</span>
+        <h3>Comunicación directa y clara</h3>
+        <p>Hablamos en el idioma de nuestros clientes. Cada paso del proceso es simple, claro y sin vueltas innecesarias.</p>
+      </div>
+      <div class="valor-card">
+        <span class="valor-num">06</span>
+        <h3>Una herramienta real, no solo visual</h3>
+        <p>Cada consulta queda registrada automáticamente. La página trabaja aunque el profesional no esté mirando.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DATOS DE LA EMPRESA -->
+<section class="seccion seccion-alt reveal">
+  <div class="contenedor">
+    <div class="empresa-grid">
+      <div class="empresa-info">
+        <h2>Dónde estamos.</h2>
+        <p>Somos un equipo argentino. Trabajamos de forma remota con profesionales de todo el país, y nuestra base de operaciones está en el Gran Buenos Aires.</p>
+        <div class="empresa-datos-lista">
+          <div class="empresa-dato">
+            <strong>Dirección</strong>
+            <span>Eduardo Costa 932, Lomas del Mirador<br>La Matanza, Buenos Aires, Argentina</span>
+          </div>
+          <div class="empresa-dato">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank">+54 9 11 4916 7978</a>
+          </div>
+          <div class="empresa-dato">
+            <strong>Email</strong>
+            <a href="mailto:presenciaonline.web@gmail.com">presenciaonline.web@gmail.com</a>
+          </div>
+          <div class="empresa-dato">
+            <strong>Horario de atención</strong>
+            <span>Lunes a viernes · 9 a 18hs</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-primario">
+          Escribinos por WhatsApp →
+        </a>
+      </div>
+      <div class="empresa-mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5!2d-58.5620!3d-34.6710!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRWR1YXJkbyBDb3N0YSA5MzIsIExvbWFzIGRlbCBNaXJhZG9y!5e0!3m2!1ses!2sar!4v1"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA FINAL -->
+<section class="conocenos-cta reveal">
+  <div class="contenedor">
+    <h2>¿Querés ver cómo quedaría tu página?</h2>
+    <p>Tenemos demos reales de distintas profesiones. Entrá, mirá y decidís sin compromiso.</p>
+    <div class="conocenos-cta-btns">
+      <a href="demos.html" class="btn-blanco">Ver demos →</a>
+      <a href="https://wa.me/5491149167978?text=Hola,%20quiero%20información%20sobre%20las%20páginas%20web." target="_blank" class="btn btn-ghost-blanco">Consultanos →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/img/logo-presencia-online-sin-fondo.png" alt="Presencia Online">
+        <p>Ayudamos a especialistas independientes a tener presencia online a través de una página web personalizada, moderna y de acabado profesional.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="index.html">Inicio</a>
+        <a href="profesionales.html">Para profesionales</a>
+        <a href="demos.html">Demos</a>
+        <a href="index.html#precios">Precios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="conocenos.html">Conócenos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Demos</h4>
+        <a href="demos/psicologo/index.html">Demo Psicólogo</a>
+        <a href="demos/abogado/index.html">Demo Abogado</a>
+        <a href="demos/odontologo/index.html">Demo Odontólogo</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Presencia Online. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="legal/privacidad.html">Privacidad</a>
+        <a href="legal/cookies.html">Cookies</a>
+        <a href="legal/terminos.html">Términos</a>
+        <a href="legal/disclaimer.html">Aviso legal</a>
+      </div>
+    </div>
+    <!-- NAP para crawlers de Google — mantener texto plano y consistente en todas las páginas -->
+    <div class="footer-nap">
+      Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
+    </div>
+  </div>
+</footer>
+
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('abierto');
+}
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
