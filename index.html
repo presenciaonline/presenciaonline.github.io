@@ -27,393 +27,289 @@
 <link rel="stylesheet" href="presencia.css">
 
 <style>
-/* ── CARDS DE NICHOS ── */
-.nichos-index-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-.nicho-index-card {
-  background: var(--blanco);
-  border: 2px solid rgba(26,111,204,0.08);
-  border-radius: var(--radio-lg);
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: var(--transicion);
-}
-.nicho-index-card:hover {
-  border-color: var(--azul);
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-4px);
-}
-.nicho-index-header { display: flex; align-items: center; gap: 12px; }
-.nicho-index-icono {
-  width: 40px; height: 40px; border-radius: 10px;
-  background: linear-gradient(135deg, #e8f0fe, #e8f5ee);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; flex-shrink: 0;
-}
-.nicho-index-card h3 { font-size: 0.95rem; color: var(--oscuro); }
-.nicho-index-frase { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--oscuro); line-height: 1.4; }
-.nicho-index-copy { font-size: 0.83rem; color: var(--gris-texto); line-height: 1.6; flex: 1; }
-.nicho-index-links { display: flex; gap: 16px; margin-top: 4px; flex-wrap: wrap; }
-.nicho-link-primary { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--azul); text-decoration: none; transition: var(--transicion); }
-.nicho-link-secondary { font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--gris-texto); text-decoration: none; transition: var(--transicion); }
-.nicho-link-primary:hover { color: var(--azul-oscuro); }
-.nicho-link-secondary:hover { color: var(--azul); }
-@media (max-width: 1024px) { .nichos-index-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .nichos-index-grid { grid-template-columns: 1fr; } }
 
 /* ── PROBLEMA ── */
-.problema-lista {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin: 32px auto;
-  max-width: 560px;
-}
-.problema-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  background: var(--blanco);
-  border-radius: var(--radio);
-  padding: 18px 20px;
-  box-shadow: var(--sombra);
-  border-left: 4px solid #e53e3e;
-}
-.problema-item-icono { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.problema-item p { font-size: 0.93rem; color: var(--gris-texto); line-height: 1.5; }
-.problema-cierre {
-  text-align: center;
-  max-width: 600px;
-  margin: 32px auto 0;
-  font-size: 1.05rem;
-  color: var(--oscuro);
-  font-weight: 600;
-  font-family: 'Raleway', sans-serif;
-  line-height: 1.6;
-  padding: 24px;
-  background: rgba(229,62,62,0.05);
-  border-radius: var(--radio-lg);
-  border: 1px solid rgba(229,62,62,0.15);
-}
+.problema-lista { display:flex; flex-direction:column; gap:14px; margin:32px auto; max-width:560px; }
+.problema-item { display:flex; align-items:flex-start; gap:14px; background:var(--blanco); border-radius:var(--radio); padding:18px 20px; box-shadow:var(--sombra); border-left:4px solid #e53e3e; }
+.problema-item-icono { font-size:1.3rem; flex-shrink:0; margin-top:2px; }
+.problema-item p { font-size:0.93rem; color:var(--gris-texto); line-height:1.5; }
+.problema-cierre { text-align:center; max-width:600px; margin:32px auto 0; font-size:1.05rem; color:var(--oscuro); font-weight:600; font-family:'Raleway',sans-serif; line-height:1.6; padding:24px; background:rgba(229,62,62,0.05); border-radius:var(--radio-lg); border:1px solid rgba(229,62,62,0.15); }
 
 /* ── QUIEBRE ── */
-.quiebre-bloque { max-width: 680px; margin: 0 auto; text-align: center; }
-.quiebre-pregunta {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--oscuro);
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-.quiebre-pregunta span { color: var(--azul); }
-.quiebre-remate { font-size: 1rem; color: var(--gris-texto); font-style: italic; margin-bottom: 36px; }
-.quiebre-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-.quiebre-stat {
-  background: var(--blanco);
-  border-radius: var(--radio-lg);
-  padding: 24px 16px;
-  box-shadow: var(--sombra);
-  text-align: center;
-}
-.quiebre-stat-num {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  color: var(--azul);
-  display: block;
-  margin-bottom: 6px;
-}
-.quiebre-stat-label { font-size: 0.83rem; color: var(--gris-texto); line-height: 1.4; }
-@media (max-width: 600px) { .quiebre-stats { grid-template-columns: 1fr; } }
-
-/* ── PASOS 4 ── */
-.pasos-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  position: relative;
-}
-.pasos-grid-4::before {
-  content: '';
-  position: absolute;
-  top: 36px;
-  left: calc(12.5% + 16px);
-  right: calc(12.5% + 16px);
-  height: 2px;
-  background: linear-gradient(90deg, var(--azul), var(--verde));
-  border-radius: 2px;
-}
-@media (max-width: 1024px) { .pasos-grid-4 { grid-template-columns: repeat(2, 1fr); } .pasos-grid-4::before { display: none; } }
-@media (max-width: 600px) { .pasos-grid-4 { grid-template-columns: 1fr; } }
+.quiebre-bloque { max-width:680px; margin:0 auto; text-align:center; }
+.quiebre-pregunta { font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(1.4rem,3vw,2rem); color:var(--oscuro); line-height:1.3; margin-bottom:20px; }
+.quiebre-pregunta span { color:var(--azul); }
+.quiebre-remate { font-size:1rem; color:var(--gris-texto); font-style:italic; margin-bottom:36px; }
+.quiebre-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px; }
+.quiebre-stat { background:var(--blanco); border-radius:var(--radio-lg); padding:24px 16px; box-shadow:var(--sombra); text-align:center; }
+.quiebre-stat-num { font-family:'Raleway',sans-serif; font-weight:800; font-size:2rem; color:var(--azul); display:block; margin-bottom:6px; }
+.quiebre-stat-label { font-size:0.83rem; color:var(--gris-texto); line-height:1.4; }
+@media (max-width:600px) { .quiebre-stats { grid-template-columns:1fr; } }
 
 /* ── PRECIOS ── */
-.precios-intro {
-  text-align: center;
-  max-width: 560px;
-  margin: 0 auto 48px;
-  font-size: 0.97rem;
-  color: var(--gris-texto);
-  line-height: 1.7;
-}
-.precio-card {
-  background: var(--blanco);
-  border: 2px solid rgba(26,111,204,0.10);
-  border-radius: var(--radio-lg);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  transition: var(--transicion);
-  position: relative;
-}
-.precio-card:hover { box-shadow: var(--sombra-hover); transform: translateY(-4px); }
-.precio-card-destacado { border-color: var(--azul); box-shadow: var(--sombra-hover); }
-.precio-etiqueta {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--verde);
-  color: var(--blanco);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  padding: 4px 16px;
-  border-radius: 99px;
-  white-space: nowrap;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.precio-nombre { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--azul); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 10px; }
-.precio-bajada { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--oscuro); margin-bottom: 20px; line-height: 1.3; }
-.precio-monto-wrap { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
-.precio-tachado { font-size: 1rem; color: #a0aec0; text-decoration: line-through; font-family: 'Raleway', sans-serif; }
-.precio-actual { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 2rem; color: var(--oscuro); }
-.precio-desc { font-size: 0.82rem; color: var(--verde-oscuro); font-weight: 700; font-family: 'Raleway', sans-serif; margin-bottom: 20px; }
-.precio-divider { height: 1px; background: rgba(26,111,204,0.08); margin: 20px 0; }
-.precio-texto { font-size: 0.87rem; color: var(--gris-texto); line-height: 1.65; margin-bottom: 16px; }
-.precio-aclaracion { font-size: 0.8rem; color: #a0aec0; font-style: italic; line-height: 1.5; margin-bottom: 24px; }
-.precio-remate { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.87rem; color: var(--oscuro); margin-bottom: 8px; line-height: 1.4; }
-.precio-cierre { font-size: 0.8rem; color: var(--azul); font-weight: 600; font-family: 'Raleway', sans-serif; margin-bottom: 24px; }
-.precio-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 14px 20px; border-radius: var(--radio);
-  font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.9rem;
-  text-decoration: none; transition: var(--transicion); margin-top: auto; text-align: center;
-}
-.precio-btn-primario { background: var(--azul); color: var(--blanco); box-shadow: var(--sombra); }
-.precio-btn-primario:hover { background: var(--azul-oscuro); transform: translateY(-2px); }
-.precio-btn-outline { background: transparent; color: var(--azul); border: 2px solid var(--azul); }
-.precio-btn-outline:hover { background: var(--azul); color: var(--blanco); transform: translateY(-2px); }
-.precios-lanzamiento {
-  text-align: center; margin-top: 40px; padding: 20px 28px;
-  background: rgba(26,111,204,0.05); border: 1px solid rgba(26,111,204,0.15);
-  border-radius: var(--radio-lg); max-width: 680px; margin-left: auto; margin-right: auto;
-}
-.precios-lanzamiento p { font-size: 0.9rem; color: var(--gris-texto); line-height: 1.65; }
-.precios-lanzamiento strong { color: var(--oscuro); }
+.precios-intro { text-align:center; max-width:560px; margin:0 auto 48px; font-size:0.97rem; color:var(--gris-texto); line-height:1.7; }
+.precio-card { background:var(--blanco); border:2px solid rgba(26,111,204,0.10); border-radius:var(--radio-lg); padding:32px 28px; display:flex; flex-direction:column; gap:0; transition:var(--transicion); position:relative; }
+.precio-card:hover { box-shadow:var(--sombra-hover); transform:translateY(-4px); }
+.precio-card-destacado { border-color:var(--azul); box-shadow:var(--sombra-hover); }
+.precio-etiqueta { position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--verde); color:var(--blanco); font-family:'Raleway',sans-serif; font-weight:700; font-size:0.75rem; padding:4px 16px; border-radius:99px; white-space:nowrap; letter-spacing:0.5px; text-transform:uppercase; }
+.precio-nombre { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); letter-spacing:0.8px; text-transform:uppercase; margin-bottom:10px; }
+.precio-bajada { font-family:'Raleway',sans-serif; font-weight:700; font-size:1.1rem; color:var(--oscuro); margin-bottom:20px; line-height:1.3; }
+.precio-monto-wrap { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; }
+.precio-tachado { font-size:1rem; color:#a0aec0; text-decoration:line-through; font-family:'Raleway',sans-serif; }
+.precio-actual { font-family:'Raleway',sans-serif; font-weight:800; font-size:2rem; color:var(--oscuro); }
+.precio-desc { font-size:0.82rem; color:var(--verde-oscuro); font-weight:700; font-family:'Raleway',sans-serif; margin-bottom:20px; }
+.precio-divider { height:1px; background:rgba(26,111,204,0.08); margin:20px 0; }
+.precio-texto { font-size:0.87rem; color:var(--gris-texto); line-height:1.65; margin-bottom:16px; }
+.precio-aclaracion { font-size:0.8rem; color:#a0aec0; font-style:italic; line-height:1.5; margin-bottom:24px; }
+.precio-remate { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.87rem; color:var(--oscuro); margin-bottom:8px; line-height:1.4; }
+.precio-cierre { font-size:0.8rem; color:var(--azul); font-weight:600; font-family:'Raleway',sans-serif; margin-bottom:24px; }
+.precio-btn { display:flex; align-items:center; justify-content:center; gap:8px; padding:14px 20px; border-radius:var(--radio); font-family:'Raleway',sans-serif; font-weight:700; font-size:0.9rem; text-decoration:none; transition:var(--transicion); margin-top:auto; text-align:center; }
+.precio-btn-primario { background:var(--azul); color:var(--blanco); box-shadow:var(--sombra); }
+.precio-btn-primario:hover { background:var(--azul-oscuro); transform:translateY(-2px); }
+.precio-btn-outline { background:transparent; color:var(--azul); border:2px solid var(--azul); }
+.precio-btn-outline:hover { background:var(--azul); color:var(--blanco); transform:translateY(-2px); }
+.precios-lanzamiento { text-align:center; margin:40px auto 0; padding:20px 28px; background:rgba(26,111,204,0.05); border:1px solid rgba(26,111,204,0.15); border-radius:var(--radio-lg); max-width:680px; }
+.precios-lanzamiento p { font-size:0.9rem; color:var(--gris-texto); line-height:1.65; }
+.precios-lanzamiento strong { color:var(--oscuro); }
 
-/* ── TABLA COMPARATIVA — desktop ── */
-.comparativa-wrapper {
-  margin: 48px auto 0;
-  background: #ffffff;
-  border-radius: 28px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-.comparativa-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.comparativa-table th {
-  background: #f8fafc; padding: 18px 16px;
-  font-family: 'Raleway', sans-serif; font-weight: 700; color: #1a2332;
-  text-align: center; border-bottom: 2px solid #e2e8f0;
-}
-.comparativa-table td { padding: 14px 16px; text-align: center; border-bottom: 1px solid #eef2f6; color: #4a5568; }
-.comparativa-table td:first-child { text-align: left; font-weight: 600; background: #fafcff; }
-.comparativa-table .check { color: #10b981; font-weight: 700; }
-.comparativa-table .cross { color: #ef4444; font-weight: 700; }
-.comparativa-table .destacado-col {
-  background: rgba(30,115,190,0.03);
-  border-left: 2px solid #1E73BE;
-  border-right: 2px solid #1E73BE;
-}
-
-/* ── COMPARATIVA MOBILE — carrusel sincronizado ── */
-.comparativa-cards { display: none; }
+/* ── TABLA COMPARATIVA desktop ── */
+.comparativa-wrapper { margin:48px auto 0; background:#fff; border-radius:28px; box-shadow:0 8px 28px rgba(0,0,0,0.05); overflow:hidden; }
+.comparativa-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+.comparativa-table th { background:#f8fafc; padding:18px 16px; font-family:'Raleway',sans-serif; font-weight:700; color:#1a2332; text-align:center; border-bottom:2px solid #e2e8f0; }
+.comparativa-table td { padding:14px 16px; text-align:center; border-bottom:1px solid #eef2f6; color:#4a5568; }
+.comparativa-table td:first-child { text-align:left; font-weight:600; background:#fafcff; }
+.comparativa-table .check { color:#10b981; font-weight:700; }
+.comparativa-table .cross { color:#ef4444; font-weight:700; }
+.comparativa-table .destacado-col { background:rgba(30,115,190,0.03); border-left:2px solid #1E73BE; border-right:2px solid #1E73BE; }
+.comparativa-cards { display:none; }
 
 /* ── QUIÉN SOMOS ── */
-.quien-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.quien-texto h2 { margin-bottom: 16px; }
-.quien-texto p { margin-bottom: 16px; font-size: 0.95rem; color: var(--gris-texto); }
-.quien-datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
-.quien-dato { text-align: center; padding: 20px 12px; background: var(--gris-claro); border-radius: var(--radio); }
-.quien-dato-num { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--azul); display: block; }
-.quien-dato-label { font-size: 0.78rem; color: var(--gris-texto); }
-.quien-visual { display: flex; flex-direction: column; gap: 16px; }
-.quien-card { background: var(--blanco); border-radius: var(--radio-lg); padding: 20px 22px; box-shadow: var(--sombra); display: flex; align-items: center; gap: 16px; transition: var(--transicion); }
-.quien-card:hover { box-shadow: var(--sombra-hover); transform: translateX(4px); }
-.quien-card-icono { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--azul), var(--verde)); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-.quien-card h4 { font-size: 0.92rem; color: var(--oscuro); margin-bottom: 2px; }
-.quien-card p { font-size: 0.8rem; color: var(--gris-texto); }
-@media (max-width: 768px) { .quien-inner { grid-template-columns: 1fr; } .quien-datos { grid-template-columns: repeat(3, 1fr); } }
+.quien-inner { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.quien-texto h2 { margin-bottom:16px; }
+.quien-texto p { margin-bottom:16px; font-size:0.95rem; color:var(--gris-texto); }
+.quien-datos { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px; }
+.quien-dato { text-align:center; padding:20px 12px; background:var(--gris-claro); border-radius:var(--radio); }
+.quien-dato-num { font-family:'Raleway',sans-serif; font-weight:800; font-size:1.6rem; color:var(--azul); display:block; }
+.quien-dato-label { font-size:0.78rem; color:var(--gris-texto); }
+.quien-visual { display:flex; flex-direction:column; gap:16px; }
+.quien-card { background:var(--blanco); border-radius:var(--radio-lg); padding:20px 22px; box-shadow:var(--sombra); display:flex; align-items:center; gap:16px; transition:var(--transicion); }
+.quien-card:hover { box-shadow:var(--sombra-hover); transform:translateX(4px); }
+.quien-card-icono { width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,var(--azul),var(--verde)); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+.quien-card h4 { font-size:0.92rem; color:var(--oscuro); margin-bottom:2px; }
+.quien-card p { font-size:0.8rem; color:var(--gris-texto); }
+@media (max-width:768px) { .quien-inner { grid-template-columns:1fr; } .quien-datos { grid-template-columns:repeat(3,1fr); } }
 
 /* ── FAQs ── */
-.faqs-lista { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
-.faq-item { background: var(--blanco); border: 1.5px solid rgba(26,111,204,0.10); border-radius: var(--radio); overflow: hidden; transition: var(--transicion); }
-.faq-item.abierto { border-color: var(--azul); box-shadow: var(--sombra); }
-.faq-pregunta { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--oscuro); transition: var(--transicion); }
-.faq-pregunta:hover { color: var(--azul); }
-.faq-icono { width: 24px; height: 24px; border-radius: 50%; background: rgba(26,111,204,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; color: var(--azul); transition: var(--transicion); }
-.faq-item.abierto .faq-icono { background: var(--azul); color: var(--blanco); transform: rotate(45deg); }
-.faq-respuesta { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
-.faq-respuesta-inner { padding: 0 22px 18px; font-size: 0.9rem; color: var(--gris-texto); line-height: 1.7; }
-.faq-item.abierto .faq-respuesta { max-height: 300px; }
+.faqs-lista { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:10px; }
+.faq-item { background:var(--blanco); border:1.5px solid rgba(26,111,204,0.10); border-radius:var(--radio); overflow:hidden; transition:var(--transicion); }
+.faq-item.abierto { border-color:var(--azul); box-shadow:var(--sombra); }
+.faq-pregunta { width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 22px; background:none; border:none; cursor:pointer; text-align:left; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.92rem; color:var(--oscuro); transition:var(--transicion); }
+.faq-pregunta:hover { color:var(--azul); }
+.faq-icono { width:24px; height:24px; border-radius:50%; background:rgba(26,111,204,0.08); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem; color:var(--azul); transition:var(--transicion); }
+.faq-item.abierto .faq-icono { background:var(--azul); color:var(--blanco); transform:rotate(45deg); }
+.faq-respuesta { max-height:0; overflow:hidden; transition:max-height 0.35s ease, padding 0.35s ease; }
+.faq-respuesta-inner { padding:0 22px 18px; font-size:0.9rem; color:var(--gris-texto); line-height:1.7; }
+.faq-item.abierto .faq-respuesta { max-height:300px; }
 
 /* ── CTA FINAL ── */
-.cta-final { background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul) 60%, #2563eb 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
-.cta-final::before { content: ''; position: absolute; top: -80px; right: -80px; width: 360px; height: 360px; background: rgba(255,255,255,0.05); border-radius: 50%; }
-.cta-final::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 280px; height: 280px; background: rgba(255,255,255,0.04); border-radius: 50%; }
-.cta-final .contenedor { position: relative; z-index: 1; }
-.cta-final-kicker { display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; margin-bottom: 20px; }
-.cta-final h2 { color: var(--blanco); font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 16px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.25; }
-.cta-final p { color: rgba(255,255,255,0.78); font-size: 1rem; max-width: 520px; margin: 0 auto 36px; line-height: 1.7; }
-.cta-final-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-blanco { background: var(--blanco); color: var(--azul); font-family: 'Raleway', sans-serif; font-weight: 700; padding: 14px 28px; border-radius: var(--radio); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: var(--transicion); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-.btn-blanco:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.cta-final { background:linear-gradient(135deg,var(--azul-oscuro) 0%,var(--azul) 60%,#2563eb 100%); padding:80px 0; text-align:center; position:relative; overflow:hidden; }
+.cta-final::before { content:''; position:absolute; top:-80px; right:-80px; width:360px; height:360px; background:rgba(255,255,255,0.05); border-radius:50%; }
+.cta-final::after { content:''; position:absolute; bottom:-60px; left:-60px; width:280px; height:280px; background:rgba(255,255,255,0.04); border-radius:50%; }
+.cta-final .contenedor { position:relative; z-index:1; }
+.cta-final-kicker { display:inline-block; background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.9); font-family:'Raleway',sans-serif; font-weight:700; font-size:0.78rem; letter-spacing:1px; text-transform:uppercase; padding:5px 14px; border-radius:99px; margin-bottom:20px; }
+.cta-final h2 { color:var(--blanco); font-size:clamp(1.6rem,3.5vw,2.4rem); margin-bottom:16px; max-width:640px; margin-left:auto; margin-right:auto; line-height:1.25; }
+.cta-final p { color:rgba(255,255,255,0.78); font-size:1rem; max-width:520px; margin:0 auto 36px; line-height:1.7; }
+.cta-final-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-blanco { background:var(--blanco); color:var(--azul); font-family:'Raleway',sans-serif; font-weight:700; padding:14px 28px; border-radius:var(--radio); text-decoration:none; font-size:0.95rem; display:inline-flex; align-items:center; gap:8px; transition:var(--transicion); box-shadow:0 4px 16px rgba(0,0,0,0.15); }
+.btn-blanco:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
 
 /* ── MERCADO PAGO ── */
-.mp-bloque { margin-top: 32px; background: linear-gradient(135deg, #f0f9ff 0%, #eef3fd 100%); border: 1.5px solid rgba(0,158,227,0.22); border-radius: var(--radio-lg); padding: 26px 24px; }
-.mp-bloque-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.mp-bloque-titulo { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.98rem; color: var(--oscuro); }
-.mp-badge { display: inline-flex; align-items: center; background: rgba(0,158,227,0.12); color: #0369a1; font-size: 0.7rem; font-weight: 700; padding: 2px 9px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.05em; }
-.mp-bloque-sub { font-size: 0.84rem; color: var(--gris-texto); line-height: 1.65; margin-bottom: 18px; max-width: 520px; }
-.mp-bloque-btns { display: flex; gap: 10px; flex-wrap: wrap; }
-.mp-bloque-btn { display: inline-flex; align-items: center; gap: 7px; background: #009ee3; color: #fff; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.86rem; padding: 10px 20px; border-radius: 99px; text-decoration: none; transition: background 0.2s, transform 0.15s, box-shadow 0.15s; box-shadow: 0 2px 8px rgba(0,158,227,0.28); cursor: pointer; }
-.mp-bloque-btn:hover { background: #007ec2; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,158,227,0.38); }
-.mp-bloque-btn-ghost { background: transparent; color: #009ee3; border: 2px solid #009ee3; box-shadow: none; }
-.mp-bloque-btn-ghost:hover { background: rgba(0,158,227,0.07); box-shadow: none; }
-.mp-bloque-nota { font-size: 0.75rem; color: #64748b; margin-top: 12px; }
+.mp-bloque { margin-top:32px; background:linear-gradient(135deg,#f0f9ff 0%,#eef3fd 100%); border:1.5px solid rgba(0,158,227,0.22); border-radius:var(--radio-lg); padding:26px 24px; }
+.mp-bloque-header { display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+.mp-bloque-titulo { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.98rem; color:var(--oscuro); }
+.mp-badge { display:inline-flex; align-items:center; background:rgba(0,158,227,0.12); color:#0369a1; font-size:0.7rem; font-weight:700; padding:2px 9px; border-radius:99px; text-transform:uppercase; letter-spacing:0.05em; }
+.mp-bloque-sub { font-size:0.84rem; color:var(--gris-texto); line-height:1.65; margin-bottom:18px; max-width:520px; }
+.mp-bloque-btns { display:flex; gap:10px; flex-wrap:wrap; }
+.mp-bloque-btn { display:inline-flex; align-items:center; gap:7px; background:#009ee3; color:#fff; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.86rem; padding:10px 20px; border-radius:99px; text-decoration:none; transition:background 0.2s,transform 0.15s,box-shadow 0.15s; box-shadow:0 2px 8px rgba(0,158,227,0.28); cursor:pointer; }
+.mp-bloque-btn:hover { background:#007ec2; transform:translateY(-2px); box-shadow:0 4px 14px rgba(0,158,227,0.38); }
+.mp-bloque-btn-ghost { background:transparent; color:#009ee3; border:2px solid #009ee3; box-shadow:none; }
+.mp-bloque-btn-ghost:hover { background:rgba(0,158,227,0.07); box-shadow:none; }
+.mp-bloque-nota { font-size:0.75rem; color:#64748b; margin-top:12px; }
 
 /* ── MODAL PAGO ── */
-.modal-pago { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 10000; justify-content: center; align-items: center; }
-.modal-contenido { background: var(--blanco); border-radius: var(--radio-lg); max-width: 500px; width: 90%; padding: 28px; position: relative; box-shadow: var(--sombra-hover); }
-.modal-contenido h3 { font-size: 1.3rem; margin-bottom: 12px; }
-.modal-contenido p { margin-bottom: 20px; font-size: 0.9rem; color: var(--gris-texto); }
-.modal-form .form-grupo { margin-bottom: 18px; }
-.modal-form label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 5px; color: var(--oscuro); }
-.modal-form input { width: 100%; padding: 12px; border: 2px solid rgba(26,111,204,0.12); border-radius: var(--radio); font-size: 0.9rem; transition: var(--transicion); }
-.modal-form input:focus { border-color: var(--azul); outline: none; }
-.modal-botones { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; }
-.modal-botones .btn { padding: 10px 20px; font-size: 0.9rem; }
-.modal-botones .btn-secundario { background: #e2e8f0; color: #1a2332; border: none; }
-.modal-botones .btn-secundario:hover { background: #cbd5e1; transform: none; }
-.error-msg { color: #e53e3e; font-size: 0.8rem; margin-top: 4px; display: none; }
+.modal-pago { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:10000; justify-content:center; align-items:center; }
+.modal-contenido { background:var(--blanco); border-radius:var(--radio-lg); max-width:500px; width:90%; padding:28px; position:relative; box-shadow:var(--sombra-hover); }
+.modal-contenido h3 { font-size:1.3rem; margin-bottom:12px; }
+.modal-contenido p { margin-bottom:20px; font-size:0.9rem; color:var(--gris-texto); }
+.modal-form .form-grupo { margin-bottom:18px; }
+.modal-form label { font-weight:600; font-size:0.85rem; display:block; margin-bottom:5px; color:var(--oscuro); }
+.modal-form input { width:100%; padding:12px; border:2px solid rgba(26,111,204,0.12); border-radius:var(--radio); font-size:0.9rem; transition:var(--transicion); }
+.modal-form input:focus { border-color:var(--azul); outline:none; }
+.modal-botones { display:flex; justify-content:flex-end; gap:12px; margin-top:24px; }
+.modal-botones .btn { padding:10px 20px; font-size:0.9rem; }
+.modal-botones .btn-secundario { background:#e2e8f0; color:#1a2332; border:none; }
+.modal-botones .btn-secundario:hover { background:#cbd5e1; transform:none; }
+.error-msg { color:#e53e3e; font-size:0.8rem; margin-top:4px; display:none; }
 
-/* ══════════════════════════════════════
-   CARRUSELES: PRECIOS + COMPARATIVA + CLIENTES
-   Desktop: grillas normales
-   Mobile (≤640px): carruseles con swipe
-══════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   SISTEMA DE CARRUSELES — dots compartidos
+   Desktop: layouts normales (grid/flex original)
+   Mobile ≤640px: carruseles con swipe + dots
+══════════════════════════════════════════════════════ */
 
-/* ── Precios carrusel ── */
-.precios-clip { overflow: visible; }
-.precios-track { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: start; transition: none; }
-.precio-slide { min-width: unset; display: flex; flex-direction: column; }
-.precio-slide .precio-card { flex: 1; }
-.precios-dots { display: none; }
-
-/* ── Comparativa carrusel ── */
-.comparativa-clip { overflow: visible; }
-.comparativa-track { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; transition: none; }
-.comparativa-slide { min-width: unset; }
-
-/* ── Clientes carrusel ── */
-.cliente-card { background: var(--blanco); border: 1.5px solid rgba(26,111,204,0.08); border-radius: var(--radio-lg); overflow: hidden; transition: var(--transicion); }
-.cliente-card:hover { box-shadow: var(--sombra-hover); transform: translateY(-4px); }
-.cliente-browser { background: var(--gris-claro); padding: 8px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(0,0,0,0.06); }
-.cliente-dots { display: flex; gap: 5px; }
-.cliente-dots div { width: 9px; height: 9px; border-radius: 50%; background: #e2e8f0; }
-.cliente-url { flex: 1; background: var(--blanco); border-radius: 4px; padding: 3px 10px; font-size: 10px; color: var(--gris-texto); border: 1px solid rgba(0,0,0,0.08); }
-.cliente-card img { width: 100%; display: block; object-fit: contain; height: auto; background: #f8fafc; }
-.cliente-info { padding: 18px 20px; }
-.cliente-nombre { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--oscuro); margin-bottom: 2px; }
-.cliente-rubro { font-size: 0.82rem; color: var(--gris-texto); margin-bottom: 12px; }
-.cliente-link { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--azul); text-decoration: none; }
-.cliente-link:hover { color: var(--azul-oscuro); }
-.clientes-clip { overflow: visible; }
-.clientes-track { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 860px; margin: 0 auto; transition: none; }
-.clientes-slide { min-width: unset; }
-.clientes-dots { display: none; }
-
-/* Dots compartidos */
-.cliente-dot, .precio-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: rgba(26,111,204,0.25);
-  border: none; padding: 0; cursor: pointer;
-  transition: background .2s; -webkit-appearance: none; appearance: none;
+/* Dots — estilo compartido para todos */
+.car-dot {
+  width:10px; height:10px; border-radius:50%;
+  background:rgba(26,111,204,0.25);
+  border:none; padding:0; cursor:pointer;
+  transition:background .2s; -webkit-appearance:none; appearance:none;
+  flex-shrink:0;
 }
-.cliente-dot.activo, .precio-dot.activo { background: var(--azul); }
+.car-dot.activo { background:var(--azul); }
 
-/* ── MOBILE: activar carruseles ── */
-@media (max-width: 640px) {
+.car-dots {
+  display:none; /* ocultos en desktop */
+  justify-content:center;
+  gap:10px;
+  margin-top:18px;
+}
+
+/* ── CLIENTES (hereda el sistema anterior) ── */
+.cliente-card { background:var(--blanco); border:1.5px solid rgba(26,111,204,0.08); border-radius:var(--radio-lg); overflow:hidden; transition:var(--transicion); }
+.cliente-card:hover { box-shadow:var(--sombra-hover); transform:translateY(-4px); }
+.cliente-browser { background:var(--gris-claro); padding:8px 12px; display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(0,0,0,0.06); }
+.cliente-dots-bar { display:flex; gap:5px; }
+.cliente-dots-bar div { width:9px; height:9px; border-radius:50%; background:#e2e8f0; }
+.cliente-url { flex:1; background:var(--blanco); border-radius:4px; padding:3px 10px; font-size:10px; color:var(--gris-texto); border:1px solid rgba(0,0,0,0.08); }
+.cliente-card img { width:100%; display:block; object-fit:contain; height:auto; background:#f8fafc; }
+.cliente-info { padding:18px 20px; }
+.cliente-nombre { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.95rem; color:var(--oscuro); margin-bottom:2px; }
+.cliente-rubro { font-size:0.82rem; color:var(--gris-texto); margin-bottom:12px; }
+.cliente-link { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); text-decoration:none; }
+.cliente-link:hover { color:var(--azul-oscuro); }
+
+/* ── DESKTOP: todos los tracks como grillas ── */
+/* Pasos */
+.pasos-car-clip { overflow:visible; }
+.pasos-car-track { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; position:relative; transition:none; }
+.pasos-car-track::before { content:''; position:absolute; top:36px; left:calc(12.5% + 16px); right:calc(12.5% + 16px); height:2px; background:linear-gradient(90deg,var(--azul),var(--verde)); border-radius:2px; }
+.paso-slide { min-width:unset; }
+
+/* Porque */
+.porque-car-clip { overflow:visible; }
+.porque-car-track { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; transition:none; }
+.porque-slide { min-width:unset; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+
+/* Nichos */
+.nichos-car-clip { overflow:visible; }
+.nichos-car-track { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; transition:none; }
+.nicho-slide { min-width:unset; }
+
+/* Precios */
+.precios-clip { overflow:visible; }
+.precios-track { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; transition:none; }
+.precio-slide { min-width:unset; display:flex; flex-direction:column; }
+.precio-slide .precio-card { flex:1; }
+
+/* Comparativa */
+.comparativa-clip { overflow:visible; }
+.comparativa-track { display:grid; grid-template-columns:repeat(3,1fr); gap:0; transition:none; }
+.comparativa-slide { min-width:unset; }
+
+/* Clientes */
+.clientes-clip { overflow:visible; }
+.clientes-track { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:860px; margin:0 auto; transition:none; }
+.cliente-slide { min-width:unset; }
+
+/* ── MOBILE ≤640px: activar carruseles ── */
+@media (max-width:640px) {
+
+  .car-dots { display:flex; }
+
+  /* Pasos → 4 slides individuales */
+  .pasos-car-clip { overflow:hidden; }
+  .pasos-car-track { display:flex; grid-template-columns:unset; gap:0; transition:transform .4s ease; }
+  .pasos-car-track::before { display:none; }
+  .paso-slide { min-width:88%; max-width:88%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
+
+  /* Porque → 3 slides de 2 cards */
+  .porque-car-clip { overflow:hidden; }
+  .porque-car-track { display:flex; grid-template-columns:unset; gap:0; transition:transform .4s ease; }
+  .porque-slide { min-width:100%; max-width:100%; flex-shrink:0; padding:0 8px; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+  /* Nichos → 3 slides */
+  .nichos-car-clip { overflow:hidden; }
+  .nichos-car-track { display:flex; grid-template-columns:unset; gap:0; transition:transform .4s ease; }
+  .nicho-slide { min-width:88%; max-width:88%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
+
+  /* Nichos card en mobile */
+  .nicho-index-card { background:var(--blanco); border:2px solid rgba(26,111,204,0.08); border-radius:var(--radio-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:var(--transicion); }
+  .nicho-index-header { display:flex; align-items:center; gap:12px; }
+  .nicho-index-icono { width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,#e8f0fe,#e8f5ee); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+  .nicho-index-card h3 { font-size:0.95rem; color:var(--oscuro); }
+  .nicho-index-frase { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.88rem; color:var(--oscuro); line-height:1.4; }
+  .nicho-index-copy { font-size:0.83rem; color:var(--gris-texto); line-height:1.6; flex:1; }
+  .nicho-index-links { display:flex; gap:16px; margin-top:4px; flex-wrap:wrap; }
+  .nicho-link-primary { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); text-decoration:none; }
+  .nicho-link-secondary { font-family:'Raleway',sans-serif; font-weight:600; font-size:0.82rem; color:var(--gris-texto); text-decoration:none; }
 
   /* Precios */
-  .precios-clip { overflow: hidden; }
-  .precios-track { display: flex; grid-template-columns: unset; gap: 0; align-items: unset; transition: transform .4s ease; }
-  .precio-slide { min-width: 88%; max-width: 88%; flex-shrink: 0; padding: 0 8px; box-sizing: border-box; }
-  .precios-dots { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+  .precios-clip { overflow:hidden; }
+  .precios-track { display:flex; grid-template-columns:unset; gap:0; align-items:unset; transition:transform .4s ease; }
+  .precio-slide { min-width:88%; max-width:88%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
 
-  /* Comparativa — sincronizada */
-  .comparativa-wrapper { border-radius: 0; box-shadow: none; background: transparent; margin-top: 0; }
-  .comparativa-table { display: none; }
-  .comparativa-cards { display: block; }
-  .comparativa-clip { overflow: hidden; }
-  .comparativa-track {
-    display: flex;
-    grid-template-columns: unset;
-    gap: 0;
-    transition: transform .4s ease;
-  }
-  .comparativa-slide {
-    min-width: 88%;
-    max-width: 88%;
-    flex-shrink: 0;
-    padding: 0 8px;
-    box-sizing: border-box;
-  }
+  /* Comparativa sincronizada */
+  .comparativa-wrapper { border-radius:0; box-shadow:none; background:transparent; margin-top:0; }
+  .comparativa-table { display:none; }
+  .comparativa-cards { display:block; }
+  .comparativa-clip { overflow:hidden; }
+  .comparativa-track { display:flex; grid-template-columns:unset; gap:0; transition:transform .4s ease; }
+  .comparativa-slide { min-width:88%; max-width:88%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
 
-  /* Plan cards dentro del carrusel */
-  .plan-card {
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
-    border-radius: 24px;
-    padding: 20px;
-  }
-  .plan-card.destacado { border-color: #1E73BE; background: rgba(30,115,190,0.02); }
-  .plan-nombre { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.2rem; color: #1a2332; margin-bottom: 4px; }
-  .plan-etiqueta { display: inline-block; background: #10b981; color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 10px; border-radius: 99px; margin-bottom: 12px; }
-  .plan-precio { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.6rem; color: #1E73BE; margin: 12px 0; }
-  .plan-precio span { font-size: 0.9rem; font-weight: 400; color: #a0aec0; text-decoration: line-through; }
-  .plan-caracteristicas { list-style: none; padding: 0; margin: 16px 0; }
-  .plan-caracteristicas li { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eef2f6; font-size: 0.85rem; }
-  .plan-caracteristicas .feature-name { font-weight: 600; color: #4a5568; }
-  .plan-caracteristicas .feature-value { font-weight: 500; }
-  .plan-btn { display: block; text-align: center; background: #1E73BE; color: white; font-family: 'Raleway', sans-serif; font-weight: 700; padding: 12px 20px; border-radius: 12px; text-decoration: none; margin-top: 16px; transition: all 0.2s; }
-  .plan-btn:hover { background: #155a96; transform: translateY(-2px); }
-  .plan-btn-outline { background: transparent; border: 2px solid #1E73BE; color: #1E73BE; }
-  .plan-btn-outline:hover { background: #1E73BE; color: white; }
+  /* Plan cards */
+  .plan-card { background:#fff; border:2px solid #e2e8f0; border-radius:24px; padding:20px; }
+  .plan-card.destacado { border-color:#1E73BE; background:rgba(30,115,190,0.02); }
+  .plan-nombre { font-family:'Raleway',sans-serif; font-weight:800; font-size:1.2rem; color:#1a2332; margin-bottom:4px; }
+  .plan-etiqueta { display:inline-block; background:#10b981; color:white; font-size:0.65rem; font-weight:700; padding:2px 10px; border-radius:99px; margin-bottom:12px; }
+  .plan-precio { font-family:'Raleway',sans-serif; font-weight:800; font-size:1.6rem; color:#1E73BE; margin:12px 0; }
+  .plan-precio span { font-size:0.9rem; font-weight:400; color:#a0aec0; text-decoration:line-through; }
+  .plan-caracteristicas { list-style:none; padding:0; margin:16px 0; }
+  .plan-caracteristicas li { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #eef2f6; font-size:0.85rem; }
+  .plan-caracteristicas .feature-name { font-weight:600; color:#4a5568; }
+  .plan-caracteristicas .feature-value { font-weight:500; }
+  .plan-btn { display:block; text-align:center; background:#1E73BE; color:white; font-family:'Raleway',sans-serif; font-weight:700; padding:12px 20px; border-radius:12px; text-decoration:none; margin-top:16px; transition:all 0.2s; }
+  .plan-btn:hover { background:#155a96; transform:translateY(-2px); }
+  .plan-btn-outline { background:transparent; border:2px solid #1E73BE; color:#1E73BE; }
+  .plan-btn-outline:hover { background:#1E73BE; color:white; }
 
   /* Clientes */
-  .clientes-clip { overflow: hidden; }
-  .clientes-track { display: flex; grid-template-columns: unset; gap: 0; max-width: unset; margin: 0; transition: transform .4s ease; }
-  .clientes-slide { min-width: 100%; max-width: 100%; flex-shrink: 0; padding: 0 8px; box-sizing: border-box; }
-  .clientes-dots { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+  .clientes-clip { overflow:hidden; }
+  .clientes-track { display:flex; grid-template-columns:unset; gap:0; max-width:unset; margin:0; transition:transform .4s ease; }
+  .cliente-slide { min-width:100%; max-width:100%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
+
+  /* Porque cards en mobile */
+  .porque-item { background:var(--blanco); border-radius:var(--radio-lg); padding:24px 20px; text-align:center; }
+  .porque-icono { font-size:2rem; margin-bottom:12px; }
+  .porque-item h3 { font-size:0.95rem; color:var(--oscuro); margin-bottom:8px; }
+  .porque-item p { font-size:0.83rem; color:var(--gris-texto); line-height:1.6; }
 }
+
+/* Desktop: nichos grid normal */
+@media (min-width:641px) {
+  .nicho-index-card { background:var(--blanco); border:2px solid rgba(26,111,204,0.08); border-radius:var(--radio-lg); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:var(--transicion); }
+  .nicho-index-card:hover { border-color:var(--azul); box-shadow:var(--sombra-hover); transform:translateY(-4px); }
+  .nicho-index-header { display:flex; align-items:center; gap:12px; }
+  .nicho-index-icono { width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,#e8f0fe,#e8f5ee); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+  .nicho-index-card h3 { font-size:0.95rem; color:var(--oscuro); }
+  .nicho-index-frase { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.88rem; color:var(--oscuro); line-height:1.4; }
+  .nicho-index-copy { font-size:0.83rem; color:var(--gris-texto); line-height:1.6; flex:1; }
+  .nicho-index-links { display:flex; gap:16px; margin-top:4px; flex-wrap:wrap; }
+  .nicho-link-primary { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); text-decoration:none; transition:var(--transicion); }
+  .nicho-link-secondary { font-family:'Raleway',sans-serif; font-weight:600; font-size:0.82rem; color:var(--gris-texto); text-decoration:none; transition:var(--transicion); }
+  .nicho-link-primary:hover { color:var(--azul-oscuro); }
+  .nicho-link-secondary:hover { color:var(--azul); }
+}
+
 </style>
 </head>
 
@@ -476,7 +372,7 @@
 <!-- 2. PROBLEMA -->
 <section class="seccion reveal">
   <div class="contenedor">
-    <div class="seccion-kicker" style="text-align:center; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; color:var(--azul); margin-bottom:12px;">El problema real</div>
+    <div class="seccion-kicker" style="text-align:center;font-family:'Raleway',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:12px;">El problema real</div>
     <h2 class="seccion-titulo">¿Sentís que tus consultas llegan por todos lados? </h2>
     <p class="seccion-subtitulo">WhatsApp, Instagram, email... Es un desafío mantener todo en orden.</p>
     <div class="problema-lista">
@@ -510,52 +406,86 @@
 </section>
 
 
-<!-- 4. CÓMO FUNCIONA -->
+<!-- 4. CÓMO FUNCIONA — carrusel mobile 4 slides, texto fijo abajo -->
 <section class="seccion reveal" id="como-funciona">
   <div class="contenedor">
     <h2 class="seccion-titulo">Así funciona.</h2>
     <p class="seccion-subtitulo">Cuatro pasos y tu página trabaja sola.</p>
-    <div class="pasos-grid-4">
-      <div class="paso-card"><div class="paso-numero">1</div><h3>La persona entra y entiende</h3><p>Ve quién sos, cómo trabajás y qué ofrecés. Con claridad, desde el primer segundo.</p></div>
-      <div class="paso-card"><div class="paso-numero">2</div><h3>Entiende cómo avanzar</h3><p>La página la guía hacia el siguiente paso: escribirte, solicitar turno o pagar directamente.</p></div>
-      <div class="paso-card"><div class="paso-numero">3</div><h3>Te escribe o completa el formulario</h3><p>Por WhatsApp o desde la página. Vos respondés cuando podés, sin perder nada.</p></div>
-      <div class="paso-card"><div class="paso-numero">4</div><h3>Cada consulta queda registrada</h3><p>Automáticamente. Sin hacer nada. Al final del mes abrís un archivo y ves quién te contactó y cuándo.</p></div>
+
+    <div data-car="pasos">
+      <div class="pasos-car-clip">
+        <div class="pasos-car-track">
+          <div class="paso-slide"><div class="paso-card"><div class="paso-numero">1</div><h3>La persona entra y entiende</h3><p>Ve quién sos, cómo trabajás y qué ofrecés. Con claridad, desde el primer segundo.</p></div></div>
+          <div class="paso-slide"><div class="paso-card"><div class="paso-numero">2</div><h3>Entiende cómo avanzar</h3><p>La página la guía hacia el siguiente paso: escribirte, solicitar turno o pagar directamente.</p></div></div>
+          <div class="paso-slide"><div class="paso-card"><div class="paso-numero">3</div><h3>Te escribe o completa el formulario</h3><p>Por WhatsApp o desde la página. Vos respondés cuando podés, sin perder nada.</p></div></div>
+          <div class="paso-slide"><div class="paso-card"><div class="paso-numero">4</div><h3>Cada consulta queda registrada</h3><p>Automáticamente. Sin hacer nada. Al final del mes abrís un archivo y ves quién te contactó y cuándo.</p></div></div>
+        </div>
+      </div>
+      <div class="car-dots">
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+        <button class="car-dot"></button>
+        <button class="car-dot"></button>
+      </div>
     </div>
-    <div style="text-align:center; margin-top:40px; font-family:'Raleway',sans-serif; font-weight:600; color:var(--gris-texto);">
+
+    <!-- Texto fijo — no entra en el carrusel -->
+    <div style="text-align:center;margin-top:32px;font-family:'Raleway',sans-serif;font-weight:600;color:var(--gris-texto);">
       Vos solo respondés. <strong style="color:var(--oscuro);">Con todo mucho más ordenado.</strong>
     </div>
   </div>
 </section>
 
 
-<!-- 5. POR QUÉ ELEGIRNOS -->
+<!-- 5. POR QUÉ ELEGIRNOS — carrusel mobile 3 slides de 2 cards -->
 <section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿Por qué elegirnos?</h2>
     <p class="seccion-subtitulo">Lo que nos diferencia de cualquier otra opción del mercado.</p>
-    <div class="porque-grid">
-      <div class="porque-item"><div class="porque-icono">⏱️</div><h3>Online en 72 horas</h3><p>Mientras otros tardan semanas en entregar algo, vos ya estás online. Sin esperas, sin excusas.</p></div>
-      <div class="porque-item"><div class="porque-icono">💰</div><h3>Pago único, sin sorpresas</h3><p>Pagás una vez y la página ya es tuya. Sin mensualidades, sin renovaciones, sin costos ocultos.</p></div>
-      <div class="porque-item"><div class="porque-icono">🛡️</div><h3>No se rompe, no da trabajo</h3><p>No depende de plataformas que fallan, que te cobran más o que necesitan actualizaciones constantes.</p></div>
-      <div class="porque-item"><div class="porque-icono">📱</div><h3>Perfecta en celular</h3><p>La mayoría te va a buscar desde el teléfono. Tu página se ve impecable en cualquier pantalla.</p></div>
-      <div class="porque-item"><div class="porque-icono">🔧</div><h3>Cambios en 48 horas</h3><p>¿Cambió tu dirección, tus servicios o tu foto? Avisás y lo resolvemos en menos de 48 horas.</p></div>
-      <div class="porque-item"><div class="porque-icono">🎯</div><h3>Hecha para convertir</h3><p>No está armada para decorar. Está armada para que la persona entienda y te contacte.</p></div>
+
+    <div data-car="porque">
+      <div class="porque-car-clip">
+        <div class="porque-car-track">
+          <div class="porque-slide">
+            <div class="porque-item"><div class="porque-icono">⏱️</div><h3>Online en 72 horas</h3><p>Mientras otros tardan semanas en entregar algo, vos ya estás online. Sin esperas, sin excusas.</p></div>
+            <div class="porque-item"><div class="porque-icono">💰</div><h3>Pago único, sin sorpresas</h3><p>Pagás una vez y la página ya es tuya. Sin mensualidades, sin renovaciones, sin costos ocultos.</p></div>
+          </div>
+          <div class="porque-slide">
+            <div class="porque-item"><div class="porque-icono">🛡️</div><h3>No se rompe, no da trabajo</h3><p>No depende de plataformas que fallan, que te cobran más o que necesitan actualizaciones constantes.</p></div>
+            <div class="porque-item"><div class="porque-icono">📱</div><h3>Perfecta en celular</h3><p>La mayoría te va a buscar desde el teléfono. Tu página se ve impecable en cualquier pantalla.</p></div>
+          </div>
+          <div class="porque-slide">
+            <div class="porque-item"><div class="porque-icono">🔧</div><h3>Cambios en 48 horas</h3><p>¿Cambió tu dirección, tus servicios o tu foto? Avisás y lo resolvemos en menos de 48 horas.</p></div>
+            <div class="porque-item"><div class="porque-icono">🎯</div><h3>Hecha para convertir</h3><p>No está armada para decorar. Está armada para que la persona entienda y te contacte.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="car-dots">
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+        <button class="car-dot"></button>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- 6. PRECIOS -->
+<!-- 6. PRECIOS — carrusel mobile con dots arriba y abajo -->
 <section class="seccion reveal" id="precios">
   <div class="contenedor">
     <h2 class="seccion-titulo">Distintas formas de empezar.</h2>
     <p class="precios-intro">No todos necesitan lo mismo. Por eso hay distintas opciones según el punto en el que estés hoy.</p>
 
-    <!-- CARRUSEL PRECIOS -->
-    <div class="precios-outer" data-carrusel-precios>
+    <div data-car="precios">
+      <!-- Dots ARRIBA -->
+      <div class="car-dots" id="precios-dots-top">
+        <button class="car-dot"></button>
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+      </div>
+
       <div class="precios-clip">
         <div class="precios-track">
-
           <div class="precio-slide">
             <div class="precio-card">
               <div class="precio-nombre">Presencia Inicial</div>
@@ -568,7 +498,6 @@
               <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
             </div>
           </div>
-
           <div class="precio-slide">
             <div class="precio-card precio-card-destacado">
               <div class="precio-etiqueta">⭐ Recomendado</div>
@@ -583,7 +512,6 @@
               <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." target="_blank" class="precio-btn precio-btn-primario">Quiero esta →</a>
             </div>
           </div>
-
           <div class="precio-slide">
             <div class="precio-card">
               <div class="precio-nombre">Presencia Completa + Cobro</div>
@@ -596,144 +524,152 @@
               <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
             </div>
           </div>
-
         </div>
       </div>
-      <!-- Dots únicos — controlan precios Y comparativa -->
-      <div class="precios-dots">
-        <button class="precio-dot"></button>
-        <button class="precio-dot activo"></button>
-        <button class="precio-dot"></button>
-      </div>
-    </div>
 
-    <!-- TABLA COMPARATIVA: desktop tabla, mobile carrusel sincronizado -->
-    <div class="comparativa-wrapper">
-
-      <!-- Desktop -->
-      <table class="comparativa-table">
-        <thead>
-          <tr><th></th><th>Presencia Inicial</th><th class="destacado-col">⭐ Presencia Completa</th><th>Presencia Completa + Cobro</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Tipo de página</td><td>Landing page (una sola página)</td><td class="destacado-col">Sitio web completo (múltiples páginas)</td><td>Sitio web completo</td></tr>
-          <tr><td>Navegación</td><td>❌ Solo scrollear</td><td class="destacado-col">✅ Menú profesional</td><td>✅ Menú profesional</td></tr>
-          <tr><td>WhatsApp integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
-          <tr><td>Instagram integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
-          <tr><td>Formulario de consultas (mail)</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
-          <tr><td>Registro de TODAS las consultas</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
-          <tr><td>Mercado Pago integrado</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí</td></tr>
-          <tr><td>Registro de TODOS los pagos</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí (nombre, DNI, monto, fecha, tipo)</td></tr>
-          <tr><td><strong>Precio de lanzamiento</strong></td><td><strong>$100.000</strong></td><td class="destacado-col"><strong>$150.000</strong></td><td><strong>$250.000</strong></td></tr>
-          <tr>
-            <td></td>
-            <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." style="color:#1E73BE;">Consultar →</a></td>
-            <td class="destacado-col"><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." style="color:#1E73BE; font-weight:700;">Quiero esta →</a></td>
-            <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." style="color:#1E73BE;">Consultar →</a></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Mobile: carrusel sincronizado con precios -->
-      <div class="comparativa-cards">
-        <div class="comparativa-clip">
-          <div class="comparativa-track">
-
-            <div class="comparativa-slide">
-              <div class="plan-card">
-                <div class="plan-nombre">Presencia Inicial</div>
-                <div class="plan-precio"><span>$150.000</span> $100.000</div>
-                <ul class="plan-caracteristicas">
-                  <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Landing page</span></li>
-                  <li><span class="feature-name">Navegación:</span><span class="feature-value">❌ Solo scrollear</span></li>
-                  <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Formulario:</span><span class="feature-value">❌ No</span></li>
-                  <li><span class="feature-name">Registro consultas:</span><span class="feature-value">❌ No</span></li>
-                  <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
-                  <li><span class="feature-name">Registro pagos:</span><span class="feature-value">❌ No</span></li>
-                </ul>
-                <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." class="plan-btn plan-btn-outline">Consultar →</a>
+      <!-- Comparativa sincronizada -->
+      <div class="comparativa-wrapper">
+        <table class="comparativa-table">
+          <thead>
+            <tr><th></th><th>Presencia Inicial</th><th class="destacado-col">⭐ Presencia Completa</th><th>Presencia Completa + Cobro</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tipo de página</td><td>Landing page (una sola página)</td><td class="destacado-col">Sitio web completo (múltiples páginas)</td><td>Sitio web completo</td></tr>
+            <tr><td>Navegación</td><td>❌ Solo scrollear</td><td class="destacado-col">✅ Menú profesional</td><td>✅ Menú profesional</td></tr>
+            <tr><td>WhatsApp integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+            <tr><td>Instagram integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+            <tr><td>Formulario de consultas (mail)</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+            <tr><td>Registro de TODAS las consultas</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+            <tr><td>Mercado Pago integrado</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí</td></tr>
+            <tr><td>Registro de TODOS los pagos</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí (nombre, DNI, monto, fecha, tipo)</td></tr>
+            <tr><td><strong>Precio de lanzamiento</strong></td><td><strong>$100.000</strong></td><td class="destacado-col"><strong>$150.000</strong></td><td><strong>$250.000</strong></td></tr>
+            <tr>
+              <td></td>
+              <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." style="color:#1E73BE;">Consultar →</a></td>
+              <td class="destacado-col"><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." style="color:#1E73BE;font-weight:700;">Quiero esta →</a></td>
+              <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." style="color:#1E73BE;">Consultar →</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="comparativa-cards">
+          <div class="comparativa-clip">
+            <div class="comparativa-track">
+              <div class="comparativa-slide">
+                <div class="plan-card">
+                  <div class="plan-nombre">Presencia Inicial</div>
+                  <div class="plan-precio"><span>$150.000</span> $100.000</div>
+                  <ul class="plan-caracteristicas">
+                    <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Landing page</span></li>
+                    <li><span class="feature-name">Navegación:</span><span class="feature-value">❌ Solo scrollear</span></li>
+                    <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Formulario:</span><span class="feature-value">❌ No</span></li>
+                    <li><span class="feature-name">Registro consultas:</span><span class="feature-value">❌ No</span></li>
+                    <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
+                    <li><span class="feature-name">Registro pagos:</span><span class="feature-value">❌ No</span></li>
+                  </ul>
+                  <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." class="plan-btn plan-btn-outline">Consultar →</a>
+                </div>
+              </div>
+              <div class="comparativa-slide">
+                <div class="plan-card destacado">
+                  <div class="plan-etiqueta">⭐ Recomendado</div>
+                  <div class="plan-nombre">Presencia Completa</div>
+                  <div class="plan-precio"><span>$250.000</span> $150.000</div>
+                  <ul class="plan-caracteristicas">
+                    <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
+                    <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
+                    <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Formulario:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Registro consultas:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
+                    <li><span class="feature-name">Registro pagos:</span><span class="feature-value">❌ No</span></li>
+                  </ul>
+                  <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." class="plan-btn">Quiero esta →</a>
+                </div>
+              </div>
+              <div class="comparativa-slide">
+                <div class="plan-card">
+                  <div class="plan-nombre">Presencia Completa + Cobro</div>
+                  <div class="plan-precio"><span>$450.000</span> $250.000</div>
+                  <ul class="plan-caracteristicas">
+                    <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
+                    <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
+                    <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Formulario:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Registro consultas:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">✅ Sí</span></li>
+                    <li><span class="feature-name">Registro pagos:</span><span class="feature-value">✅ Sí</span></li>
+                  </ul>
+                  <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." class="plan-btn plan-btn-outline">Consultar →</a>
+                </div>
               </div>
             </div>
-
-            <div class="comparativa-slide">
-              <div class="plan-card destacado">
-                <div class="plan-etiqueta">⭐ Recomendado</div>
-                <div class="plan-nombre">Presencia Completa</div>
-                <div class="plan-precio"><span>$250.000</span> $150.000</div>
-                <ul class="plan-caracteristicas">
-                  <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
-                  <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
-                  <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Formulario:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Registro consultas:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
-                  <li><span class="feature-name">Registro pagos:</span><span class="feature-value">❌ No</span></li>
-                </ul>
-                <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." class="plan-btn">Quiero esta →</a>
-              </div>
-            </div>
-
-            <div class="comparativa-slide">
-              <div class="plan-card">
-                <div class="plan-nombre">Presencia Completa + Cobro</div>
-                <div class="plan-precio"><span>$450.000</span> $250.000</div>
-                <ul class="plan-caracteristicas">
-                  <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
-                  <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
-                  <li><span class="feature-name">WhatsApp:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Instagram:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Formulario:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Registro consultas:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">✅ Sí</span></li>
-                  <li><span class="feature-name">Registro pagos:</span><span class="feature-value">✅ Sí</span></li>
-                </ul>
-                <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." class="plan-btn plan-btn-outline">Consultar →</a>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
 
+      <!-- Dots ABAJO -->
+      <div class="car-dots" id="precios-dots-bot">
+        <button class="car-dot"></button>
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+      </div>
     </div>
 
     <div class="precios-lanzamiento">
       <p><strong>🚀 Si estás leyendo esto, todavía estás a tiempo de obtener todos nuestros beneficios al precio de lanzamiento. </strong> Aprovechá esta oportunidad única y empezá hoy. Te estamos esperando.</p>
     </div>
-
   </div>
 </section>
 
 
-<!-- 7. A QUIÉNES AYUDAMOS -->
+<!-- 7. A QUIÉNES AYUDAMOS — carrusel mobile 3 slides, botón fijo abajo -->
 <section class="seccion seccion-alt reveal">
   <div class="contenedor">
     <h2 class="seccion-titulo">¿A quiénes ayudamos?</h2>
     <p class="seccion-subtitulo">Trabajamos con especialistas independientes de distintas áreas. Encontrá la tuya.</p>
-    <div class="nichos-index-grid">
-      <div class="nicho-index-card">
-        <div class="nicho-index-header"><div class="nicho-index-icono">🧠</div><h3>Psicólogos</h3></div>
-        <p class="nicho-index-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
-        <p class="nicho-index-copy">No en una plataforma que decide por vos. En un espacio propio donde tu enfoque y tu forma de trabajar puedan ser comprendidos antes del primer contacto.</p>
-        <div class="nicho-index-links"><a href="profesionales.html#psicologo" class="nicho-link-primary">Conocé más →</a><a href="demos/psicologo/index.html" class="nicho-link-secondary">Ver demo</a></div>
+
+    <div data-car="nichos">
+      <div class="nichos-car-clip">
+        <div class="nichos-car-track">
+          <div class="nicho-slide">
+            <div class="nicho-index-card">
+              <div class="nicho-index-header"><div class="nicho-index-icono">🧠</div><h3>Psicólogos</h3></div>
+              <p class="nicho-index-frase">Hay pacientes que te están buscando. ¿Pueden encontrarte?</p>
+              <p class="nicho-index-copy">No en una plataforma que decide por vos. En un espacio propio donde tu enfoque y tu forma de trabajar puedan ser comprendidos antes del primer contacto.</p>
+              <div class="nicho-index-links"><a href="profesionales.html#psicologo" class="nicho-link-primary">Conocé más →</a><a href="demos/psicologo/index.html" class="nicho-link-secondary">Ver demo</a></div>
+            </div>
+          </div>
+          <div class="nicho-slide">
+            <div class="nicho-index-card">
+              <div class="nicho-index-header"><div class="nicho-index-icono">⚖️</div><h3>Abogados</h3></div>
+              <p class="nicho-index-frase">Antes de contactarlo, ya lo evaluaron.</p>
+              <p class="nicho-index-copy">Sus clientes llegan por recomendación. Pero antes de escribirle, buscan su nombre. Y deciden en base a lo que ven.</p>
+              <div class="nicho-index-links"><a href="profesionales.html#abogado" class="nicho-link-primary">Conocé más →</a><a href="demos/abogado/index.html" class="nicho-link-secondary">Ver demo</a></div>
+            </div>
+          </div>
+          <div class="nicho-slide">
+            <div class="nicho-index-card">
+              <div class="nicho-index-header"><div class="nicho-index-icono">🦷</div><h3>Odontólogos</h3></div>
+              <p class="nicho-index-frase">Entre que lo ven y lo eligen, hay un paso.</p>
+              <p class="nicho-index-copy">El paciente no decide en redes. Decide cuando busca más información. Si no la encuentra clara, elige al consultorio que sí se la da.</p>
+              <div class="nicho-index-links"><a href="profesionales.html#odontologo" class="nicho-link-primary">Conocé más →</a><a href="demos/odontologo/index.html" class="nicho-link-secondary">Ver demo</a></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="nicho-index-card">
-        <div class="nicho-index-header"><div class="nicho-index-icono">⚖️</div><h3>Abogados</h3></div>
-        <p class="nicho-index-frase">Antes de contactarlo, ya lo evaluaron.</p>
-        <p class="nicho-index-copy">Sus clientes llegan por recomendación. Pero antes de escribirle, buscan su nombre. Y deciden en base a lo que ven.</p>
-        <div class="nicho-index-links"><a href="profesionales.html#abogado" class="nicho-link-primary">Conocé más →</a><a href="demos/abogado/index.html" class="nicho-link-secondary">Ver demo</a></div>
-      </div>
-      <div class="nicho-index-card">
-        <div class="nicho-index-header"><div class="nicho-index-icono">🦷</div><h3>Odontólogos</h3></div>
-        <p class="nicho-index-frase">Entre que lo ven y lo eligen, hay un paso.</p>
-        <p class="nicho-index-copy">El paciente no decide en redes. Decide cuando busca más información. Si no la encuentra clara, elige al consultorio que sí se la da.</p>
-        <div class="nicho-index-links"><a href="profesionales.html#odontologo" class="nicho-link-primary">Conocé más →</a><a href="demos/odontologo/index.html" class="nicho-link-secondary">Ver demo</a></div>
+      <div class="car-dots">
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+        <button class="car-dot"></button>
       </div>
     </div>
-    <div style="text-align:center; margin-top:40px;">
+
+    <!-- Botón fijo — fuera del carrusel -->
+    <div style="text-align:center;margin-top:40px;">
       <a href="profesionales.html" class="btn btn-outline">Ver todos los profesionales →</a>
     </div>
   </div>
@@ -748,13 +684,13 @@
       <h2>Algunos de nuestros clientes</h2>
       <p class="seccion-sub">Profesionales que ya tienen su presencia online.</p>
     </div>
-    <div class="clientes-outer reveal" data-carrusel-clientes>
+    <div class="reveal" data-car="clientes">
       <div class="clientes-clip">
         <div class="clientes-track">
-          <div class="clientes-slide">
+          <div class="cliente-slide">
             <div class="cliente-card">
               <div class="cliente-browser">
-                <div class="cliente-dots"><div></div><div></div><div></div></div>
+                <div class="cliente-dots-bar"><div></div><div></div><div></div></div>
                 <div class="cliente-url">presenciaonline.net/…/yeika</div>
               </div>
               <img src="assets/img/cliente-yeika.jpg" alt="Sitio web Yeika – Presencia Online">
@@ -765,10 +701,10 @@
               </div>
             </div>
           </div>
-          <div class="clientes-slide">
+          <div class="cliente-slide">
             <div class="cliente-card">
               <div class="cliente-browser">
-                <div class="cliente-dots"><div></div><div></div><div></div></div>
+                <div class="cliente-dots-bar"><div></div><div></div><div></div></div>
                 <div class="cliente-url">presenciaonline.net/…/cima</div>
               </div>
               <img src="assets/img/cliente-cima.jpg" alt="Sitio web CIMA – Presencia Online">
@@ -781,9 +717,9 @@
           </div>
         </div>
       </div>
-      <div class="clientes-dots">
-        <button class="cliente-dot activo"></button>
-        <button class="cliente-dot"></button>
+      <div class="car-dots">
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
       </div>
     </div>
   </div>
@@ -795,7 +731,7 @@
   <div class="contenedor">
     <div class="quien-inner">
       <div class="quien-texto">
-        <div style="font-family:'Raleway',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; color:var(--azul); margin-bottom:12px;">Quiénes somos</div>
+        <div style="font-family:'Raleway',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-bottom:12px;">Quiénes somos</div>
         <h2>Un equipo argentino especializado en profesionales independientes.</h2>
         <p style="margin-top:16px;">Somos desarrolladores web con foco en un solo tipo de cliente: especialistas independientes que necesitan presencia digital profesional sin complicaciones técnicas ni costos permanentes.</p>
         <p>Cada página que entregamos está pensada desde cero para la profesión de quien la va a usar — con la estructura, el texto y el flujo que su cliente necesita ver para decidir contactarse.</p>
@@ -1056,104 +992,169 @@ formPago.addEventListener('submit', function(e) {
     });
 });
 
-// ── Carrusel Precios + Comparativa sincronizados ──
-(function() {
-  var preciosOuter = document.querySelector('[data-carrusel-precios]');
-  if (!preciosOuter) return;
+// ══════════════════════════════════════════════════════
+// SISTEMA DE CARRUSELES UNIFICADO
+// Cada [data-car] es un carrusel independiente.
+// El carrusel de precios además sincroniza la comparativa
+// y duplica los dots arriba y abajo.
+// ══════════════════════════════════════════════════════
 
-  var preciosClip   = preciosOuter.querySelector('.precios-clip');
-  var preciosTrack  = preciosOuter.querySelector('.precios-track');
-  var preciosSlides = preciosOuter.querySelectorAll('.precio-slide');
-  var dots          = preciosOuter.querySelectorAll('.precio-dot');
+function esMobile() { return window.innerWidth <= 640; }
 
-  var compClip  = document.querySelector('.comparativa-clip');
-  var compTrack = document.querySelector('.comparativa-track');
-  var compSlides = compTrack ? compTrack.querySelectorAll('.comparativa-slide') : [];
+// ── Fábrica de carrusel genérico ──
+function crearCarrusel(cfg) {
+  var clip   = cfg.clip;
+  var track  = cfg.track;
+  var slides = cfg.slides;
+  var allDotGroups = cfg.allDotGroups; // array de NodeLists
+  var current = cfg.start || 0;
+  var extraTrack = cfg.extraTrack || null;
+  var extraClip  = cfg.extraClip  || null;
+  var extraSlides = cfg.extraSlides || null;
 
-  var current = 1;
-
-  function esMobile() { return window.innerWidth <= 640; }
-
-  function moverPrecios(n) {
-    var slideW = preciosSlides[0].offsetWidth;
-    var offset = (n * slideW) - (preciosClip.offsetWidth - slideW) / 2;
-    preciosTrack.style.transform = 'translateX(-' + Math.max(0, offset) + 'px)';
+  function calcOffset(slideEl, clipEl, idx) {
+    var sw = slideEl.offsetWidth;
+    // Si los slides son 100% (clientes, pasos sin centrado) solo offset simple
+    if (sw >= clipEl.offsetWidth * 0.95) {
+      return idx * sw;
+    }
+    // Slides más angostos (88%): centrar el activo
+    var offset = idx * sw - (clipEl.offsetWidth - sw) / 2;
+    return Math.max(0, offset);
   }
 
-  function moverComparativa(n) {
-    if (!compClip || !compTrack || compSlides.length === 0) return;
-    var slideW = compSlides[0].offsetWidth;
-    var offset = (n * slideW) - (compClip.offsetWidth - slideW) / 2;
-    compTrack.style.transform = 'translateX(-' + Math.max(0, offset) + 'px)';
+  function moverTrack(tr, sls, cl, n) {
+    if (!tr || !sls || sls.length === 0) return;
+    tr.style.transform = 'translateX(-' + calcOffset(sls[0], cl, n) + 'px)';
   }
 
-  function goTo(n) {
-    if (!esMobile()) return;
-    current = Math.max(0, Math.min(n, preciosSlides.length - 1));
-    moverPrecios(current);
-    moverComparativa(current);
-    dots.forEach(function(d, i) { d.classList.toggle('activo', i === current); });
-  }
-
-  dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
-
-  // Swipe en precios
-  var startX = 0;
-  preciosClip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-  preciosClip.addEventListener('touchend', function(e) {
-    var diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
-  });
-
-  // Swipe en comparativa también navega
-  if (compClip) {
-    compClip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-    compClip.addEventListener('touchend', function(e) {
-      var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+  function actualizarDots(n) {
+    allDotGroups.forEach(function(dotGroup) {
+      dotGroup.forEach(function(d, i) { d.classList.toggle('activo', i === n); });
     });
   }
 
-  window.addEventListener('resize', function() {
-    if (!esMobile()) {
-      preciosTrack.style.transform = '';
-      if (compTrack) compTrack.style.transform = '';
-    } else {
-      goTo(current);
-    }
-  });
-
-  if (esMobile()) setTimeout(function() { goTo(1); }, 100);
-})();
-
-// ── Carrusel Clientes ──
-(function() {
-  var outer = document.querySelector('[data-carrusel-clientes]');
-  if (!outer) return;
-  var clip   = outer.querySelector('.clientes-clip');
-  var track  = outer.querySelector('.clientes-track');
-  var slides = outer.querySelectorAll('.clientes-slide');
-  var dots   = outer.querySelectorAll('.cliente-dot');
-  var current = 0;
-  function esMobile() { return window.innerWidth <= 640; }
   function goTo(n) {
     if (!esMobile()) return;
     current = Math.max(0, Math.min(n, slides.length - 1));
-    track.style.transform = 'translateX(-' + (current * clip.offsetWidth) + 'px)';
-    dots.forEach(function(d, i) { d.classList.toggle('activo', i === current); });
+    moverTrack(track, slides, clip, current);
+    if (extraTrack && extraSlides && extraClip) {
+      moverTrack(extraTrack, extraSlides, extraClip, current);
+    }
+    actualizarDots(current);
   }
-  dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+
+  // Conectar todos los dots
+  allDotGroups.forEach(function(dotGroup) {
+    dotGroup.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTo(i); });
+    });
+  });
+
+  // Swipe en clip principal
   var startX = 0;
   clip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
   clip.addEventListener('touchend', function(e) {
     var diff = startX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
   });
+
+  // Swipe en track extra (comparativa)
+  if (extraClip) {
+    extraClip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+    extraClip.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    });
+  }
+
+  // Reset en resize
   window.addEventListener('resize', function() {
-    if (!esMobile()) track.style.transform = '';
-    else goTo(current);
+    if (!esMobile()) {
+      track.style.transform = '';
+      if (extraTrack) extraTrack.style.transform = '';
+    } else {
+      goTo(current);
+    }
+  });
+
+  // Inicializar
+  if (esMobile()) setTimeout(function() { goTo(current); }, 120);
+}
+
+// ── PASOS ──
+(function() {
+  var outer = document.querySelector('[data-car="pasos"]');
+  if (!outer) return;
+  crearCarrusel({
+    clip:   outer.querySelector('.pasos-car-clip'),
+    track:  outer.querySelector('.pasos-car-track'),
+    slides: outer.querySelectorAll('.paso-slide'),
+    allDotGroups: [outer.querySelectorAll('.car-dot')],
+    start: 0
   });
 })();
+
+// ── PORQUE ──
+(function() {
+  var outer = document.querySelector('[data-car="porque"]');
+  if (!outer) return;
+  crearCarrusel({
+    clip:   outer.querySelector('.porque-car-clip'),
+    track:  outer.querySelector('.porque-car-track'),
+    slides: outer.querySelectorAll('.porque-slide'),
+    allDotGroups: [outer.querySelectorAll('.car-dot')],
+    start: 0
+  });
+})();
+
+// ── PRECIOS + COMPARATIVA sincronizados, dots arriba y abajo ──
+(function() {
+  var outer = document.querySelector('[data-car="precios"]');
+  if (!outer) return;
+  var dotsTop = document.getElementById('precios-dots-top');
+  var dotsBot = document.getElementById('precios-dots-bot');
+  crearCarrusel({
+    clip:   outer.querySelector('.precios-clip'),
+    track:  outer.querySelector('.precios-track'),
+    slides: outer.querySelectorAll('.precio-slide'),
+    allDotGroups: [
+      dotsTop ? dotsTop.querySelectorAll('.car-dot') : [],
+      dotsBot ? dotsBot.querySelectorAll('.car-dot') : []
+    ],
+    start: 1,
+    extraClip:   document.querySelector('.comparativa-clip'),
+    extraTrack:  document.querySelector('.comparativa-track'),
+    extraSlides: document.querySelectorAll('.comparativa-slide')
+  });
+})();
+
+// ── NICHOS ──
+(function() {
+  var outer = document.querySelector('[data-car="nichos"]');
+  if (!outer) return;
+  crearCarrusel({
+    clip:   outer.querySelector('.nichos-car-clip'),
+    track:  outer.querySelector('.nichos-car-track'),
+    slides: outer.querySelectorAll('.nicho-slide'),
+    allDotGroups: [outer.querySelectorAll('.car-dot')],
+    start: 0
+  });
+})();
+
+// ── CLIENTES ──
+(function() {
+  var outer = document.querySelector('[data-car="clientes"]');
+  if (!outer) return;
+  crearCarrusel({
+    clip:   outer.querySelector('.clientes-clip'),
+    track:  outer.querySelector('.clientes-track'),
+    slides: outer.querySelectorAll('.cliente-slide'),
+    allDotGroups: [outer.querySelectorAll('.car-dot')],
+    start: 0
+  });
+})();
+
 </script>
 
 </body>
