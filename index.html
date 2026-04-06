@@ -695,20 +695,69 @@
 .mp-bloque-btn-ghost:hover { background: rgba(0,158,227,0.07); box-shadow: none; }
 .mp-bloque-nota { font-size: 0.75rem; color: #64748b; margin-top: 12px; }
 
-/* ── MODAL PAGO ── */
-.modal-pago { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 10000; justify-content: center; align-items: center; font-family: 'Lato', sans-serif; }
-.modal-contenido { background: var(--blanco); border-radius: var(--radio-lg); max-width: 500px; width: 90%; padding: 28px; position: relative; box-shadow: var(--sombra-hover); }
-.modal-contenido h3 { font-size: 1.3rem; margin-bottom: 12px; }
-.modal-contenido p { margin-bottom: 20px; font-size: 0.9rem; color: var(--gris-texto); }
-.modal-form .form-grupo { margin-bottom: 18px; }
-.modal-form label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 5px; color: var(--oscuro); }
-.modal-form input { width: 100%; padding: 12px; border: 2px solid rgba(26,111,204,0.12); border-radius: var(--radio); font-family: 'Lato', sans-serif; font-size: 0.9rem; transition: var(--transicion); }
-.modal-form input:focus { border-color: var(--azul); outline: none; }
-.modal-botones { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; }
-.modal-botones .btn { padding: 10px 20px; font-size: 0.9rem; }
-.modal-botones .btn-secundario { background: #e2e8f0; color: #1a2332; border: none; }
-.modal-botones .btn-secundario:hover { background: #cbd5e1; transform: none; }
-.error-msg { color: #e53e3e; font-size: 0.8rem; margin-top: 4px; display: none; }
+/* ── CLIENTES CARRUSEL ── */
+.cliente-card {
+  background: var(--blanco);
+  border: 1.5px solid rgba(26,111,204,0.08);
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  transition: var(--transicion);
+}
+.cliente-card:hover { box-shadow: var(--sombra-hover); transform: translateY(-4px); }
+.cliente-browser {
+  background: var(--gris-claro); padding: 8px 12px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.cliente-dots { display: flex; gap: 5px; }
+.cliente-dots div { width: 9px; height: 9px; border-radius: 50%; background: #e2e8f0; }
+.cliente-url {
+  flex: 1; background: var(--blanco); border-radius: 4px;
+  padding: 3px 10px; font-size: 10px; color: var(--gris-texto);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.cliente-card img { width: 100%; display: block; object-fit: cover; height: 200px; }
+.cliente-info { padding: 18px 20px; }
+.cliente-nombre { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--oscuro); margin-bottom: 2px; }
+.cliente-rubro { font-size: 0.82rem; color: var(--gris-texto); margin-bottom: 12px; }
+.cliente-link { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--azul); text-decoration: none; }
+.cliente-link:hover { color: var(--azul-oscuro); }
+
+/* Desktop: grid 2 col */
+.clientes-clip { overflow: visible; }
+.clientes-track { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 860px; margin: 0 auto; transition: none; }
+.clientes-slide { min-width: unset; }
+.clientes-dots { display: none; }
+
+/* ── PRECIOS CARRUSEL ── */
+/* Desktop: igual que antes */
+.precios-clip { overflow: visible; }
+.precios-track { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: start; transition: none; }
+.precio-slide { min-width: unset; display: flex; flex-direction: column; }
+.precio-slide .precio-card { flex: 1; }
+.precios-dots { display: none; }
+
+/* Mobile: ambos en carrusel */
+@media (max-width: 640px) {
+  .clientes-clip { overflow: hidden; }
+  .clientes-track { display: flex; grid-template-columns: unset; gap: 0; max-width: unset; margin: 0; transition: transform .4s ease; }
+  .clientes-slide { min-width: 100%; max-width: 100%; flex-shrink: 0; padding: 0 8px; box-sizing: border-box; }
+  .clientes-dots { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+
+  .precios-clip { overflow: hidden; }
+  .precios-track { display: flex; grid-template-columns: unset; gap: 0; align-items: unset; transition: transform .4s ease; }
+  .precio-slide { min-width: 88%; max-width: 88%; flex-shrink: 0; padding: 0 8px; box-sizing: border-box; }
+  .precios-dots { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+}
+
+/* Dots compartidos */
+.cliente-dot, .precio-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(26,111,204,0.25);
+  border: none; padding: 0; cursor: pointer;
+  transition: background .2s; -webkit-appearance: none; appearance: none;
+}
+.cliente-dot.activo, .precio-dot.activo { background: var(--azul); }
 </style>
 </head>
 
@@ -912,55 +961,70 @@
     <h2 class="seccion-titulo">Distintas formas de empezar.</h2>
     <p class="precios-intro">No todos necesitan lo mismo. Por eso hay distintas opciones según el punto en el que estés hoy.</p>
 
-    <div class="precios-grid">
+    <div class="precios-outer" data-carrusel-precios>
+      <div class="precios-clip">
+        <div class="precios-track">
 
-      <!-- OPCIÓN 1 -->
-      <div class="precio-card">
-        <div class="precio-nombre">Presencia Inicial</div>
-        <div class="precio-bajada">Landing page simple de una sola página.</div>
-        <div class="precio-monto-wrap">
-          <span class="precio-tachado">$150.000</span>
-          <span class="precio-actual">$100.000</span>
+          <!-- OPCIÓN 1 -->
+          <div class="precio-slide">
+            <div class="precio-card">
+              <div class="precio-nombre">Presencia Inicial</div>
+              <div class="precio-bajada">Landing page simple de una sola página.</div>
+              <div class="precio-monto-wrap">
+                <span class="precio-tachado">$150.000</span>
+                <span class="precio-actual">$100.000</span>
+              </div>
+              <div class="precio-desc">↓ Precio de lanzamiento</div>
+              <div class="precio-divider"></div>
+              <p class="precio-texto">Todo en una misma página. El menú te lleva a las distintas secciones. Para empezar si no tenés tu propia web.</p>
+              <p class="precio-aclaracion">✓ WhatsApp e Instagram integrados<br>✗ Sin formulario de consultas<br>✗ Sin registro de clientes/pacientes</p>
+              <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
+            </div>
+          </div>
+
+          <!-- OPCIÓN 2 — DESTACADA -->
+          <div class="precio-slide">
+            <div class="precio-card precio-card-destacado">
+              <div class="precio-etiqueta">⭐ Recomendado</div>
+              <div class="precio-nombre">Presencia Completa</div>
+              <div class="precio-bajada">Sitio web completo con navegación profesional.</div>
+              <div class="precio-monto-wrap">
+                <span class="precio-tachado">$250.000</span>
+                <span class="precio-actual">$150.000</span>
+              </div>
+              <div class="precio-desc">↓ Precio de lanzamiento</div>
+              <div class="precio-divider"></div>
+              <p class="precio-texto">Menú con múltiples páginas, estructura profesional. Cada consulta queda registrada automáticamente.</p>
+              <p class="precio-remate">✓ WhatsApp e Instagram<br>✓ Formulario de consultas (llega al mail)<br>✓ Registro de TODAS las consultas</p>
+              <p class="precio-cierre">La mayoría arranca acá.</p>
+              <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." target="_blank" class="precio-btn precio-btn-primario">Quiero esta →</a>
+            </div>
+          </div>
+
+          <!-- OPCIÓN 3 -->
+          <div class="precio-slide">
+            <div class="precio-card">
+              <div class="precio-nombre">Presencia Completa + Cobro</div>
+              <div class="precio-bajada">Sitio completo + pagos integrados.</div>
+              <div class="precio-monto-wrap">
+                <span class="precio-tachado">$450.000</span>
+                <span class="precio-actual">$250.000</span>
+              </div>
+              <div class="precio-desc">↓ Precio de lanzamiento</div>
+              <div class="precio-divider"></div>
+              <p class="precio-texto">Todo el sitio web completo + Mercado Pago integrado. Los datos se recolectan ANTES de pagar.</p>
+              <p class="precio-remate">✓ Todo lo del plan Completa<br>✓ Mercado Pago integrado<br>✓ Registro de TODOS los pagos (nombre, DNI, monto, fecha, tipo)</p>
+              <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
+            </div>
+          </div>
+
         </div>
-        <div class="precio-desc">↓ Precio de lanzamiento</div>
-        <div class="precio-divider"></div>
-        <p class="precio-texto">Todo en una misma página. El menú te lleva a las distintas secciones. Para empezar si no tenés tu propia web.</p>
-        <p class="precio-aclaracion">✓ WhatsApp e Instagram integrados<br>✗ Sin formulario de consultas<br>✗ Sin registro de clientes/pacientes</p>
-        <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
       </div>
-
-      <!-- OPCIÓN 2 — DESTACADA -->
-      <div class="precio-card precio-card-destacado">
-        <div class="precio-etiqueta">⭐ Recomendado</div>
-        <div class="precio-nombre">Presencia Completa</div>
-        <div class="precio-bajada">Sitio web completo con navegación profesional.</div>
-        <div class="precio-monto-wrap">
-          <span class="precio-tachado">$250.000</span>
-          <span class="precio-actual">$150.000</span>
-        </div>
-        <div class="precio-desc">↓ Precio de lanzamiento</div>
-        <div class="precio-divider"></div>
-        <p class="precio-texto">Menú con múltiples páginas, estructura profesional. Cada consulta queda registrada automáticamente.</p>
-        <p class="precio-remate">✓ WhatsApp e Instagram<br>✓ Formulario de consultas (llega al mail)<br>✓ Registro de TODAS las consultas</p>
-        <p class="precio-cierre">La mayoría arranca acá.</p>
-        <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." target="_blank" class="precio-btn precio-btn-primario">Quiero esta →</a>
+      <div class="precios-dots">
+        <button class="precio-dot"></button>
+        <button class="precio-dot activo"></button>
+        <button class="precio-dot"></button>
       </div>
-
-      <!-- OPCIÓN 3 -->
-      <div class="precio-card">
-        <div class="precio-nombre">Presencia Completa + Cobro</div>
-        <div class="precio-bajada">Sitio completo + pagos integrados.</div>
-        <div class="precio-monto-wrap">
-          <span class="precio-tachado">$450.000</span>
-          <span class="precio-actual">$250.000</span>
-        </div>
-        <div class="precio-desc">↓ Precio de lanzamiento</div>
-        <div class="precio-divider"></div>
-        <p class="precio-texto">Todo el sitio web completo + Mercado Pago integrado. Los datos se recolectan ANTES de pagar.</p>
-        <p class="precio-remate">✓ Todo lo del plan Completa<br>✓ Mercado Pago integrado<br>✓ Registro de TODOS los pagos (nombre, DNI, monto, fecha, tipo)</p>
-        <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
-      </div>
-
     </div>
 
     <!-- TABLA COMPARATIVA: En desktop tabla, en mobile tarjetas -->
@@ -1119,52 +1183,49 @@
       <p class="seccion-sub">Profesionales que ya tienen su presencia online.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:860px; margin:0 auto;" class="reveal">
+    <div class="clientes-outer reveal" data-carrusel-clientes>
+      <div class="clientes-clip">
+        <div class="clientes-track">
 
-      <!-- YEIKA -->
-      <div style="background:var(--blanco); border:1.5px solid rgba(26,111,204,0.08); border-radius:var(--radio-lg); overflow:hidden;">
-        <div style="background:var(--gris-claro); padding:8px 12px; display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(0,0,0,0.06);">
-          <div style="display:flex; gap:5px;">
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
+          <!-- YEIKA -->
+          <div class="clientes-slide">
+            <div class="cliente-card">
+              <div class="cliente-browser">
+                <div class="cliente-dots"><div></div><div></div><div></div></div>
+                <div class="cliente-url">presenciaonline.net/…/yeika</div>
+              </div>
+              <img src="assets/img/cliente-yeika.jpg" alt="Sitio web Yeika – Presencia Online">
+              <div class="cliente-info">
+                <p class="cliente-nombre">Yeika</p>
+                <p class="cliente-rubro">Influencer · Contenido digital</p>
+                <a href="https://www.presenciaonline.net/profesionales/influencers/yeika/index.html" target="_blank" class="cliente-link">Ver sitio →</a>
+              </div>
+            </div>
           </div>
-          <div style="flex:1; background:var(--blanco); border-radius:4px; padding:3px 10px; font-size:10px; color:var(--gris-texto); border:1px solid rgba(0,0,0,0.08);">presenciaonline.net/…/yeika</div>
-        </div>
-        <img src="assets/img/cliente-yeika.jpg" alt="Sitio web Yeika – Presencia Online" style="width:100%; display:block; object-fit:cover; height:200px;">
-        <div style="padding:18px 20px;">
-          <p style="font-family:'Raleway',sans-serif; font-weight:700; font-size:0.95rem; color:var(--oscuro); margin-bottom:2px;">Yeika</p>
-          <p style="font-size:0.82rem; color:var(--gris-texto); margin-bottom:12px;">Influencer · Contenido digital</p>
-          <a href="https://www.presenciaonline.net/profesionales/influencers/yeika/index.html" target="_blank" style="font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); text-decoration:none;">Ver sitio →</a>
+
+          <!-- CIMA -->
+          <div class="clientes-slide">
+            <div class="cliente-card">
+              <div class="cliente-browser">
+                <div class="cliente-dots"><div></div><div></div><div></div></div>
+                <div class="cliente-url">presenciaonline.net/…/cima</div>
+              </div>
+              <img src="assets/img/cliente-cima.jpg" alt="Sitio web CIMA – Presencia Online">
+              <div class="cliente-info">
+                <p class="cliente-nombre">Instituto CIMA</p>
+                <p class="cliente-rubro">Coaching Ontológico · Morón</p>
+                <a href="https://www.presenciaonline.net/profesionales/coach/cima/index.html" target="_blank" class="cliente-link">Ver sitio →</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- CIMA -->
-      <div style="background:var(--blanco); border:1.5px solid rgba(26,111,204,0.08); border-radius:var(--radio-lg); overflow:hidden;">
-        <div style="background:var(--gris-claro); padding:8px 12px; display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(0,0,0,0.06);">
-          <div style="display:flex; gap:5px;">
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
-            <div style="width:9px; height:9px; border-radius:50%; background:#e2e8f0;"></div>
-          </div>
-          <div style="flex:1; background:var(--blanco); border-radius:4px; padding:3px 10px; font-size:10px; color:var(--gris-texto); border:1px solid rgba(0,0,0,0.08);">presenciaonline.net/…/cima</div>
-        </div>
-        <img src="assets/img/cliente-cima.jpg" alt="Sitio web CIMA – Presencia Online" style="width:100%; display:block; object-fit:cover; height:200px;">
-        <div style="padding:18px 20px;">
-          <p style="font-family:'Raleway',sans-serif; font-weight:700; font-size:0.95rem; color:var(--oscuro); margin-bottom:2px;">Instituto CIMA</p>
-          <p style="font-size:0.82rem; color:var(--gris-texto); margin-bottom:12px;">Coaching Ontológico · Morón</p>
-          <a href="https://www.presenciaonline.net/profesionales/coach/cima/index.html" target="_blank" style="font-family:'Raleway',sans-serif; font-weight:700; font-size:0.82rem; color:var(--azul); text-decoration:none;">Ver sitio →</a>
-        </div>
+      <div class="clientes-dots">
+        <button class="cliente-dot activo"></button>
+        <button class="cliente-dot"></button>
       </div>
-
     </div>
-
-    <!-- Responsive mobile -->
-    <style>
-      @media (max-width:600px) {
-        #clientes .reveal > div { grid-template-columns:1fr !important; }
-      }
-    </style>
 
   </div>
 </section>
@@ -1374,7 +1435,7 @@
             <div class="canal-icono" style="background:var(--azul);">
               <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" style="width:28px;height:28px;">
             </div>
-            presenciaonline.web@gmail.com
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9aeae8ffe9fff4f9f3fbf5f4f6f3f4ffb4edfff8dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</a>
           </div>
         </div>
 
@@ -1509,13 +1570,74 @@
       </div>
     </div>
     <div class="footer-nap">
-      Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
+      Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f4f4d5a4c5a515c565e50515356515a11485a5d7f58525e5653115c5052">[email&#160;protected]</a>
     </div>
   </div>
 </footer>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">// ── Carrusel Clientes ──
+(function() {
+  var outer  = document.querySelector('[data-carrusel-clientes]');
+  if (!outer) return;
+  var clip   = outer.querySelector('.clientes-clip');
+  var track  = outer.querySelector('.clientes-track');
+  var slides = outer.querySelectorAll('.clientes-slide');
+  var dots   = outer.querySelectorAll('.cliente-dot');
+  var current = 0;
+  function esMobile() { return window.innerWidth <= 640; }
+  function goTo(n) {
+    if (!esMobile()) return;
+    current = Math.max(0, Math.min(n, slides.length - 1));
+    track.style.transform = 'translateX(-' + (current * clip.offsetWidth) + 'px)';
+    dots.forEach(function(d, i) { d.classList.toggle('activo', i === current); });
+  }
+  dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+  var startX = 0;
+  clip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+  clip.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+  });
+  window.addEventListener('resize', function() {
+    if (!esMobile()) track.style.transform = '';
+    else goTo(current);
+  });
+})();
+
+// ── Carrusel Precios (arranca en el del medio: slide 1) ──
+(function() {
+  var outer  = document.querySelector('[data-carrusel-precios]');
+  if (!outer) return;
+  var clip   = outer.querySelector('.precios-clip');
+  var track  = outer.querySelector('.precios-track');
+  var slides = outer.querySelectorAll('.precio-slide');
+  var dots   = outer.querySelectorAll('.precio-dot');
+  var current = 1;
+  function esMobile() { return window.innerWidth <= 640; }
+  function goTo(n) {
+    if (!esMobile()) return;
+    current = Math.max(0, Math.min(n, slides.length - 1));
+    var slideW = slides[0].offsetWidth;
+    var offset = (current * slideW) - (clip.offsetWidth - slideW) / 2;
+    track.style.transform = 'translateX(-' + Math.max(0, offset) + 'px)';
+    dots.forEach(function(d, i) { d.classList.toggle('activo', i === current); });
+  }
+  dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+  var startX = 0;
+  clip.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+  clip.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+  });
+  window.addEventListener('resize', function() {
+    if (!esMobile()) track.style.transform = '';
+    else goTo(current);
+  });
+  if (esMobile()) setTimeout(function() { goTo(1); }, 100);
+})();
+
+</script><script>
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('abierto');
 }
@@ -1602,19 +1724,4 @@ formPago.addEventListener('submit', function(e) {
   window.open(pendingUrl, '_blank');
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbw7K4oENhrt61Nz557LBM9iejt2rWu0R_bQwLhAzQ28lwrZrJ98ItoJLNhaOtWTqShagQ/exec';
-  const submitBtn = this.querySelector('button[type="submit"]');
-  submitBtn.textContent = 'Abriendo pago...';
-  submitBtn.disabled = true;
-
-  fetch(scriptURL, { method: 'POST', body: new FormData(this) })
-    .finally(function() {
-      modal.style.display = 'none';
-      formPago.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Continuar al pago →';
-    });
-});
-</script>
-
-</body>
-</html>
+  const submitBtn = this.querySelector('button[t
