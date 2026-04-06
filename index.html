@@ -254,7 +254,7 @@
   .nicho-link-secondary { font-family:'Raleway',sans-serif; font-weight:600; font-size:0.82rem; color:var(--gris-texto); text-decoration:none; }
 
   /* Precios */
-  .precios-clip { overflow:hidden; }
+  .precios-clip { overflow:hidden; padding-top: 18px;}
   .precios-track { display:flex; grid-template-columns:unset; gap:0; align-items:unset; transition:transform .4s ease; }
   .precio-slide { min-width:88%; max-width:88%; flex-shrink:0; padding:0 8px; box-sizing:border-box; }
 
@@ -477,14 +477,7 @@
     <p class="precios-intro">No todos necesitan lo mismo. Por eso hay distintas opciones según el punto en el que estés hoy.</p>
 
     <div data-car="precios">
-      <!-- Dots ARRIBA -->
-      <div class="car-dots" id="precios-dots-top">
-        <button class="car-dot"></button>
-        <button class="car-dot activo"></button>
-        <button class="car-dot"></button>
-      </div>
-
-      <div class="precios-clip">
+       <div class="precios-clip">
         <div class="precios-track">
           <div class="precio-slide">
             <div class="precio-card">
@@ -528,8 +521,16 @@
       </div>
 
       <!-- Comparativa sincronizada -->
-      <div class="comparativa-wrapper">
-        <table class="comparativa-table">
+<!-- Dots MEDIO — entre precios y comparativa -->
+      <div class="car-dots" id="precios-dots-top">
+        <button class="car-dot"></button>
+        <button class="car-dot activo"></button>
+        <button class="car-dot"></button>
+      </div>
+
+    <!-- TABLA COMPARATIVA: desktop tabla, mobile carrusel sincronizado -->
+    <div class="comparativa-wrapper">
+       <table class="comparativa-table">
           <thead>
             <tr><th></th><th>Presencia Inicial</th><th class="destacado-col">⭐ Presencia Completa</th><th>Presencia Completa + Cobro</th></tr>
           </thead>
