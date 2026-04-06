@@ -341,21 +341,22 @@
 .precios-lanzamiento strong { color: var(--oscuro); }
 @media (max-width: 1024px) { .precios-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
 
-/* ── TABLA COMPARATIVA (NUEVA) ── */
-.tabla-comparativa {
-  max-width: 900px;
+/* ── TABLA COMPARATIVA (tarjetas apiladas en mobile, tabla en desktop) ── */
+.comparativa-wrapper {
   margin: 48px auto 0;
   background: #ffffff;
   border-radius: 28px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.05);
-  overflow-x: auto;
+  overflow: hidden;
 }
-.tabla-comparativa table {
+
+/* En desktop: tabla normal */
+.comparativa-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
-.tabla-comparativa th {
+.comparativa-table th {
   background: #f8fafc;
   padding: 18px 16px;
   font-family: 'Raleway', sans-serif;
@@ -364,26 +365,127 @@
   text-align: center;
   border-bottom: 2px solid #e2e8f0;
 }
-.tabla-comparativa td {
+.comparativa-table td {
   padding: 14px 16px;
   text-align: center;
   border-bottom: 1px solid #eef2f6;
   color: #4a5568;
 }
-.tabla-comparativa td:first-child {
+.comparativa-table td:first-child {
   text-align: left;
   font-weight: 600;
   background: #fafcff;
 }
-.tabla-comparativa .check { color: #10b981; font-weight: 700; }
-.tabla-comparativa .cross { color: #ef4444; font-weight: 700; }
-.tabla-comparativa .destacado-col {
+.comparativa-table .check { color: #10b981; font-weight: 700; }
+.comparativa-table .cross { color: #ef4444; font-weight: 700; }
+.comparativa-table .destacado-col {
   background: rgba(30,115,190,0.03);
   border-left: 2px solid #1E73BE;
   border-right: 2px solid #1E73BE;
 }
+
+/* En mobile: tarjetas apiladas */
+.comparativa-cards {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .tabla-comparativa th, .tabla-comparativa td { padding: 10px 8px; font-size: 0.75rem; }
+  .comparativa-table {
+    display: none;
+  }
+  .comparativa-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .plan-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 20px;
+    transition: all 0.2s;
+  }
+  .plan-card.destacado {
+    border-color: #1E73BE;
+    background: rgba(30,115,190,0.02);
+  }
+  .plan-nombre {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #1a2332;
+    margin-bottom: 4px;
+  }
+  .plan-etiqueta {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 99px;
+    margin-bottom: 12px;
+  }
+  .plan-precio {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: #1E73BE;
+    margin: 12px 0;
+  }
+  .plan-precio span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #a0aec0;
+    text-decoration: line-through;
+  }
+  .plan-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
+  .plan-caracteristicas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eef2f6;
+    font-size: 0.85rem;
+  }
+  .plan-caracteristicas .feature-name {
+    font-weight: 600;
+    color: #4a5568;
+  }
+  .plan-caracteristicas .feature-value {
+    font-weight: 500;
+  }
+  .plan-btn {
+    display: block;
+    text-align: center;
+    background: #1E73BE;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: all 0.2s;
+  }
+  .plan-btn:hover {
+    background: #155a96;
+    transform: translateY(-2px);
+  }
+  .plan-btn-outline {
+    background: transparent;
+    border: 2px solid #1E73BE;
+    color: #1E73BE;
+  }
+  .plan-btn-outline:hover {
+    background: #1E73BE;
+    color: white;
+  }
 }
 
 /* ── QUIÉN SOMOS ── */
@@ -817,13 +919,13 @@
         <div class="precio-nombre">Presencia Inicial</div>
         <div class="precio-bajada">Landing page simple de una sola página.</div>
         <div class="precio-monto-wrap">
-          <span class="precio-tachado">$180.000</span>
+          <span class="precio-tachado">$150.000</span>
           <span class="precio-actual">$100.000</span>
         </div>
         <div class="precio-desc">↓ Precio de lanzamiento</div>
         <div class="precio-divider"></div>
-        <p class="precio-texto">Una sola página larga donde todo está abajo, scrolleando. Ideal para empezar, sin vueltas.</p>
-        <p class="precio-aclaracion">✓ Ideal si hoy no tenés nada<br>✗ No registra consultas<br>✗ Una sola pantalla, sin menú</p>
+        <p class="precio-texto">Todo en una misma página. El menú te lleva a las distintas secciones. Para empezar si no tenés tu propia web.</p>
+        <p class="precio-aclaracion">✓ WhatsApp e Instagram integrados<br>✗ Sin formulario de consultas<br>✗ Sin registro de clientes/pacientes</p>
         <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
       </div>
 
@@ -833,20 +935,20 @@
         <div class="precio-nombre">Presencia Completa</div>
         <div class="precio-bajada">Sitio web completo con navegación profesional.</div>
         <div class="precio-monto-wrap">
-          <span class="precio-tachado">$300.000</span>
+          <span class="precio-tachado">$250.000</span>
           <span class="precio-actual">$150.000</span>
         </div>
         <div class="precio-desc">↓ Precio de lanzamiento</div>
         <div class="precio-divider"></div>
-        <p class="precio-texto">Múltiples páginas (Inicio, Servicios, Contacto), menú arriba, estructura profesional. Cada consulta queda registrada automáticamente.</p>
-        <p class="precio-remate">✓ Sitio web como los de verdad<br>✓ Registro automático de consultas<br>✓ El cliente te encuentra y entiende</p>
+        <p class="precio-texto">Menú con múltiples páginas, estructura profesional. Cada consulta queda registrada automáticamente.</p>
+        <p class="precio-remate">✓ WhatsApp e Instagram<br>✓ Formulario de consultas (llega al mail)<br>✓ Registro de TODAS las consultas</p>
         <p class="precio-cierre">La mayoría arranca acá.</p>
         <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." target="_blank" class="precio-btn precio-btn-primario">Quiero esta →</a>
       </div>
 
       <!-- OPCIÓN 3 -->
       <div class="precio-card">
-        <div class="precio-nombre">Presencia + Cobro</div>
+        <div class="precio-nombre">Presencia Completa + Cobro</div>
         <div class="precio-bajada">Sitio completo + pagos integrados.</div>
         <div class="precio-monto-wrap">
           <span class="precio-tachado">$450.000</span>
@@ -854,28 +956,92 @@
         </div>
         <div class="precio-desc">↓ Precio de lanzamiento</div>
         <div class="precio-divider"></div>
-        <p class="precio-texto">Todo el sitio web completo + la posibilidad de que te paguen desde la página. El cliente no pregunta, paga.</p>
-        <p class="precio-remate">✓ Todo lo del plan Completo<br>✓ Cobro con Mercado Pago integrado<br>✓ Pasás de responder a cerrar</p>
-        <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20+%20Cobro." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
+        <p class="precio-texto">Todo el sitio web completo + Mercado Pago integrado. Los datos se recolectan ANTES de pagar.</p>
+        <p class="precio-remate">✓ Todo lo del plan Completa<br>✓ Mercado Pago integrado<br>✓ Registro de TODOS los pagos (nombre, DNI, monto, fecha, tipo)</p>
+        <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." target="_blank" class="precio-btn precio-btn-outline">Consultar →</a>
       </div>
 
     </div>
 
-    <!-- TABLA COMPARATIVA (NUEVA) -->
-    <div class="tabla-comparativa">
-      <table>
+    <!-- TABLA COMPARATIVA: En desktop tabla, en mobile tarjetas -->
+    <div class="comparativa-wrapper">
+      <!-- Versión desktop: tabla -->
+      <table class="comparativa-table">
         <thead>
-          <tr><th></th><th>Presencia Inicial</th><th class="destacado-col">⭐ Presencia Completa</th><th>Presencia + Cobro</th></tr>
+          <tr><th></th><th>Presencia Inicial</th><th class="destacado-col">⭐ Presencia Completa</th><th>Presencia Completa + Cobro</th></tr>
         </thead>
         <tbody>
-          <tr><td>Tipo de página</td><td>Landing page larguísima (una sola pantalla)</td><td class="destacado-col">Sitio web completo (múltiples páginas + menú)</td><td>Sitio web completo + pagos</td></tr>
-          <tr><td>Navegación</td><td>❌ Solo scrollear</td><td class="destacado-col">✅ Menú profesional entre páginas</td><td>✅ Menú profesional entre páginas</td></tr>
-          <tr><td>Registro automático de consultas</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
-          <tr><td>Cobros desde la página</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí (Mercado Pago)</td></tr>
+          <tr><td>Tipo de página</td><td>Landing page (una sola página)</td><td class="destacado-col">Sitio web completo (múltiples páginas)</td><td>Sitio web completo</td></tr>
+          <tr><td>Navegación</td><td>❌ Solo scrollear</td><td class="destacado-col">✅ Menú profesional</td><td>✅ Menú profesional</td></tr>
+          <tr><td>WhatsApp integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+          <tr><td>Instagram integrado</td><td>✅ Sí</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+          <tr><td>Formulario de consultas (mail)</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+          <tr><td>Registro de TODAS las consultas</td><td>❌ No</td><td class="destacado-col">✅ Sí</td><td>✅ Sí</td></tr>
+          <tr><td>Mercado Pago integrado</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí</td></tr>
+          <tr><td>Registro de TODOS los pagos</td><td>❌ No</td><td class="destacado-col">❌ No</td><td>✅ Sí (nombre, DNI, monto, fecha, tipo)</td></tr>
           <tr><td><strong>Precio de lanzamiento</strong></td><td><strong>$100.000</strong></td><td class="destacado-col"><strong>$150.000</strong></td><td><strong>$250.000</strong></td></tr>
-          <tr><td></td><td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." style="color:#1E73BE;">Consultar →</a></td><td class="destacado-col"><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." style="color:#1E73BE; font-weight:700;">Quiero esta →</a></td><td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20+%20Cobro." style="color:#1E73BE;">Consultar →</a></td></tr>
+          <tr>
+            <td></td>
+            <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." style="color:#1E73BE;">Consultar →</a></td>
+            <td class="destacado-col"><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." style="color:#1E73BE; font-weight:700;">Quiero esta →</a></td>
+            <td><a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." style="color:#1E73BE;">Consultar →</a></td>
+          </tr>
         </tbody>
       </table>
+
+      <!-- Versión mobile: tarjetas apiladas -->
+      <div class="comparativa-cards">
+        
+        <div class="plan-card">
+          <div class="plan-nombre">Presencia Inicial</div>
+          <div class="plan-precio"><span>$150.000</span> $100.000</div>
+          <ul class="plan-caracteristicas">
+            <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Landing page (una sola página)</span></li>
+            <li><span class="feature-name">Navegación:</span><span class="feature-value">❌ Solo scrollear</span></li>
+            <li><span class="feature-name">WhatsApp integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Instagram integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Formulario de consultas:</span><span class="feature-value">❌ No</span></li>
+            <li><span class="feature-name">Registro de consultas:</span><span class="feature-value">❌ No</span></li>
+            <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
+            <li><span class="feature-name">Registro de pagos:</span><span class="feature-value">❌ No</span></li>
+          </ul>
+          <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Inicial." class="plan-btn plan-btn-outline">Consultar →</a>
+        </div>
+
+        <div class="plan-card destacado">
+          <div class="plan-etiqueta">⭐ Recomendado</div>
+          <div class="plan-nombre">Presencia Completa</div>
+          <div class="plan-precio"><span>$250.000</span> $150.000</div>
+          <ul class="plan-caracteristicas">
+            <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
+            <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
+            <li><span class="feature-name">WhatsApp integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Instagram integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Formulario de consultas:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Registro de consultas:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">❌ No</span></li>
+            <li><span class="feature-name">Registro de pagos:</span><span class="feature-value">❌ No</span></li>
+          </ul>
+          <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20la%20Presencia%20Completa." class="plan-btn">Quiero esta →</a>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-nombre">Presencia Completa + Cobro</div>
+          <div class="plan-precio"><span>$450.000</span> $250.000</div>
+          <ul class="plan-caracteristicas">
+            <li><span class="feature-name">Tipo de página:</span><span class="feature-value">Sitio web completo</span></li>
+            <li><span class="feature-name">Navegación:</span><span class="feature-value">✅ Menú profesional</span></li>
+            <li><span class="feature-name">WhatsApp integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Instagram integrado:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Formulario de consultas:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Registro de consultas:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Mercado Pago:</span><span class="feature-value">✅ Sí</span></li>
+            <li><span class="feature-name">Registro de pagos:</span><span class="feature-value">✅ Sí (nombre, DNI, monto, fecha, tipo)</span></li>
+          </ul>
+          <a href="https://wa.me/5491149167978?text=Hola,%20me%20interesa%20Presencia%20Completa%20+%20Cobro." class="plan-btn plan-btn-outline">Consultar →</a>
+        </div>
+
+      </div>
     </div>
 
     <div class="precios-lanzamiento">
@@ -1281,7 +1447,6 @@
         <a href="legal/disclaimer.html">Aviso legal</a>
       </div>
     </div>
-    <!-- NAP para crawlers de Google — mantener texto plano y consistente en todas las páginas -->
     <div class="footer-nap">
       Presencia Online · Eduardo Costa 932, Lomas del Mirador, La Matanza, Buenos Aires, Argentina · +54 9 11 4916 7978 · presenciaonline.web@gmail.com
     </div>
@@ -1328,9 +1493,7 @@ document.querySelectorAll('.faq-pregunta').forEach(function(btn) {
   btn.addEventListener('click', function() {
     const item = this.closest('.faq-item');
     const estaAbierto = item.classList.contains('abierto');
-    // Cerrar todos
     document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('abierto'); });
-    // Abrir el clickeado si estaba cerrado
     if (!estaAbierto) item.classList.add('abierto');
   });
 });
@@ -1345,7 +1508,6 @@ document.querySelectorAll('.mp-bloque-btn[data-url]').forEach(function(btn) {
     e.preventDefault();
     pendingUrl = this.getAttribute('data-url');
     
-    // Detectar tipo de pago por el id del botón
     var tipoPago = 'no especificado';
     if (this.id === 'btn-sena') {
       tipoPago = 'seña';
@@ -1376,7 +1538,6 @@ formPago.addEventListener('submit', function(e) {
   }
   document.getElementById('error-msg-modal').style.display = 'none';
 
-  // ✅ window.open() ANTES del fetch — evita bloqueo de popup
   window.open(pendingUrl, '_blank');
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbw7K4oENhrt61Nz557LBM9iejt2rWu0R_bQwLhAzQ28lwrZrJ98ItoJLNhaOtWTqShagQ/exec';
