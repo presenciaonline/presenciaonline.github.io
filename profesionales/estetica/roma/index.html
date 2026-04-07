@@ -49,9 +49,7 @@
       max-width: 480px; margin-bottom: 38px;
     }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero-img {
-      position: relative;
-    }
+    .hero-img { position: relative; }
     .hero-img-principal {
       width: 100%; border-radius: var(--radio-lg);
       object-fit: cover; aspect-ratio: 3/4;
@@ -99,23 +97,16 @@
       font-size: 2rem; font-weight: 400; color: var(--dorado);
     }
     .stat span { font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(250,247,242,0.45); }
-
-    /* ─── TRATAMIENTOS CARRUSEL ─── */
-    .trat-card {
-      border-radius: var(--radio-lg); overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform .3s, border-color .3s, box-shadow .3s;
-    }
   </style>
 </head>
 <body>
 
   <!-- FLOTANTES -->
   <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="float-wa">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    <img src="img/icon-whatsapp.png" alt="WhatsApp">
   </a>
-  <a href="https://www.instagram.com/estetica.roma_" target="_blank" class="float-ig">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  <a href="https://www.instagram.com/estetica.roma_/" target="_blank" class="float-ig">
+    <img src="img/icon-instagram.png" alt="Instagram">
   </a>
 
   <!-- HEADER -->
@@ -421,7 +412,6 @@
       </div>
       <div class="grid2" style="gap:56px; align-items:start;">
 
-        <!-- Datos -->
         <div>
           <h3 class="t-lg" style="margin-bottom:10px; color:var(--crema);">Estamos para atenderte</h3>
           <p style="font-size:0.95rem; color:rgba(250,247,242,0.6); margin-bottom:28px; line-height:1.8;">
@@ -433,7 +423,7 @@
               <div class="dato-ico">📍</div>
               <div class="dato-txt">
                 <strong>Dirección</strong>
-                <span>Buenos Aires, Argentina</span>
+                <span>Belgrano 654 2°E, Buenos Aires</span>
               </div>
             </div>
             <div class="dato">
@@ -461,7 +451,6 @@
           <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="btn-oro">Escribir por WhatsApp</a>
         </div>
 
-        <!-- Formulario -->
         <div class="forma">
           <h3>O dejanos tu consulta</h3>
           <form id="form-contacto" action="https://script.google.com/macros/s/AKfycbyOlBfJWX2f7tn7Liw6SaIZAHGbmUnM1xVoSVdbeBc3fJnXehMuGDBwY2hz2JkKe1LUCw/exec" method="POST">
@@ -510,7 +499,7 @@
     <p>
       Roma · Centro de Belleza y Relajación
       <span class="foot-sep">|</span>
-      Buenos Aires, Argentina
+      Belgrano 654 2°E, Buenos Aires
     </p>
     <p>
       <a href="servicios.html">Servicios</a>
@@ -526,7 +515,6 @@
 
 
   <script>
-    // ── Menú hamburguesa
     function toggleMenu() {
       const nav = document.getElementById('nav-menu');
       const ham = document.getElementById('hamburger');
@@ -534,13 +522,11 @@
       ham.classList.toggle('abierto');
     }
 
-    // ── Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // ── Carrusel genérico
     function irASlide(trackId, dotsId, n) {
       if (window.innerWidth > 768) return;
       const track = document.getElementById(trackId);
@@ -549,7 +535,6 @@
       dots.forEach((d, i) => d.classList.toggle('activo', i === n));
     }
 
-    // ── Swipe touch para carrusel
     function setupSwipe(trackId, dotsId, total) {
       const track = document.getElementById(trackId);
       if (!track) return;
@@ -566,7 +551,6 @@
     }
     setupSwipe('carrusel-tratamientos', 'dots-tratamientos', 3);
 
-    // ── Formulario de contacto
     document.getElementById('form-contacto').addEventListener('submit', function(e) {
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
