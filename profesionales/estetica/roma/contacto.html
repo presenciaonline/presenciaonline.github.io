@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Roma – Centro de Belleza y Relajación</title>
+  <meta name="description" content="Contacto de Roma Estética. Reservá tu turno por WhatsApp o dejanos tu consulta. Atendemos Lunes a Sábado de 08 a 20hs.">
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    .page-hero {
+      background: var(--negro);
+      padding: 130px 28px 72px;
+      text-align: center;
+      border-bottom: 0.5px solid rgba(255,215,64,0.12);
+    }
+    .mapa-box {
+      width: 100%; height: 320px; border-radius: var(--radio-lg);
+      overflow: hidden; border: 0.5px solid rgba(255,215,64,0.15);
+      background: var(--negro2);
+    }
+    .mapa-box iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.8) invert(0.9); }
+    .mp-bloque {
+      background: rgba(255,215,64,0.05);
+      border: 0.5px solid rgba(255,215,64,0.2);
+      border-radius: var(--radio-lg); padding: 24px 22px;
+      margin-top: 20px;
+    }
+    .mp-titulo {
+      font-family: 'Playfair Display', serif; font-weight: 400;
+      color: var(--dorado); font-size: 1rem; margin-bottom: 8px;
+    }
+    .mp-sub { font-size: 0.88rem; color: rgba(250,247,242,0.55); line-height: 1.7; margin-bottom: 14px; }
+    .mp-btn {
+      display: inline-block; background: var(--dorado);
+      color: var(--negro); font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 10px 24px; border-radius: 99px;
+      transition: all .25s;
+    }
+    .mp-btn:hover { background: var(--dorado-claro); transform: translateY(-1px); }
+    .mp-nota { font-size: 0.72rem; color: rgba(250,247,242,0.3); margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="float-wa">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com/estetica.roma_" target="_blank" class="float-ig">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="img/logo.jpeg" alt="Roma Estética"></a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="activo">Contacto</a>
+      </nav>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="page-hero reveal">
+    <span class="kicker">Estamos para atenderte</span>
+    <h1 class="t-hero" style="margin-bottom:14px;">¿<em>Hablamos?</em></h1>
+    <p style="font-size:1.05rem; color:rgba(250,247,242,0.6); max-width:460px; margin:0 auto;">
+      Escribinos por WhatsApp o dejanos tu consulta. Respondemos a la brevedad.
+    </p>
+  </div>
+
+  <!-- HORARIO -->
+  <div class="franja-oro reveal">
+    <p>Atendemos <strong>Lunes a Sábado</strong> de <strong>08:00 a 20:00 hs</strong> &nbsp;·&nbsp; Turnos: <strong>11 6560-1129</strong></p>
+  </div>
+
+
+  <!-- ══ CONTACTO COMPLETO ══ -->
+  <section class="s s-negro reveal">
+    <div class="inner">
+      <div class="grid2" style="gap:56px; align-items:start;">
+
+        <!-- INFO + MAPA -->
+        <div>
+          <h2 class="t-lg" style="margin-bottom:10px;">Encontranos</h2>
+          <div class="divisor-oro izq"></div>
+          <div class="dato-list" style="margin-bottom:28px;">
+            <div class="dato">
+              <div class="dato-ico">📍</div>
+              <div class="dato-txt">
+                <strong>Dirección</strong>
+                <span>Buenos Aires, Argentina</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">🕐</div>
+              <div class="dato-txt">
+                <strong>Horarios de atención</strong>
+                <span>Lunes a Sábado · 08:00 a 20:00 hs</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">📱</div>
+              <div class="dato-txt">
+                <strong>WhatsApp</strong>
+                <span>11 6560-1129</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">📸</div>
+              <div class="dato-txt">
+                <strong>Instagram</strong>
+                <span>@estetica.roma_</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAPA -->
+          <div class="mapa-box">
+            <iframe
+              src="https://maps.app.goo.gl/Ea56vd2ByckzQBpA6"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Roma Estética">
+            </iframe>
+          </div>
+
+          <!-- MERCADO PAGO -->
+          <div class="mp-bloque" style="margin-top:24px;">
+            <p class="mp-titulo">Pagá tu seña por Mercado Pago</p>
+            <p class="mp-sub">¿Ya coordinamos tu turno? Podés enviarnos la seña o el pago directamente desde acá. Vos ingresás el monto acordado.</p>
+            <a href="REEMPLAZAR_LINK_MERCADOPAGO" target="_blank" class="mp-btn" id="btn-mp">Ir al pago</a>
+            <p class="mp-nota">Pago seguro · Tarjeta, débito o saldo Mercado Pago</p>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="forma">
+          <h3>Dejanos tu consulta</h3>
+          <form id="form-contacto" action="REEMPLAZAR_URL_GOOGLE_SCRIPT" method="POST">
+            <div class="fg">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="fg">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="fg">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="11 ...">
+            </div>
+            <div class="fg">
+              <label for="servicio">Me interesa</label>
+              <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Seleccioná un tratamiento</option>
+                <option value="maquinaria">Maquinaria (Mio Up, VelaSlim, Presoterapia...)</option>
+                <option value="masajes">Masajes</option>
+                <option value="cosmetologia">Cosmetología</option>
+                <option value="manos-pies">Manos y Pies</option>
+                <option value="seguimiento">Kinesiología / Deportología</option>
+                <option value="info">Solo quiero información</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos qué estás buscando..."></textarea>
+            </div>
+            <button type="submit" class="btn-oro form-btn">Enviar consulta</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PAGO CON MP — modal datos -->
+  <div id="modal-mp" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:500; align-items:center; justify-content:center;">
+    <div style="background:var(--negro2); border:0.5px solid rgba(255,215,64,0.25); border-radius:var(--radio-lg); padding:36px 32px; max-width:440px; width:90%;">
+      <h3 style="font-family:'Playfair Display',serif; font-weight:400; color:var(--crema); margin-bottom:8px;">Antes de continuar</h3>
+      <p style="font-size:0.88rem; color:rgba(250,247,242,0.55); margin-bottom:22px; line-height:1.7;">Necesitamos tus datos para enviarte la confirmación del pago.</p>
+      <form id="form-mp">
+        <div class="fg"><label>Nombre completo</label><input type="text" id="mp-nombre" required placeholder="Tu nombre completo"></div>
+        <div class="fg"><label>DNI / CUIT</label><input type="text" id="mp-dni" required placeholder="Tu DNI o CUIT"></div>
+        <div class="fg"><label>Email</label><input type="email" id="mp-email" required placeholder="tu@email.com"></div>
+        <div class="fg"><label>Teléfono / WhatsApp</label><input type="tel" id="mp-tel" required placeholder="11 ..."></div>
+        <div class="fg">
+          <label>Tipo de pago</label>
+          <select id="mp-tipo">
+            <option value="seña">Seña</option>
+            <option value="total">Pago total</option>
+          </select>
+        </div>
+        <div style="display:flex; gap:12px; margin-top:8px;">
+          <button type="button" onclick="cerrarModal()" style="flex:1; padding:12px; background:transparent; border:0.5px solid rgba(255,215,64,0.25); border-radius:var(--radio); color:rgba(250,247,242,0.5); cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:0.9rem;">Cancelar</button>
+          <button type="submit" class="btn-oro" style="flex:2; padding:12px;">Continuar al pago</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo"><img src="img/logo.jpeg" alt="Roma Estética"></div>
+    <p>Roma · Centro de Belleza y Relajación <span class="foot-sep">|</span> Buenos Aires, Argentina</p>
+    <p>
+      <a href="servicios.html">Servicios</a><span class="foot-sep">·</span>
+      <a href="nosotros.html">Nosotros</a><span class="foot-sep">·</span>
+      <a href="contacto.html">Contacto</a>
+    </p>
+    <p style="margin-top:16px;">Desarrollado por <a href="https://www.presenciaonline.net" target="_blank">Presencia Online</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+      document.getElementById('hamburger').classList.toggle('abierto');
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Formulario contacto
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Enviando...'; btn.disabled = true;
+      fetch(this.action, { method: 'POST', body: new FormData(this) })
+        .then(() => {
+          btn.textContent = 'Consulta enviada';
+          this.reset();
+          setTimeout(() => { btn.textContent = 'Enviar consulta'; btn.disabled = false; }, 5000);
+        })
+        .catch(() => { btn.textContent = 'Error. Escribinos por WhatsApp.'; btn.disabled = false; });
+    });
+
+    // Mercado Pago — modal
+    document.getElementById('btn-mp').addEventListener('click', function(e) {
+      e.preventDefault();
+      const modal = document.getElementById('modal-mp');
+      modal.style.display = 'flex';
+    });
+    function cerrarModal() {
+      document.getElementById('modal-mp').style.display = 'none';
+    }
+    document.getElementById('modal-mp').addEventListener('click', function(e) {
+      if (e.target === this) cerrarModal();
+    });
+
+    document.getElementById('form-mp').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const datos = {
+        nombre: document.getElementById('mp-nombre').value,
+        dni_cuit: document.getElementById('mp-dni').value,
+        email: document.getElementById('mp-email').value,
+        telefono: document.getElementById('mp-tel').value,
+        tipo_pago: document.getElementById('mp-tipo').value
+      };
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Guardando...'; btn.disabled = true;
+      const params = new URLSearchParams(datos);
+      fetch('https://script.google.com/macros/s/AKfycbzIPhSmdCa3wJrwiyrMaBGebqIZxlhE0vERy1sZ12JNPFLe14t3ZyW0mHOh07Rzaw9A/exec?' + params.toString())
+        .then(() => { window.open('REEMPLAZAR_LINK_MERCADOPAGO', '_blank'); cerrarModal(); btn.textContent = 'Continuar al pago'; btn.disabled = false; })
+        .catch(() => { window.open('REEMPLAZAR_LINK_MERCADOPAGO', '_blank'); cerrarModal(); btn.textContent = 'Continuar al pago'; btn.disabled = false; });
+    });
+  </script>
+</body>
+</html>

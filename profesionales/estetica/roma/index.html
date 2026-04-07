@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roma | Centro de Belleza y Relajación</title>
+  <meta name="description" content="Roma, Centro de Belleza y Relajación en Buenos Aires. Tratamientos de maquinaria, masajes, cosmetología, manos y pies, kinesiología y deportología. Lunes a Sábado de 08 a 20hs.">
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      background: var(--negro);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('img/hero.jpg');
+      background-size: cover; background-position: center;
+      opacity: 0.18;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(17,17,17,0.95) 40%, rgba(17,17,17,0.6) 100%);
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 1200px; margin: 0 auto;
+      padding: 80px 28px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .hero-texto .eyebrow {
+      font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--dorado); margin-bottom: 20px; display: block;
+    }
+    .hero-linea-oro {
+      width: 52px; height: 0.5px;
+      background: linear-gradient(90deg, var(--dorado-oscuro), var(--dorado-claro));
+      margin-bottom: 24px;
+    }
+    .hero-texto h1 { margin-bottom: 22px; color: var(--crema); }
+    .hero-texto p {
+      font-size: 1.1rem; line-height: 1.9;
+      color: rgba(250,247,242,0.65);
+      max-width: 480px; margin-bottom: 38px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-img {
+      position: relative;
+    }
+    .hero-img-principal {
+      width: 100%; border-radius: var(--radio-lg);
+      object-fit: cover; aspect-ratio: 3/4;
+      border: 0.5px solid rgba(255,215,64,0.18);
+    }
+    .hero-badge {
+      position: absolute; bottom: 24px; left: -24px;
+      background: var(--negro2);
+      border: 0.5px solid rgba(255,215,64,0.3);
+      border-radius: var(--radio-lg);
+      padding: 16px 22px;
+    }
+    .hero-badge strong {
+      display: block; font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 400; color: var(--dorado);
+    }
+    .hero-badge span { font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(250,247,242,0.5); }
+    .hero-deco {
+      position: absolute; top: 24px; right: -12px;
+      background: rgba(255,215,64,0.06);
+      border: 0.5px solid rgba(255,215,64,0.15);
+      border-radius: var(--radio-lg); padding: 14px 18px;
+    }
+    .hero-deco p { font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,215,64,0.6); line-height: 1.8; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 44px; padding: 60px 20px; }
+      .hero-img { display: none; }
+    }
+
+    /* ─── STATS STRIP ─── */
+    .stats-strip {
+      background: var(--negro2);
+      border-top: 0.5px solid rgba(255,215,64,0.12);
+      border-bottom: 0.5px solid rgba(255,215,64,0.12);
+      padding: 28px 28px;
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 20px; text-align: center;
+    }
+    .stat strong {
+      display: block; font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 400; color: var(--dorado);
+    }
+    .stat span { font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(250,247,242,0.45); }
+
+    /* ─── TRATAMIENTOS CARRUSEL ─── */
+    .trat-card {
+      border-radius: var(--radio-lg); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOTANTES -->
+  <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="float-wa">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com/estetica.roma_" target="_blank" class="float-ig">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logo.jpeg" alt="Roma – Centro de Belleza y Relajación">
+      </a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-texto reveal">
+        <span class="eyebrow">Centro de Belleza y Relajación</span>
+        <div class="hero-linea-oro"></div>
+        <h1 class="t-hero">Tu bienestar,<br>en manos <em>expertas</em></h1>
+        <p>
+          Tratamientos profesionales de maquinaria, masajes y cosmetología,
+          pensados para que te sientas y te veas en tu mejor versión.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20reservar%20un%20turno." target="_blank" class="btn-oro">Reservar turno</a>
+          <a href="servicios.html" class="btn-borde-oro">Ver tratamientos</a>
+        </div>
+      </div>
+      <div class="hero-img reveal reveal-d1">
+        <img src="img/hero-lateral.jpg" alt="Roma Estética" class="hero-img-principal">
+        <div class="hero-badge">
+          <strong>5+</strong>
+          <span>Categorías de tratamientos</span>
+        </div>
+        <div class="hero-deco">
+          <p>Lunes a Sábado<br>08:00 — 20:00 hs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat reveal">
+        <strong>20+</strong>
+        <span>Tratamientos disponibles</span>
+      </div>
+      <div class="stat reveal reveal-d1">
+        <strong>6</strong>
+        <span>Días de atención</span>
+      </div>
+      <div class="stat reveal reveal-d2">
+        <strong>100%</strong>
+        <span>Atención personalizada</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ EL CENTRO ══ -->
+  <section class="s s-negro reveal">
+    <div class="inner">
+      <div class="grid2">
+        <div class="foto-box">
+          <div class="foto-grid-2x2">
+            <img src="img/local-1.jpg" alt="Roma Estética – espacio">
+            <img src="img/local-2.jpg" alt="Roma Estética – cabina">
+            <img src="img/local-3.jpg" alt="Roma Estética – tratamiento">
+            <img src="img/local-4.jpg" alt="Roma Estética – ambiente">
+          </div>
+        </div>
+        <div>
+          <span class="kicker">El centro</span>
+          <h2 class="t-xl">Un espacio diseñado<br>para tu <em>bienestar</em></h2>
+          <div class="divisor-oro izq"></div>
+          <p class="sub dark" style="color:rgba(250,247,242,0.65); margin-left:0;">
+            En Roma combinamos tecnología de maquinaria de última generación con técnicas manuales especializadas.
+            Cada tratamiento está pensado para resultados reales, con la calidez y la atención que merecés.
+          </p>
+          <p class="sub dark" style="color:rgba(250,247,242,0.65); margin-left:0; margin-top:-20px;">
+            Trabajamos con quienes buscan verse y sentirse mejor — ya sea que entrenés, que necesites recuperación muscular, o que simplemente quieras darte un momento para vos.
+          </p>
+          <a href="nosotros.html" class="btn-borde-oro">Conocer el centro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisor-seccion"></div>
+
+
+  <!-- ══ SERVICIOS PREVIEW ══ -->
+  <section class="s s-negro2 reveal">
+    <div class="inner centro">
+      <span class="kicker">Nuestros tratamientos</span>
+      <h2 class="t-xl" style="margin-bottom:12px;">Todo lo que <em>necesitás</em><br>en un solo lugar</h2>
+      <p class="sub">
+        Cinco categorías de tratamientos profesionales. Encontrá el que se adapta a lo que estás buscando.
+      </p>
+      <div class="cards-grid">
+
+        <a href="servicios.html#maquinaria" class="card">
+          <img src="img/card-maquinaria.jpg" alt="Maquinaria" class="card-img">
+          <div class="card-body">
+            <div class="card-linea"></div>
+            <h3>Maquinaria</h3>
+            <p>Mio Up, VelaSlim, Presoterapia y Depilación Definitiva. Tecnología de última generación para resultados visibles.</p>
+            <span class="card-cta">Ver tratamientos →</span>
+          </div>
+        </a>
+
+        <a href="servicios.html#masajes" class="card">
+          <img src="img/card-masajes.jpg" alt="Masajes" class="card-img">
+          <div class="card-body">
+            <div class="card-linea"></div>
+            <h3>Masajes</h3>
+            <p>Integral, deportivo, drenaje linfático, maderoterapia, reflexología y más. Para relajar, recuperar y revitalizar.</p>
+            <span class="card-cta">Ver tratamientos →</span>
+          </div>
+        </a>
+
+        <a href="servicios.html#cosmetologia" class="card">
+          <img src="img/card-cosmetologia.jpg" alt="Cosmetología" class="card-img">
+          <div class="card-body">
+            <div class="card-linea"></div>
+            <h3>Cosmetología</h3>
+            <p>Limpiezas profundas, hilos tensores, dermapen, radiofrecuencia, peeling y mucho más. Tu piel en las mejores manos.</p>
+            <span class="card-cta">Ver tratamientos →</span>
+          </div>
+        </a>
+
+        <a href="servicios.html#manos-pies" class="card">
+          <img src="img/card-manos.jpg" alt="Manos y Pies" class="card-img">
+          <div class="card-body">
+            <div class="card-linea"></div>
+            <h3>Manos y Pies</h3>
+            <p>Podología, belleza de pies, soft gel, esmaltado semipermanente y kapping. Cuidado completo de manos y pies.</p>
+            <span class="card-cta">Ver tratamientos →</span>
+          </div>
+        </a>
+
+        <a href="servicios.html#seguimiento" class="card">
+          <img src="img/card-seguimiento.jpg" alt="Seguimiento" class="card-img">
+          <div class="card-body">
+            <div class="card-linea"></div>
+            <h3>Seguimiento</h3>
+            <p>Kinesiología y Deportología. Acompañamiento profesional para tu recuperación y rendimiento físico.</p>
+            <span class="card-cta">Ver tratamientos →</span>
+          </div>
+        </a>
+
+        <a href="servicios.html" class="card" style="justify-content:center; align-items:center; min-height:220px; text-align:center; padding:32px;">
+          <div style="margin-bottom:14px;">
+            <div style="width:40px;height:0.5px;background:linear-gradient(90deg,var(--dorado-oscuro),var(--dorado));margin:0 auto 14px;"></div>
+          </div>
+          <h3 style="color:var(--crema);margin-bottom:10px;">Ver todos<br>los servicios</h3>
+          <span class="card-cta" style="display:block;">Ir al catálogo →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ TRATAMIENTOS ESTRELLA ══ -->
+  <section class="s s-negro reveal">
+    <div class="inner centro">
+      <span class="kicker">Tratamientos destacados</span>
+      <h2 class="t-xl" style="margin-bottom:12px;">Tecnología que <em>transforma</em></h2>
+      <p class="sub">
+        Nuestros tratamientos de maquinaria combinan ciencia y precisión para resultados que se ven y se sienten.
+      </p>
+      <div class="carrusel-wrapper">
+        <div class="carrusel-track" id="carrusel-tratamientos">
+
+          <div class="card carrusel-slide">
+            <img src="img/velaslim.jpg" alt="VelaSlim" class="card-img">
+            <div class="card-body">
+              <div class="card-linea"></div>
+              <h3>VelaSlim</h3>
+              <p>Luz infrarroja, radiofrecuencia y succión en un mismo tratamiento. Reduce grasa localizada, mejora la tensión de la piel y atenúa la celulitis.</p>
+              <ul class="lista-beneficios" style="margin-top:4px;">
+                <li>Grasa localizada y celulitis</li>
+                <li>Modelado del contorno corporal</li>
+                <li>Drenaje linfático</li>
+              </ul>
+              <a href="servicios.html#velaslim" class="card-cta">Ver más →</a>
+            </div>
+          </div>
+
+          <div class="card carrusel-slide">
+            <img src="img/mioup.jpg" alt="Mio Up" class="card-img">
+            <div class="card-body">
+              <div class="card-linea"></div>
+              <h3>Mio Up</h3>
+              <p>Electroestimulación muscular de profundidad. Tonificá, aumentá masa muscular y disminuí tejido adiposo — incluso en tus días de descanso.</p>
+              <ul class="lista-beneficios" style="margin-top:4px;">
+                <li>Aumento de tejido muscular</li>
+                <li>Firmeza y fuerza</li>
+                <li>Disminución de celulitis</li>
+              </ul>
+              <a href="servicios.html#mioup" class="card-cta">Ver más →</a>
+            </div>
+          </div>
+
+          <div class="card carrusel-slide">
+            <img src="img/presoterapia.jpg" alt="Presoterapia" class="card-img">
+            <div class="card-body">
+              <div class="card-linea"></div>
+              <h3>Presoterapia</h3>
+              <p>Presión positiva sobre tejidos para mejorar la circulación venosa y el drenaje linfático. Ideal para quienes entrenan y sienten piernas pesadas.</p>
+              <ul class="lista-beneficios" style="margin-top:4px;">
+                <li>Elimina líquidos y toxinas</li>
+                <li>Mejora la circulación</li>
+                <li>Recuperación muscular</li>
+              </ul>
+              <a href="servicios.html#presoterapia" class="card-cta">Ver más →</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="carrusel-dots" id="dots-tratamientos">
+          <span class="dot activo" onclick="irASlide('carrusel-tratamientos','dots-tratamientos',0)"></span>
+          <span class="dot" onclick="irASlide('carrusel-tratamientos','dots-tratamientos',1)"></span>
+          <span class="dot" onclick="irASlide('carrusel-tratamientos','dots-tratamientos',2)"></span>
+        </div>
+      </div>
+      <div style="margin-top:44px;">
+        <a href="servicios.html" class="btn-borde-oro">Ver todos los tratamientos</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ HORARIOS ══ -->
+  <div class="franja-oro reveal">
+    <p>Atendemos <strong>Lunes a Sábado</strong> de <strong>08:00 a 20:00 hs</strong> &nbsp;·&nbsp; Turnos: <strong>11 6560-1129</strong></p>
+  </div>
+
+
+  <!-- ══ PARA QUIENES ENTRENAN ══ -->
+  <section class="s s-crema reveal">
+    <div class="inner">
+      <div class="grid2 inv">
+        <div class="foto-box">
+          <img src="img/ejercicio.jpg" alt="Tratamientos para quienes entrenan" style="aspect-ratio:4/3; object-fit:cover; border-radius:var(--radio-lg); border:0.5px solid rgba(184,137,42,0.2);">
+        </div>
+        <div>
+          <span class="kicker oscuro">Especial deportistas</span>
+          <h2 class="t-xl dark">Para quienes<br>hacen <em style="color:var(--dorado-oscuro)">ejercicio</em></h2>
+          <div class="divisor-oro izq" style="background:linear-gradient(90deg,var(--dorado-oscuro),var(--dorado-medio));"></div>
+          <p class="sub dark">
+            Si entrenás, tu cuerpo merece recuperación de calidad. En Roma tenemos tratamientos específicos para potenciar tu rendimiento, recuperarte más rápido y modelar las zonas donde el ejercicio no alcanza.
+          </p>
+          <ul class="lista-beneficios dark" style="margin-bottom:28px;">
+            <li>VelaSlim para modelar zonas específicas</li>
+            <li>Mio Up para potenciar el trabajo muscular</li>
+            <li>Presoterapia para piernas pesadas post entrenamiento</li>
+            <li>Masajes deportivos y descontracturantes</li>
+            <li>Kinesiología y Deportología</li>
+          </ul>
+          <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20entreno%20y%20quiero%20saber%20qué%20tratamiento%20me%20recomendás." target="_blank" class="btn-borde-negro">Consultá cuál es para vos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CTA FINAL ══ -->
+  <section class="cta-final reveal">
+    <div class="inner">
+      <div class="divisor-oro" style="margin-bottom:28px;"></div>
+      <h2 class="t-xl" style="margin-bottom:16px;">¿Estás lista para <em>empezar?</em></h2>
+      <p class="sub">
+        Escribinos y te orientamos hacia el tratamiento ideal para lo que estás buscando. Respondemos rápido.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20reservar%20un%20turno." target="_blank" class="btn-oro">Reservar por WhatsApp</a>
+        <a href="contacto.html" class="btn-borde-oro">Dejanos tu consulta</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CONTACTO PREVIEW ══ -->
+  <section class="s s-negro2 reveal" id="contacto">
+    <div class="inner">
+      <div style="text-align:center;margin-bottom:56px;">
+        <span class="kicker">Contacto</span>
+        <h2 class="t-xl" style="margin-bottom:0;">¿<em>Hablamos?</em></h2>
+      </div>
+      <div class="grid2" style="gap:56px; align-items:start;">
+
+        <!-- Datos -->
+        <div>
+          <h3 class="t-lg" style="margin-bottom:10px; color:var(--crema);">Estamos para atenderte</h3>
+          <p style="font-size:0.95rem; color:rgba(250,247,242,0.6); margin-bottom:28px; line-height:1.8;">
+            Si tenés dudas sobre algún tratamiento, querés saber cuál es el ideal para vos,
+            o ya estás lista para reservar, escribinos. Respondemos a la brevedad.
+          </p>
+          <div class="dato-list" style="margin-bottom:32px;">
+            <div class="dato">
+              <div class="dato-ico">📍</div>
+              <div class="dato-txt">
+                <strong>Dirección</strong>
+                <span>Buenos Aires, Argentina</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">🕐</div>
+              <div class="dato-txt">
+                <strong>Horarios</strong>
+                <span>Lunes a Sábado · 08:00 a 20:00 hs</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">📱</div>
+              <div class="dato-txt">
+                <strong>WhatsApp</strong>
+                <span>11 6560-1129</span>
+              </div>
+            </div>
+            <div class="dato">
+              <div class="dato-ico">📸</div>
+              <div class="dato-txt">
+                <strong>Instagram</strong>
+                <span>@estetica.roma_</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="btn-oro">Escribir por WhatsApp</a>
+        </div>
+
+        <!-- Formulario -->
+        <div class="forma">
+          <h3>O dejanos tu consulta</h3>
+          <form id="form-contacto" action="https://script.google.com/macros/s/AKfycbyOlBfJWX2f7tn7Liw6SaIZAHGbmUnM1xVoSVdbeBc3fJnXehMuGDBwY2hz2JkKe1LUCw/exec" method="POST">
+            <div class="fg">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="fg">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="fg">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="11 ...">
+            </div>
+            <div class="fg">
+              <label for="servicio">Me interesa</label>
+              <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Seleccioná un tratamiento</option>
+                <option value="maquinaria">Maquinaria (Mio Up, VelaSlim, Presoterapia...)</option>
+                <option value="masajes">Masajes</option>
+                <option value="cosmetologia">Cosmetología</option>
+                <option value="manos-pies">Manos y Pies</option>
+                <option value="seguimiento">Kinesiología / Deportología</option>
+                <option value="info">Solo quiero información</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos qué estás buscando..."></textarea>
+            </div>
+            <button type="submit" class="btn-oro form-btn">Enviar consulta</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-logo">
+      <img src="img/logo.jpeg" alt="Roma Estética">
+    </div>
+    <p>
+      Roma · Centro de Belleza y Relajación
+      <span class="foot-sep">|</span>
+      Buenos Aires, Argentina
+    </p>
+    <p>
+      <a href="servicios.html">Servicios</a>
+      <span class="foot-sep">·</span>
+      <a href="nosotros.html">Nosotros</a>
+      <span class="foot-sep">·</span>
+      <a href="contacto.html">Contacto</a>
+    </p>
+    <p style="margin-top:16px;">
+      Desarrollado por <a href="https://www.presenciaonline.net" target="_blank">Presencia Online</a>
+    </p>
+  </footer>
+
+
+  <script>
+    // ── Menú hamburguesa
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      const ham = document.getElementById('hamburger');
+      nav.classList.toggle('abierto');
+      ham.classList.toggle('abierto');
+    }
+
+    // ── Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── Carrusel genérico
+    function irASlide(trackId, dotsId, n) {
+      if (window.innerWidth > 768) return;
+      const track = document.getElementById(trackId);
+      const dots = document.querySelectorAll('#' + dotsId + ' .dot');
+      track.style.transform = `translateX(calc(-${n * 100}% - ${n * 40}px))`;
+      dots.forEach((d, i) => d.classList.toggle('activo', i === n));
+    }
+
+    // ── Swipe touch para carrusel
+    function setupSwipe(trackId, dotsId, total) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      let startX = 0, current = 0;
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0 && current < total - 1) current++;
+          if (diff < 0 && current > 0) current--;
+          irASlide(trackId, dotsId, current);
+        }
+      });
+    }
+    setupSwipe('carrusel-tratamientos', 'dots-tratamientos', 3);
+
+    // ── Formulario de contacto
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      fetch(this.action, { method: 'POST', body: new FormData(this) })
+        .then(() => {
+          btn.textContent = 'Consulta enviada';
+          this.reset();
+          setTimeout(() => { btn.textContent = 'Enviar consulta'; btn.disabled = false; }, 5000);
+        })
+        .catch(() => {
+          btn.textContent = 'Error. Escribinos por WhatsApp.';
+          btn.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html>

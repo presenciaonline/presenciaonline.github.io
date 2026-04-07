@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Roma – Centro de Belleza y Relajación</title>
+  <meta name="description" content="Conocé Roma Estética: nuestro centro, nuestro equipo y nuestra filosofía de trabajo.">
+  <link rel="stylesheet" href="roma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    .page-hero {
+      background: var(--negro);
+      padding: 130px 28px 72px;
+      text-align: center;
+      border-bottom: 0.5px solid rgba(255,215,64,0.12);
+    }
+    .galeria-3 {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px; max-width: 1100px; margin: 0 auto;
+    }
+    .galeria-3 img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radio-lg); border: 0.5px solid rgba(255,215,64,0.12); }
+    .galeria-hero {
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: 1fr 1fr; gap: 12px;
+      max-width: 1100px; border-radius: var(--radio-lg); overflow: hidden;
+    }
+    .galeria-hero img { width: 100%; height: 100%; object-fit: cover; }
+    .galeria-hero img:first-child { grid-row: 1 / 3; aspect-ratio: auto; }
+    .galeria-hero img:not(:first-child) { aspect-ratio: 4/3; }
+    .valor {
+      background: rgba(255,215,64,0.04);
+      border: 0.5px solid rgba(255,215,64,0.12);
+      border-radius: var(--radio-lg); padding: 28px 24px;
+    }
+    .valor h3 { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--dorado); font-size: 1.1rem; margin-bottom: 10px; }
+    .valor p { font-size: 0.93rem; color: rgba(250,247,242,0.6); line-height: 1.8; }
+    .valores-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 900px) {
+      .galeria-3 { grid-template-columns: 1fr 1fr; }
+      .valores-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-hero { grid-template-columns: 1fr; }
+      .galeria-hero img:first-child { grid-row: auto; aspect-ratio: 4/3; }
+    }
+    @media (max-width: 600px) {
+      .galeria-3 { grid-template-columns: 1fr; }
+      .valores-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20información%20sobre%20los%20tratamientos." target="_blank" class="float-wa">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com/estetica.roma_" target="_blank" class="float-ig">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="img/logo.jpeg" alt="Roma Estética"></a>
+      <nav class="nav" id="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html" class="activo">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="page-hero reveal">
+    <span class="kicker">El centro</span>
+    <h1 class="t-hero" style="margin-bottom:14px;">Conocé <em>Roma</em></h1>
+    <p style="font-size:1.05rem; color:rgba(250,247,242,0.6); max-width:480px; margin:0 auto;">
+      Un espacio creado para que te sientas y te veas en tu mejor versión, con el cuidado y la atención que merecés.
+    </p>
+  </div>
+
+
+  <!-- ══ EL ESPACIO ══ -->
+  <section class="s s-negro reveal">
+    <div class="inner">
+      <div class="grid2" style="max-width:1100px; margin:0 auto;">
+        <div>
+          <div class="galeria-hero">
+            <img src="img/local-principal.jpg" alt="Roma Estética – interior">
+            <img src="img/local-cabina.jpg" alt="Roma Estética – cabina">
+            <img src="img/local-detalle.jpg" alt="Roma Estética – detalle">
+          </div>
+        </div>
+        <div>
+          <span class="kicker">El espacio</span>
+          <h2 class="t-xl" style="margin-bottom:14px;">Un ambiente<br>diseñado para <em>vos</em></h2>
+          <div class="divisor-oro izq"></div>
+          <p style="font-size:0.97rem; color:rgba(250,247,242,0.65); line-height:1.9; margin-bottom:16px;">
+            Desde el primer momento que entrás a Roma, todo está pensado para que te sientas cómoda, contenida y en buenas manos. Nuestro espacio combina estética cuidada, equipamiento de última generación y un equipo que te escucha.
+          </p>
+          <p style="font-size:0.97rem; color:rgba(250,247,242,0.65); line-height:1.9; margin-bottom:28px;">
+            Cada cabina está preparada para brindarte privacidad y comodidad durante cada tratamiento. El ambiente cálido no es casualidad — es parte del servicio.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:28px; height:0.5px; background:linear-gradient(90deg,var(--dorado-oscuro),var(--dorado));"></div>
+              <span style="font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase; color:rgba(250,247,242,0.5);">Equipamiento de última generación</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:28px; height:0.5px; background:linear-gradient(90deg,var(--dorado-oscuro),var(--dorado));"></div>
+              <span style="font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase; color:rgba(250,247,242,0.5);">Atención personalizada</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:28px; height:0.5px; background:linear-gradient(90deg,var(--dorado-oscuro),var(--dorado));"></div>
+              <span style="font-size:0.85rem; letter-spacing:1.5px; text-transform:uppercase; color:rgba(250,247,242,0.5);">Ambiente cálido y privado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisor-seccion"></div>
+
+
+  <!-- ══ NUESTROS VALORES ══ -->
+  <section class="s s-negro2 reveal">
+    <div class="inner centro">
+      <span class="kicker">Nuestra filosofía</span>
+      <h2 class="t-xl" style="margin-bottom:12px;">Lo que nos <em>define</em></h2>
+      <p class="sub" style="margin-bottom:48px;">Cada decisión que tomamos está orientada a que tu experiencia en Roma sea excepcional.</p>
+      <div class="valores-grid">
+        <div class="valor">
+          <h3>Resultados reales</h3>
+          <p>Trabajamos con tecnología y técnicas que producen resultados visibles. Sin promesas vacías.</p>
+        </div>
+        <div class="valor">
+          <h3>Atención personalizada</h3>
+          <p>Cada persona tiene necesidades diferentes. Por eso escuchamos antes de recomendar.</p>
+        </div>
+        <div class="valor">
+          <h3>Profesionalismo</h3>
+          <p>Nuestro equipo está formado y actualizado en las últimas técnicas y tecnologías estéticas.</p>
+        </div>
+        <div class="valor">
+          <h3>Calidez</h3>
+          <p>Te recibimos con la cercanía y la calidez que merecés. Aquí te tratamos como a quien sos.</p>
+        </div>
+        <div class="valor">
+          <h3>Cuerpo en movimiento</h3>
+          <p>Entendemos el cuerpo activo. Nuestros tratamientos acompañan tu estilo de vida.</p>
+        </div>
+        <div class="valor">
+          <h3>Bienestar integral</h3>
+          <p>No solo la apariencia. Trabajamos para que te sientas bien desde adentro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ GALERÍA ══ -->
+  <section class="s s-negro reveal">
+    <div class="inner centro">
+      <span class="kicker">El espacio</span>
+      <h2 class="t-xl" style="margin-bottom:44px;">Nuestras <em>instalaciones</em></h2>
+      <div class="galeria-3">
+        <img src="img/galeria-1.jpg" alt="Roma Estética">
+        <img src="img/galeria-2.jpg" alt="Roma Estética">
+        <img src="img/galeria-3.jpg" alt="Roma Estética">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ HORARIOS ══ -->
+  <div class="franja-oro reveal">
+    <p>Atendemos <strong>Lunes a Sábado</strong> de <strong>08:00 a 20:00 hs</strong> &nbsp;·&nbsp; Turnos: <strong>11 6560-1129</strong></p>
+  </div>
+
+
+  <!-- ══ CTA ══ -->
+  <section class="cta-final reveal">
+    <div class="inner">
+      <div class="divisor-oro"></div>
+      <h2 class="t-xl" style="margin-bottom:14px;">¿Querés conocer<br>el <em>centro</em> en persona?</h2>
+      <p class="sub">Escribinos y coordinamos una consulta. Te esperamos.</p>
+      <a href="https://wa.me/5491165601129?text=Hola%20Roma,%20quiero%20conocer%20el%20centro%20y%20saber%20más%20sobre%20los%20tratamientos." target="_blank" class="btn-oro">Escribir por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><img src="img/logo.jpeg" alt="Roma Estética"></div>
+    <p>Roma · Centro de Belleza y Relajación <span class="foot-sep">|</span> Buenos Aires, Argentina</p>
+    <p>
+      <a href="servicios.html">Servicios</a><span class="foot-sep">·</span>
+      <a href="nosotros.html">Nosotros</a><span class="foot-sep">·</span>
+      <a href="contacto.html">Contacto</a>
+    </p>
+    <p style="margin-top:16px;">Desarrollado por <a href="https://www.presenciaonline.net" target="_blank">Presencia Online</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('abierto');
+      document.getElementById('hamburger').classList.toggle('abierto');
+    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
