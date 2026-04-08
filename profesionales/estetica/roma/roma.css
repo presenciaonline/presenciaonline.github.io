@@ -35,15 +35,17 @@ a { text-decoration: none; color: inherit; }
 /* ─── FLOTANTES ─── */
 .float-wa, .float-ig {
   position: fixed;
+  right: 22px;
   width: 60px; height: 60px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  z-index: 2000;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 2000;
+  transition: transform 0.25s ease;
 }
-.float-wa { bottom: 22px; right: 22px; background: #25D366; }
+.float-wa { bottom: 22px; background: #25D366; }
 .float-ig {
-  bottom: 95px; right: 22px;
+  bottom: 95px;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 .float-wa:hover { transform: scale(1.05); }
@@ -52,7 +54,9 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── HEADER ─── */
 .header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #111111;
   border-bottom: 0.5px solid rgba(255,215,64,0.18);
   height: 72px;
@@ -387,9 +391,6 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
   .cards-grid.dos { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .header { background: #111111; backdrop-filter: none; }
-  .float-wa { bottom: 16px; right: 16px; }
-  .float-ig { bottom: 76px; right: 16px; }
   .s { padding: 64px 20px; }
   .cards-grid { grid-template-columns: 1fr; }
   .hamburger { display: flex; }
