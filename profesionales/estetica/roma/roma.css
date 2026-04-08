@@ -26,7 +26,6 @@ body {
   font-family: 'Cormorant Garamond', serif;
   background: var(--negro);
   color: var(--crema);
-  overflow-x: hidden;
   line-height: 1.75;
 }
 img { max-width: 100%; display: block; }
