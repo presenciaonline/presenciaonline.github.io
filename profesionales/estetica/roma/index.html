@@ -62,14 +62,26 @@
   border: 1.5px solid #FFD740;
   border-radius: var(--radio-lg); 
   padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-    .hero-badge strong {
-  display: block; font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700; color: #FFD740;
+  .hero-badge strong {
+  display: block; 
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFD740;
+  margin-bottom: 0;
 }
-.hero-badge span { 
-  font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; 
-  color: #FFD740; font-weight: 600;
+ .hero-badge span { 
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
+  color: #FFD740;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.3;
 }
   .hero-deco {
   position: absolute; top: 24px; right: -12px;
@@ -268,8 +280,7 @@
 
   <!-- ══ HERO ══ -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
+   
     <div class="hero-inner">
       <div class="hero-texto reveal">
         <span class="eyebrow">Centro de Belleza y Relajación · Morón</span>
