@@ -53,8 +53,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── HEADER ─── */
 .header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
   background: #111111;
   border-bottom: 0.5px solid rgba(255,215,64,0.18);
