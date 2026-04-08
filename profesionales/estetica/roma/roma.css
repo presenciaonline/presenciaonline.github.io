@@ -388,6 +388,8 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
   .cards-grid.dos { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+  .float-wa { bottom: 16px; right: 16px; }
+  .float-ig { bottom: 76px; right: 16px; }
   .s { padding: 64px 20px; }
   .cards-grid { grid-template-columns: 1fr; }
   .hamburger { display: flex; }
