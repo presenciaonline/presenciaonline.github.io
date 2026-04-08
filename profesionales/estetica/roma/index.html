@@ -127,7 +127,7 @@
     .serv-bloque.inv > * { direction: ltr; }
     .serv-foto img {
       width: 100%; border-radius: var(--radio-lg);
-      object-fit: cover; aspect-ratio: 3/4;
+      object-fit: contain; aspect-ratio: auto;
       border: 0.5px solid rgba(255,215,64,0.12);
       display: block;
     }
@@ -166,6 +166,7 @@
     .serv-slide img {
       width: 100%; border-radius: var(--radio-lg);
       object-fit: cover; aspect-ratio: 3/4;
+      object-position: top;
       border: 0.5px solid rgba(255,215,64,0.12);
     }
     .serv-slide h2 {
