@@ -64,6 +64,7 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
 }
 .header-inner {
+  position: relative;
   max-width: 1200px; margin: 0 auto; width: 100%;
   display: flex; align-items: center; justify-content: space-between;
 }
@@ -395,22 +396,83 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
   .cards-grid { grid-template-columns: 1fr 1fr; }
   .cards-grid.dos { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 768px) {
+  body {
+    padding-top: 72px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0 20px;
+  }
+
+  .header-inner {
+    height: 100%;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
   .s { padding: 64px 20px; }
   .cards-grid { grid-template-columns: 1fr; }
+
   .hamburger { display: flex; }
   .nav { display: none; }
+
   .nav.abierto {
-    display: flex; flex-direction: column; gap: 0;
-    position: absolute; top: 72px; left: 0; right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
     background: #111111;
-    padding: 28px 24px;
+    padding: 20px 20px 18px;
     border-top: 0.5px solid rgba(255,215,64,0.15);
     border-bottom: 0.5px solid rgba(255,215,64,0.15);
     box-shadow: 0 8px 28px rgba(0,0,0,0.6);
     z-index: 99;
   }
-  .nav a { padding: 18px 0; border-bottom: 0.5px solid rgba(255,215,64,0.08); font-size: 1.15rem; display: block; }
+
+  .nav a {
+    padding: 16px 0;
+    border-bottom: 0.5px solid rgba(255,215,64,0.08);
+    font-size: 1rem;
+    display: block;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+
+  .float-wa,
+  .float-ig {
+    width: 56px;
+    height: 56px;
+    right: 20px;
+  }
+
+  .float-wa {
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .float-ig {
+    bottom: calc(92px + env(safe-area-inset-bottom));
+  }
+
+  .float-wa img,
+  .float-ig img {
+    width: 32px;
+  }
+
   .carrusel-track { display: flex; transition: transform .4s ease; gap: 0; }
   .carrusel-slide { min-width: calc(100% - 40px); margin: 0 20px; }
   .carrusel-dots { display: flex; }
