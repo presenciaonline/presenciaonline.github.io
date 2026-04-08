@@ -415,3 +415,19 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
   .foto-grid-2x2 { grid-template-columns: 1fr 1fr; aspect-ratio: auto; }
   .foto-grid-2x2 img { height: 160px; }
 }
+
+.flotantes {
+  position: fixed;
+  bottom: 22px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.float-wa, .float-ig {
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
