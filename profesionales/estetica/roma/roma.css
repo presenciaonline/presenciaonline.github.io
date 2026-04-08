@@ -114,13 +114,6 @@ a { text-decoration: none; color: inherit; }
 .s-crema   { background: var(--crema); }
 .s-crema2  { background: var(--crema2); }
 
-.hero {
-  padding: 120px 28px 80px;
-  min-height: calc(100vh - 72px);
-  display: flex;
-  align-items: center;
-}
-
 .inner  { max-width: 1100px; margin: 0 auto; }
 .centro { text-align: center; }
 
