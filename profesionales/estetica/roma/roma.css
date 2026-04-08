@@ -699,8 +699,8 @@ footer .foot-sep {
 
   .hero-inner {
     grid-template-columns: 1fr !important;
-    gap: 36px !important;
-    padding: 40px 20px 32px !important;
+    gap: 32px !important;
+    padding: 28px 20px 28px !important;
   }
 
   .hero-img {
@@ -720,7 +720,33 @@ footer .foot-sep {
   }
 }
 
+  .stats-strip {
+    padding: 22px 20px !important;
+  }
+}
+
 @media (max-width: 768px) {
+  body {
+    padding-top: 64px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .header-inner {
+    padding: 10px 0;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
   .s { padding: 64px 20px; }
   .cards-grid { grid-template-columns: 1fr; }
 
@@ -754,23 +780,19 @@ footer .foot-sep {
     border-bottom: none;
   }
 
-  .logo img {
-    height: 42px;
-  }
-
   .float-wa,
   .float-ig {
     width: 56px;
     height: 56px;
-    right: 16px;
+    right: 22px;
   }
 
   .float-wa {
-    bottom: calc(16px + env(safe-area-inset-bottom));
+    bottom: calc(24px + env(safe-area-inset-bottom));
   }
 
   .float-ig {
-    bottom: calc(84px + env(safe-area-inset-bottom));
+    bottom: calc(96px + env(safe-area-inset-bottom));
   }
 
   .float-wa img,
