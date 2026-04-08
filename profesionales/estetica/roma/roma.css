@@ -427,11 +427,6 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
     padding: 64px 20px;
   }
 
- .hero {
-  padding: 100px 20px 60px;
-  min-height: auto;
-}
-
   .cards-grid {
     grid-template-columns: 1fr;
   }
