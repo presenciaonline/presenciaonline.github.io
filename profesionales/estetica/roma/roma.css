@@ -53,13 +53,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── HEADER ─── */
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   background: #111111;
   border-bottom: 0.5px solid rgba(255,215,64,0.18);
   height: 72px;
   padding: 0 28px;
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
 }
 .header-inner {
   max-width: 1200px; margin: 0 auto; width: 100%;
@@ -416,18 +418,3 @@ footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
   .foto-grid-2x2 img { height: 160px; }
 }
 
-.flotantes {
-  position: fixed;
-  bottom: 22px;
-  right: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.float-wa, .float-ig {
-  position: relative;
-  right: 0;
-  bottom: 0;
-}
