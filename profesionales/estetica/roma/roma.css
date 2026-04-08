@@ -34,7 +34,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── FLOTANTES ─── */
 .float-wa, .float-ig {
   position: fixed;
-  right: 22px;
+  right: 28px;
   width: 60px; height: 60px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -383,6 +383,11 @@ footer a:hover { color: var(--dorado); }
 footer .foot-sep { color: rgba(255,215,64,0.2); margin: 0 6px; }
 
 /* ─── RESPONSIVE ─── */
+@media (min-width: 900px) {
+  .float-wa { right: 35px; bottom: 35px; }
+  .float-ig { right: 35px; bottom: 110px; }
+}
+
 @media (max-width: 960px) {
   .grid2 { grid-template-columns: 1fr; gap: 44px; }
   .grid2.inv { direction: ltr; }
