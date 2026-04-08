@@ -74,10 +74,16 @@
     }
     .hero-deco p { font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,215,64,0.6); line-height: 1.8; }
 
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 44px;   padding: 10px 20px 60px; }
-      .hero-img { display: none; }
-    }
+   @media (max-width: 900px) {
+  .hero-inner { 
+    grid-template-columns: 1fr; 
+    gap: 44px;   
+    padding: 10px 20px 60px; 
+  }
+  .hero-img { 
+    display: block; 
+  }
+}
 
     /* ─── STATS ─── */
     .stats-strip {
